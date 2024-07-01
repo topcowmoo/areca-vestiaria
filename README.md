@@ -2,11 +2,11 @@
 
 <br />
 <div align="center">
-  <!-- <a href="https://github.com/topcowmoo/areca-vestiaria">
-    <img src="./client/src/assets/baketomo-logo.svg" alt="Logo">
-  </a> -->
+  <a href="https://github.com/topcowmoo/areca-vestiaria">
+    <img src="src/assets/favicon.png" alt="Logo">
+  </a>
 
-<!-- <h3 align="center"><a href="https://baketomo.onrender.com/">Dr. M. Mammoliti, MD, FRCPC Psychiatry</a></h3> -->
+<h3 align="center"><a href="">Dr. M. Mammoliti, MD, FRCPC Psychiatry</a></h3>
 
   <p align="center">
 
