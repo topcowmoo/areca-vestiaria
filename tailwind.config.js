@@ -8,6 +8,7 @@ export default {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
         'playfair': ['Playfair Display', 'serif'],
+        'urbanist': ['Urbanist', 'sans-serif'],
     },
   },
 },
