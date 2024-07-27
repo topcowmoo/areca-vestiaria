@@ -230,7 +230,7 @@ export const collectionData = [
     kind: "Article",
     category: "Couples Resources",
     subCategory: "",
-    title: "Dr.Gottman Sound Relationship House",
+    title: "Dr. Gottman Sound Relationship House",
     link: "https://www.gottman.com/about/the-gottman-method/",
   },
   {
