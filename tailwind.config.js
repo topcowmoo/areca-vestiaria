@@ -4,7 +4,12 @@ export default {
   darkMode: 'selector',
   darkModeSelector: '.dark-mode', 
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'],
+        'playfair': ['Playfair Display', 'serif'],
+    },
   },
+},
   plugins: [],
 };
