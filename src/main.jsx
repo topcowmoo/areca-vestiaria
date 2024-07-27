@@ -15,7 +15,11 @@ import AttachmentsAndEmotions from './pages/AttachmentsAndEmotions.jsx';
 import CouplesResources from './pages/CouplesResources.jsx';
 import FAQ from './pages/FAQ.jsx';
 import Error from './pages/Error.jsx';
-
+import Therapy from './pages/Therapy.jsx';
+import PhysicianResources from './pages/PhysicianPatient.jsx'
+import Guidelines from './pages/Guidelines.jsx';
+import BorderlinePersonalityDisorder from './pages/BorderlinePersonalityDisorder.jsx';
+import GeneralResources from './pages/GeneralResources.jsx';
 
 
 const router = createBrowserRouter([
@@ -55,6 +59,26 @@ const router = createBrowserRouter([
       {
         path: 'faq',
         element: <FAQ />,
+      },
+      {
+        path: 'therapy',
+        element: <Therapy />,
+      },
+      {
+        path: 'physician-patient-resources',
+        element: <PhysicianResources />,
+      },
+      {
+        path: 'guidelines',
+        element: <Guidelines />,
+      },
+      {
+        path: 'borderlinepersonalitydisorder',
+        element: <BorderlinePersonalityDisorder />,
+      },
+      {
+        path: 'general-resources',
+        element: <GeneralResources />,
       },
     ],
   },
