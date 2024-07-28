@@ -19,8 +19,6 @@ const FilterBox = () => {
   const [couplesChecked, setCouplesChecked] = useState(false);
   const [therapyChecked, setTherapyChecked] = useState(false);
   const [physicianPatientChecked, setPhysicianPatientChecked] = useState(false);
-  const [guidelineChecked, setGuidelineChecked] = useState(false);
-  const [borderlinePersonalityChecked, setBorderlinePersonalityChecked] = useState(false);
   const [generalChecked, setGeneralChecked] = useState(false);
 
   // Function to filter collection data based on selected checkboxes
@@ -45,8 +43,6 @@ const FilterBox = () => {
       couplesChecked ||
       therapyChecked ||
       physicianPatientChecked ||
-      guidelineChecked ||
-      borderlinePersonalityChecked ||
       generalChecked
     ) {
       const categories = [];
@@ -57,8 +53,6 @@ const FilterBox = () => {
       if (couplesChecked) categories.push("Couples Resources");
       if (therapyChecked) categories.push("Therapy");
       if (physicianPatientChecked) categories.push("Physician Patient Resources");
-      if (guidelineChecked) categories.push("Guidelines");
-      if (borderlinePersonalityChecked) categories.push("Borderline Personality Disorder");
       if (generalChecked) categories.push("General Resources");
 
       filteredData = filteredData.filter((item) => categories.includes(item.category));
@@ -77,8 +71,6 @@ const FilterBox = () => {
     couplesChecked,
     therapyChecked,
     physicianPatientChecked,
-    guidelineChecked,
-    borderlinePersonalityChecked,
     generalChecked,
   ]);
 
@@ -97,8 +89,6 @@ const FilterBox = () => {
     couplesChecked,
     therapyChecked,
     physicianPatientChecked,
-    guidelineChecked,
-    borderlinePersonalityChecked,
     generalChecked,
   ]);
 
@@ -120,8 +110,6 @@ const FilterBox = () => {
     if (value === "Couples Resources") setCouplesChecked(checked);
     if (value === "Therapy") setTherapyChecked(checked);
     if (value === "Physician Patient Resources") setPhysicianPatientChecked(checked);
-    if (value === "Guidelines") setGuidelineChecked(checked);
-    if (value === "Borderline Personality Disorder") setBorderlinePersonalityChecked(checked);
     if (value === "General Resources") setGeneralChecked(checked);
   };
 
@@ -330,21 +318,6 @@ const FilterBox = () => {
                   Physician Patient Resources
                 </div>
               </div>
-              {/* Guidelines checkbox */}
-              <div className="justify-start items-center gap-8 inline-flex">
-                <div className="justify-start items-start gap-2.5 flex">
-                  <input
-                    type="checkbox"
-                    value="Guidelines"
-                    checked={guidelineChecked}
-                    onChange={handleCategoryCheckboxChange}
-                    className="custom-checkbox"
-                  />
-                </div>
-                <div className="text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
-                  Guidelines
-                </div>
-              </div>
               {/* General Resources checkbox */}
               <div className="justify-start items-center gap-8 inline-flex">
                 <div className="justify-start items-start gap-2.5 flex">
@@ -360,24 +333,9 @@ const FilterBox = () => {
                   General Resources
                 </div>
               </div>
-              {/* Borderline Personality Disorder checkbox */}
-              <div className="justify-start items-center gap-8 inline-flex">
-                <div className="justify-start items-start gap-2.5 flex">
-                  <input
-                    type="checkbox"
-                    value="Borderline Personality Disorder"
-                    checked={borderlinePersonalityChecked}
-                    onChange={handleCategoryCheckboxChange}
-                    className="custom-checkbox"
-                  />
-                </div>
-                <div className="text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight whitespace-nowrap overflow-hidden text-ellipsis">
-                  Borderline Personality Disorder
-                </div>
               </div>
             </div>
           </div>
-        </div>
       )}
     </div>
   );
