@@ -6,8 +6,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: (theme) => ({
-        "page-one": "url('/src/assets/homePage1.jpeg')",
-        "page-two": "url('/src/assets/homePage2.jpeg')",
+        "page-one": "url('/src/assets/home-1.png')",
+        "page-two": "url('/src/assets/home-2.png')",
       }),
     },
   },
