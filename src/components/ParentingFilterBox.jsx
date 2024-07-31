@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback } from "react";
-import { collectionData } from "../data/collectionData";
-import tune from "../assets/tune.png";
+import { useState, useMemo } from "react"; // Importing useState and useMemo hooks from React
+import { collectionData } from "../data/collectionData"; // Importing collectionData from the data file
+import tune from "../assets/tune.png"; // Importing the filter icon
 
 // Map of subcategory labels to keys
 const subcategoryLabels = {
@@ -12,15 +12,15 @@ const subcategoryLabels = {
 };
 
 const ParentingFilterBox = () => {
-  // State to manage visibility of the filter box
-  const [showFilterBox, setShowFilterBox] = useState(false);
+  const [showFilterBox, setShowFilterBox] = useState(false); // State to manage the visibility of the filter box
 
-  // States to manage checked state of resource format checkboxes
-  const [articleChecked, setArticleChecked] = useState(false);
-  const [videoChecked, setVideoChecked] = useState(false);
-  const [bookChecked, setBookChecked] = useState(false);
+  // Combined state to manage checked state of resource format checkboxes
+  const [checkedKinds, setCheckedKinds] = useState({
+    Article: false,
+    Video: false,
+    Book: false,
+  });
 
-  // State to manage checked state of subcategory checkboxes
   const [selectedSubcategories, setSelectedSubcategories] = useState({
     "Local Services": false,
     "Sex Discussion": false,
@@ -29,44 +29,36 @@ const ParentingFilterBox = () => {
     General: false,
   });
 
-  // Function to filter collection data based on selected checkboxes
-  const filterData = useCallback(() => {
-    let filteredData = collectionData;
-
-    // Filter by resource format
-    if (articleChecked || videoChecked || bookChecked) {
-      const kinds = [];
-      if (articleChecked) kinds.push("Article");
-      if (videoChecked) kinds.push("Video");
-      if (bookChecked) kinds.push("Book");
-      filteredData = filteredData.filter((item) => kinds.includes(item.kind));
-    }
-
-    // Filter by subcategories
+  // useMemo is used here to optimize the performance of filtering the data.
+  // It will recompute the filtered data only when `checkedKinds` or `selectedSubcategories` change.
+  const filteredData = useMemo(() => {
+    const kinds = Object.keys(checkedKinds).filter((kind) => checkedKinds[kind]); // Get the kinds that are checked
     const activeSubcategories = Object.keys(selectedSubcategories).filter(
       (key) => selectedSubcategories[key]
-    );
-    if (activeSubcategories.length > 0) {
-      filteredData = filteredData.filter((item) =>
-        activeSubcategories.includes(item.subCategory)
-      );
+    ); // Get the subcategories that are selected
+
+    // Early exit if no filters are active
+    if (kinds.length === 0 && activeSubcategories.length === 0) {
+      return collectionData.filter((item) => item.category === "Parenting Resources"); // Return all parenting resources if no filters are selected
     }
 
-    // Log the filtered data for now
-    console.log(filteredData);
-  }, [articleChecked, videoChecked, bookChecked, selectedSubcategories]);
-
-  // Use effect to call filterData when any of the dependencies change
-  useEffect(() => {
-    filterData();
-  }, [filterData, articleChecked, videoChecked, bookChecked, selectedSubcategories]);
+    return collectionData.filter((item) => {
+      const kindMatch = kinds.length > 0 ? kinds.includes(item.kind) : true; // Check if the item kind matches the selected kinds
+      const subCategoryMatch =
+        activeSubcategories.length > 0
+          ? activeSubcategories.some((subCategory) =>
+              item.subCategory.includes(subcategoryLabels[subCategory])
+            )
+          : true; // Check if the item subcategory matches the selected subcategories
+      return item.category === "Parenting Resources" && kindMatch && subCategoryMatch; // Return items that match the category, kind, and subcategory
+    });
+  }, [checkedKinds, selectedSubcategories]); // Recompute filteredData when checkedKinds or selectedSubcategories change
+  console.log(filteredData);
 
   // Handle checkbox change for resource format
   const handleKindCheckboxChange = (e) => {
     const { value, checked } = e.target;
-    if (value === "Article") setArticleChecked(checked);
-    if (value === "Video") setVideoChecked(checked);
-    if (value === "Book") setBookChecked(checked);
+    setCheckedKinds((prev) => ({ ...prev, [value]: checked })); // Update checkedKinds state based on the checkbox value and checked status
   };
 
   // Handle checkbox change for subcategories
@@ -75,12 +67,12 @@ const ParentingFilterBox = () => {
     setSelectedSubcategories((prev) => ({
       ...prev,
       [value]: checked,
-    }));
+    })); // Update selectedSubcategories state based on the checkbox value and checked status
   };
 
   // Toggle the visibility of the filter box
   const toggleFilterBox = () => {
-    setShowFilterBox((prevState) => !prevState);
+    setShowFilterBox((prevState) => !prevState); // Toggle the state of showFilterBox
   };
 
   return (
@@ -98,7 +90,7 @@ const ParentingFilterBox = () => {
               className="w-[24.29px] h-[24.29px] left-0 absolute"
               src={tune}
               alt="Filter"
-              style={{ filter: showFilterBox ? "invert(1)" : "invert(0)" }}
+              style={{ filter: showFilterBox ? "invert(1)" : "invert(0)" }} // Invert the filter icon color based on showFilterBox state
             />
             <div className="left-[31.96px] absolute text-black text-xl font-medium font-['Inter']">
               Filter
@@ -118,69 +110,27 @@ const ParentingFilterBox = () => {
         <div className="mt-4">
           {/* Filter options */}
           <div className="w-[282px] px-4 pt-7 pb-[69px] bg-[#e8e8e8]/20 rounded-[10px] border border-white backdrop-blur-[24.90px] flex-col justify-start items-start gap-[15px] inline-flex">
-            <div className="text-white text-[32px] font-semibold font-['Inter']">
-              Filter
-            </div>
+            <div className="text-white text-[32px] font-semibold font-['Inter']">Filter</div>
             <hr className="border-t border-white w-full" />
-            <div className="justify-start items-center gap-8 inline-flex">
-              <div className="text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
-                Resource Format
-              </div>
-            </div>
+            <div className="text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">Resource Format</div>
             <div className="flex-col justify-start items-start gap-[7px] flex">
-              {/* Article checkbox */}
-              <div className="justify-start items-center gap-8 inline-flex">
-                <div className="justify-start items-start gap-2.5 flex">
-                  <input
-                    type="checkbox"
-                    value="Article"
-                    checked={articleChecked}
-                    onChange={handleKindCheckboxChange}
-                    className="custom-checkbox"
-                  />
+              {Object.keys(checkedKinds).map((kind) => (
+                <div className="justify-start items-center gap-8 inline-flex" key={kind}>
+                  <div className="justify-start items-start gap-2.5 flex">
+                    <input
+                      type="checkbox"
+                      value={kind}
+                      checked={checkedKinds[kind]}
+                      onChange={handleKindCheckboxChange}
+                      className="custom-checkbox"
+                    />
+                  </div>
+                  <div className="text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">{kind}</div>
                 </div>
-                <div className="text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
-                  Articles
-                </div>
-              </div>
-              {/* Video checkbox */}
-              <div className="justify-start items-center gap-8 inline-flex">
-                <div className="justify-start items-start gap-2.5 flex">
-                  <input
-                    type="checkbox"
-                    value="Video"
-                    checked={videoChecked}
-                    onChange={handleKindCheckboxChange}
-                    className="custom-checkbox"
-                  />
-                </div>
-                <div className="text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
-                  Videos
-                </div>
-              </div>
-              {/* Book checkbox */}
-              <div className="justify-start items-center gap-8 inline-flex">
-                <div className="justify-start items-start gap-2.5 flex">
-                  <input
-                    type="checkbox"
-                    value="Book"
-                    checked={bookChecked}
-                    onChange={handleKindCheckboxChange}
-                    className="custom-checkbox"
-                  />
-                </div>
-                <div className="text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
-                  Books
-                </div>
-              </div>
+              ))}
             </div>
-            <div className="justify-start items-center gap-8 inline-flex">
-              <div className="text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
-                Type of Resource
-              </div>
-            </div>
+            <div className="text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">Type of Resource</div>
             <div className="flex-col justify-start items-start gap-[7px] flex">
-              {/* Subcategory checkboxes */}
               {Object.keys(subcategoryLabels).map((subcategoryKey) => (
                 <div className="justify-start items-center gap-8 inline-flex" key={subcategoryKey}>
                   <div className="justify-start items-start gap-2.5 flex">
@@ -202,7 +152,7 @@ const ParentingFilterBox = () => {
         </div>
       )}
     </div>
-  );
+  );  
 };
 
 export default ParentingFilterBox;
