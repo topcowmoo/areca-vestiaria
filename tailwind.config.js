@@ -8,6 +8,7 @@ export default {
       backgroundImage: (theme) => ({
         "page-one": "url('/src/assets/home-1.png')",
         "page-two": "url('/src/assets/home-2.png')",
+        "page-three": "url('/src/assets/home-3.png')",
       }),
       fontFamily: {
         inter: ["Inter", "sans-serif"],
