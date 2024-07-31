@@ -33,7 +33,7 @@ function Home() {
 
           <SearchBar />
           <a
-            href=""
+            href="#second-page"
             className="text-center text-white text-[19px] font-light font-['Inter'] underline m-8 pb-4"
           >
             Explore More
@@ -41,7 +41,10 @@ function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col min-h-screen bg-page-two bg-cover bg-center p-6">
+      <div
+        id="second-page"
+        className="flex flex-col min-h-screen bg-page-two bg-cover bg-center p-6"
+      >
         <div className="flex flex-grow flex-col items-center justify-center mx-12 my-12">
           <div className="w-3/4 flex flex-grow flex-col items-start justify-center">
             <div className="w-[1014px] text-white text-[71px] font-extrabold font-playfair leading-[67.45px] mb-4">
