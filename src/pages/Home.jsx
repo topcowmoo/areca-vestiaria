@@ -91,7 +91,7 @@ function Home() {
               Please note, you will need a referral from your Family Doctor to
               be referred to Dr. Mammoliti for a consultation. The consultation
               and ongoing care are covered by OHIP (your health card) but not
-              the NO SHOW FEE, LATE FEE or other non-insured services (forms,
+              the NO SHOW FEE, LATE FEEor other non-insured services (forms,
               notes etc). AT THIS TIME REFERRALS ARE SEEN ONLY WHEN THERE ARE
               LEARNERS PRESENTS FOR TEACHING PURPOSES AND SPECIAL SLOTS ARE
               CREATED - otherwise referrals are not accepted. REFERRALS ARE
@@ -99,9 +99,6 @@ function Home() {
             </div>
           </div>
         </div>
-        <footer className="bg-gray-800 text-white text-center">
-          <p>Footer Content Here</p>
-        </footer>
       </div>
 
       {isModalOpen && (
