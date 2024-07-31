@@ -79,17 +79,17 @@ const Footer = () => {
         <div>
           <h2 className="text-lg font-bold mb-4 font-['Inter']">Address</h2>
           <p className="text-white text-[15px] font-light font-['Inter']">Toronto</p>
-          <p className="text-white text-[15px] font-light font-['Inter']">10 Four Seasons PL</p>
+          <p className="text-white text-[15px] font-light font-['Inter']">10 Four Seasons Pl</p>
           <p className="text-white text-[15px] font-light font-['Inter']">Suite 1000, Etobicoke,</p>
           <p className="text-white text-[15px] font-light font-['Inter']">ON M9B 6H7</p>
           <p className="text-white text-[15px] font-light font-['Inter'] mt-4">Phone: (519) 936-3392</p>
           <p className="text-white text-[15px] font-light font-['Inter']">Fax: (519) 936-3395</p>
           <p className="text-white text-[15px] font-light font-['Inter'] mt-4">Calgary</p>
           <p className="text-white text-[15px] font-light font-['Inter']">1919 Sirocco Dr SW</p>
-          <p className="text-white text-[15px] font-light font-['Inter']"> Unit 304</p>
-          <p className="text-white text-[15px] font-light font-['Inter']"> AB T3H 2Y3 </p>
-          <p className="text-white text-[15px] font-light font-['Inter'] mt-4">Phone: (403) 456 7000</p>
-          <p className="text-white text-[15px] font-light font-['Inter']">Fax: (403) 456 7007</p>
+          <p className="text-white text-[15px] font-light font-['Inter']">Unit 304</p>
+          <p className="text-white text-[15px] font-light font-['Inter']">AB T3H 2Y3 </p>
+          <p className="text-white text-[15px] font-light font-['Inter'] mt-4">Phone: (403) 456-7000</p>
+          <p className="text-white text-[15px] font-light font-['Inter']">Fax: (403) 456-7007</p>
         </div>
         <div>
           <h2 className="text-lg font-bold mb-4 font-['Inter']">Hours</h2>
