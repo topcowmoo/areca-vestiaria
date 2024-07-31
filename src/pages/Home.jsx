@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SearchBar from "../components/SearchBar";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,15 +15,25 @@ function Home() {
   return (
     <div>
       <div className="flex flex-col min-h-screen bg-page-one bg-cover bg-center">
-        <div className="flex justify-center py-4">
+        <div className="flex justify-center">
           <h2>**Nav Bar Here**</h2>
         </div>
 
         <div className="flex flex-grow flex-col items-center justify-center">
-          <h1 className="text-xl">WLNS</h1>
-          <h4 className="text-s">The Wellness Hub</h4>
-          <h4>**Search Bar Here**</h4>
-          <a href="" className="text-xs">
+          <div className="w-[261px]">
+            <h1 className="w-full text-center text-white text-[90.17px] font-extrabold font-playfair mb-2">
+              WLNS
+            </h1>
+            <h4 className="w-full text-center text-white text-3xl font-extralight font-inter mb-8">
+              The Wellness Hub
+            </h4>
+          </div>
+
+          <SearchBar />
+          <a
+            href=""
+            className="text-center text-white text-[19px] font-light font-['Inter'] underline m-8 pb-4"
+          >
             Explore More
           </a>
         </div>

@@ -38,11 +38,15 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="flex flex-col items-center justify-center p-4">
       <div className="w-[482px] h-[35px] px-[22px] py-1.5 bg-white rounded-[32px] shadow flex items-center">
         <input
           type="text"
-          className={`flex-grow bg-transparent focus:outline-none ${query ? 'text-[#373636] text-base font-semibold font-["Inter"]' : "text-[#9b9b9b] text-base font-semibold font-inter"}`}
+          className={`flex-grow bg-transparent focus:outline-none ${
+            query
+              ? 'text-[#373636] text-base font-semibold font-["Inter"]'
+              : "text-[#9b9b9b] text-base font-semibold font-inter"
+          }`}
           placeholder="Search Topic..."
           value={query}
           onChange={handleInputChange}
