@@ -75,6 +75,29 @@ function Home() {
         </div>
       </div>
 
+      <div className="flex flex-col min-h-screen bg-page-three bg-cover bg-center p-6">
+        <div className="flex flex-grow flex-col items-center justify-center mx-12 my-12">
+          <div className="w-3/4 flex flex-grow flex-col items-start justify-center">
+            <div className="w-[1014px] text-white text-[71px] font-extrabold font-playfair leading-[67.45px] mb-4">
+              Contact Us
+            </div>
+            <div className="w-full text-white text-[19px] font-light font-['Inter'] leading-[37px] mt-8">
+              Please note, you will need a referral from your Family Doctor to
+              be referred to Dr. Mammoliti for a consultation. The consultation
+              and ongoing care are covered by OHIP (your health card) but not
+              the NO SHOW FEE, LATE FEE or other non-insured services (forms,
+              notes etc). AT THIS TIME REFERRALS ARE SEEN ONLY WHEN THERE ARE
+              LEARNERS PRESENTS FOR TEACHING PURPOSES AND SPECIAL SLOTS ARE
+              CREATED - otherwise referrals are not accepted. REFERRALS ARE
+              ACCEPTED VIA FAX
+            </div>
+          </div>
+        </div>
+        <footer className="bg-gray-800 text-white text-center">
+          <p>Footer Content Here</p>
+        </footer>
+      </div>
+
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
