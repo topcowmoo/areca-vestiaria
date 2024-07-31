@@ -9,6 +9,11 @@ export default {
         "page-one": "url('/src/assets/home-1.png')",
         "page-two": "url('/src/assets/home-2.png')",
       }),
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        playfair: ["Playfair Display", "serif"],
+        urbanist: ["Urbanist", "sans-serif"],
+      },
     },
   },
   plugins: [],

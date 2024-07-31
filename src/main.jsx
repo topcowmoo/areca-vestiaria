@@ -2,8 +2,6 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 
-
-
 import App from './App.jsx';
 // Import pages
 import ADHDResources from './pages/ADHDResources.jsx';
@@ -15,7 +13,9 @@ import AttachmentsAndEmotions from './pages/AttachmentsAndEmotions.jsx';
 import CouplesResources from './pages/CouplesResources.jsx';
 import FAQ from './pages/FAQ.jsx';
 import Error from './pages/Error.jsx';
-
+import Therapy from './pages/Therapy.jsx';
+import PhysicianResources from './pages/PhysicianPatient.jsx'
+import GeneralResources from './pages/GeneralResources.jsx';
 
 
 const router = createBrowserRouter([
@@ -55,6 +55,18 @@ const router = createBrowserRouter([
       {
         path: 'faq',
         element: <FAQ />,
+      },
+      {
+        path: 'therapy',
+        element: <Therapy />,
+      },
+      {
+        path: 'physician-patient-resources',
+        element: <PhysicianResources />,
+      },
+      {
+        path: 'general-resources',
+        element: <GeneralResources />,
       },
     ],
   },
