@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -15,24 +15,19 @@ const Footer = () => {
           <h2 className="text-lg font-bold mb-4 font-['Inter']">Company</h2>
           <ul>
             <li className="mb-1">
-              <a href="#" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
+              <Link to="/about-me" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
                 About Me
-              </a>
+              </Link>
             </li>
             <li className="mb-1">
-              <a href="#" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
-                Services
-              </a>
-            </li>
-            <li className="mb-1">
-              <a href="#" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
+              <Link to="/disclaimer" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
                 Disclaimer
-              </a>
+              </Link>
             </li>
             <li className="mb-1">
-              <a href="#" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
+              <Link to="/faq" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
                 FAQ
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -40,44 +35,44 @@ const Footer = () => {
           <h2 className="text-lg font-bold mb-4 font-['Inter']">Resources</h2>
           <ul>
             <li className="mb-1">
-              <a href="#" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
+              <Link to="/adhd-resources" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
                 ADHD Resources
-              </a>
+              </Link>
             </li>
             <li className="mb-1">
-              <a href="#" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
+              <Link to="/parenting-resources" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
                 Parenting Resources
-              </a>
+              </Link>
             </li>
             <li className="mb-1">
-              <a href="#" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
+              <Link to="/attachments-and-emotions" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
                 Attachment & Emotions
-              </a>
+              </Link>
             </li>
             <li className="mb-1">
-              <a href="#" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
+              <Link to="/couples-resources" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
                 Couple Resources
-              </a>
+              </Link>
             </li>
             <li className="mb-1">
-              <a href="#" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
+              <Link to="/anger-and-shame" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
                 Anger and Shame
-              </a>
+              </Link>
             </li>
             <li className="mb-1">
-              <a href="#" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
+              <Link to="/therapy" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
                 Therapy Resources
-              </a>
+              </Link>
             </li>
             <li className="mb-1">
-              <a href="#" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
+              <Link to="/physician-patient-resources" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
                 Physician Patient Resources
-              </a>
+              </Link>
             </li>
             <li className="mb-1">
-              <a href="#" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
+              <Link to="/general-resources" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
                 General Resources
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -87,6 +82,8 @@ const Footer = () => {
           <p className="text-white text-[15px] font-light font-['Inter']">10 Four Seasons PL</p>
           <p className="text-white text-[15px] font-light font-['Inter']">Suite 1000, Etobicoke,</p>
           <p className="text-white text-[15px] font-light font-['Inter']">ON M9B 6H7</p>
+          <p className="text-white text-[15px] font-light font-['Inter'] mt-4">Phone: (519) 936-3392</p>
+          <p className="text-white text-[15px] font-light font-['Inter']">Fax: (519) 936-3395</p>
           <p className="text-white text-[15px] font-light font-['Inter'] mt-4">Calgary</p>
           <p className="text-white text-[15px] font-light font-['Inter']">1919 Sirocco Dr SW</p>
           <p className="text-white text-[15px] font-light font-['Inter']"> Unit 304</p>
