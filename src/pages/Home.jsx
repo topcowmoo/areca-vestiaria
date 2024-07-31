@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SearchBar from "../components/SearchBar";
+import closeX from "../assets/close.png";
 
 function Home() {
   //modal state for 'Read More' option on Page two
@@ -77,7 +78,10 @@ function Home() {
         </div>
       </div>
       {/* Last Page + Footer */}
-      <div className="flex flex-col min-h-screen bg-page-three bg-cover bg-center p-6">
+      <div
+        id="#contact-page"
+        className="flex flex-col min-h-screen bg-page-three bg-cover bg-center p-6"
+      >
         <div className="flex flex-grow flex-col items-center justify-center mx-12 my-12">
           <div className="w-3/4 flex flex-grow flex-col items-start justify-center">
             <div className="w-[1014px] text-white text-[71px] font-extrabold font-playfair leading-[67.45px] mb-4">
@@ -101,20 +105,31 @@ function Home() {
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
-            <h2 className="text-2xl mb-4">More Information</h2>
-            <p>
-              Detailed information about the services and expertise offered by
-              Dr. Mammoliti and Dr. Eletu, including their backgrounds,
-              specializations, and availability for consultations.
-            </p>
-            <button
+        <div className="fixed inset-0 bg-black bg-opacity-0 backdrop-blur-sm flex items-center justify-center">
+          <div className="relative w-[957px] h-[473px] bg-white/80 bg-opacity-50 rounded-[18px] p-6">
+            <img
+              src={closeX}
+              alt="Close"
               onClick={handleCloseModal}
-              className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-            >
-              Close
-            </button>
+              className="absolute top-4 right-4 cursor-pointer w-8 h-8"
+            />
+
+            <h2 className="text-center text-black text-[71px] font-extrabold font-playfair mb-4">
+              About Us
+            </h2>
+            <div className="bg-white/80 rounded-[18px] mb-4">
+              <p className="text-[#1e1e1e] text-[18px] font-normal font-inter leading-[37px] p-6">
+                Dr. M. Mammoliti is a dedicated psychiatrist specializing in
+                General Adult Psychiatry with a focus on Physician Mental Health
+                and ADHD in adults. She completed her medical education at the
+                University of Ottawa and her psychiatry residency at the
+                University of Western Ontario. Dr. Mammoliti is committed to
+                comprehensive psychiatric care, combining medication management
+                and psychotherapy to optimize patient outcomes. She is also
+                involved in advocacy and education, ensuring her patients
+                receive informed and compassionate care.
+              </p>
+            </div>
           </div>
         </div>
       )}
