@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { collectionData } from "../data/collectionData";
-import searchbar from "../assets/searchbar.png";
+import { IoMdSearch } from "react-icons/io";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
@@ -51,10 +51,8 @@ const SearchBar = () => {
           value={query}
           onChange={handleInputChange}
         />
-        <img
-          className="w-[23px] h-[23px] ml-2"
-          src={searchbar}
-          alt="Search Icon"
+        <IoMdSearch
+          className="w-[23px] h-[23px] ml-2 text-[#9b9b9b]"
         />
       </div>
       {query.length >= 3 && (
