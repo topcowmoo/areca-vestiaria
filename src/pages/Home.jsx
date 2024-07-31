@@ -67,7 +67,7 @@ function Home() {
             </div>
             <button
               onClick={handleOpenModal}
-              className="mt-4 px-4 py-2 bg-white text-white font-inter rounded text-[#161616] hover:text-white hover:bg-[#161616]"
+              className="mt-4 px-4 py-2 bg-white font-inter rounded text-alt hover:text-white hover:bg-alt"
             >
               Read More
             </button>

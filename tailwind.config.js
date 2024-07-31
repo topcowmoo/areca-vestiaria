@@ -14,6 +14,9 @@ export default {
         playfair: ["Playfair Display", "serif"],
         urbanist: ["Urbanist", "sans-serif"],
       },
+      colors: {
+        alt: "#161616",
+      },
     },
   },
   plugins: [],
