@@ -2,6 +2,7 @@ import { useState } from "react";
 import SearchBar from "../components/SearchBar";
 
 function Home() {
+  //modal state for 'Read More' option on Page two
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -13,8 +14,7 @@ function Home() {
   };
 
   return (
-    //Top page
-
+    //Top Page + NavBar
     <div>
       <div className="flex flex-col min-h-screen bg-page-one bg-cover bg-center">
         <div className="flex justify-center">
@@ -40,6 +40,8 @@ function Home() {
           </a>
         </div>
       </div>
+
+      {/* Second Page */}
 
       <div
         id="second-page"
@@ -74,7 +76,7 @@ function Home() {
           </div>
         </div>
       </div>
-
+      {/* Last Page + Footer */}
       <div className="flex flex-col min-h-screen bg-page-three bg-cover bg-center p-6">
         <div className="flex flex-grow flex-col items-center justify-center mx-12 my-12">
           <div className="w-3/4 flex flex-grow flex-col items-start justify-center">
