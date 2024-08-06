@@ -1,9 +1,9 @@
 import { useState } from "react";
+import { IoCloseSharp } from "react-icons/io5";
 import SearchBar from "../components/SearchBar";
-import closeX from "../assets/close.png";
 
 function Home() {
-  //modal state for 'Read More' option on Page two
+  // Modal state for 'Read More' option on Page two
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -15,11 +15,10 @@ function Home() {
   };
 
   return (
-    //Top Page + NavBar
+    // Top Page + NavBar
     <div>
       <div className="flex flex-col min-h-screen bg-page-one bg-cover bg-center">
         <div className="flex justify-center">
-          <h2>**Nav Bar Here**</h2>
         </div>
 
         <div className="flex flex-grow flex-col items-center justify-center">
@@ -77,9 +76,10 @@ function Home() {
           </div>
         </div>
       </div>
+
       {/* Last Page + Footer */}
       <div
-        id="#contact-page"
+        id="contact-page"
         className="flex flex-col min-h-screen bg-page-three bg-cover bg-center p-6"
       >
         <div className="flex flex-grow flex-col items-center justify-center mx-12 my-12">
@@ -104,11 +104,9 @@ function Home() {
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-0 backdrop-blur-sm flex items-center justify-center">
           <div className="relative w-[957px] h-[473px] bg-white/80 bg-opacity-50 rounded-[18px] p-6">
-            <img
-              src={closeX}
-              alt="Close"
+            <IoCloseSharp
+              className="absolute top-4 right-4 cursor-pointer w-8 h-8 text-black"
               onClick={handleCloseModal}
-              className="absolute top-4 right-4 cursor-pointer w-8 h-8"
             />
 
             <h2 className="text-center text-black text-[71px] font-extrabold font-playfair mb-4">

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { collectionData } from "../data/collectionData";
-import tune from "../assets/tune.png";
+import { RiEqualizerFill } from "react-icons/ri";
 
 const FilterBox = () => {
   // State for toggling the visibility of the filter box
@@ -122,16 +122,16 @@ const FilterBox = () => {
     <div>
       {/* Filter button */}
       <div
-        className={`h-[33.95px] px-[9.59px] py-[4.47px] rounded-md border justify-start items-center gap-[7.67px] inline-flex cursor-pointer ${showFilterBox ? "bg-white border-white" : "border-white"}`}
+        className={`h-[33.95px] px-[9.59px] py-[4.47px] rounded-md border justify-start items-center gap-[7.67px] inline-flex cursor-pointer ${
+          showFilterBox ? "bg-white border-white" : "border-white"
+        }`}
         onClick={toggleFilterBox}
       >
         {showFilterBox ? (
           <div className="w-[81.96px] h-[25px] relative flex items-center">
-            <img
+            <RiEqualizerFill
               className="w-[24.29px] h-[24.29px] left-0 absolute"
-              src={tune}
-              alt="Filter"
-              style={{ filter: showFilterBox ? "invert(1)" : "invert(0)" }}
+              style={{ color: "black" }} // Set the icon color to black when the filter box is open
             />
             <div className="left-[31.96px] absolute text-black text-xl font-medium font-['Inter']">
               Filter
@@ -140,7 +140,10 @@ const FilterBox = () => {
           </div>
         ) : (
           <>
-            <img className="w-[24.29px] h-[24.29px]" src={tune} alt="Filter" />
+            <RiEqualizerFill
+              className="w-[24.29px] h-[24.29px]"
+              style={{ color: "white" }} // Set the icon color to white when the filter box is closed
+            />
             <div className="text-white text-xl font-medium font-['Inter']">
               Filter
             </div>

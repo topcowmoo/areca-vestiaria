@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react"; // Importing useState and useMemo hooks from React
 import { collectionData } from "../data/collectionData"; // Importing collectionData from the data file
-import tune from "../assets/tune.png"; // Importing the filter icon
+import { RiEqualizerFill } from "react-icons/ri"; // Importing the filter icon
 
 // Map of subcategory labels to keys
 const subcategoryLabels = {
@@ -86,11 +86,9 @@ const ParentingFilterBox = () => {
       >
         {showFilterBox ? (
           <div className="w-[81.96px] h-[25px] relative flex items-center">
-            <img
+            <RiEqualizerFill
               className="w-[24.29px] h-[24.29px] left-0 absolute"
-              src={tune}
-              alt="Filter"
-              style={{ filter: showFilterBox ? "invert(1)" : "invert(0)" }} // Invert the filter icon color based on showFilterBox state
+              style={{ color: "black" }} // Set the icon color to black when the filter box is open
             />
             <div className="left-[31.96px] absolute text-black text-xl font-medium font-['Inter']">
               Filter
@@ -99,7 +97,10 @@ const ParentingFilterBox = () => {
           </div>
         ) : (
           <>
-            <img className="w-[24.29px] h-[24.29px]" src={tune} alt="Filter" />
+            <RiEqualizerFill
+              className="w-[24.29px] h-[24.29px]"
+              style={{ color: "white" }} // Set the icon color to white when the filter box is closed
+            />
             <div className="text-white text-xl font-medium font-['Inter']">
               Filter
             </div>
