@@ -5,11 +5,15 @@ export default {
   darkModeSelector: ".dark-mode",
   theme: {
     extend: {
-      backgroundImage: (theme) => ({
+      backgroundImage: {
         "page-one": "url('/src/assets/home-1.png')",
         "page-two": "url('/src/assets/home-2.png')",
         "page-three": "url('/src/assets/home-3.png')",
-      }),
+        "card-one": "url('/src/assets/card1.png')",
+        "card-two": "url('/src/assets/card2.png')",
+        "card-three": "url('/src/assets/card3.png')",
+        "card-four": "url('/src/assets/card4.png')",
+      },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         playfair: ["Playfair Display", "serif"],
