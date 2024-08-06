@@ -1,121 +1,74 @@
-import { useState, useEffect, useCallback } from "react";
-import { collectionData } from "../data/collectionData";
-import { RiEqualizerFill } from "react-icons/ri";
+import { useState, useEffect, useCallback } from "react"; // Importing necessary hooks from React
+import { collectionData } from "../data/collectionData"; // Importing collection data from a data file
+import { RiEqualizerFill } from "react-icons/ri"; // Importing an icon from react-icons library
 
 const FilterBox = () => {
   // State for toggling the visibility of the filter box
   const [showFilterBox, setShowFilterBox] = useState(false);
 
-  // States for resource format checkboxes
-  const [articleChecked, setArticleChecked] = useState(false);
-  const [videoChecked, setVideoChecked] = useState(false);
-  const [bookChecked, setBookChecked] = useState(false);
+  // Single state object for all checkboxes
+  const [filters, setFilters] = useState({
+    articleChecked: false,
+    videoChecked: false,
+    bookChecked: false,
+    adhdChecked: false,
+    angerAndShameChecked: false,
+    parentingChecked: false,
+    attachmentAndEmotionsChecked: false,
+    couplesChecked: false,
+    therapyChecked: false,
+    physicianPatientChecked: false,
+    generalChecked: false,
+  });
 
-  // States for resource category checkboxes
-  const [adhdChecked, setAdhdChecked] = useState(false);
-  const [angerAndShameChecked, setAngerAndShameChecked] = useState(false);
-  const [parentingChecked, setParentingChecked] = useState(false);
-  const [attachmentAndEmotionsChecked, setAttachmentAndEmotionsChecked] = useState(false);
-  const [couplesChecked, setCouplesChecked] = useState(false);
-  const [therapyChecked, setTherapyChecked] = useState(false);
-  const [physicianPatientChecked, setPhysicianPatientChecked] = useState(false);
-  const [generalChecked, setGeneralChecked] = useState(false);
+  // Function to handle checkbox changes
+  const handleCheckboxChange = (e) => {
+    const { name, checked } = e.target; // Destructure name and checked properties from the event target
+    setFilters((prevFilters) => ({
+      ...prevFilters, // Spread the previous filters state
+      [name]: checked, // Update the specific checkbox state
+    }));
+  };
 
   // Function to filter collection data based on selected checkboxes
   const filterData = useCallback(() => {
-    let filteredData = collectionData;
+    let filteredData = collectionData; // Initialize filteredData with all collection data
 
     // Filter by resource format
-    if (articleChecked || videoChecked || bookChecked) {
-      const kinds = [];
-      if (articleChecked) kinds.push("Article");
-      if (videoChecked) kinds.push("Video");
-      if (bookChecked) kinds.push("Book");
-      filteredData = filteredData.filter((item) => kinds.includes(item.kind));
+    const kinds = []; // Initialize an empty array for kinds
+    if (filters.articleChecked) kinds.push("Article"); // Add "Article" to kinds if articleChecked is true
+    if (filters.videoChecked) kinds.push("Video"); // Add "Video" to kinds if videoChecked is true
+    if (filters.bookChecked) kinds.push("Book"); // Add "Book" to kinds if bookChecked is true
+
+    if (kinds.length > 0) { // If there are any kinds selected
+      filteredData = filteredData.filter((item) => kinds.includes(item.kind)); // Filter the data by kinds
     }
 
     // Filter by resource category
-    if (
-      adhdChecked ||
-      angerAndShameChecked ||
-      parentingChecked ||
-      attachmentAndEmotionsChecked ||
-      couplesChecked ||
-      therapyChecked ||
-      physicianPatientChecked ||
-      generalChecked
-    ) {
-      const categories = [];
-      if (adhdChecked) categories.push("ADHD");
-      if (angerAndShameChecked) categories.push("Anger & Shame");
-      if (parentingChecked) categories.push("Parenting Resources");
-      if (attachmentAndEmotionsChecked) categories.push("Attachment & Emotions");
-      if (couplesChecked) categories.push("Couples Resources");
-      if (therapyChecked) categories.push("Therapy");
-      if (physicianPatientChecked) categories.push("Physician Patient Resources");
-      if (generalChecked) categories.push("General Resources");
+    const categories = []; // Initialize an empty array for categories
+    if (filters.adhdChecked) categories.push("ADHD"); // Add "ADHD" to categories if adhdChecked is true
+    if (filters.angerAndShameChecked) categories.push("Anger & Shame"); // Add "Anger & Shame" to categories if angerAndShameChecked is true
+    if (filters.parentingChecked) categories.push("Parenting Resources"); // Add "Parenting Resources" to categories if parentingChecked is true
+    if (filters.attachmentAndEmotionsChecked) categories.push("Attachment & Emotions"); // Add "Attachment & Emotions" to categories if attachmentAndEmotionsChecked is true
+    if (filters.couplesChecked) categories.push("Couples Resources"); // Add "Couples Resources" to categories if couplesChecked is true
+    if (filters.therapyChecked) categories.push("Therapy"); // Add "Therapy" to categories if therapyChecked is true
+    if (filters.physicianPatientChecked) categories.push("Physician Patient Resources"); // Add "Physician Patient Resources" to categories if physicianPatientChecked is true
+    if (filters.generalChecked) categories.push("General Resources"); // Add "General Resources" to categories if generalChecked is true
 
-      filteredData = filteredData.filter((item) => categories.includes(item.category));
+    if (categories.length > 0) { // If there are any categories selected
+      filteredData = filteredData.filter((item) => categories.includes(item.category)); // Filter the data by categories
     }
 
-    // Log the filtered data for now
-    console.log(filteredData);
-  }, [
-    articleChecked,
-    videoChecked,
-    bookChecked,
-    adhdChecked,
-    angerAndShameChecked,
-    parentingChecked,
-    attachmentAndEmotionsChecked,
-    couplesChecked,
-    therapyChecked,
-    physicianPatientChecked,
-    generalChecked,
-  ]);
+    console.log(filteredData); // Log the filtered data for now
+  }, [filters]); // Dependency array for useCallback to ensure it only updates when filters change
 
-  // Use effect to call filterData when any of the dependencies change
   useEffect(() => {
-    filterData();
-  }, [
-    filterData,
-    articleChecked,
-    videoChecked,
-    bookChecked,
-    adhdChecked,
-    angerAndShameChecked,
-    parentingChecked,
-    attachmentAndEmotionsChecked,
-    couplesChecked,
-    therapyChecked,
-    physicianPatientChecked,
-    generalChecked,
-  ]);
-
-  // Handler for resource format checkbox changes
-  const handleKindCheckboxChange = (e) => {
-    const { value, checked } = e.target;
-    if (value === "Article") setArticleChecked(checked);
-    if (value === "Video") setVideoChecked(checked);
-    if (value === "Book") setBookChecked(checked);
-  };
-
-  // Handler for resource category checkbox changes
-  const handleCategoryCheckboxChange = (e) => {
-    const { value, checked } = e.target;
-    if (value === "ADHD") setAdhdChecked(checked);
-    if (value === "Anger & Shame") setAngerAndShameChecked(checked);
-    if (value === "Parenting Resources") setParentingChecked(checked);
-    if (value === "Attachment & Emotions") setAttachmentAndEmotionsChecked(checked);
-    if (value === "Couples Resources") setCouplesChecked(checked);
-    if (value === "Therapy") setTherapyChecked(checked);
-    if (value === "Physician Patient Resources") setPhysicianPatientChecked(checked);
-    if (value === "General Resources") setGeneralChecked(checked);
-  };
+    filterData(); // Call filterData whenever the component mounts or filters change
+  }, [filterData]); // Dependency array for useEffect to ensure it only updates when filterData changes
 
   // Toggle the visibility of the filter box
   const toggleFilterBox = () => {
-    setShowFilterBox((prevState) => !prevState);
+    setShowFilterBox((prevState) => !prevState); // Toggle the state of showFilterBox
   };
 
   return (
@@ -125,9 +78,9 @@ const FilterBox = () => {
         className={`h-[33.95px] px-[9.59px] py-[4.47px] rounded-md border justify-start items-center gap-[7.67px] inline-flex cursor-pointer ${
           showFilterBox ? "bg-white border-white" : "border-white"
         }`}
-        onClick={toggleFilterBox}
+        onClick={toggleFilterBox} // Toggle filter box visibility on click
       >
-        {showFilterBox ? (
+        {showFilterBox ? ( // If filter box is visible
           <div className="w-[81.96px] h-[25px] relative flex items-center">
             <RiEqualizerFill
               className="w-[24.29px] h-[24.29px] left-0 absolute"
@@ -138,7 +91,7 @@ const FilterBox = () => {
             </div>
             <div className="w-[101.14px] h-[33.95px] left-[-19px] top-[-4px] absolute rounded-md" />
           </div>
-        ) : (
+        ) : ( // If filter box is not visible
           <>
             <RiEqualizerFill
               className="w-[24.29px] h-[24.29px]"
@@ -150,7 +103,7 @@ const FilterBox = () => {
           </>
         )}
       </div>
-      {showFilterBox && (
+      {showFilterBox && ( // If filter box is visible, render filter options
         <div className="mt-4">
           {/* Filter options */}
           <div className="w-[282px] px-4 pt-7 pb-[69px] bg-[#e8e8e8]/20 rounded-[10px] border border-white backdrop-blur-[24.90px] flex-col justify-start items-start gap-[15px] inline-flex">
@@ -169,9 +122,9 @@ const FilterBox = () => {
                 <div className="justify-start items-start gap-2.5 flex">
                   <input
                     type="checkbox"
-                    value="Article"
-                    checked={articleChecked}
-                    onChange={handleKindCheckboxChange}
+                    name="articleChecked"
+                    checked={filters.articleChecked} // Bind to articleChecked state
+                    onChange={handleCheckboxChange} // Handle change event
                     className="custom-checkbox"
                   />
                 </div>
@@ -184,9 +137,9 @@ const FilterBox = () => {
                 <div className="justify-start items-start gap-2.5 flex">
                   <input
                     type="checkbox"
-                    value="Video"
-                    checked={videoChecked}
-                    onChange={handleKindCheckboxChange}
+                    name="videoChecked"
+                    checked={filters.videoChecked} // Bind to videoChecked state
+                    onChange={handleCheckboxChange} // Handle change event
                     className="custom-checkbox"
                   />
                 </div>
@@ -199,9 +152,9 @@ const FilterBox = () => {
                 <div className="justify-start items-start gap-2.5 flex">
                   <input
                     type="checkbox"
-                    value="Book"
-                    checked={bookChecked}
-                    onChange={handleKindCheckboxChange}
+                    name="bookChecked"
+                    checked={filters.bookChecked} // Bind to bookChecked state
+                    onChange={handleCheckboxChange} // Handle change event
                     className="custom-checkbox"
                   />
                 </div>
@@ -221,9 +174,9 @@ const FilterBox = () => {
                 <div className="justify-start items-start gap-2.5 flex">
                   <input
                     type="checkbox"
-                    value="ADHD"
-                    checked={adhdChecked}
-                    onChange={handleCategoryCheckboxChange}
+                    name="adhdChecked"
+                    checked={filters.adhdChecked} // Bind to adhdChecked state
+                    onChange={handleCheckboxChange} // Handle change event
                     className="custom-checkbox"
                   />
                 </div>
@@ -236,9 +189,9 @@ const FilterBox = () => {
                 <div className="justify-start items-start gap-2.5 flex">
                   <input
                     type="checkbox"
-                    value="Anger & Shame"
-                    checked={angerAndShameChecked}
-                    onChange={handleCategoryCheckboxChange}
+                    name="angerAndShameChecked"
+                    checked={filters.angerAndShameChecked} // Bind to angerAndShameChecked state
+                    onChange={handleCheckboxChange} // Handle change event
                     className="custom-checkbox"
                   />
                 </div>
@@ -251,9 +204,9 @@ const FilterBox = () => {
                 <div className="justify-start items-start gap-2.5 flex">
                   <input
                     type="checkbox"
-                    value="Parenting Resources"
-                    checked={parentingChecked}
-                    onChange={handleCategoryCheckboxChange}
+                    name="parentingChecked"
+                    checked={filters.parentingChecked} // Bind to parentingChecked state
+                    onChange={handleCheckboxChange} // Handle change event
                     className="custom-checkbox"
                   />
                 </div>
@@ -266,9 +219,9 @@ const FilterBox = () => {
                 <div className="justify-start items-start gap-2.5 flex">
                   <input
                     type="checkbox"
-                    value="Attachment & Emotions"
-                    checked={attachmentAndEmotionsChecked}
-                    onChange={handleCategoryCheckboxChange}
+                    name="attachmentAndEmotionsChecked"
+                    checked={filters.attachmentAndEmotionsChecked} // Bind to attachmentAndEmotionsChecked state
+                    onChange={handleCheckboxChange} // Handle change event
                     className="custom-checkbox"
                   />
                 </div>
@@ -281,9 +234,9 @@ const FilterBox = () => {
                 <div className="justify-start items-start gap-2.5 flex">
                   <input
                     type="checkbox"
-                    value="Couples Resources"
-                    checked={couplesChecked}
-                    onChange={handleCategoryCheckboxChange}
+                    name="couplesChecked"
+                    checked={filters.couplesChecked} // Bind to couplesChecked state
+                    onChange={handleCheckboxChange} // Handle change event
                     className="custom-checkbox"
                   />
                 </div>
@@ -296,9 +249,9 @@ const FilterBox = () => {
                 <div className="justify-start items-start gap-2.5 flex">
                   <input
                     type="checkbox"
-                    value="Therapy"
-                    checked={therapyChecked}
-                    onChange={handleCategoryCheckboxChange}
+                    name="therapyChecked"
+                    checked={filters.therapyChecked} // Bind to therapyChecked state
+                    onChange={handleCheckboxChange} // Handle change event
                     className="custom-checkbox"
                   />
                 </div>
@@ -311,9 +264,9 @@ const FilterBox = () => {
                 <div className="justify-start items-start gap-2.5 flex">
                   <input
                     type="checkbox"
-                    value="Physician Patient Resources"
-                    checked={physicianPatientChecked}
-                    onChange={handleCategoryCheckboxChange}
+                    name="physicianPatientChecked"
+                    checked={filters.physicianPatientChecked} // Bind to physicianPatientChecked state
+                    onChange={handleCheckboxChange} // Handle change event
                     className="custom-checkbox"
                   />
                 </div>
@@ -326,9 +279,9 @@ const FilterBox = () => {
                 <div className="justify-start items-start gap-2.5 flex">
                   <input
                     type="checkbox"
-                    value="General Resources"
-                    checked={generalChecked}
-                    onChange={handleCategoryCheckboxChange}
+                    name="generalChecked"
+                    checked={filters.generalChecked} // Bind to generalChecked state
+                    onChange={handleCheckboxChange} // Handle change event
                     className="custom-checkbox"
                   />
                 </div>
@@ -336,9 +289,9 @@ const FilterBox = () => {
                   General Resources
                 </div>
               </div>
-              </div>
             </div>
           </div>
+        </div>
       )}
     </div>
   );
