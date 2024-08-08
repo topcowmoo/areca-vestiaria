@@ -1,8 +1,9 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
 import { collectionData } from "../data/collectionData";
 import { IoMdSearch } from "react-icons/io";
 
-const SearchBar = () => {
+const SearchBar = ({ onSearchSubmit, category }) => {
   const [query, setQuery] = useState("");
   const [filteredData, setFilteredData] = useState([]);
 
@@ -15,9 +16,21 @@ const SearchBar = () => {
     } else {
       const results = collectionData.filter(
         (item) =>
-          item.title && item.title.toLowerCase().includes(value.toLowerCase())
+          item.title && item.title.toLowerCase().includes(value.toLowerCase()) &&
+          (!category || item.category === category)
       );
       setFilteredData(results);
+    }
+  };
+
+  const handleSearchSubmit = () => {
+    onSearchSubmit(query);
+    setFilteredData([]);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSearchSubmit();
     }
   };
 
@@ -50,9 +63,11 @@ const SearchBar = () => {
           placeholder="Search Topic..."
           value={query}
           onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
         />
         <IoMdSearch
-          className="w-[23px] h-[23px] ml-2 text-[#9b9b9b]"
+          className="w-[23px] h-[23px] ml-2 text-[#9b9b9b] cursor-pointer"
+          onClick={handleSearchSubmit}
         />
       </div>
       {query.length >= 3 && (
@@ -90,6 +105,12 @@ const SearchBar = () => {
       )}
     </div>
   );
+};
+
+// Add PropTypes validation
+SearchBar.propTypes = {
+  onSearchSubmit: PropTypes.func.isRequired,
+  category: PropTypes.string,
 };
 
 export default SearchBar;

@@ -36,3 +36,23 @@ body, html {
 html {
   scroll-behavior: smooth;
 }
+
+/* In your global CSS file (e.g., styles.css) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 13px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #424242;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
