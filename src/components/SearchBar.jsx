@@ -51,9 +51,7 @@ const SearchBar = () => {
           value={query}
           onChange={handleInputChange}
         />
-        <IoMdSearch
-          className="w-[23px] h-[23px] ml-2 text-[#9b9b9b]"
-        />
+        <IoMdSearch className="w-[23px] h-[23px] ml-2 text-[#9b9b9b]" />
       </div>
       {query.length >= 3 && (
         <div className="w-[482px] bg-white rounded-[10px] mt-4 p-4">

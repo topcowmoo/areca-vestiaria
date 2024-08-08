@@ -17,9 +17,8 @@ function Home() {
   return (
     // Top Page + NavBar
     <div>
-      <div className="flex flex-col min-h-screen bg-page-one bg-cover bg-center">
-        <div className="flex justify-center"></div>
-
+      <div className=""></div>
+      <div className="relative flex flex-col min-h-screen bg-page-one bg-cover bg-center">
         <div className="flex flex-grow flex-col items-center justify-center">
           <div className="w-[261px]">
             <h1 className="w-full text-center text-white text-[90.17px] font-extrabold font-playfair mb-2">
@@ -29,8 +28,10 @@ function Home() {
               The Wellness Hub
             </h4>
           </div>
+          <div className="relative w-full flex justify-center">
+            <SearchBar className="absolute top-0 z-50" />
+          </div>
 
-          <SearchBar />
           <a
             href="#second-page"
             className="text-center text-white text-[19px] font-light font-['Inter'] underline m-8 pb-4"
