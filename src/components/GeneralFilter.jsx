@@ -2,7 +2,7 @@ import { useState, useMemo } from "react"; // Importing useState and useMemo hoo
 import { collectionData } from "../data/collectionData"; // Importing collectionData from the data file
 import { RiEqualizerFill } from "react-icons/ri"; // Importing the filter icon
 
-const ParentingFilterBox = () => {
+const GeneralFilter = ({ currentPage }) => {
   const [showFilterBox, setShowFilterBox] = useState(false); // State to manage the visibility of the filter box
 
   // Combined state to manage checked state of resource format checkboxes
@@ -13,20 +13,20 @@ const ParentingFilterBox = () => {
   });
 
   // useMemo is used here to optimize the performance of filtering the data.
-  // It will recompute the filtered data only when `checkedKinds` change.
+  // It will recompute the filtered data only when `checkedKinds` or `currentPage` change.
   const filteredData = useMemo(() => {
     const kinds = Object.keys(checkedKinds).filter((kind) => checkedKinds[kind]); // Get the kinds that are checked
 
     // Early exit if no filters are active
     if (kinds.length === 0) {
-      return collectionData.filter((item) => item.category === "Parenting Resources"); // Return all parenting resources if no filters are selected
+      return collectionData.filter((item) => item.category === currentPage); // Return all resources for the current page if no filters are selected
     }
 
     return collectionData.filter((item) => {
       const kindMatch = kinds.length > 0 ? kinds.includes(item.kind) : true; // Check if the item kind matches the selected kinds
-      return item.category === "Parenting Resources" && kindMatch; // Return items that match the category and kind
+      return item.category === currentPage && kindMatch; // Return items that match the category and kind
     });
-  }, [checkedKinds]); // Recompute filteredData when checkedKinds change
+  }, [checkedKinds, currentPage]); // Recompute filteredData when checkedKinds or currentPage change
 
   console.log(filteredData);
 
@@ -103,4 +103,4 @@ const ParentingFilterBox = () => {
   );  
 };
 
-export default ParentingFilterBox;
+export default GeneralFilter;
