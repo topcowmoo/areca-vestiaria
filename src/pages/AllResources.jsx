@@ -6,7 +6,7 @@ function AllResources() {
   return (
     // Top Page + NavBar
     <div>
-      <div className="flex flex-col h-[60vh] bg-page-one bg-cover bg-center">
+      <div className="flex flex-col h-[70vh] bg-resource-image bg-cover bg-center">
         <div className="flex justify-center"></div>
 
         <div className="flex flex-grow flex-col items-center justify-center">
@@ -20,7 +20,7 @@ function AllResources() {
         </div>
       </div>
       <div className="px-8 md:px-32 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 justify-items-center">
           {categoryData.map((card, index) => (
             <ResourceCard
               key={index}

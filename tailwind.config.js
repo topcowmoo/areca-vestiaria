@@ -13,6 +13,7 @@ export default {
         "card-two": "url('/src/assets/card2.png')",
         "card-three": "url('/src/assets/card3.png')",
         "card-four": "url('/src/assets/card4.png')",
+        "resource-image": "url('/src/assets/Resources1.png')",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
