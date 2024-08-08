@@ -18,8 +18,7 @@ function Home() {
     // Top Page + NavBar
     <div>
       <div className="flex flex-col min-h-screen bg-page-one bg-cover bg-center">
-        <div className="flex justify-center">
-        </div>
+        <div className="flex justify-center"></div>
 
         <div className="flex flex-grow flex-col items-center justify-center">
           <div className="w-[261px]">
