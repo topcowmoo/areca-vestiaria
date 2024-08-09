@@ -15,7 +15,7 @@ function Home() {
   };
 
   return (
-    // Top Page + NavBar
+    // Top Page
     <div>
       <div className="flex flex-col min-h-screen bg-page-one bg-cover bg-center">
         <div className="flex justify-center"></div>
