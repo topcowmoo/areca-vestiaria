@@ -41,4 +41,10 @@ export const categoryData = [
     image: "bg-card-three",
     link: "/physician-patient-resources",
   },
+  {
+    id: 8,
+    title: "General Resources",
+    image: "bg-card-three",
+    link: "/general-resources",
+  },
 ];
