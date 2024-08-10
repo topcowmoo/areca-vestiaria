@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const ResourceCard = ({ title, image, link }) => {
   return (
@@ -9,9 +10,9 @@ const ResourceCard = ({ title, image, link }) => {
         <h2 className="text-white text-[60px] font-playfair text-left">
           {title}
         </h2>
-        <a href={link} className="text-white text-lg underline text-left py-4">
+        <Link to={link} className="text-white text-lg underline text-left py-4">
           View More
-        </a>
+        </Link>
       </div>
     </div>
   );
