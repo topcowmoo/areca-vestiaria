@@ -1,8 +1,15 @@
-import { useState, useMemo } from "react"; // Importing useState and useMemo hooks from React
-import { collectionData } from "../data/collectionData"; // Importing collectionData from the data file
-import { RiEqualizerFill } from "react-icons/ri"; // Importing the filter icon
+import { useState, useMemo, useEffect } from "react"; 
+// Import useState, useMemo, and useEffect hooks from React for state management, memoization, and side effects.
 
-// Map of subcategory labels to keys
+import PropTypes from "prop-types";
+// Import PropTypes for type-checking props passed to the component.
+
+import { collectionData } from "../data/collectionData";
+// Import the collectionData array from the specified data file.
+
+import { RiEqualizerFill } from "react-icons/ri";
+// Import the RiEqualizerFill icon from the react-icons library for the filter icon.
+
 const subcategoryLabels = {
   "Local Services": "Local Services",
   "Sex Discussion": "Sex Discussion",
@@ -10,16 +17,18 @@ const subcategoryLabels = {
   Bullying: "Bullying",
   General: "General",
 };
+// Define a mapping of subcategory keys to their display labels.
 
-const ParentingFilterBox = () => {
-  const [showFilterBox, setShowFilterBox] = useState(false); // State to manage the visibility of the filter box
+const ParentingFilterBox = ({ currentPage, setFilteredData }) => {
+  const [showFilterBox, setShowFilterBox] = useState(false);
+  // State to control the visibility of the filter box.
 
-  // Combined state to manage checked state of resource format checkboxes
   const [checkedKinds, setCheckedKinds] = useState({
     Article: false,
     Video: false,
     Book: false,
   });
+  // State to track which resource formats (Article, Video, Book) are selected.
 
   const [selectedSubcategories, setSelectedSubcategories] = useState({
     "Local Services": false,
@@ -28,67 +37,86 @@ const ParentingFilterBox = () => {
     Bullying: false,
     General: false,
   });
+  // State to track which subcategories are selected.
 
-  // useMemo is used here to optimize the performance of filtering the data.
-  // It will recompute the filtered data only when `checkedKinds` or `selectedSubcategories` change.
   const filteredData = useMemo(() => {
-    const kinds = Object.keys(checkedKinds).filter((kind) => checkedKinds[kind]); // Get the kinds that are checked
+    // Memoize the filtering logic to avoid unnecessary recalculations.
+
+    console.log("Filtering data with the following criteria:");
+    console.log("Checked Kinds:", checkedKinds);
+    console.log("Selected Subcategories:", selectedSubcategories);
+
+    const kinds = Object.keys(checkedKinds).filter((kind) => checkedKinds[kind]);
+    // Get an array of selected kinds.
+
     const activeSubcategories = Object.keys(selectedSubcategories).filter(
       (key) => selectedSubcategories[key]
-    ); // Get the subcategories that are selected
+    );
+    // Get an array of selected subcategories.
 
-    // Early exit if no filters are active
     if (kinds.length === 0 && activeSubcategories.length === 0) {
-      return collectionData.filter((item) => item.category === "Parenting Resources"); // Return all parenting resources if no filters are selected
+      // If no filters are applied, return all data for the current page.
+      console.log("No filters applied, returning all data for:", currentPage);
+      return collectionData.filter((item) => item.category === currentPage);
     }
 
-    return collectionData.filter((item) => {
-      const kindMatch = kinds.length > 0 ? kinds.includes(item.kind) : true; // Check if the item kind matches the selected kinds
+    // Filter the data based on selected kinds and subcategories.
+    const filtered = collectionData.filter((item) => {
+      const kindMatch = kinds.length > 0 ? kinds.includes(item.kind) : true;
       const subCategoryMatch =
         activeSubcategories.length > 0
           ? activeSubcategories.some((subCategory) =>
               item.subCategory.includes(subcategoryLabels[subCategory])
             )
-          : true; // Check if the item subcategory matches the selected subcategories
-      return item.category === "Parenting Resources" && kindMatch && subCategoryMatch; // Return items that match the category, kind, and subcategory
+          : true;
+      return item.category === currentPage && kindMatch && subCategoryMatch;
     });
-  }, [checkedKinds, selectedSubcategories]); // Recompute filteredData when checkedKinds or selectedSubcategories change
-  console.log(filteredData);
 
-  // Handle checkbox change for resource format
+    console.log("Filtered Data:", filtered);
+    return filtered;
+  }, [checkedKinds, selectedSubcategories, currentPage]);
+  // Dependencies: recalculate the filtered data whenever checkedKinds, selectedSubcategories, or currentPage changes.
+
+  useEffect(() => {
+    // Effect to update the parent component's filtered data when filteredData changes.
+    console.log("Setting filtered data in ParentingResources:", filteredData);
+    setFilteredData(filteredData); 
+  }, [filteredData, setFilteredData]);
+
   const handleKindCheckboxChange = (e) => {
+    // Handler for updating the checked kinds state when a checkbox is toggled.
     const { value, checked } = e.target;
-    setCheckedKinds((prev) => ({ ...prev, [value]: checked })); // Update checkedKinds state based on the checkbox value and checked status
+    setCheckedKinds((prev) => ({ ...prev, [value]: checked }));
   };
 
-  // Handle checkbox change for subcategories
   const handleSubcategoryCheckboxChange = (e) => {
+    // Handler for updating the selected subcategories state when a checkbox is toggled.
     const { value, checked } = e.target;
     setSelectedSubcategories((prev) => ({
       ...prev,
       [value]: checked,
-    })); // Update selectedSubcategories state based on the checkbox value and checked status
+    }));
   };
 
-  // Toggle the visibility of the filter box
   const toggleFilterBox = () => {
-    setShowFilterBox((prevState) => !prevState); // Toggle the state of showFilterBox
+    // Toggle the visibility of the filter box.
+    setShowFilterBox((prevState) => !prevState);
   };
 
   return (
     <div>
-      {/* Filter button */}
       <div
         className={`h-[33.95px] px-[9.59px] py-[4.47px] rounded-md border justify-start items-center gap-[7.67px] inline-flex cursor-pointer ${
           showFilterBox ? "bg-white border-white" : "border-white"
         }`}
         onClick={toggleFilterBox}
       >
+        {/* The clickable area that toggles the filter box visibility. */}
         {showFilterBox ? (
           <div className="w-[81.96px] h-[25px] relative flex items-center">
             <RiEqualizerFill
               className="w-[24.29px] h-[24.29px] left-0 absolute"
-              style={{ color: "black" }} // Set the icon color to black when the filter box is open
+              style={{ color: "black" }} 
             />
             <div className="left-[31.96px] absolute text-black text-xl font-medium font-['Inter']">
               Filter
@@ -99,7 +127,7 @@ const ParentingFilterBox = () => {
           <>
             <RiEqualizerFill
               className="w-[24.29px] h-[24.29px]"
-              style={{ color: "white" }} // Set the icon color to white when the filter box is closed
+              style={{ color: "white" }} 
             />
             <div className="text-white text-xl font-medium font-['Inter']">
               Filter
@@ -109,7 +137,6 @@ const ParentingFilterBox = () => {
       </div>
       {showFilterBox && (
         <div className="mt-4">
-          {/* Filter options */}
           <div className="w-[282px] px-4 pt-7 pb-[69px] bg-[#e8e8e8]/20 rounded-[10px] border border-white backdrop-blur-[24.90px] flex-col justify-start items-start gap-[15px] inline-flex">
             <div className="text-white text-[32px] font-semibold font-['Inter']">Filter</div>
             <hr className="border-t border-white w-full" />
@@ -156,4 +183,11 @@ const ParentingFilterBox = () => {
   );  
 };
 
+ParentingFilterBox.propTypes = {
+  currentPage: PropTypes.string.isRequired,
+  setFilteredData: PropTypes.func.isRequired,
+};
+// Define propTypes to ensure that the correct types of props are passed to the component.
+
 export default ParentingFilterBox;
+// Export the ParentingFilterBox component as the default export.
