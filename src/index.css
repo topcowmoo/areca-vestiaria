@@ -39,7 +39,7 @@ html {
 
 /* In your global CSS file (e.g., styles.css) */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 13px;
+  width: 17px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
