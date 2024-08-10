@@ -1,11 +1,17 @@
-import ParentingFilterBox from '../components/ParentingFilterBox';
+import { useState } from "react";
+import ParentingFilterBox from "../components/ParentingFilterBox";
+import Directory from "../components/Directory";
 
-function parentingResources() {
+function ParentingResources() {
+  const [filteredData, setFilteredData] = useState([]);
+  const category = "Parenting Resources";
+
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900">
-        <ParentingFilterBox />
-      </div>
-  )
+    <div className="flex items-center justify-center min-h-screen bg-black">
+      <ParentingFilterBox currentPage={category} setFilteredData={setFilteredData} />
+      <Directory filteredData={filteredData} />
+    </div>
+  );
 }
 
-export default parentingResources
+export default ParentingResources;
