@@ -1,29 +1,43 @@
 import { useState, useMemo, useEffect } from "react"; 
+// Import useState, useMemo, and useEffect hooks from React for managing state, memoizing expensive calculations, and handling side effects.
+
 import PropTypes from "prop-types"; 
+// Import PropTypes for type-checking props passed to the component.
+
 import { collectionData } from "../data/collectionData"; 
+// Import the collectionData array from the specified data file.
+
 import { RiEqualizerFill } from "react-icons/ri"; 
+// Import the RiEqualizerFill icon from react-icons library for the filter icon.
 
 const subcategoryLabels = {
   Guideline: "Guideline",
   General: "General",
   "Borderline Personality Disorder": "Borderline Personality Disorder",
 };
+// Define labels for subcategories to be used in the filter.
 
 const GeneralResourceFilterBox = ({ currentPage, setFilteredData }) => {
   const [showFilterBox, setShowFilterBox] = useState(false); 
+  // State to control the visibility of the filter box.
+
   const [checkedKinds, setCheckedKinds] = useState({
     Article: false,
     Video: false,
     Book: false,
   });
+  // State to track the selected kinds (e.g., Article, Video, Book) for filtering.
 
   const [selectedSubcategories, setSelectedSubcategories] = useState({
     "Borderline Personality Disorder": false,
     Guideline: false,
     General: false,
   });
+  // State to track the selected subcategories for filtering.
 
   const filteredData = useMemo(() => {
+    // Memoize the filtering logic to avoid recalculating unless dependencies change.
+    
     console.log("Filtering data with the following criteria:");
     console.log("Checked Kinds:", checkedKinds);
     console.log("Selected Subcategories:", selectedSubcategories);
@@ -31,17 +45,22 @@ const GeneralResourceFilterBox = ({ currentPage, setFilteredData }) => {
     const kinds = Object.keys(checkedKinds).filter(
       (kind) => checkedKinds[kind]
     );
+    // Get an array of kinds that are checked.
+
     const activeSubcategories = Object.keys(selectedSubcategories).filter(
       (key) => selectedSubcategories[key]
     );
+    // Get an array of subcategories that are checked.
 
     if (kinds.length === 0 && activeSubcategories.length === 0) {
+      // If no filters are applied, return all data for the current page.
       console.log("No filters applied, returning all data for:", currentPage);
       return collectionData.filter(
         (item) => item.category === currentPage
       );
     }
 
+    // Filter the data based on selected kinds and subcategories.
     const filtered = collectionData.filter((item) => {
       const kindMatch = kinds.length > 0 ? kinds.includes(item.kind) : true;
       const subCategoryMatch =
@@ -58,18 +77,22 @@ const GeneralResourceFilterBox = ({ currentPage, setFilteredData }) => {
     console.log("Filtered Data:", filtered);
     return filtered;
   }, [checkedKinds, selectedSubcategories, currentPage]);
+  // Dependencies: recalculate the filtered data whenever checkedKinds, selectedSubcategories, or currentPage changes.
 
   useEffect(() => {
+    // Effect to update the parent component's filtered data when filteredData changes.
     console.log("Setting filtered data in parent component:", filteredData);
     setFilteredData(filteredData); 
   }, [filteredData, setFilteredData]);
 
   const handleKindCheckboxChange = (e) => {
+    // Handler for updating the checked kinds state when a checkbox is toggled.
     const { value, checked } = e.target;
     setCheckedKinds((prev) => ({ ...prev, [value]: checked }));
   };
 
   const handleSubcategoryCheckboxChange = (e) => {
+    // Handler for updating the selected subcategories state when a checkbox is toggled.
     const { value, checked } = e.target;
     setSelectedSubcategories((prev) => ({
       ...prev,
@@ -78,6 +101,7 @@ const GeneralResourceFilterBox = ({ currentPage, setFilteredData }) => {
   };
 
   const toggleFilterBox = () => {
+    // Toggle the visibility of the filter box.
     setShowFilterBox((prevState) => !prevState);
   };
 
@@ -89,6 +113,7 @@ const GeneralResourceFilterBox = ({ currentPage, setFilteredData }) => {
         }`}
         onClick={toggleFilterBox}
       >
+        {/* The clickable area that toggles the filter box visibility. */}
         {showFilterBox ? (
           <div className="w-[81.96px] h-[25px] relative flex items-center">
             <RiEqualizerFill
@@ -178,5 +203,7 @@ GeneralResourceFilterBox.propTypes = {
   currentPage: PropTypes.string.isRequired,
   setFilteredData: PropTypes.func.isRequired,
 };
+// Define propTypes to ensure the correct types of props are passed to the component.
 
 export default GeneralResourceFilterBox;
+// Export the GeneralResourceFilterBox component as the default export.
