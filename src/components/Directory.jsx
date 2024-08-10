@@ -24,10 +24,11 @@ function Directory({ filteredData }) {
 
   return (
     <div
-      className="w-[1200px] px-[39px] pt-[20px] pb-[20px] bg-white rounded-[10px] shadow-inner mt-[120px] flex"
+      className="w-[1200px] px-[39px] py-[40] pt-[20px] pb-[20px] bg-white rounded-[10px] shadow-inner flex"
       style={{
         height: `${dynamicHeight}px`,
-        minHeight: "400px", // Ensure a minimum height to maintain the design.
+        minHeight: filteredData.length > 0 ? `${dynamicHeight}px` : "auto", 
+        // Adjust the minHeight to "auto" if no items are present to prevent excess space.
       }}
     >
       <div className="flex flex-col gap-[27px] h-full overflow-y-auto pr-[33px] pl-[10px] custom-scrollbar w-full pt-[20px] pb-[20px]">

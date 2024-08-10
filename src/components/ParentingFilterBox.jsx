@@ -107,33 +107,18 @@ const ParentingFilterBox = ({ currentPage, setFilteredData }) => {
     <div>
       <div
         className={`h-[33.95px] px-[9.59px] py-[4.47px] rounded-md border justify-start items-center gap-[7.67px] inline-flex cursor-pointer ${
-          showFilterBox ? "bg-white border-white" : "border-white"
+          showFilterBox ? "bg-white text-black border-white" : "bg-black text-white border-white"
         }`}
         onClick={toggleFilterBox}
       >
         {/* The clickable area that toggles the filter box visibility. */}
-        {showFilterBox ? (
-          <div className="w-[81.96px] h-[25px] relative flex items-center">
-            <RiEqualizerFill
-              className="w-[24.29px] h-[24.29px] left-0 absolute"
-              style={{ color: "black" }} 
-            />
-            <div className="left-[31.96px] absolute text-black text-xl font-medium font-['Inter']">
-              Filter
-            </div>
-            <div className="w-[101.14px] h-[33.95px] left-[-19px] top-[-4px] absolute rounded-md" />
-          </div>
-        ) : (
-          <>
-            <RiEqualizerFill
-              className="w-[24.29px] h-[24.29px]"
-              style={{ color: "white" }} 
-            />
-            <div className="text-white text-xl font-medium font-['Inter']">
-              Filter
-            </div>
-          </>
-        )}
+        <RiEqualizerFill
+          className="w-[24.29px] h-[24.29px]"
+          style={{ color: showFilterBox ? "black" : "white" }} 
+        />
+        <div className="text-xl font-medium font-['Inter']">
+          Filter
+        </div>
       </div>
       {showFilterBox && (
         <div className="mt-4">
