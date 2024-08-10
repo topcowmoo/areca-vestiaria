@@ -2,7 +2,7 @@ import { useState } from "react";
 import GeneralFilter from "../components/GeneralFilter";
 import Directory from "../components/Directory";
 
-function CouplesResources() {
+function CouplesResources () {
   const [filteredData, setFilteredData] = useState([]);
 
   return (
