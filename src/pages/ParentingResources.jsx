@@ -15,9 +15,8 @@ function ParentingResources() {
   // Define a constant 'category' to represent the current resource category.
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-screen bg-red-300 py-10">
-      {/* A container div styled with Flexbox to arrange items in a column, starting from the top.
-          The div covers the full height of the screen, has padding on the top and bottom, and has a black background. */}
+    <div className="flex flex-col items-center justify-start min-h-screen bg-slate-800 pb-[100px] pt-[100px]">
+      {/* Adjusted padding-top and bottom to add space between the navbar and the filter box/directory components and footer and filter box/directory */}
       
       <div className="flex flex-col gap-[37px] items-start w-[1200px]">
         {/* A container to hold the filter button and the directory with a gap of 37px and aligned to the left side. */}
