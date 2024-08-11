@@ -1,33 +1,51 @@
 import { useState } from "react";
-// Import the useState hook from React for managing state within this component.
-
 import GeneralFilter from "../components/GeneralFilter";
-// Import the GeneralFilter component from the specified path.
-
 import Directory from "../components/Directory";
-// Import the Directory component from the specified path.
 
 function ADHDResources() {
   const [filteredData, setFilteredData] = useState([]);
-  // Declare a state variable 'filteredData', initialized to an empty array.
-  // 'setFilteredData' is the function used to update 'filteredData'.
+  const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(false);
+  const [isInitial, setIsInitial] = useState(true); // Initial state to control first interaction
+  const category = "ADHD"; // Category specific to this page
+
+  const handleFilterBoxToggle = () => {
+    if (isInitial) {
+      setIsInitial(false); // Set to false after the first interaction
+    }
+    setIsFilterBoxOpen(!isFilterBoxOpen);
+  };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-black">
-      {/* A div container using Flexbox to center its content both horizontally and vertically.
-          The container covers the entire screen with a black background. */}
-      
-      <GeneralFilter currentPage="ADHD" setFilteredData={setFilteredData} />
-      {/* Render the GeneralFilter component, passing two props:
-          - 'currentPage' specifies the active page (in this case, "ADHD").
-          - 'setFilteredData' allows the GeneralFilter component to update the 'filteredData' state. */}
-      
-      <Directory filteredData={filteredData} />
-      {/* Render the Directory component, passing 'filteredData' as a prop.
-          This ensures that the Directory displays only the filtered data. */}
+    <div className="flex flex-col items-center justify-start min-h-screen bg-black pb-[100px] pt-[100px]">
+      <div className="relative w-[1200px]">
+        <div className="relative z-20">
+          <GeneralFilter
+            currentPage={category}
+            setFilteredData={setFilteredData}
+            setIsFilterBoxOpen={handleFilterBoxToggle} // Use the toggle handler
+            isFilterBoxOpen={isFilterBoxOpen}
+            className={`transition-all duration-500 ease-in-out ${
+              !isInitial &&
+              (isFilterBoxOpen ? "animate-slideDown" : "animate-slideUp")
+            }`}
+          />
+        </div>
+
+        <div className="flex flex-col pt-[37px]">
+          <div
+            className={`transition-all duration-500 ease-in-out flex origin-left ${
+              isFilterBoxOpen ? "ml-[300px] shrink" : "ml-0 grow"
+            }`}
+          >
+            <Directory
+              filteredData={filteredData}
+              className="flex-1 min-w-[75%]" // Keep this as a base width when open
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default ADHDResources;
-// Export the ADHDResources component as the default export.

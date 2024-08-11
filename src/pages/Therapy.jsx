@@ -1,33 +1,51 @@
 import { useState } from "react";
-// Import the useState hook from React to manage state within this component.
-
 import GeneralFilter from "../components/GeneralFilter";
-// Import the GeneralFilter component from the specified file path.
-
 import Directory from "../components/Directory";
-// Import the Directory component from the specified file path.
 
 function Therapy() {
   const [filteredData, setFilteredData] = useState([]);
-  // Declare a state variable 'filteredData', initialized to an empty array.
-  // The 'setFilteredData' function is used to update the 'filteredData' state.
+  const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(false);
+  const [isInitial, setIsInitial] = useState(true); // Initial state to control first interaction
+  const category = "Therapy"; // Category specific to this page
+
+  const handleFilterBoxToggle = () => {
+    if (isInitial) {
+      setIsInitial(false); // Set to false after the first interaction
+    }
+    setIsFilterBoxOpen(!isFilterBoxOpen);
+  };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-black">
-      {/* A container div styled with Flexbox to center its content both horizontally and vertically.
-          The div covers the full height of the screen and has a black background. */}
-      
-      <GeneralFilter currentPage="Therapy" setFilteredData={setFilteredData} />
-      {/* Render the GeneralFilter component, passing two props:
-          - 'currentPage' specifies the current page as "Therapy".
-          - 'setFilteredData' allows the GeneralFilter component to update the 'filteredData' state. */}
-      
-      <Directory filteredData={filteredData} />
-      {/* Render the Directory component, passing the filtered data as a prop.
-          This ensures that the Directory component displays only the data filtered by the GeneralFilter. */}
+    <div className="flex flex-col items-center justify-start min-h-screen bg-black pb-[100px] pt-[100px]">
+      <div className="relative w-[1200px]">
+        <div className="relative z-20">
+          <GeneralFilter
+            currentPage={category}
+            setFilteredData={setFilteredData}
+            setIsFilterBoxOpen={handleFilterBoxToggle} // Use the toggle handler
+            isFilterBoxOpen={isFilterBoxOpen}
+            className={`transition-all duration-500 ease-in-out ${
+              !isInitial &&
+              (isFilterBoxOpen ? "animate-slideDown" : "animate-slideUp")
+            }`}
+          />
+        </div>
+
+        <div className="flex flex-col pt-[37px]">
+          <div
+            className={`transition-all duration-500 ease-in-out flex origin-left ${
+              isFilterBoxOpen ? "ml-[300px] shrink" : "ml-0 grow"
+            }`}
+          >
+            <Directory
+              filteredData={filteredData}
+              className="flex-1 min-w-[75%]" // Keep this as a base width when open
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default Therapy;
-// Export the Therapy component as the default export of this module.
