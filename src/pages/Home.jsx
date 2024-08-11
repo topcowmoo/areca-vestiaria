@@ -108,7 +108,7 @@ function Home() {
               onClick={handleCloseModal}
             />
 
-            <h2 className="text-center text-black text-[71px] font-extrabold font-playfair mb-4">
+            <h2 className="text-center text-black text-[40px] font-extrabold font-playfair mb-4">
               About Us
             </h2>
             <div className="bg-white/80 rounded-[18px] mb-4">
