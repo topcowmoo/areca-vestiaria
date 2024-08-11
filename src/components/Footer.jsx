@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="w-full px-[52px] pt-20 pb-[106px] bg-black text-white">
+    <footer className="w-full px-[52px] pt-20 pb-[106px] bg-black text-white ">
       <div className="max-w-[1440px] mx-auto flex justify-between">
         <div className="flex flex-col justify-start">
           <div className="text-white text-[69.39px] font-extrabold" style={{ fontFamily: 'Playfair Display, sans-serif', lineHeight: '59.33px' }}>WLNS</div>
