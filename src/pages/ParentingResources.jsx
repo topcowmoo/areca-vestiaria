@@ -1,37 +1,51 @@
 import { useState } from "react";
-// Import the useState hook from React for managing state within this component.
-
 import ParentingFilterBox from "../components/ParentingFilterBox";
-// Import the ParentingFilterBox component from the specified file path.
-
 import Directory from "../components/Directory";
-// Import the Directory component from the specified file path.
 
 function ParentingResources() {
   const [filteredData, setFilteredData] = useState([]);
-  // Declare a state variable 'filteredData', initialized as an empty array.
-
+  const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(false);
+  const [isInitial, setIsInitial] = useState(true); // Initial state to control first interaction
   const category = "Parenting Resources";
-  // Define a constant 'category' to represent the current resource category.
+
+  const handleFilterBoxToggle = () => {
+    if (isInitial) {
+      setIsInitial(false); // Set to false after the first interaction
+    }
+    setIsFilterBoxOpen(!isFilterBoxOpen);
+  };
 
   return (
     <div className="flex flex-col items-center justify-start min-h-screen bg-slate-800 pb-[100px] pt-[100px]">
-      {/* Adjusted padding-top and bottom to add space between the navbar and the filter box/directory components and footer and filter box/directory */}
-      
-      <div className="flex flex-col gap-[37px] items-start w-[1200px]">
-        {/* A container to hold the filter button and the directory with a gap of 37px and aligned to the left side. */}
-        <ParentingFilterBox currentPage={category} setFilteredData={setFilteredData} />
-        {/* Render the ParentingFilterBox component, passing two props:
-            - 'currentPage' specifies the current page as "Parenting Resources".
-            - 'setFilteredData' allows the ParentingFilterBox component to update the 'filteredData' state. */}
-        
-        <Directory filteredData={filteredData} />
-        {/* Render the Directory component, passing the filtered data as a prop.
-            This ensures that the Directory component displays only the data filtered by the ParentingFilterBox. */}
+      <div className="relative w-[1200px]">
+        <div className="relative z-20">
+          <ParentingFilterBox
+            currentPage={category}
+            setFilteredData={setFilteredData}
+            setIsFilterBoxOpen={handleFilterBoxToggle} // Use the toggle handler
+            isFilterBoxOpen={isFilterBoxOpen}
+            className={`transition-all duration-500 ease-in-out ${
+              !isInitial &&
+              (isFilterBoxOpen ? "animate-slideDown" : "animate-slideUp")
+            }`}
+          />
+        </div>
+
+        <div className="flex flex-col pt-[37px]">
+          <div
+            className={`transition-all duration-500 ease-in-out flex origin-left ${
+              isFilterBoxOpen ? "ml-[300px] shrink" : "ml-0 grow"
+            }`}
+          >
+            <Directory
+              filteredData={filteredData}
+              className="flex-1 min-w-[75%]" // Keep this as a base width when open
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
 }
 
 export default ParentingResources;
-// Export the ParentingResources component as the default export of this module.
