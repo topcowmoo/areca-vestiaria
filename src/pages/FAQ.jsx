@@ -32,7 +32,7 @@ const Faq = () => {
             <div className="text-black text-[17px] font-normal font-['Inter']">
               Your consultation will be about 75 minutes (that is what you are booked for but may be longer or shorter depending on individual issues) so that the doctor can do a comprehensive assessment and have time to discuss findings directly with you as well as treatment options...
             </div>
-            <div className="text-[#1f1f1f]">Read More</div>
+            <div className="text-black text-[17px] font-semibold font-['Inter'] underline">Read More</div>
           </div>
 
           {/* Vertical Divider */}
@@ -44,7 +44,7 @@ const Faq = () => {
             <div className="text-black text-[17px] font-normal font-['Inter']">
               Your consultation will be about 75 minutes (that is what you are booked for but may be longer or shorter depending on individual issues) so that the doctor can do a comprehensive assessment and have time to discuss findings directly with you as well as treatment options...
             </div>
-            <div className="text-[#1f1f1f]">Read More</div>
+            <div className="text-black text-[17px] font-semibold font-['Inter'] underline">Read More</div>
           </div>
         </div>
 
@@ -58,7 +58,7 @@ const Faq = () => {
             <div className="text-black text-[17px] font-normal font-['Inter']">
               Your consultation will be about 75 minutes (that is what you are booked for but may be longer or shorter depending on individual issues) so that the doctor can do a comprehensive assessment and have time to discuss findings directly with you as well as treatment options...
             </div>
-            <div className="text-[#1f1f1f]">Read More</div>
+            <div className="text-black text-[17px] font-semibold font-['Inter'] underline">Read More</div>
           </div>
 
           {/* Vertical Divider */}
@@ -72,7 +72,7 @@ const Faq = () => {
             <div className="text-black text-[17px] font-normal font-['Inter']">
               Your consultation will be about 75 minutes (that is what you are booked for but may be longer or shorter depending on individual issues) so that the doctor can do a comprehensive assessment and have time to discuss findings directly with you as well as treatment options...
             </div>
-            <div className="text-[#1f1f1f]">Read More</div>
+            <div className="text-black text-[17px] font-semibold font-['Inter'] underline">Read More</div>
           </div>
         </div>
 
@@ -86,7 +86,7 @@ const Faq = () => {
             <div className="text-black text-[17px] font-normal font-['Inter']">
               Your consultation will be about 75 minutes (that is what you are booked for but may be longer or shorter depending on individual issues) so that the doctor can do a comprehensive assessment and have time to discuss findings directly with you as well as treatment options...
             </div>
-            <div className="text-[#1f1f1f]">Read More</div>
+            <div className="text-black text-[17px] font-semibold font-['Inter'] underline">Read More</div>
           </div>
 
           {/* Vertical Divider */}
@@ -100,7 +100,7 @@ const Faq = () => {
             <div className="text-black text-[17px] font-normal font-['Inter']">
               Your consultation will be about 75 minutes (that is what you are booked for but may be longer or shorter depending on individual issues) so that the doctor can do a comprehensive assessment and have time to discuss findings directly with you as well as treatment options...
             </div>
-            <div className="text-[#1f1f1f]">Read More</div>
+            <div className="text-black text-[17px] font-semibold font-['Inter'] underline">Read More</div>
           </div>
         </div>
       </div>
