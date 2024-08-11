@@ -18,10 +18,10 @@ function Directory({ filteredData }) {
       className="w-[1200px] px-[39px] py-[40] pt-[20px] pb-[20px] bg-white rounded-[10px] shadow-inner flex"
       style={{
         height: filteredData.length > 0 ? `${dynamicHeight}px` : "auto",
-        minHeight: "150px", // Ensure a minimum height for proper rendering of "No results found".
+        minHeight: "150px",
       }}
     >
-      <div className="flex flex-col gap-[27px] h-full overflow-y-auto pr-[33px] pl-[10px] custom-scrollbar w-full pt-[20px] pb-[20px]">
+      <div className="flex flex-col gap-[27px] h-full overflow-y-auto pr-[33px] pl-[10px] custom-scrollbar w-full pt-[10px] pb-[10px]">
         {filteredData.length > 0 ? (
           filteredData.map((item) => (
             <a
