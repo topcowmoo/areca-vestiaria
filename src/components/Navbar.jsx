@@ -137,7 +137,7 @@ function Navbar() {
                 label: "Physician Patient Resources",
                 className: "tracking-tight",
               },
-              { to: "/general-resources", label: "General Resources" },
+              { to: "/additional-resources", label: "Additional Resources" },
             ].map((item) => (
               <HashLink
                 key={item.to}

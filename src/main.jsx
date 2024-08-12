@@ -15,7 +15,7 @@ import FAQ from './pages/FAQ.jsx';
 import Error from './pages/Error.jsx';
 import Therapy from './pages/Therapy.jsx';
 import PhysicianResources from './pages/PhysicianPatient.jsx'
-import GeneralResources from './pages/GeneralResources.jsx';
+import AdditionalResources from './pages/AdditionalResources.jsx';
 
 
 const router = createBrowserRouter([
@@ -65,8 +65,8 @@ const router = createBrowserRouter([
         element: <PhysicianResources />,
       },
       {
-        path: 'general-resources',
-        element: <GeneralResources />,
+        path: 'additional-resources',
+        element: <AdditionalResources />,
       },
     ],
   },

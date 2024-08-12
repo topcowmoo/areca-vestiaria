@@ -9,7 +9,7 @@ const subcategoryLabels = {
   "Borderline Personality Disorder": "Borderline Personality Disorder",
 };
 
-const GeneralResourceFilterBox = ({
+const AdditionalResourceFilterBox = ({
   currentPage,
   setFilteredData,
   setIsFilterBoxOpen,
@@ -157,11 +157,11 @@ const GeneralResourceFilterBox = ({
   );
 };
 
-GeneralResourceFilterBox.propTypes = {
+AdditionalResourceFilterBox.propTypes = {
   currentPage: PropTypes.string.isRequired,
   setFilteredData: PropTypes.func.isRequired,
   setIsFilterBoxOpen: PropTypes.func.isRequired,
   isFilterBoxOpen: PropTypes.bool.isRequired,
 };
 
-export default GeneralResourceFilterBox;
+export default AdditionalResourceFilterBox;

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import GeneralResourceFilterBox from "../components/GeneralResourceFilterBox";
+import AdditionalResourceFilterBox from "../components/AdditionalResourceFilterBox";
 import Directory from "../components/Directory";
 
-function GeneralResources() {
+function AdditionalResources() {
   const [filteredData, setFilteredData] = useState([]);
   const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(false);
   const [isInitial, setIsInitial] = useState(true); // Initial state to control first interaction
@@ -21,7 +21,7 @@ function GeneralResources() {
     <div className="flex flex-col items-center justify-start min-h-screen bg-slate-800 pb-[100px] pt-[100px]">
       <div className="relative w-[1200px]">
         <div className="relative z-20">
-          <GeneralResourceFilterBox
+          <AdditionalResourceFilterBox
             currentPage={category}
             setFilteredData={setFilteredData}
             setIsFilterBoxOpen={handleFilterBoxToggle} // Use the toggle handler
@@ -50,4 +50,4 @@ function GeneralResources() {
   );
 }
 
-export default GeneralResources;
+export default AdditionalResources;

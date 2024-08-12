@@ -70,8 +70,8 @@ const Footer = () => {
               </Link>
             </li>
             <li className="mb-1">
-              <Link to="/general-resources" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
-                General Resources
+              <Link to="/additional-resources" className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400">
+                Additional Resources
               </Link>
             </li>
           </ul>
