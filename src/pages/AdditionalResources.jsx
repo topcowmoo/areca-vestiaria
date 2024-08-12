@@ -1,14 +1,13 @@
 import { useState } from "react";
 import AdditionalResourceFilterBox from "../components/AdditionalResourceFilterBox";
 import Directory from "../components/Directory";
+import SearchBar from "../components/SearchBar";
 
 function AdditionalResources() {
   const [filteredData, setFilteredData] = useState([]);
   const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(false);
   const [isInitial, setIsInitial] = useState(true); // Initial state to control first interaction
   const category = "General Resources";
-  // Define a constant 'category' to hold the string "General Resources".
-  // This can be passed as a prop to other components to identify the current category.
 
   const handleFilterBoxToggle = () => {
     if (isInitial) {
@@ -18,9 +17,18 @@ function AdditionalResources() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-screen bg-slate-800 pb-[100px] pt-[100px]">
-      <div className="relative w-[1200px]">
-        <div className="relative z-20">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-black to-black">
+      <div className="w-full h-[847px] bg-additional-page bg-cover bg-center flex flex-col items-center justify-center">
+        <h1 className="text-center text-white text-[71px] font-extrabold font-[playfair] -mt-[161.5px]">
+          Additional Resources
+        </h1>
+        <div className="flex flex-col items-center">
+          <SearchBar />
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center justify-start flex-grow pb-[100px] -mt-[173px]">
+        <div className="w-[1200px] min-h-[500px]"> {/* Adjust min-height as needed */}
           <AdditionalResourceFilterBox
             currentPage={category}
             setFilteredData={setFilteredData}
@@ -31,18 +39,18 @@ function AdditionalResources() {
               (isFilterBoxOpen ? "animate-slideDown" : "animate-slideUp")
             }`}
           />
-        </div>
 
-        <div className="flex flex-col pt-[37px]">
-          <div
-            className={`transition-all duration-500 ease-in-out flex origin-left ${
-              isFilterBoxOpen ? "ml-[300px] shrink" : "ml-0 grow"
-            }`}
-          >
-            <Directory
-              filteredData={filteredData}
-              className="flex-1 min-w-[75%]" // Keep this as a base width when open
-            />
+          <div className="flex flex-col pt-[37px]">
+            <div
+              className={`transition-all duration-500 ease-in-out flex origin-left ${
+                isFilterBoxOpen ? "ml-[300px] shrink" : "ml-0 grow"
+              }`}
+            >
+              <Directory
+                filteredData={filteredData}
+                className="flex-1 min-w-[75%]"
+              />
+            </div>
           </div>
         </div>
       </div>
