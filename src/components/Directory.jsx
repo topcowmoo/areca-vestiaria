@@ -1,24 +1,15 @@
 import PropTypes from "prop-types";
-import { useMemo } from "react";
 
 function Directory({ filteredData }) {
-  console.log("Directory component received filteredData:", filteredData);
-
-  const itemHeight = 120;
-  const padding = 40;
-  const maxItems = 8;
-
-  const dynamicHeight = useMemo(() => {
-    const numItems = Math.min(filteredData.length, maxItems);
-    return numItems * itemHeight + padding;
-  }, [filteredData]);
+  const minItemsToShow = 7;
+  const minHeight = minItemsToShow * 120 + 40;
 
   return (
     <div
-      className="w-[1200px] px-[39px] py-[40] pt-[20px] pb-[20px] bg-white rounded-[10px] shadow-inner flex"
+      className="w-[1200px] p-[40px] px-[39px] pt-[20px] pb-[20px] bg-white rounded-[10px] shadow-inner flex"
       style={{
-        height: filteredData.length > 0 ? `${dynamicHeight}px` : "auto",
-        minHeight: "150px",
+        minHeight: `${minHeight}px`,
+        height: filteredData.length > 0 ? `${minHeight}px` : "auto",
       }}
     >
       <div className="flex flex-col gap-[27px] h-full overflow-y-auto pr-[33px] pl-[10px] custom-scrollbar w-full pt-[10px] pb-[10px]">

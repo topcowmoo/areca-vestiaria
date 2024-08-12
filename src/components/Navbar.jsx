@@ -22,9 +22,10 @@ function Navbar() {
     if (
       !event.target.closest(".dropdown-menu") && // Check if the click is outside the dropdown menu
       !event.target.closest(".resources-toggle") && // Check if the click is outside the resources toggle
-      !event.target.closest(".mobile-menu-icon") // Check if the click is outside the mobile menu icon
+      !event.target.closest(".mobile-menu") // Check if the click is outside the mobile menu
     ) {
       setIsResourcesOpen(false); // Close resources dropdown if clicked outside
+      setIsMobileMenuOpen(false); // Close mobile menu if clicked outside
     }
   }, []);
 
@@ -43,19 +44,16 @@ function Navbar() {
     (path) => {
       navigate(path); // Navigate to the specified path
       setIsMobileMenuOpen(false); // Close mobile menu
+      setIsResourcesOpen(false); // Close resources dropdown
     },
     [navigate]
   );
-
-  const closeResources = useCallback(() => {
-    setIsResourcesOpen(false); // Close resources dropdown
-  }, []);
 
   return (
     <nav className="absolute top-0 left-0 w-full z-10 flex justify-center">
       {/* Navbar container */}
       <div className="w-full flex justify-between items-center px-4 py-3 md:hidden">
-        {/* Mobile menu container */}
+        {/* Mobile menu icon container */}
         <CgMenuRound
           className={`text-white transition-transform duration-300 mobile-menu-icon ${isMobileMenuOpen ? "rotate-90" : ""}`}
           size={30}
@@ -63,11 +61,11 @@ function Navbar() {
         />
       </div>
       <ul
-        className={`flex-col md:flex md:flex-row md:justify-start items-start gap-12 pt-11 ${
+        className={`mobile-menu md:flex md:flex-row md:justify-start items-start gap-12 pt-11 ${
           isMobileMenuOpen
-            ? "fixed top-0 left-0 w-[327px] h-[100vh] px-[21px] py-[29px] bg-black/75 backdrop-blur-[17.70px] flex flex-col justify-start items-start gap-7 overflow-y-auto"
-            : "hidden"
-        } md:flex`}
+            ? "fixed top-0 left-0 w-[327px] h-[100vh] px-[21px] py-[29px] bg-black/75 backdrop-blur-[17.70px] flex flex-col justify-start items-start gap-7 overflow-y-auto pointer-events-auto opacity-100 visibility-visible"
+            : "hidden md:flex md:opacity-100 visibility-hidden md:visibility-visible"
+        }`}
       >
         {isMobileMenuOpen && (
           <>
@@ -119,8 +117,8 @@ function Navbar() {
           <div
             className={`dropdown-menu absolute mt-2 py-5 bg-black/25 backdrop-blur-md flex flex-col justify-start items-start gap-4 text-white rounded shadow-lg px-5 z-20 w-[285px] transition-all duration-500 ease-in-out transform origin-top ${
               isResourcesOpen
-                ? "translate-y-0 scale-y-100 opacity-100"
-                : "-translate-y-2 scale-y-75 opacity-0"
+                ? "translate-y-0 scale-y-100 opacity-100 pointer-events-auto visibility-visible"
+                : "-translate-y-2 scale-y-75 opacity-0 pointer-events-none visibility-hidden"
             }`}
             style={{ left: "-50px" }}
           >
@@ -146,7 +144,10 @@ function Navbar() {
                 smooth
                 to={item.to}
                 className={`text-[17px] font-light font-['Inter'] rounded-md px-3 py-2 hover:text-white hover:font-semibold ${item.className || ""}`}
-                onClick={closeResources} // Close resources dropdown and navigate on click
+                onClick={() => {
+                  setIsResourcesOpen(false); // Close resources dropdown
+                  setIsMobileMenuOpen(false); // Close mobile menu
+                }}
               >
                 {item.label}
               </HashLink>
