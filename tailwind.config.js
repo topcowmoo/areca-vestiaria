@@ -41,6 +41,7 @@ export default {
         "card-three": "url('/src/assets/card3.png')",
         "card-four": "url('/src/assets/card4.png')",
         "resource-image": "url('/src/assets/Resources1.png')",
+        "parenting-page": "url('/src/assets/parentingpage.png')",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
