@@ -131,7 +131,7 @@ function Navbar() {
                 label: "Attachment & Emotions",
               },
               { to: "/anger-and-shame", label: "Anger & Shame" },
-              { to: "/therapy", label: "Therapy Resources" },
+              { to: "/therapy", label: "Therapy" },
               {
                 to: "/physician-patient-resources",
                 label: "Physician Patient Resources",
