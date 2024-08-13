@@ -18,7 +18,7 @@ const FilterBox = () => {
     couplesChecked: false,
     therapyChecked: false,
     physicianPatientChecked: false,
-    generalChecked: false,
+    additionalChecked: false,
   });
 
   // Function to handle checkbox changes
@@ -40,7 +40,8 @@ const FilterBox = () => {
     if (filters.videoChecked) kinds.push("Video"); // Add "Video" to kinds if videoChecked is true
     if (filters.bookChecked) kinds.push("Book"); // Add "Book" to kinds if bookChecked is true
 
-    if (kinds.length > 0) { // If there are any kinds selected
+    if (kinds.length > 0) {
+      // If there are any kinds selected
       filteredData = filteredData.filter((item) => kinds.includes(item.kind)); // Filter the data by kinds
     }
 
@@ -49,14 +50,19 @@ const FilterBox = () => {
     if (filters.adhdChecked) categories.push("ADHD"); // Add "ADHD" to categories if adhdChecked is true
     if (filters.angerAndShameChecked) categories.push("Anger & Shame"); // Add "Anger & Shame" to categories if angerAndShameChecked is true
     if (filters.parentingChecked) categories.push("Parenting Resources"); // Add "Parenting Resources" to categories if parentingChecked is true
-    if (filters.attachmentAndEmotionsChecked) categories.push("Attachment & Emotions"); // Add "Attachment & Emotions" to categories if attachmentAndEmotionsChecked is true
+    if (filters.attachmentAndEmotionsChecked)
+      categories.push("Attachment & Emotions"); // Add "Attachment & Emotions" to categories if attachmentAndEmotionsChecked is true
     if (filters.couplesChecked) categories.push("Couples Resources"); // Add "Couples Resources" to categories if couplesChecked is true
     if (filters.therapyChecked) categories.push("Therapy"); // Add "Therapy" to categories if therapyChecked is true
-    if (filters.physicianPatientChecked) categories.push("Physician Patient Resources"); // Add "Physician Patient Resources" to categories if physicianPatientChecked is true
-    if (filters.generalChecked) categories.push("General Resources"); // Add "General Resources" to categories if generalChecked is true
+    if (filters.physicianPatientChecked)
+      categories.push("Physician Patient Resources"); // Add "Physician Patient Resources" to categories if physicianPatientChecked is true
+    if (filters.additionalChecked) categories.push("General Resources"); // Add "General Resources" to categories if generalChecked is true
 
-    if (categories.length > 0) { // If there are any categories selected
-      filteredData = filteredData.filter((item) => categories.includes(item.category)); // Filter the data by categories
+    if (categories.length > 0) {
+      // If there are any categories selected
+      filteredData = filteredData.filter((item) =>
+        categories.includes(item.category)
+      ); // Filter the data by categories
     }
 
     console.log(filteredData); // Log the filtered data for now
@@ -91,7 +97,8 @@ const FilterBox = () => {
             </div>
             <div className="w-[101.14px] h-[33.95px] left-[-19px] top-[-4px] absolute rounded-md" />
           </div>
-        ) : ( // If filter box is not visible
+        ) : (
+          // If filter box is not visible
           <>
             <RiEqualizerFill
               className="w-[24.29px] h-[24.29px]"
@@ -274,19 +281,19 @@ const FilterBox = () => {
                   Physician Patient Resources
                 </div>
               </div>
-              {/* General Resources checkbox */}
+              {/ Additional Resources checkbox */}
               <div className="justify-start items-center gap-8 inline-flex">
                 <div className="justify-start items-start gap-2.5 flex">
                   <input
                     type="checkbox"
-                    name="generalChecked"
-                    checked={filters.generalChecked} // Bind to generalChecked state
+                    name="additionalChecked"
+                    checked={filters.additionalChecked} // Bind to generalChecked state
                     onChange={handleCheckboxChange} // Handle change event
                     className="custom-checkbox"
                   />
                 </div>
                 <div className="text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
-                  General Resources
+                  Additional Resources
                 </div>
               </div>
             </div>

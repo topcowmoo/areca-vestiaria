@@ -42,10 +42,14 @@ export default {
         "card-four": "url('/src/assets/card4.png')",
         "resource-image": "url('/src/assets/Resources1.png')",
         "parenting-page": "url('/src/assets/parentingpage.png')",
+ feature-av52-additional-resources-hero
+        "additional-page": "url('/src/assets/additionalpage.png')",
+=======
  feature-av56-anger-hero
         "anger-page": "url('/src/assets/angershamepage.png')",
 =======
         "therapy-page": "url('/src/assets/therapypage.png')",
+ main
  main
       },
       fontFamily: {

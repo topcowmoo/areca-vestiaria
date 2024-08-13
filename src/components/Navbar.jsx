@@ -131,13 +131,13 @@ function Navbar() {
                 label: "Attachment & Emotions",
               },
               { to: "/anger-and-shame", label: "Anger & Shame" },
-              { to: "/therapy", label: "Therapy Resources" },
+              { to: "/therapy", label: "Therapy" },
               {
                 to: "/physician-patient-resources",
                 label: "Physician Patient Resources",
                 className: "tracking-tight",
               },
-              { to: "/general-resources", label: "General Resources" },
+              { to: "/additional-resources", label: "Additional Resources" },
             ].map((item) => (
               <HashLink
                 key={item.to}
