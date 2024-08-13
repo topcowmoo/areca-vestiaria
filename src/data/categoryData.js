@@ -1,7 +1,7 @@
 export const categoryData = [
   {
     id: 1,
-    title: "ADHD Resources",
+    title: "ADHD",
     image: "bg-card-one",
     link: "/adhd-resources",
   },
@@ -19,19 +19,19 @@ export const categoryData = [
   },
   {
     id: 4,
-    title: "Couple Resources",
+    title: "Couples Resources",
     image: "bg-card-four",
     link: "/couples-resources",
   },
   {
     id: 5,
-    title: "Anger and Shame",
+    title: "Anger & Shame",
     image: "bg-card-one",
     link: "/anger-and-shame",
   },
   {
     id: 6,
-    title: "Therapy Resources",
+    title: "Therapy",
     image: "bg-card-two",
     link: "/therapy",
   },
