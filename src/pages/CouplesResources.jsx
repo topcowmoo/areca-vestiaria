@@ -18,7 +18,7 @@ function CouplesResources() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-black to-black">
-      <div className="w-full h-[847px] bg-parenting-page bg-cover bg-center flex flex-col items-center justify-center">
+      <div className="w-full h-[847px] bg-couples-page bg-cover bg-center flex flex-col items-center justify-center">
         <h1 className="text-center text-white text-[71px] font-extrabold font-[playfair] -mt-[161.5px]">
           Couples Resources
         </h1>
