@@ -45,6 +45,10 @@ export default {
         "additional-page": "url('/src/assets/additionalpage.png')",
         "anger-page": "url('/src/assets/angershamepage.png')",
         "therapy-page": "url('/src/assets/therapypage.png')",
+        "attachment-page": "url('/src/assets/attachmentpage.png')",
+        "adhd-page": "url('/src/assets/adhdpage.png')",
+        "couples-page": "url('/src/assets/couplespage.png')",
+        "physician-page": "url('/src/assets/physicianpage.png')",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
