@@ -7,7 +7,7 @@ function PhysicianPatient() {
   const [filteredData, setFilteredData] = useState([]);
   const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(false);
   const [isInitial, setIsInitial] = useState(true); // Initial state to control first interaction
-  const category = "Physician Patient Resources"; // Category specific to this page
+  const category = "Physician Patient"; // Category specific to this page
 
   const handleFilterBoxToggle = () => {
     if (isInitial) {
@@ -20,7 +20,7 @@ function PhysicianPatient() {
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-black to-black">
       <div className="w-full h-[847px] bg-physician-page bg-cover bg-center flex flex-col items-center justify-center">
         <h1 className="text-center text-white text-[71px] font-extrabold font-[playfair] -mt-[161.5px]">
-        Physician Patient Resources
+          Physician Patient Resources
         </h1>
         <div className="flex flex-col items-center">
           <SearchBar />
@@ -28,7 +28,9 @@ function PhysicianPatient() {
       </div>
 
       <div className="flex flex-col items-center justify-start flex-grow pb-[100px] -mt-[173px]">
-        <div className="w-[1200px] min-h-[500px]"> {/* Adjust min-height as needed */}
+        <div className="w-[1200px] min-h-[500px]">
+          {" "}
+          {/* Adjust min-height as needed */}
           <GeneralFilter
             currentPage={category}
             setFilteredData={setFilteredData}
@@ -39,7 +41,6 @@ function PhysicianPatient() {
               (isFilterBoxOpen ? "animate-slideDown" : "animate-slideUp")
             }`}
           />
-
           <div className="flex flex-col pt-[37px]">
             <div
               className={`transition-all duration-500 ease-in-out flex origin-left ${
