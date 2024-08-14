@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import SearchBar from "../components/SearchBar";
+import HomeResourceDisplay from "../components/HomeResourceDisplay";
 
 function Home() {
   // Modal state for 'Read More' option on Page two
@@ -18,8 +19,6 @@ function Home() {
     // Top Page
     <div>
       <div className="flex flex-col min-h-screen bg-page-one bg-cover bg-center">
-        <div className="flex justify-center"></div>
-
         <div className="flex flex-grow flex-col items-center justify-center">
           <div className="w-[261px]">
             <h1 className="w-full text-center text-white text-[90.17px] font-extrabold font-playfair mb-2">
@@ -73,6 +72,35 @@ function Home() {
               Read More
             </button>
           </div>
+        </div>
+      </div>
+
+      {/* Resource Display Section */}
+      <div className="max-w-3/4 mx-auto">
+        <div className="w-full flex flex-col bg-[#fcfcfc] bg-center p-6">
+          {/* Container for Title and Button */}
+          <div className="flex justify-between xl:justify-around items-center my-6">
+            {/* Title Above Left Section */}
+            <h2 className="text-[67px] font-bold font-playfair">Resources</h2>
+
+            {/* Button in the Top Right Corner */}
+            <a
+              href="/all-resources"
+              className="bg-[#393939] text-[22px] text-white px-4 py-1 rounded"
+            >
+              View All Resources
+            </a>
+          </div>
+
+          {/* Resource Display Components */}
+          <HomeResourceDisplay category="ADHD" />
+          <HomeResourceDisplay category="Parenting Resources" />
+          <HomeResourceDisplay category="Attachment & Emotions" />
+          <HomeResourceDisplay category="Couples Resources" />
+          <HomeResourceDisplay category="Anger & Shame" />
+          <HomeResourceDisplay category="Therapy" />
+          <HomeResourceDisplay category="Physician Patient Resources" />
+          <HomeResourceDisplay category="General Resources" />
         </div>
       </div>
 
