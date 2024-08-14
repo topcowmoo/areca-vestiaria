@@ -93,14 +93,14 @@ function Home() {
           </div>
 
           {/* Resource Display Components */}
-          <HomeResourceDisplay category="ADHD" />
+          <HomeResourceDisplay category="ADHD Resources" />
           <HomeResourceDisplay category="Parenting Resources" />
           <HomeResourceDisplay category="Attachment & Emotions" />
           <HomeResourceDisplay category="Couples Resources" />
           <HomeResourceDisplay category="Anger & Shame" />
           <HomeResourceDisplay category="Therapy" />
-          <HomeResourceDisplay category="Physician Patient Resources" />
-          <HomeResourceDisplay category="General Resources" />
+          <HomeResourceDisplay category="Physician Patient" />
+          <HomeResourceDisplay category="Additional Resources" />
         </div>
       </div>
 

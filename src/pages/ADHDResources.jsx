@@ -7,7 +7,7 @@ function ADHDResources() {
   const [filteredData, setFilteredData] = useState([]);
   const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(false);
   const [isInitial, setIsInitial] = useState(true); // Initial state to control first interaction
-  const category = "ADHD"; // Category specific to this page
+  const category = "ADHD Resources"; // Category specific to this page
 
   const handleFilterBoxToggle = () => {
     if (isInitial) {
@@ -28,7 +28,9 @@ function ADHDResources() {
       </div>
 
       <div className="flex flex-col items-center justify-start flex-grow pb-[100px] -mt-[173px]">
-        <div className="w-[1200px] min-h-[500px]"> {/* Adjust min-height as needed */}
+        <div className="w-[1200px] min-h-[500px]">
+          {" "}
+          {/* Adjust min-height as needed */}
           <GeneralFilter
             currentPage={category}
             setFilteredData={setFilteredData}
@@ -39,7 +41,6 @@ function ADHDResources() {
               (isFilterBoxOpen ? "animate-slideDown" : "animate-slideUp")
             }`}
           />
-
           <div className="flex flex-col pt-[37px]">
             <div
               className={`transition-all duration-500 ease-in-out flex origin-left ${

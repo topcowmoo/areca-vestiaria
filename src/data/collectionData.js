@@ -1079,7 +1079,7 @@ export const collectionData = [
   {
     id: 135,
     kind: "Article",
-    category: "Physician Patient Resources",
+    category: "Physician Patient",
     subCategory: "",
     title: "You Signed Up to Be a Doctor, Not a Martyr",
     link: "https://www.kevinmd.com/2016/04/signed-doctor-not-martyr.html",
@@ -1087,7 +1087,7 @@ export const collectionData = [
   {
     id: 136,
     kind: "Article",
-    category: "Physician Patient Resources",
+    category: "Physician Patient",
     subCategory: "Suicide",
     title: "Doctor Revived After Suicide Tells All",
     link: "https://www.kevinmd.com/2017/02/doctors-revived-suicide-tells.html",
@@ -1095,7 +1095,7 @@ export const collectionData = [
   {
     id: 137,
     kind: "Article",
-    category: "Physician Patient Resources",
+    category: "Physician Patient",
     subCategory: "Suicide",
     title: "Suicide: A Doctor's Story",
     link: "https://www.kevinmd.com/2014/12/suicide-doctors-story.html",
@@ -1103,7 +1103,7 @@ export const collectionData = [
   {
     id: 138,
     kind: "Article",
-    category: "Physician Patient Resources",
+    category: "Physician Patient",
     subCategory: "",
     title: "Doctor Mom, Remember That It Is All Worth It",
     link: "https://www.kevinmd.com/2016/12/doctor-mom-remember-worth.html?utm_content=buffer3e3fe&utm_medium=social&utm_source=facebook.com&utm_campaign=b",
@@ -1111,7 +1111,7 @@ export const collectionData = [
   {
     id: 139,
     kind: "Article",
-    category: "Physician Patient Resources",
+    category: "Physician Patient",
     subCategory: "",
     title: "The Disease of Being Busy",
     link: "https://onbeing.org/blog/the-disease-of-being-busy/",
@@ -1119,7 +1119,7 @@ export const collectionData = [
   {
     id: 140,
     kind: "Article",
-    category: "Physician Patient Resources",
+    category: "Physician Patient",
     subCategory: "Suicide",
     title: "Physician Suicide",
     link: "https://www.idealmedicalcare.org/ive-learned-547-doctor-suicides/",
@@ -1127,7 +1127,7 @@ export const collectionData = [
   {
     id: 141,
     kind: "Article",
-    category: "Physician Patient Resources",
+    category: "Physician Patient",
     subCategory: "",
     title: "The Institute For Physician Wellness",
     link: "https://www.instituteforphysicianwellness.com/",
@@ -1135,7 +1135,7 @@ export const collectionData = [
   {
     id: 142,
     kind: "Article",
-    category: "Physician Patient Resources",
+    category: "Physician Patient",
     subCategory: "",
     title: "6 Tips For Dealing With Conflict",
     link: "https://ideas.ted.com/6-tips-for-dealing-with-conflict/",
@@ -1143,7 +1143,7 @@ export const collectionData = [
   {
     id: 143,
     kind: "Article",
-    category: "Physician Patient Resources",
+    category: "Physician Patient",
     subCategory: "",
     title: "Why It Doesn't Pay to Be A People Pleaser",
     link: "https://www.mindful.org/doesnt-pay-people-pleaser/?utm_content=buffer8d7df&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer",
@@ -1151,7 +1151,7 @@ export const collectionData = [
   {
     id: 144,
     kind: "Article",
-    category: "Physician Patient Resources",
+    category: "Physician Patient",
     subCategory: "",
     title: "Compassionate Boundaries: How to Say No with Heart",
     link: "https://www.mindful.org/compassionate-boundaries-say-no-heart/",
@@ -1159,7 +1159,7 @@ export const collectionData = [
   {
     id: 145,
     kind: "Article",
-    category: "Physician Patient Resources",
+    category: "Physician Patient",
     subCategory: "",
     title: "Increasing Resilience",
     link: "https://www.mindful.org/how-people-learn-to-increase-their-resilience/",
@@ -1167,7 +1167,7 @@ export const collectionData = [
   {
     id: 146,
     kind: "Video",
-    category: "Physician Patient Resources",
+    category: "Physician Patient",
     subCategory: "",
     title: "Guilt and Shame",
     link: "https://fs.blog/brene-brown-guilt-shame/",
@@ -1175,7 +1175,7 @@ export const collectionData = [
   {
     id: 147,
     kind: "Article",
-    category: "Physician Patient Resources",
+    category: "Physician Patient",
     subCategory: "",
     title: "ADHD and Physicians",
     link: "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cjpl.ca/assets/cjplvol7number4.pdf?fbclid=IwAR2jAltAQ1aXwMdPNXWE93Rk2_99t7Ee8plJtXavFNg0vGybNx7aumJX8lo",
@@ -1479,7 +1479,7 @@ export const collectionData = [
   {
     id: 185,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "Guideline",
     title: "Guidance In Switching Medications",
     link: "https://www.switchrx.com/",
@@ -1487,7 +1487,7 @@ export const collectionData = [
   {
     id: 186,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "Guideline",
     title: "Help With Medications in Elderly Population",
     link: "https://www.gerimedrisk.com/",
@@ -1495,7 +1495,7 @@ export const collectionData = [
   {
     id: 187,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "Guideline",
     title:
       "Canadian Psychiatric Association Position Statement on Implications of Cannabis Legalization on Youth and Young Adults",
@@ -1504,7 +1504,7 @@ export const collectionData = [
   {
     id: 188,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "Guideline",
     title: "Cannabis Use and the Risk of Developing a Psychotic Disorder",
     link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2424288/",
@@ -1512,7 +1512,7 @@ export const collectionData = [
   {
     id: 189,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resourcess",
     subCategory: "Guideline",
     title: "Mother to Baby Cannabis Use Effect",
     link: "https://mothertobaby.org/fact-sheets/marijuana-pregnancy/?fref=gc&dti=818693151553751",
@@ -1520,7 +1520,7 @@ export const collectionData = [
   {
     id: 190,
     kind: "Video",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "Guideline",
     title: "Healthy Aging Advice",
     link: "https://fountainofhealth.ca/en",
@@ -1528,7 +1528,7 @@ export const collectionData = [
   {
     id: 191,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "Guideline",
     title: "Mindfulness and Metta Trauma Therapy",
     link: "https://mmtt.ca/",
@@ -1536,7 +1536,7 @@ export const collectionData = [
   {
     id: 192,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "Guideline",
     title: "Mental Health and Violence APA",
     link: "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://psychiatryonline.org/doi/pdf/10.5555/appi.books.9781615371099",
@@ -1544,7 +1544,7 @@ export const collectionData = [
   {
     id: 193,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "Guideline",
     title: "Alcohol Use Disorder Medication Treatments",
     link: "https://www.aafp.org/pubs/afp/issues/2016/0315/p457.html?fbclid=IwAR1l3TMXAlPgJCtKlzFhWzJBOYgZnsZ30Q5Iswj6P2oCcKHYyNnv2uWsEos",
@@ -1552,7 +1552,7 @@ export const collectionData = [
   {
     id: 194,
     kind: "Article",
-    category: "ADHD",
+    category: "ADHD Resources",
     subCategory: "",
     title: "Information for Parents",
     link: "https://www.caddra.ca/public-information/parents/",
@@ -1560,7 +1560,7 @@ export const collectionData = [
   {
     id: 195,
     kind: "Article",
-    category: "ADHD",
+    category: "ADHD Resources",
     subCategory: "",
     title: "Additude Online",
     link: "https://www.additudemag.com/",
@@ -1568,7 +1568,7 @@ export const collectionData = [
   {
     id: 196,
     kind: "Book",
-    category: "ADHD",
+    category: "ADHD Resources",
     subCategory: "",
     title: "Dr. Russell Barkley Website",
     link: "https://www.russellbarkley.org/?fbclid=IwAR1_wcSI1JRweQWHqt-hjJB-OzQxuV942xbqTyaO0aSX39mVG60jnYSdBK4",
@@ -1576,7 +1576,7 @@ export const collectionData = [
   {
     id: 197,
     kind: "Article",
-    category: "ADHD",
+    category: "ADHD Resources",
     subCategory: "",
     title: "Fact Sheet on ADHD",
     link: "https://www.russellbarkley.org/factsheets.html?fbclid=IwAR3Iwsrcaf0Lg21fXMVbjA26FP2lw_tQqzDHvB3cmkIYunM-lY_IFePwLss",
@@ -1584,7 +1584,7 @@ export const collectionData = [
   {
     id: 198,
     kind: "Article",
-    category: "ADHD",
+    category: "ADHD Resources",
     subCategory: "",
     title: "Understanding The ADHD Brain",
     link: "https://nncionline.org/course/understanding-the-adhd-brain/?fbclid=IwAR39dcMSXOaiZAoUeTovSFMQq3ULILo67QADb79vuKh7Zqjf6kDrv493Ap0",
@@ -1592,7 +1592,7 @@ export const collectionData = [
   {
     id: 199,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "Borderline Personality Disorder",
     title: "Borderline Personality Disorder Resources",
     link: "https://www.borderlinepersonalitydisorder.org/?fbclid=IwAR3vn1wUne-zF1BvJJwHcL2iN-vqdn0cevjAYI-6mSXiUy8OdnWm0tVNhn0",
@@ -1600,7 +1600,7 @@ export const collectionData = [
   {
     id: 200,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "Borderline Personality Disorder",
     title: "Self harm in Youth Support",
     link: "https://www.cheo.on.ca/en/resources-and-support/self-harm.aspx",
@@ -1608,7 +1608,7 @@ export const collectionData = [
   {
     id: 201,
     kind: "Book",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "Borderline Personality Disorder",
     title: "Borderline Personality Disorder Survival Guide by Chapman",
     link: "https://www.amazon.ca/Borderline-Personality-Disorder-Survival-Guide/dp/1572245077/ref=sr_1_1?hvadid=208359317200&hvdev=c&hvlocphy=9001076&hvnetw=g&hvpos=1t1&hvqmt=b&hvrand=15865181363332696758&hvtargid=kwd-299315019086&keywords=borderline+personality+disorders&qid=1551929553&s=gateway&sr=8-1&tag=googcana-20%C2%A0",
@@ -1616,7 +1616,7 @@ export const collectionData = [
   {
     id: 202,
     kind: "Book",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "Mind Over Mood",
     link: "https://www.amazon.ca/Mind-Over-Mood-Second-Changing/dp/1462520421/ref=sr_1_1?ie=UTF8&qid=1499135895&sr=8-1&keywords=mind+over+Mood",
@@ -1624,7 +1624,7 @@ export const collectionData = [
   {
     id: 203,
     kind: "Book",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "Man's Search for Meaning",
     link: "https://www.amazon.ca/Mans-Search-Meaning-Viktor-Frankl/dp/080701429X/ref=sr_1_sc_1?ie=UTF8&qid=1499135930&sr=8-1-spell&keywords=Man%27s+search+for+menaing",
@@ -1632,7 +1632,7 @@ export const collectionData = [
   {
     id: 204,
     kind: "Book",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "The Dialectical Behavior Therapy Skills Workbook",
     link: "https://www.amazon.ca/Dialectical-Behavior-Therapy-Skills-Workbook/dp/1572245131/ref=sr_1_1?ie=UTF8&qid=1499135956&sr=8-1&keywords=dbt+workbook",
@@ -1640,7 +1640,7 @@ export const collectionData = [
   {
     id: 205,
     kind: "Book",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "Calming the Emotional Storm",
     link: "https://www.amazon.ca/Calming-Emotional-Storm-Dialectical-Behavior/dp/1608820874/ref=sr_1_1?ie=UTF8&qid=1499136027&sr=8-1&keywords=emotional+storm",
@@ -1648,7 +1648,7 @@ export const collectionData = [
   {
     id: 206,
     kind: "Book",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "The Dialectical Behavior Therapy Skills Workbook for Anxiety",
     link: "https://www.amazon.ca/Dialectical-Behavior-Therapy-Workbook-Anxiety/dp/1572249544/ref=sr_1_3?ie=UTF8&qid=1499136005&sr=8-3&keywords=dbt+workbook",
@@ -1656,7 +1656,7 @@ export const collectionData = [
   {
     id: 207,
     kind: "Book",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "The Dialectical Behavior Therapy Skills Workbook for Anger",
     link: "https://www.amazon.ca/Dialectical-Behavior-Therapy-Skills-Workbook/dp/1626250219/ref=sr_1_4?ie=UTF8&qid=1499136005&sr=8-4&keywords=dbt+workbook",
@@ -1664,7 +1664,7 @@ export const collectionData = [
   {
     id: 208,
     kind: "Book",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "Taking Charge of Adult ADHD",
     link: "https://www.amazon.ca/Taking-Charge-Adult-Russell-Barkley/dp/1606233386/ref=sr_1_fkmr2_4?ie=UTF8&qid=1499136404&sr=8-4-fkmr2&keywords=taking+charge+of+your+ADHD",
@@ -1672,7 +1672,7 @@ export const collectionData = [
   {
     id: 209,
     kind: "Book",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title:
       "Taking Charge of ADHD: The Complete, Authoritative Guide for Parents",
@@ -1681,7 +1681,7 @@ export const collectionData = [
   {
     id: 210,
     kind: "Book",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "When the Body Says No: The Cost of Hidden Stress",
     link: "https://www.amazon.ca/When-Body-Says-No-Hidden/dp/0676973124/ref=sr_1_1?s=books&ie=UTF8&qid=1499136497&sr=1-1&keywords=the+cost+of+hidden+stress",
@@ -1689,7 +1689,7 @@ export const collectionData = [
   {
     id: 211,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "Relationship and Emotional Regulation Information",
     link: "https://www.gottman.com/",
@@ -1697,7 +1697,7 @@ export const collectionData = [
   {
     id: 212,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "Anxiety Canada",
     link: "https://www.anxietycanada.com/",
@@ -1705,7 +1705,7 @@ export const collectionData = [
   {
     id: 213,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "Canadian ADHD Resource Alliance",
     link: "https://www.caddra.ca/",
@@ -1713,7 +1713,7 @@ export const collectionData = [
   {
     id: 214,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "Mindfulness Information",
     link: "https://www.mindful.org/",
@@ -1721,7 +1721,7 @@ export const collectionData = [
   {
     id: 215,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "DBT Self Help",
     link: "https://dbtselfhelp.com/",
@@ -1729,7 +1729,7 @@ export const collectionData = [
   {
     id: 216,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "The Science of Trauma, Mindfulness and PTSD",
     link: "https://www.mindful.org/the-science-of-trauma-mindfulness-ptsd/",
@@ -1737,7 +1737,7 @@ export const collectionData = [
   {
     id: 217,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "Springboard ADHD Clinic Resources",
     link: "https://springboardclinic.com/learning-resources/",
@@ -1745,7 +1745,7 @@ export const collectionData = [
   {
     id: 218,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "Attachment Theory Explanation",
     link: "https://www.thecut.com/2016/06/attachment-theory-motherhood-c-v-r.html",
@@ -1753,7 +1753,7 @@ export const collectionData = [
   {
     id: 219,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "Attachment and Addiction/ACES Study",
     link: "https://www.pacesconnection.com/blog/substance-abuse-doc-says-stop-chasing-the-drug-and-focus-on-the-aces",
@@ -1761,7 +1761,7 @@ export const collectionData = [
   {
     id: 220,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "An Open Letter To The Couple Who is Staying Together for The Kids",
     link: "https://www.huffpost.com/entry/an-open-letter-to-the-couple-who-are-staying-together_b_57e4704de4b09f67131e3f9c?section=us_divorce",
@@ -1769,7 +1769,7 @@ export const collectionData = [
   {
     id: 221,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "Emotional Advertising",
     link: "https://www.thestar.com/news/insight/buy-now-rationalize-later-this-is-how-emotional-advertising-works-age-of-unreason/article_a48d9810-20fe-5e78-8a30-eb332466eb93.html",
@@ -1777,7 +1777,7 @@ export const collectionData = [
   {
     id: 222,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "Healthy Aging Advice",
     link: "https://fountainofhealth.ca/en",
@@ -1785,7 +1785,7 @@ export const collectionData = [
   {
     id: 223,
     kind: "Article",
-    category: "General Resources",
+    category: "Additional Resources",
     subCategory: "General",
     title: "Taming Your Inner Critic",
     link: "https://www.mindful.org/basic-meditation-tame-inner-critic/",
