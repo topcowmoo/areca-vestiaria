@@ -1,17 +1,17 @@
 import { useState } from "react";
 import GeneralFilter from "../components/GeneralFilter";
 import Directory from "../components/Directory";
-import SearchBar from "../components/SearchBar";
+import SearchBarWithCommit from "../components/SearchBarWithCommit";
 
 function ADHDResources() {
   const [filteredData, setFilteredData] = useState([]);
   const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(false);
-  const [isInitial, setIsInitial] = useState(true); // Initial state to control first interaction
-  const category = "ADHD"; // Category specific to this page
+  const [isInitial, setIsInitial] = useState(true);
+  const category = "ADHD";
 
   const handleFilterBoxToggle = () => {
     if (isInitial) {
-      setIsInitial(false); // Set to false after the first interaction
+      setIsInitial(false);
     }
     setIsFilterBoxOpen(!isFilterBoxOpen);
   };
@@ -23,16 +23,19 @@ function ADHDResources() {
           ADHD Resources
         </h1>
         <div className="flex flex-col items-center">
-          <SearchBar />
+          <SearchBarWithCommit
+            setFilteredData={setFilteredData}
+            category={category} // Pass the category to filter by
+          />
         </div>
       </div>
 
       <div className="flex flex-col items-center justify-start flex-grow pb-[100px] -mt-[173px]">
-        <div className="w-[1200px] min-h-[500px]"> {/* Adjust min-height as needed */}
+        <div className="w-[1200px] min-h-[500px]">
           <GeneralFilter
             currentPage={category}
             setFilteredData={setFilteredData}
-            setIsFilterBoxOpen={handleFilterBoxToggle} // Use the toggle handler
+            setIsFilterBoxOpen={handleFilterBoxToggle}
             isFilterBoxOpen={isFilterBoxOpen}
             className={`transition-all duration-500 ease-in-out ${
               !isInitial &&
