@@ -21,7 +21,7 @@ const SearchBarWithCommit = ({ setFilteredData, category }) => {
           item.title &&
           item.title.toLowerCase().includes(value.toLowerCase())
       );
-      setSearchResults(results.slice(0, 5)); // Limit the results to 5 items
+      setSearchResults(results.slice(0, 5));
     }
   };
 

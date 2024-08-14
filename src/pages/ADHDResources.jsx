@@ -25,7 +25,7 @@ function ADHDResources() {
         <div className="flex flex-col items-center">
           <SearchBarWithCommit
             setFilteredData={setFilteredData}
-            category={category} // Pass the category to filter by
+            category={category}
           />
         </div>
       </div>
