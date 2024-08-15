@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { IoMdSearch } from "react-icons/io";
 import { collectionData } from "../data/collectionData";
 
-const SearchBarWithCommit = ({ setFilteredData, category }) => {
+const SearchBarWithCommit = ({ category }) => {
   const [query, setQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [isFocused, setIsFocused] = useState(false);
@@ -41,19 +41,9 @@ const SearchBarWithCommit = ({ setFilteredData, category }) => {
     );
   };
 
-  const handleSearchCommit = () => {
-    const results = collectionData.filter(
-      (item) =>
-        item.category === category && // Filter by the current page's category
-        item.title &&
-        item.title.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredData(results);
-  };
-
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
-      handleSearchCommit();
+  const handleKeyUp = (e) => {
+    if (e.key === "Enter" && searchResults.length > 0) {
+      window.open(searchResults[0].link, "_blank"); // Open the first result in a new tab
     }
   };
 
@@ -70,7 +60,7 @@ const SearchBarWithCommit = ({ setFilteredData, category }) => {
           placeholder="Search Topic..."
           value={query}
           onChange={handleInputChange}
-          onKeyPress={handleKeyPress}
+          onKeyUp={handleKeyUp}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setTimeout(() => setIsFocused(false), 150)}
         />
@@ -121,7 +111,6 @@ const SearchBarWithCommit = ({ setFilteredData, category }) => {
 };
 
 SearchBarWithCommit.propTypes = {
-  setFilteredData: PropTypes.func.isRequired,
   category: PropTypes.string.isRequired, // Ensure the category is passed as a prop
 };
 
