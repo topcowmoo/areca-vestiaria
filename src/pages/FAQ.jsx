@@ -1,4 +1,4 @@
-import  { useState, lazy, Suspense } from "react"; 
+import { useState, lazy, Suspense } from "react"; 
 
 // Lazy load the Modal component
 const Modal = lazy(() => import("../components/Modal"));
@@ -23,40 +23,41 @@ const Faq = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 relative">
+    <div className="min-h-screen bg-gray-100 relative pb-40">
       {/* Black Bar at the Top */}
       <div className="w-full h-[136px] left-0 top-0 absolute bg-black z-0" />
 
       {/* FAQ Section */}
-      <div className="relative max-w-[1440px] mx-auto px-4 pt-[250px]">
+      <div className="relative max-w-[1440px] mx-auto px-4 pt-[150px] sm:pt-[200px] lg:pt-[250px]">
         {/* FAQ Section Title */}
-        <div>
-          <div className="text-[#090909] text-[65px] font-bold font-['Playfair'] leading-none">
+        <div className="text-center lg:text-left">
+          <div className="text-[#090909] text-[32px] sm:text-[45px] lg:text-[65px] font-bold font-['Playfair'] leading-tight lg:leading-none">
             Frequently Asked Questions
           </div>
         </div>
 
         {/* FAQ Section Intro */}
         <div className="mt-4">
-          <div className="text-[17px] text-black font-normal font-['Inter'] mb-8 w-[1198px]">
+          <div className="text-[15px] sm:text-[17px] text-black font-normal font-['Inter'] mb-8 w-full sm:w-[80%] lg:w-[1198px] mx-auto lg:mx-0">
             Welcome to our FAQ page! Here, we've compiled answers to the most common questions we receive from our customers. Whether you're new to our services or a long-time client, we hope you find this resource helpful. If your question isn't listed here, please don't hesitate to contact our support team for further assistance.
           </div>
         </div>
 
-        {/* First Row of FAQ Entries */}
-        <div className="flex items-start gap-[90px] pt-[90px]">
-          <div className="w-[539px] flex flex-col gap-[17px]">
-            <div className="w-[125px] h-[26px] flex items-center justify-center text-white text-[15px] font-bold font-['Inter'] bg-[#06a416] rounded">
+        {/* FAQ Entries */}
+        <div className="space-y-16 lg:space-y-0 lg:flex lg:gap-[90px] pt-[50px] lg:pt-[90px]">
+          {/* First Column */}
+          <div className="w-full lg:w-[539px] flex flex-col gap-[17px]">
+            <div className="w-[125px] h-[26px] flex items-center justify-center text-white text-[15px] font-bold font-['Inter'] bg-[#06a416] rounded mx-auto lg:mx-0">
               Most Asked
             </div>
-            <div className="text-[#1f1f1f] text-[22px] font-semibold font-['Inter']">
+            <div className="text-[#1f1f1f] text-[20px] sm:text-[22px] font-semibold font-['Inter']">
               What can I expect for my consultation?
             </div>
-            <div className="text-black text-[17px] font-normal font-['Inter']">
+            <div className="text-black text-[15px] sm:text-[17px] font-normal font-['Inter']">
               Your consultation will be about 75 minutes (that is what you are booked for but may be longer or shorter depending on individual issues) so that the doctor can do a comprehensive assessment and have time to discuss findings directly with you as well as treatment options...
             </div>
             <div
-              className="text-black text-[17px] font-semibold font-['Inter'] underline cursor-pointer"
+              className="text-black text-[15px] sm:text-[17px] font-semibold font-['Inter'] underline cursor-pointer"
               onClick={() =>
                 openModal(
                   "What can I expect for my consultation?",
@@ -79,16 +80,17 @@ const Faq = () => {
           </div>
 
           {/* Vertical Divider */}
-          <div className="h-[228px] w-[0.5px] bg-gray-400 mx-auto"></div>
+          <div className="hidden lg:block h-[228px] w-[0.5px] bg-gray-400 mx-auto"></div>
 
-          <div className="w-[539px] flex flex-col gap-[17px]">
-            <div className="w-[125px] h-[26px] flex items-center justify-center text-white/0 text-[15px] font-bold font-['Inter']"></div>
-            <div className="text-[#1f1f1f] text-[22px] font-semibold font-['Inter']">Fees</div>
-            <div className="text-black text-[17px] font-normal font-['Inter']">
+          {/* Second Column */}
+          <div className="w-full lg:w-[539px] flex flex-col gap-[17px]">
+            <div className="hidden lg:block w-[125px] h-[26px] flex items-center justify-center text-white/0 text-[15px] font-bold font-['Inter']"></div>
+            <div className="text-[#1f1f1f] text-[20px] sm:text-[22px] font-semibold font-['Inter']">Fees</div>
+            <div className="text-black text-[15px] sm:text-[17px] font-normal font-['Inter']">
               Your consultation will be about 75 minutes (that is what you are booked for but may be longer or shorter depending on individual issues) so that the doctor can do a comprehensive assessment and have time to discuss findings directly with you as well as treatment options...
             </div>
             <div
-              className="text-black text-[17px] font-semibold font-['Inter'] underline cursor-pointer"
+              className="text-black text-[15px] sm:text-[17px] font-semibold font-['Inter'] underline cursor-pointer"
               onClick={() =>
                 openModal(
                   "Fees",
@@ -102,17 +104,18 @@ const Faq = () => {
         </div>
 
         {/* Second Row of FAQ Entries */}
-        <div className="flex items-start gap-[90px] mt-[100px]">
-          <div className="w-[539px] flex flex-col gap-[17px]">
-            <div className="w-[125px] h-[26px] flex items-center justify-center text-white/0 text-[15px] font-bold font-['Inter']"></div>
-            <div className="text-[#1f1f1f] text-[22px] font-semibold font-['Inter']">
+        <div className="space-y-16 lg:space-y-0 lg:flex lg:gap-[90px] mt-[50px] lg:mt-[100px]">
+          {/* First Column */}
+          <div className="w-full lg:w-[539px] flex flex-col gap-[17px]">
+            <div className="hidden lg:block w-[125px] h-[26px] flex items-center justify-center text-white/0 text-[15px] font-bold font-['Inter']"></div>
+            <div className="text-[#1f1f1f] text-[20px] sm:text-[22px] font-semibold font-['Inter']">
               What can I expect for my consultation?
             </div>
-            <div className="text-black text-[17px] font-normal font-['Inter']">
+            <div className="text-black text-[15px] sm:text-[17px] font-normal font-['Inter']">
               Your consultation will be about 75 minutes (that is what you are booked for but may be longer or shorter depending on individual issues) so that the doctor can do a comprehensive assessment and have time to discuss findings directly with you as well as treatment options...
             </div>
             <div
-              className="text-black text-[17px] font-semibold font-['Inter'] underline cursor-pointer"
+              className="text-black text-[15px] sm:text-[17px] font-semibold font-['Inter'] underline cursor-pointer"
               onClick={() =>
                 openModal(
                   "What can I expect for my consultation?",
@@ -125,66 +128,19 @@ const Faq = () => {
           </div>
 
           {/* Vertical Divider */}
-          <div className="h-[228px] w-[0.5px] bg-gray-400 mx-auto"></div>
+          <div className="hidden lg:block h-[228px] w-[0.5px] bg-gray-400 mx-auto"></div>
 
-          <div className="w-[539px] flex flex-col gap-[17px]">
-            <div className="w-[125px] h-[26px] flex items-center justify-center text-white/0 text-[15px] font-bold font-['Inter']"></div>
-            <div className="text-[#1f1f1f] text-[22px] font-semibold font-['Inter']">
+          {/* Second Column */}
+          <div className="w-full lg:w-[539px] flex flex-col gap-[17px]">
+            <div className=" lg:block w-[125px] h-[26px] flex items-center justify-center text-white/0 text-[15px] font-bold font-['Inter']"></div>
+            <div className="text-[#1f1f1f] text-[20px] sm:text-[22px] font-semibold font-['Inter']">
               What can I expect for my consultation?
             </div>
-            <div className="text-black text-[17px] font-normal font-['Inter']">
+            <div className="text-black text-[15px] sm:text-[17px] font-normal font-['Inter']">
               Your consultation will be about 75 minutes (that is what you are booked for but may be longer or shorter depending on individual issues) so that the doctor can do a comprehensive assessment and have time to discuss findings directly with you as well as treatment options...
             </div>
             <div
-              className="text-black text-[17px] font-semibold font-['Inter'] underline cursor-pointer"
-              onClick={() =>
-                openModal(
-                  "What can I expect for my consultation?",
-                  "Your consultation will be about 75 minutes, depending on individual issues. The doctor will conduct a comprehensive assessment, discuss findings, and present treatment options. The discussion is aimed at providing you with the best possible care."
-                )
-              }
-            >
-              Read More
-            </div>
-          </div>
-        </div>
-
-        {/* Third Row of FAQ Entries */}
-        <div className="flex items-start gap-[90px] mt-[100px]">
-          <div className="w-[539px] flex flex-col gap-[17px]">
-            <div className="w-[125px] h-[26px] flex items-center justify-center text-white/0 text-[15px] font-bold font-['Inter']"></div>
-            <div className="text-[#1f1f1f] text-[22px] font-semibold font-['Inter']">
-              What can I expect for my consultation?
-            </div>
-            <div className="text-black text-[17px] font-normal font-['Inter']">
-              Your consultation will be about 75 minutes (that is what you are booked for but may be longer or shorter depending on individual issues) so that the doctor can do a comprehensive assessment and have time to discuss findings directly with you as well as treatment options...
-            </div>
-            <div
-              className="text-black text-[17px] font-semibold font-['Inter'] underline cursor-pointer"
-              onClick={() =>
-                openModal(
-                  "What can I expect for my consultation?",
-                  "Your consultation will be about 75 minutes, depending on individual issues. The doctor will conduct a comprehensive assessment, discuss findings, and present treatment options. The discussion is aimed at providing you with the best possible care."
-                )
-              }
-            >
-              Read More
-            </div>
-          </div>
-
-          {/* Vertical Divider */}
-          <div className="h-[228px] w-[0.5px] bg-gray-400 mx-auto"></div>
-
-          <div className="w-[539px] flex flex-col gap-[17px]">
-            <div className="w-[125px] h-[26px] flex items-center justify-center text-white/0 text-[15px] font-bold font-['Inter']"></div>
-            <div className="text-[#1f1f1f] text-[22px] font-semibold font-['Inter']">
-              What can I expect for my consultation?
-            </div>
-            <div className="text-black text-[17px] font-normal font-['Inter']">
-              Your consultation will be about 75 minutes (that is what you are booked for but may be longer or shorter depending on individual issues) so that the doctor can do a comprehensive assessment and have time to discuss findings directly with you as well as treatment options...
-            </div>
-            <div
-              className="text-black text-[17px] font-semibold font-['Inter'] underline cursor-pointer"
+              className="text-black text-[15px] sm:text-[17px] font-semibold font-['Inter'] underline cursor-pointer"
               onClick={() =>
                 openModal(
                   "What can I expect for my consultation?",
