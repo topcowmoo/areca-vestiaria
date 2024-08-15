@@ -1,7 +1,7 @@
 export const categoryData = [
   {
     id: 1,
-    title: "ADHD",
+    title: "ADHD Resources",
     image: "bg-card-one",
     link: "/adhd-resources",
   },
@@ -20,31 +20,31 @@ export const categoryData = [
   {
     id: 4,
     title: "Couples Resources",
-    image: "bg-card-four",
+    image: "bg-card-five",
     link: "/couples-resources",
   },
   {
     id: 5,
     title: "Anger & Shame",
-    image: "bg-card-one",
+    image: "bg-card-six",
     link: "/anger-and-shame",
   },
   {
     id: 6,
     title: "Therapy",
-    image: "bg-card-two",
+    image: "bg-card-one",
     link: "/therapy",
   },
   {
     id: 7,
-    title: "Physician Patient Resources",
+    title: "Physician Patient",
     image: "bg-card-three",
     link: "/physician-patient-resources",
   },
   {
     id: 8,
-    title: "General Resources",
-    image: "bg-card-three",
+    title: "Additional Resources",
+    image: "bg-card-seven",
     link: "/general-resources",
   },
 ];

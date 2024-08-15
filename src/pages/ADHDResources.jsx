@@ -6,8 +6,8 @@ import SearchBarWithCommit from "../components/SearchBarWithCommit";
 function ADHDResources() {
   const [filteredData, setFilteredData] = useState([]);
   const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(false);
-  const [isInitial, setIsInitial] = useState(true);
-  const category = "ADHD";
+  const [isInitial, setIsInitial] = useState(true); // Initial state to control first interaction
+  const category = "ADHD Resources"; // Category specific to this page
 
   const handleFilterBoxToggle = () => {
     if (isInitial) {
@@ -32,6 +32,8 @@ function ADHDResources() {
 
       <div className="flex flex-col items-center justify-start flex-grow pb-[100px] -mt-[173px]">
         <div className="w-[1200px] min-h-[500px]">
+          {" "}
+          {/* Adjust min-height as needed */}
           <GeneralFilter
             currentPage={category}
             setFilteredData={setFilteredData}
@@ -42,7 +44,6 @@ function ADHDResources() {
               (isFilterBoxOpen ? "animate-slideDown" : "animate-slideUp")
             }`}
           />
-
           <div className="flex flex-col pt-[37px]">
             <div
               className={`transition-all duration-500 ease-in-out flex origin-left ${
