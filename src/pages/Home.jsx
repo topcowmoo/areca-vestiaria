@@ -16,15 +16,14 @@ function Home() {
   };
 
   return (
-    // Top Page
     <div>
-      <div className="flex flex-col min-h-screen bg-page-one bg-cover bg-center">
+      <div className="flex flex-col h-[75vh] md:h-[100vh] bg-page-one bg-cover bg-center">
         <div className="flex flex-grow flex-col items-center justify-center">
           <div className="w-[261px]">
-            <h1 className="w-full text-center text-white text-[90.17px] font-extrabold font-playfair mb-2">
+            <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-2">
               WLNS
             </h1>
-            <h4 className="w-full text-center text-white text-3xl font-extralight font-inter mb-8">
+            <h4 className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter mb-8">
               The Wellness Hub
             </h4>
           </div>
@@ -32,25 +31,23 @@ function Home() {
           <SearchBar />
           <a
             href="#second-page"
-            className="text-center text-white text-[19px] font-light font-['Inter'] underline m-8 pb-4"
+            className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] underline m-8 pb-4"
           >
             Explore More
           </a>
         </div>
       </div>
 
-      {/* Second Page */}
-
       <div
         id="second-page"
-        className="flex flex-col min-h-screen bg-page-two bg-cover bg-center p-6"
+        className="flex flex-col h-[75vh] md:h-[100vh] bg-page-two bg-cover bg-center p-4 sm:p-6 md:p-12"
       >
-        <div className="flex flex-grow flex-col items-center justify-center mx-12 my-12">
-          <div className="w-3/4 flex flex-grow flex-col items-start justify-center">
-            <div className="w-[1014px] text-white text-[71px] font-extrabold font-playfair leading-[67.45px] mb-4">
-              Sunrise Health & Clinical Excellence Centre
+        <div className="flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-8 sm:my-12">
+          <div className="w-full lg:w-3/4 flex flex-grow flex-col items-start justify-center">
+            <div className="w-full text-white text-[26px] sm:text-[48px] md:text-[71px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
+              Sunrise Health & Clinical <br /> Excellence Centre
             </div>
-            <div className="w-full text-white text-[19px] font-light font-['Inter'] leading-[37px] mt-8">
+            <div className="w-full text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] leading-[24px] sm:leading-[32px] md:leading-[37px] mt-4 sm:mt-6 md:mt-8">
               Sun rises everyday - and we believe that in mental health and life
               in general - hope and new beginnings are key ingredients to
               wellness. At SUNRISE, not only do we focus on comprehensive
@@ -59,11 +56,11 @@ function Home() {
               and currently consists of Dr. Mammoliti and Dr. Eletu. <br />
               <br />
               Being a medical doctor, a consultation with Dr. Mammoliti or Dr.
-              Eletu is covered by OHIP as well as ongoing care <br />
-              (your health card) if you have OHIP coverage. THERE IS NO CAPACITY
-              FOR ONGOING PSYCHIATRIC CARE AT THIS TIME WITH EITHER DOCTOR AND
-              CONSULTS ARE AVAILABLE on a limited basis given the demand and
-              expertise fields.{" "}
+              Eletu is covered by OHIP as well as ongoing care (your health
+              card) if you have OHIP coverage. THERE IS NO CAPACITY FOR ONGOING
+              PSYCHIATRIC CARE AT THIS TIME WITH EITHER DOCTOR AND CONSULTS ARE
+              AVAILABLE on a limited basis given the demand and expertise
+              fields.{" "}
             </div>
             <button
               onClick={handleOpenModal}
@@ -130,17 +127,17 @@ function Home() {
 
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-0 backdrop-blur-sm flex items-center justify-center">
-          <div className="relative w-[957px] h-[473px] bg-white/80 bg-opacity-50 rounded-[18px] p-6">
+          <div className="relative w-3/4 lg:w-[957px] bg-white/80 bg-opacity-50 rounded-[18px] p-6">
             <IoCloseSharp
               className="absolute top-4 right-4 cursor-pointer w-8 h-8 text-black"
               onClick={handleCloseModal}
             />
 
-            <h2 className="text-center text-black text-[40px] font-extrabold font-playfair mb-4">
+            <h2 className="text-center text-black text-[30px] md:text-[40px] font-extrabold font-playfair mb-4">
               About Us
             </h2>
             <div className="bg-white/80 rounded-[18px] mb-4">
-              <p className="text-[#1e1e1e] text-[18px] font-normal font-inter leading-[37px] p-6">
+              <p className="text-[#1e1e1e] text-[13px] sm:text-base md:text-[19px] font-normal font-inter p-6">
                 Dr. M. Mammoliti is a dedicated psychiatrist specializing in
                 General Adult Psychiatry with a focus on Physician Mental Health
                 and ADHD in adults. She completed her medical education at the

@@ -40,7 +40,7 @@ const SearchBar = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center p-4">
-      <div className="w-[482px] h-[35px] px-[22px] py-1.5 bg-white rounded-[32px] shadow flex items-center border border-gray-200 focus-within:shadow-lg">
+      <div className="w-[282px] md:w-[482px] h-[35px] px-[22px] py-2.5 md:py-1.5 bg-white rounded-[32px] shadow flex items-center border border-gray-200 focus-within:shadow-lg">
         <input
           type="text"
           className={`flex-grow bg-transparent focus:outline-none ${
