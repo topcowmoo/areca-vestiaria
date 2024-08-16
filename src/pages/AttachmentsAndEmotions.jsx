@@ -18,22 +18,20 @@ function AttachmentsAndEmotions() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-black to-black">
-      <div className="w-full h-[847px] bg-attachment-page bg-cover bg-center flex flex-col items-center justify-center">
-        <h1 className="text-center text-white text-[71px] font-extrabold font-[playfair] -mt-[161.5px]">
+      <div className="w-full h-[50vh] md:h-[847px] bg-attachment-page md:bg-center bg-[length:auto_54.5%] bg-no-repeat md:bg-cover flex flex-col items-center justify-center">
+        <h1 className="text-center text-white text-[34px] md:text-[71px] font-extrabold font-[playfair] -mt-[161.5px]">
           Attachment & Emotions
         </h1>
         <div className="flex flex-col items-center">
-        <SearchBarWithCommit
+          <SearchBarWithCommit
             setFilteredData={setFilteredData}
             category={category}
           />
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-start flex-grow pb-[100px] -mt-[173px]">
-        <div className="w-[1200px] min-h-[500px]">
-          {" "}
-          {/* Adjust min-height as needed */}
+      <div className="flex flex-col items-center justify-start flex-grow pb-[100px] -mt-[192px]">
+        <div className="w-full max-w-[1200px] min-h-[500px] px-4 md:px-6 lg:px-8">
           <GeneralFilter
             currentPage={category}
             setFilteredData={setFilteredData}
@@ -52,7 +50,7 @@ function AttachmentsAndEmotions() {
             >
               <Directory
                 filteredData={filteredData}
-                className="flex-1 min-w-[75%]"
+                className="flex-1 min-w-[75%] md:min-w-full"
               />
             </div>
           </div>
