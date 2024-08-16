@@ -1,7 +1,7 @@
 import { useState } from "react";
 import GeneralFilter from "../components/GeneralFilter";
 import Directory from "../components/Directory";
-import SearchBar from "../components/SearchBar";
+import SearchBarWithCommit from "../components/SearchBarWithCommit";
 
 function ADHDResources() {
   const [filteredData, setFilteredData] = useState([]);
@@ -11,7 +11,7 @@ function ADHDResources() {
 
   const handleFilterBoxToggle = () => {
     if (isInitial) {
-      setIsInitial(false); // Set to false after the first interaction
+      setIsInitial(false);
     }
     setIsFilterBoxOpen(!isFilterBoxOpen);
   };
@@ -23,7 +23,10 @@ function ADHDResources() {
           ADHD Resources
         </h1>
         <div className="flex flex-col items-center">
-          <SearchBar />
+          <SearchBarWithCommit
+            setFilteredData={setFilteredData}
+            category={category}
+          />
         </div>
       </div>
 
@@ -34,7 +37,7 @@ function ADHDResources() {
           <GeneralFilter
             currentPage={category}
             setFilteredData={setFilteredData}
-            setIsFilterBoxOpen={handleFilterBoxToggle} // Use the toggle handler
+            setIsFilterBoxOpen={handleFilterBoxToggle}
             isFilterBoxOpen={isFilterBoxOpen}
             className={`transition-all duration-500 ease-in-out ${
               !isInitial &&

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AdditionalResourceFilterBox from "../components/AdditionalResourceFilterBox";
 import Directory from "../components/Directory";
-import SearchBar from "../components/SearchBar";
+import SearchBarWithCommit from "../components/SearchBarWithCommit";
 
 function AdditionalResources() {
   const [filteredData, setFilteredData] = useState([]);
@@ -23,7 +23,10 @@ function AdditionalResources() {
           Additional Resources
         </h1>
         <div className="flex flex-col items-center">
-          <SearchBar />
+        <SearchBarWithCommit
+            setFilteredData={setFilteredData}
+            category={category}
+          />
         </div>
       </div>
 
