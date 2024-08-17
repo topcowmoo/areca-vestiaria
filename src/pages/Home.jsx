@@ -40,14 +40,14 @@ function Home() {
 
       <div
         id="second-page"
-        className="flex flex-col h-[75vh] md:h-[100vh] bg-page-two bg-cover bg-center p-4 sm:p-6 md:p-12"
+        className="flex flex-col h-[100vh] bg-page-two bg-cover bg-center p-2 sm:p-6 md:p-12"
       >
-        <div className="flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-8 sm:my-12">
-          <div className="w-full lg:w-3/4 flex flex-grow flex-col items-start justify-center">
-            <div className="w-full text-white text-[26px] sm:text-[48px] md:text-[71px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
+        <div className="flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12">
+          <div className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-center">
+            <div className="w-full text-white text-[26px] sm:text-[38px] lg:text-[61px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
               Sunrise Health & Clinical <br /> Excellence Centre
             </div>
-            <div className="w-full text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] leading-[24px] sm:leading-[32px] md:leading-[37px] mt-4 sm:mt-6 md:mt-8">
+            <div className="w-full text-white text-[10px] md:text-[14px] lg:text-[16px] font-light font-['Inter'] leading-[18px] md:leading-[26px] mt-4">
               Sun rises everyday - and we believe that in mental health and life
               in general - hope and new beginnings are key ingredients to
               wellness. At SUNRISE, not only do we focus on comprehensive
@@ -64,7 +64,7 @@ function Home() {
             </div>
             <button
               onClick={handleOpenModal}
-              className="mt-4 px-4 py-2 bg-white font-inter rounded text-alt hover:text-white hover:bg-alt"
+              className="mt-4 px-4 py-2 bg-white text-sm md:text-md font-inter rounded text-alt hover:text-white hover:bg-alt"
             >
               Read More
             </button>
@@ -74,16 +74,18 @@ function Home() {
 
       {/* Resource Display Section */}
       <div className="max-w-3/4 mx-auto">
-        <div className="w-full flex flex-col bg-[#fcfcfc] bg-center p-6">
+        <div className="w-full flex flex-col bg-[#fcfcfc] bg-center p-3 md:p-6">
           {/* Container for Title and Button */}
           <div className="flex justify-between xl:justify-around items-center my-6">
             {/* Title Above Left Section */}
-            <h2 className="text-[67px] font-bold font-playfair">Resources</h2>
+            <h2 className="text-[27px] md:text-[37px] lg:text-[67px] font-bold font-playfair">
+              Resources
+            </h2>
 
             {/* Button in the Top Right Corner */}
             <a
               href="/all-resources"
-              className="bg-[#393939] text-[22px] text-white px-4 py-1 rounded"
+              className="bg-[#393939] text-[9px] md:text-[18px] lg:text-[22px] text-white px-4 py-1 rounded"
             >
               View All Resources
             </a>
@@ -104,14 +106,14 @@ function Home() {
       {/* Last Page + Footer */}
       <div
         id="contact-page"
-        className="flex flex-col min-h-screen bg-page-three bg-cover bg-center p-6"
+        className="flex flex-col h-[100vh] bg-page-two bg-cover bg-center p-2 sm:p-6 md:p-12"
       >
-        <div className="flex flex-grow flex-col items-center justify-center mx-12 my-12">
-          <div className="w-3/4 flex flex-grow flex-col items-start justify-center">
-            <div className="w-[1014px] text-white text-[71px] font-extrabold font-playfair leading-[67.45px] mb-4">
+        <div className="flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12">
+          <div className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-center">
+            <div className="w-full text-white text-[26px] sm:text-[38px] lg:text-[61px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
               Contact Us
             </div>
-            <div className="w-full text-white text-[19px] font-light font-['Inter'] leading-[37px] mt-8">
+            <div className="w-full text-white text-[10px] md:text-[14px] lg:text-[16px] font-light font-['Inter'] leading-[18px] md:leading-[26px] mt-4">
               Please note, you will need a referral from your Family Doctor to
               be referred to Dr. Mammoliti for a consultation. The consultation
               and ongoing care are covered by OHIP (your health card) but not

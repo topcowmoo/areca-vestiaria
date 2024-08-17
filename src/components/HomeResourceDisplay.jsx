@@ -21,9 +21,9 @@ const CategoryResourceDisplay = ({ category }) => {
 
   return (
     <div className="flex justify-center items-center my-8">
-      <div className="flex flex-col md:flex-row items-start justify-center space-x-0 md:space-x-4 max-w-max">
+      <div className="flex flex-col md:flex-row items-start justify-center w-full">
         {/* Left side: Main Resource Card */}
-        <div className="flex-grow-0 self-stretch">
+        <div className="w-full md:w-[80%] lg:w-auto">
           <ResourceCard
             title={categoryInfo.title}
             image={categoryInfo.image}
@@ -33,7 +33,7 @@ const CategoryResourceDisplay = ({ category }) => {
         </div>
 
         {/* Right side: Scrollable list of related resources */}
-        <div className="flex-grow-0 self-stretch h-[550px] w-[612px] overflow-y-auto p-1 rounded-md box-border">
+        <div className="w-full md:w-[80%] lg:w-[612px] lg:h-[550px] overflow-y-auto p-1 rounded-md box-border">
           <HomeDirectory filteredData={resources} />
         </div>
       </div>
