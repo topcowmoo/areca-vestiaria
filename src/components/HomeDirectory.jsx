@@ -15,7 +15,7 @@ function HomeDirectory({ filteredData }) {
       <div
         className={`flex flex-col gap-4 w-full ${
           needsScrolling ? "overflow-y-auto custom-scrollbar" : ""
-        } h-[300px] sm:h-[400px] md:h-[450px] lg:h-[510px]`}
+        } h-[300px] sm:h-[400px] md:h-[370px] lg:h-[510px]`}
       >
         {filteredData.length > 0 ? (
           filteredData.map((item) => (
