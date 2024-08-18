@@ -15,6 +15,13 @@ function Home() {
     setIsModalOpen(false);
   };
 
+  const handleBackdropClick = (e) => {
+    // Close the modal only if the backdrop itself (not the modal content) is clicked
+    if (e.target === e.currentTarget) {
+      handleCloseModal();
+    }
+  };
+
   return (
     <div>
       <div className="flex flex-col h-[75vh] md:h-[100vh] bg-page-one bg-cover bg-center">
@@ -64,7 +71,7 @@ function Home() {
             </div>
             <button
               onClick={handleOpenModal}
-              className="mt-4 px-4 py-2 bg-white text-sm md:text-md font-inter rounded text-alt hover:text-white hover:bg-alt"
+              className="mt-4 md:mt-7 px-4 py-2 bg-white text-sm md:text-md font-inter rounded text-alt hover:text-white hover:bg-alt"
             >
               Read More
             </button>
@@ -128,8 +135,11 @@ function Home() {
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-0 backdrop-blur-sm flex items-center justify-center">
-          <div className="relative w-3/4 lg:w-[957px] bg-white/80 bg-opacity-50 rounded-[18px] p-6">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-0 backdrop-blur-sm flex items-center justify-center"
+          onClick={handleBackdropClick}
+        >
+          <div className="relative w-[85%] lg:w-[957px] bg-white/80 bg-opacity-50 rounded-[18px] p-6">
             <IoCloseSharp
               className="absolute top-4 right-4 cursor-pointer w-8 h-8 text-black"
               onClick={handleCloseModal}
@@ -139,7 +149,7 @@ function Home() {
               About Us
             </h2>
             <div className="bg-white/80 rounded-[18px] mb-4">
-              <p className="text-[#1e1e1e] text-[13px] sm:text-base md:text-[19px] font-normal font-inter p-6">
+              <p className="text-[#1e1e1e] text-[13px] sm:text-base md:text-[19px] font-normal leading-[18px] font-inter p-6">
                 Dr. M. Mammoliti is a dedicated psychiatrist specializing in
                 General Adult Psychiatry with a focus on Physician Mental Health
                 and ADHD in adults. She completed her medical education at the

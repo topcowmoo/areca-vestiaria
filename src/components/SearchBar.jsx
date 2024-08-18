@@ -57,7 +57,7 @@ const SearchBar = () => {
         <IoMdSearch className="w-[23px] h-[23px] ml-2 text-[#9b9b9b]" />
       </div>
       <div
-        className={`absolute top-[60px] w-[482px] bg-white rounded-[10px] mt-4 p-4 shadow-lg z-10 border border-gray-200 transition-all ease-in-out transform ${
+        className={`absolute top-[60px] w-[90%] md:w-[482px] bg-white rounded-[10px] mt-4 p-4 shadow-lg z-10 border border-gray-200 transition-all ease-in-out transform ${
           isFocused && query.length >= 3
             ? "duration-300 opacity-100 translate-y-0"
             : "duration-500 opacity-0 -translate-y-2 pointer-events-none"
@@ -73,13 +73,13 @@ const SearchBar = () => {
                 rel="noopener noreferrer"
                 className="w-full no-underline hover:underline"
               >
-                <div className="w-full">
+                <div className="w-full md:w-full">
                   <span className="text-[#1f1f1f] text-base font-normal font-['Inter'] truncate block">
                     {highlightQuery(item.title)}
                   </span>
                   {item !== filteredData[filteredData.length - 1] && (
                     <div
-                      className="w-[456.5px] border-t mt-2 mb-2"
+                      className="w-full md:w-[456.5px] border-t mt-2 mb-2"
                       style={{ borderColor: "#0000007D" }}
                     ></div>
                   )}
