@@ -3,7 +3,12 @@ import PropTypes from "prop-types";
 import { collectionData } from "../data/collectionData";
 import { RiEqualizerFill } from "react-icons/ri";
 
-const GeneralFilter = ({ currentPage, setFilteredData, setIsFilterBoxOpen, isFilterBoxOpen }) => {
+const GeneralFilter = ({
+  currentPage,
+  setFilteredData,
+  setIsFilterBoxOpen,
+  isFilterBoxOpen,
+}) => {
   const [checkedKinds, setCheckedKinds] = useState({
     Article: false,
     Video: false,
@@ -11,7 +16,9 @@ const GeneralFilter = ({ currentPage, setFilteredData, setIsFilterBoxOpen, isFil
   });
 
   const filteredData = useMemo(() => {
-    const kinds = Object.keys(checkedKinds).filter((kind) => checkedKinds[kind]);
+    const kinds = Object.keys(checkedKinds).filter(
+      (kind) => checkedKinds[kind]
+    );
 
     if (kinds.length === 0) {
       return collectionData.filter((item) => item.category === currentPage);
@@ -56,12 +63,14 @@ const GeneralFilter = ({ currentPage, setFilteredData, setIsFilterBoxOpen, isFil
 
       {/* Animate visibility of the FilterBox */}
       <div
-        className={`mt-[37px] absolute top-full left-0 transition-all duration-500 ease-in-out transform ${
-          isFilterBoxOpen ? 'translate-y-0 opacity-100' : '-translate-y-8 opacity-0'
+        className={`mt-[15px] absolute top-full left-0 transition-all duration-500 ease-in-out transform ${
+          isFilterBoxOpen
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-8 opacity-0"
         }`}
-        style={{ visibility: isFilterBoxOpen ? 'visible' : 'hidden' }}
+        style={{ visibility: isFilterBoxOpen ? "visible" : "hidden" }}
       >
-        <div className="w-[282px] px-4 pt-7 pb-[69px] bg-[#e8e8e8]/20 rounded-[10px] border border-white backdrop-blur-[24.90px] flex-col justify-start items-start gap-[15px] inline-flex">
+        <div className="lg:w-[282px] w-[343px] px-4 pt-7 lg:pb-[69px] pb-[302px] bg-[#e8e8e8]/20 rounded-[10px] border border-white backdrop-blur-[24.90px] flex-col justify-start items-start gap-[15px] inline-flex">
           <div className="lg:text-white text-[32px] font-semibold font-['Inter']">
             Filter
           </div>
