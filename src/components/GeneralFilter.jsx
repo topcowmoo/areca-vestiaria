@@ -70,7 +70,7 @@ const GeneralFilter = ({
         }`}
         style={{ visibility: isFilterBoxOpen ? "visible" : "hidden" }}
       >
-        <div className="lg:w-[282px] w-[343px] px-4 pt-7 lg:pb-[69px] pb-[302px] bg-[#e8e8e8]/20 rounded-[10px] border border-white backdrop-blur-[24.90px] flex-col justify-start items-start gap-[15px] inline-flex">
+        <div className="sm:w-[282px] w-[343px] px-4 pt-7 sm:pb-[69px] pb-[302px] lg:bg-[#e8e8e8]/20 rounded-[10px] border border-white lg:backdrop-blur-[24.90px] bg-[#e5e5e5] flex-col justify-start items-start gap-[15px] inline-flex">
           <div className="lg:text-white text-[32px] font-semibold font-['Inter']">
             Filter
           </div>
