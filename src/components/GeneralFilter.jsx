@@ -43,31 +43,22 @@ const GeneralFilter = ({
     setIsFilterBoxOpen(!isFilterBoxOpen);
   };
 
-return (
-    <div className="relative w-full">
-      {/* Button styles for large and small screens */}
+  return (
+    <div className="relative">
+      {/* Move the button to the desired location using CSS or layout changes */}
       <div
-        className={`h-[33.95px] px-[9.59px] py-[4.47px] justify-start items-center gap-[7.67px] inline-flex cursor-pointer ${
+        className={`${
           isFilterBoxOpen
-            ? "lg:bg-white lg:text-black sm:bg-white sm:text-black sm:border-none"
-            : "lg:bg-black lg:text-white sm:bg-black sm:text-white"
-        } ${
-          !isFilterBoxOpen
-            ? "rounded-md border border-white"
-            : "rounded-md border-none"
-        } sm:h-[28px] sm:px-[8px] sm:py-[4px] sm:gap-[5px] lg:h-[33.95px] lg:px-[9.59px] lg:py-[4.47px] lg:gap-[7.67px]`}
+            ? "bg-white text-black border-white"
+            : "bg-black text-white border-white"
+        } h-[22.75px] px-[6.16px] pt-[4.47px] rounded-md border justify-start items-end gap-[4.93px] inline-flex cursor-pointer lg:h-[33.95px] lg:px-[9.59px] lg:py-[4.47px] lg:items-center lg:gap-[7.67px]`}
         onClick={toggleFilterBox}
       >
         <RiEqualizerFill
-          className={`w-[24.29px] h-[24.29px] sm:w-[20px] sm:h-[20px] lg:w-[24.29px] lg:h-[24.29px] ${
-            isFilterBoxOpen ? "sm:text-black lg:text-black" : "sm:text-white lg:text-white"
-          }`}
+          className="w-[13.15px] h-[13.15px] lg:w-[24.29px] lg:h-[24.29px]"
+          style={{ color: isFilterBoxOpen ? "black" : "white" }}
         />
-        <div
-          className={`text-xl font-medium sm:text-base lg:text-xl ${
-            isFilterBoxOpen ? "sm:text-black lg:text-black" : "sm:text-white lg:text-white"
-          }`}
-        >
+        <div className="text-[13.15px] font-medium font-['Inter'] lg:text-xl">
           Filter
         </div>
       </div>
@@ -78,43 +69,24 @@ return (
           isFilterBoxOpen
             ? "translate-y-0 opacity-100"
             : "-translate-y-8 opacity-0"
-        } sm:mt-[20px] lg:mt-[37px] lg:border lg:border-white rounded-[10px]`}
+        }`}
         style={{ visibility: isFilterBoxOpen ? "visible" : "hidden" }}
       >
-        <div
-          className={`w-[343px] sm:w-[500px] px-4 sm:px-6 pt-7 pb-[304px] rounded-[10px] ${
-            isFilterBoxOpen
-              ? "sm:bg-white sm:text-black sm:border-none lg:bg-[#e8e8e8]/20 lg:text-white"
-              : "sm:bg-[#e8e8e8]/20 sm:text-white lg:bg-[#e8e8e8]/20 lg:text-white"
-          } backdrop-blur-[24.90px] flex-col justify-start items-start gap-[15px] inline-flex lg:w-[282px] lg:px-4 lg:pt-7 lg:pb-[69px] rounded-[10px]`}
-        >
-          <div
-            className={`text-[32px] font-semibold sm:text-[24px] lg:text-[32px] ${
-              isFilterBoxOpen
-                ? "sm:text-black lg:text-white"
-                : "sm:text-white lg:text-white"
-            }`}
-          >
+        <div className="w-[282px] px-4 pt-7 pb-[69px] bg-[#e8e8e8]/20 rounded-[10px] border border-white backdrop-blur-[24.90px] flex-col justify-start items-start gap-[15px] inline-flex">
+          <div className="lg:text-white text-[32px] font-semibold font-['Inter']">
             Filter
           </div>
-          <hr className="w-full h-[2px] sm:bg-black lg:bg-white bg-black border-0" />
-
-          <div
-            className={`text-[19px] font-semibold leading-7 tracking-tight sm:text-[16px] lg:text-[19px] ${
-              isFilterBoxOpen
-                ? "sm:text-black lg:text-white"
-                : "sm:text-white lg:text-white"
-            }`}
-          >
+          <hr className="border-t border-white w-full" />
+          <div className="lg:text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
             Resource Format
           </div>
-          <div className="flex-col justify-start items-start gap-[7px] sm:gap-[5px] lg:gap-[7px] flex">
+          <div className="flex-col justify-start items-start gap-[7px] flex">
             {Object.keys(checkedKinds).map((kind) => (
               <div
-                className="justify-start items-center gap-8 sm:gap-4 lg:gap-8 inline-flex"
+                className="justify-start items-center gap-8 inline-flex"
                 key={kind}
               >
-                <div className="justify-start items-start gap-2.5 sm:gap-2.5 lg:gap-2.5 flex">
+                <div className="justify-start items-start gap-2.5 flex">
                   <input
                     type="checkbox"
                     value={kind}
@@ -125,13 +97,7 @@ return (
                     }`}
                   />
                 </div>
-                <div
-                  className={`text-base sm:text-sm lg:text-base font-medium ${
-                    isFilterBoxOpen
-                      ? "sm:text-black lg:text-white"
-                      : "sm:text-white lg:text-white"
-                  }`}
-                >
+                <div className="lg:text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
                   {kind}
                 </div>
               </div>
