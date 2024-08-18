@@ -62,11 +62,11 @@ const GeneralFilter = ({ currentPage, setFilteredData, setIsFilterBoxOpen, isFil
         style={{ visibility: isFilterBoxOpen ? 'visible' : 'hidden' }}
       >
         <div className="w-[282px] px-4 pt-7 pb-[69px] bg-[#e8e8e8]/20 rounded-[10px] border border-white backdrop-blur-[24.90px] flex-col justify-start items-start gap-[15px] inline-flex">
-          <div className="text-white text-[32px] font-semibold font-['Inter']">
+          <div className="lg:text-white text-[32px] font-semibold font-['Inter']">
             Filter
           </div>
-          <hr className="border-t border-white w-full" />
-          <div className="text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
+          <hr className="w-full h-[2px] sm:bg-black lg:bg-white bg-black border-0" />
+          <div className="lg:text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
             Resource Format
           </div>
           <div className="flex-col justify-start items-start gap-[7px] flex">
@@ -75,16 +75,18 @@ const GeneralFilter = ({ currentPage, setFilteredData, setIsFilterBoxOpen, isFil
                 className="justify-start items-center gap-8 inline-flex"
                 key={kind}
               >
-                <div className="justify-start items-start gap-2.5 flex">
+                <div className="justify-start items-start gap-2.5 sm:gap-2.5 lg:gap-2.5 flex">
                   <input
                     type="checkbox"
                     value={kind}
                     checked={checkedKinds[kind]}
                     onChange={handleKindCheckboxChange}
-                    className="custom-checkbox"
+                    className={`custom-checkbox ${
+                      isFilterBoxOpen ? "mobile-open" : ""
+                    }`}
                   />
                 </div>
-                <div className="text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
+                <div className="lg:text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
                   {kind}
                 </div>
               </div>
