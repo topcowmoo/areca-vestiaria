@@ -34,6 +34,17 @@ body, html {
   transform: translate(-50%, -50%);
 }
 
+@media (max-width: 640px) {
+  .custom-checkbox.mobile-open {
+    background-color: #000; /* Black background */
+  }
+
+  .custom-checkbox.mobile-open:checked::before {
+    color: #fff; /* White checkmark */
+  }
+}
+
+
 html {
   scroll-behavior: smooth;
 }
