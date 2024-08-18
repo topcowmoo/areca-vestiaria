@@ -54,7 +54,7 @@ const SearchBar = () => {
           onFocus={() => setIsFocused(true)}
           onBlur={() => setTimeout(() => setIsFocused(false), 150)}
         />
-        <IoMdSearch className="w-[23px] h-[23px] ml-2 text-[#9b9b9b]" />
+        <IoMdSearch className="w-[9.86px] h-[9.86px] lg:w-[23px] lg:h-[23px] ml-2 text-[#9b9b9b]" />
       </div>
       <div
         className={`absolute top-[60px] w-[90%] md:w-[482px] bg-white rounded-[10px] mt-4 p-4 shadow-lg z-10 border border-gray-200 transition-all ease-in-out transform ${
