@@ -4,19 +4,21 @@ import SearchBar from "../components/SearchBar";
 import HomeResourceDisplay from "../components/HomeResourceDisplay";
 
 function Home() {
-  // Modal state for 'Read More' option on Page two
+  // State to manage the modal's open/close status
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // Function to open the modal
   const handleOpenModal = () => {
     setIsModalOpen(true);
   };
 
+  // Function to close the modal
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
 
+  // Function to close modal if clicking outside modal content
   const handleBackdropClick = (e) => {
-    // Close the modal only if the backdrop itself (not the modal content) is clicked
     if (e.target === e.currentTarget) {
       handleCloseModal();
     }
@@ -24,6 +26,7 @@ function Home() {
 
   return (
     <div>
+      {/* First section with background and main title */}
       <div className="flex flex-col h-[75vh] md:h-[100vh] bg-page-one bg-cover bg-center">
         <div className="flex flex-grow flex-col items-center justify-center">
           <div className="w-[261px]">
@@ -35,6 +38,7 @@ function Home() {
             </h4>
           </div>
 
+          {/* Search bar component */}
           <SearchBar />
           <a
             href="#second-page"
@@ -45,6 +49,7 @@ function Home() {
         </div>
       </div>
 
+      {/* Second section with additional content and 'Read More' button */}
       <div
         id="second-page"
         className="flex flex-col h-[100vh] bg-page-two bg-cover bg-center p-2 sm:p-6 md:p-12"
@@ -69,6 +74,7 @@ function Home() {
               AVAILABLE on a limited basis given the demand and expertise
               fields.{" "}
             </div>
+            {/* Button to open the modal */}
             <button
               onClick={handleOpenModal}
               className="mt-4 md:mt-7 px-4 py-2 bg-white text-sm md:text-md font-inter rounded text-alt hover:text-white hover:bg-alt"
@@ -79,17 +85,14 @@ function Home() {
         </div>
       </div>
 
-      {/* Resource Display Section */}
+      {/* Section displaying various resources */}
       <div className="max-w-3/4 mx-auto">
         <div className="w-full flex flex-col bg-[#fcfcfc] bg-center p-3 md:p-6">
           {/* Container for Title and Button */}
           <div className="flex justify-between xl:justify-around items-center my-6">
-            {/* Title Above Left Section */}
             <h2 className="text-[27px] md:text-[37px] lg:text-[67px] font-bold font-playfair">
               Resources
             </h2>
-
-            {/* Button in the Top Right Corner */}
             <a
               href="/all-resources"
               className="bg-[#393939] text-[9px] md:text-[18px] lg:text-[22px] text-white px-4 py-1 rounded"
@@ -98,7 +101,7 @@ function Home() {
             </a>
           </div>
 
-          {/* Resource Display Components */}
+          {/* Display various resource categories */}
           <HomeResourceDisplay category="ADHD Resources" />
           <HomeResourceDisplay category="Parenting Resources" />
           <HomeResourceDisplay category="Attachment & Emotions" />
@@ -110,17 +113,14 @@ function Home() {
         </div>
       </div>
 
-      {/* Last Page + Footer */}
+      {/* Last page with contact information */}
       <div
         id="contact-page"
         className="flex flex-col h-[100vh] bg-page-two bg-cover bg-center p-2 sm:p-6 md:p-12"
       >
         <div className="flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12">
           <div className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-center">
-            <div className="w-full text-white text-[26px] sm:text-[38px] lg:text-[61px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
-              Contact Us
-            </div>
-            <div className="w-full text-white text-[10px] md:text-[14px] lg:text-[16px] font-light font-['Inter'] leading-[18px] md:leading-[26px] mt-4">
+            <div className="w-full text-white text-[14px] md:text-[18px] lg:text-[20px] font-bold font-['Inter'] leading-[28px] md:leading-[36px] mt-4">
               Please note, you will need a referral from your Family Doctor to
               be referred to Dr. Mammoliti for a consultation. The consultation
               and ongoing care are covered by OHIP (your health card) but not
@@ -134,12 +134,14 @@ function Home() {
         </div>
       </div>
 
+      {/* Modal for 'Read More' content */}
       {isModalOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-0 backdrop-blur-sm flex items-center justify-center"
-          onClick={handleBackdropClick}
+          onClick={handleBackdropClick} // Handle click on backdrop
         >
           <div className="relative w-[85%] lg:w-[957px] bg-white/80 bg-opacity-50 rounded-[18px] p-6">
+            {/* Close button for the modal */}
             <IoCloseSharp
               className="absolute top-4 right-4 cursor-pointer w-8 h-8 text-black"
               onClick={handleCloseModal}
