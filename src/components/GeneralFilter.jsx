@@ -3,12 +3,7 @@ import PropTypes from "prop-types";
 import { collectionData } from "../data/collectionData";
 import { RiEqualizerFill } from "react-icons/ri";
 
-const GeneralFilter = ({
-  currentPage,
-  setFilteredData,
-  setIsFilterBoxOpen,
-  isFilterBoxOpen,
-}) => {
+const GeneralFilter = ({ currentPage, setFilteredData, setIsFilterBoxOpen, isFilterBoxOpen }) => {
   const [checkedKinds, setCheckedKinds] = useState({
     Article: false,
     Video: false,
@@ -16,9 +11,7 @@ const GeneralFilter = ({
   });
 
   const filteredData = useMemo(() => {
-    const kinds = Object.keys(checkedKinds).filter(
-      (kind) => checkedKinds[kind]
-    );
+    const kinds = Object.keys(checkedKinds).filter((kind) => checkedKinds[kind]);
 
     if (kinds.length === 0) {
       return collectionData.filter((item) => item.category === currentPage);
@@ -47,37 +40,33 @@ const GeneralFilter = ({
     <div className="relative">
       {/* Move the button to the desired location using CSS or layout changes */}
       <div
-        className={`${
+        className={`h-[33.95px] px-[9.59px] py-[4.47px] rounded-md border justify-start items-center gap-[7.67px] inline-flex cursor-pointer ${
           isFilterBoxOpen
             ? "bg-white text-black border-white"
             : "bg-black text-white border-white"
-        } h-[22.75px] px-[6.16px] pt-[4.47px] rounded-md border justify-start items-end gap-[4.93px] inline-flex cursor-pointer lg:h-[33.95px] lg:px-[9.59px] lg:py-[4.47px] lg:items-center lg:gap-[7.67px]`}
+        }`}
         onClick={toggleFilterBox}
       >
         <RiEqualizerFill
-          className="w-[13.15px] h-[13.15px] lg:w-[24.29px] lg:h-[24.29px]"
+          className="w-[24.29px] h-[24.29px]"
           style={{ color: isFilterBoxOpen ? "black" : "white" }}
         />
-        <div className="text-[13.15px] font-medium font-['Inter'] lg:text-xl">
-          Filter
-        </div>
+        <div className="text-xl font-medium font-['Inter']">Filter</div>
       </div>
 
       {/* Animate visibility of the FilterBox */}
       <div
         className={`mt-[37px] absolute top-full left-0 transition-all duration-500 ease-in-out transform ${
-          isFilterBoxOpen
-            ? "translate-y-0 opacity-100"
-            : "-translate-y-8 opacity-0"
+          isFilterBoxOpen ? 'translate-y-0 opacity-100' : '-translate-y-8 opacity-0'
         }`}
-        style={{ visibility: isFilterBoxOpen ? "visible" : "hidden" }}
+        style={{ visibility: isFilterBoxOpen ? 'visible' : 'hidden' }}
       >
         <div className="w-[282px] px-4 pt-7 pb-[69px] bg-[#e8e8e8]/20 rounded-[10px] border border-white backdrop-blur-[24.90px] flex-col justify-start items-start gap-[15px] inline-flex">
-          <div className="lg:text-white text-[32px] font-semibold font-['Inter']">
+          <div className="text-white text-[32px] font-semibold font-['Inter']">
             Filter
           </div>
           <hr className="border-t border-white w-full" />
-          <div className="lg:text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
+          <div className="text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
             Resource Format
           </div>
           <div className="flex-col justify-start items-start gap-[7px] flex">
@@ -92,12 +81,10 @@ const GeneralFilter = ({
                     value={kind}
                     checked={checkedKinds[kind]}
                     onChange={handleKindCheckboxChange}
-                    className={`custom-checkbox ${
-                      isFilterBoxOpen ? "mobile-open" : ""
-                    }`}
+                    className="custom-checkbox"
                   />
                 </div>
-                <div className="lg:text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
+                <div className="text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
                   {kind}
                 </div>
               </div>
