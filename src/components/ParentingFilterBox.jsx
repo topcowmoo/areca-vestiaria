@@ -76,7 +76,7 @@ const ParentingFilterBox = ({
   };
 
   return (
-    <div className="w-full sm:w-[90%] md:w-[90%] lg:w-[90%] mx-auto relative ml-5 mr-5">
+    <div className="w-full sm:w-[90%] md:w-[90%] lg:w-[90%] mx-auto relative">
       {/* Filter Button */}
       <div
         className={`h-[33.95px] px-[9.59px] py-[4.47px] rounded-md border justify-start items-center gap-[7.67px] inline-flex cursor-pointer ${
@@ -95,7 +95,7 @@ const ParentingFilterBox = ({
 
       {/* Animate visibility of the FilterBox */}
       <div
-        className={`mt-[37px] absolute top-full left-0 transition-all duration-500 ease-in-out transform ${
+        className={`w-full mt-[37px] absolute top-full left-0 transition-all duration-500 ease-in-out transform ${
           isFilterBoxOpen
             ? "translate-y-0 opacity-100"
             : "-translate-y-8 opacity-0"
@@ -103,7 +103,8 @@ const ParentingFilterBox = ({
         style={{ visibility: isFilterBoxOpen ? "visible" : "hidden" }}
       >
         <div
-          className={`w-[282px] px-4 pt-7 pb-[69px] 
+          className={`w-full sm:w-[282px] px-4 pt-7 pb-[69px]
+ 
   ${isFilterBoxOpen ? "bg-[#f0f0f0] backdrop-blur-xl text-black" : "bg-[#f0f0f0]"}
   sm:bg-[#e8e8e8]/20 sm:text-white 
   md:bg-[#e8e8e8]/20 md:text-white 

@@ -7,7 +7,7 @@ function Directory({ filteredData }) {
   
   return (
     <div
-      className="w-full sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[90%] p-[20px] sm:p-[20px] md:p-[25px] lg:p-[35px] xl:p-[35px] bg-white rounded-[10px] shadow-inner flex mx-auto ml-5 mr-5"
+      className="w-full sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[90%] p-[20px] sm:p-[20px] md:p-[25px] lg:p-[35px] xl:p-[35px] bg-white rounded-[10px] shadow-inner flex mx-auto"
       style={{
         height: filteredData.length > 0 ? `${maxHeight}px` : "auto",
       }}

@@ -39,7 +39,7 @@ function ParentingResources() {
               setFilteredData={setFilteredData}
               setIsFilterBoxOpen={handleFilterBoxToggle}
               isFilterBoxOpen={isFilterBoxOpen}
-              className={`transition-all duration-700 ease-out ${
+              className={`transition-all duration-500 ease-in-out ${
                 !isInitial &&
                 (isFilterBoxOpen ? "animate-slideDown" : "animate-slideUp")
               }`}
@@ -61,7 +61,7 @@ function ParentingResources() {
                 isFilterBoxOpen
                   ? "sm:ml-[310px]" // Apply margin only when the filter box is open on sm and above
                   : "ml-0"
-              } sm:transition-none`} // Disable transition for sm and smaller
+              }`} // Disable transition for sm and smaller
             >
               <Directory
                 filteredData={filteredData}
