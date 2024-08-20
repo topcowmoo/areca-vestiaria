@@ -7,15 +7,13 @@ function Directory({ filteredData }) {
 
   return (
     <div
-      className="w-full max-w-[1200px] p-[20px] md:p-[40px] md:px-[39px] pt-[20px] pb-[20px] bg-white rounded-[10px] shadow-inner flex"
+      className="w-full sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[90%] p-[20px] sm:p-[20px] md:p-[25px] lg:p-[35px] xl:p-[35px] bg-white rounded-[10px] shadow-inner flex mx-auto ml-5 mr-5"
       style={{
         height: filteredData.length > 0 ? `${maxHeight}px` : "auto",
-        paddingLeft: "22px", // Increased left padding
-        paddingRight: "22px",
       }}
     >
       <div
-        className="flex flex-col gap-[15px] h-full overflow-y-auto custom-scrollbar w-full pt-[10px] pb-[10px] pr-[15px] pl-[15px]" // Added left padding here
+        className="flex flex-col gap-[15px] h-full overflow-y-auto custom-scrollbar w-full pt-[10px] pb-[10px] pr-[15px] pl-[15px]"
         style={{
           maxHeight: `${maxHeight}px`,
         }}
@@ -27,13 +25,13 @@ function Directory({ filteredData }) {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="block px-[20px] py-[10px] bg-white rounded-[10px] shadow-custom-light text-[#1f1f1f] text-sm font-semibold font-['Inter'] text-left hover:underline md:px-[35px] md:py-[15px] md:text-lg lg:px-[71px] lg:py-[23px] lg:text-xl" // Increased left padding for text boxes
+              className="block px-[20px] py-[10px] bg-white rounded-[10px] shadow-custom-light text-[#1f1f1f] text-[10px] sm:text-[10px] md:text-lg lg:text-xl font-semibold font-['Inter'] text-left hover:underline sm:px-[22px] sm:py-[11px] md:px-[25px] md:py-[12px] lg:px-[30px] lg:py-[15px] xl:px-[35px] xl:py-[18px]"
             >
               {item.title}
             </a>
           ))
         ) : (
-          <div className="block px-[20px] py-[10px] bg-white rounded-[10px] shadow-custom-light text-[#1f1f1f] text-sm font-semibold font-['Inter'] text-left md:px-[35px] md:py-[15px] md:text-lg lg:px-[71px] lg:py-[23px] lg:text-xl">
+          <div className="block px-[20px] py-[10px] bg-white rounded-[10px] shadow-custom-light text-[#1f1f1f] text-[10px] sm:text-[10px] md:text-lg lg:text-xl font-semibold font-['Inter'] text-left sm:px-[22px] sm:py-[11px] md:px-[25px] md:py-[12px] lg:px-[30px] lg:py-[15px] xl:px-[35px] xl:py-[18px]">
             No results found
           </div>
         )}

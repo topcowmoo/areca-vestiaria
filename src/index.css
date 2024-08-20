@@ -8,8 +8,6 @@ body, html {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-  
-  
 }
 
 .custom-checkbox {
@@ -36,15 +34,6 @@ body, html {
 
 @media (max-width: 640px) {
   .custom-checkbox.mobile-open {
-    background-color: #000;
-  }
-
-  .custom-checkbox.mobile-open:checked::before {
-    color: #fff; 
-  }
-
-@media (max-width: 640px) {
-  .custom-checkbox.mobile-open {
     background-color: #000; /* Black background */
   }
 
@@ -53,12 +42,11 @@ body, html {
   }
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
-/* In your global CSS file (e.g., styles.css) */
+/* Custom Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 17px;
 }
@@ -74,7 +62,3 @@ html {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-}

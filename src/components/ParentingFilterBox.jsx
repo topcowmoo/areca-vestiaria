@@ -76,8 +76,8 @@ const ParentingFilterBox = ({
   };
 
   return (
-    <div className="relative">
-      {/* Move the button to the desired location using CSS or layout changes */}
+    <div className="w-full sm:w-[90%] md:w-[90%] lg:w-[90%] mx-auto relative ml-5 mr-5">
+      {/* Filter Button */}
       <div
         className={`h-[33.95px] px-[9.59px] py-[4.47px] rounded-md border justify-start items-center gap-[7.67px] inline-flex cursor-pointer ${
           isFilterBoxOpen
