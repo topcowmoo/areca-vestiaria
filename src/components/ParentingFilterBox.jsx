@@ -15,7 +15,7 @@ const ParentingFilterBox = ({
   currentPage,
   setFilteredData,
   setIsFilterBoxOpen,
-  isFilterBoxOpen
+  isFilterBoxOpen,
 }) => {
   const [checkedKinds, setCheckedKinds] = useState({
     Article: false,
@@ -76,8 +76,8 @@ const ParentingFilterBox = ({
   };
 
   return (
-    <div className="relative">
-      {/* Move the button to the desired location using CSS or layout changes */}
+    <div className="w-full sm:w-[90%] md:w-[90%] lg:w-[90%] mx-auto relative">
+      {/* Filter Button */}
       <div
         className={`h-[33.95px] px-[9.59px] py-[4.47px] rounded-md border justify-start items-center gap-[7.67px] inline-flex cursor-pointer ${
           isFilterBoxOpen
@@ -95,17 +95,29 @@ const ParentingFilterBox = ({
 
       {/* Animate visibility of the FilterBox */}
       <div
-        className={`mt-[37px] absolute top-full left-0 transition-all duration-500 ease-in-out transform ${
-          isFilterBoxOpen ? 'translate-y-0 opacity-100' : '-translate-y-8 opacity-0'
+        className={`w-full mt-[37px] absolute top-full left-0 transition-all duration-500 ease-in-out transform ${
+          isFilterBoxOpen
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-8 opacity-0"
         }`}
-        style={{ visibility: isFilterBoxOpen ? 'visible' : 'hidden' }}
+        style={{ visibility: isFilterBoxOpen ? "visible" : "hidden" }}
       >
-        <div className="w-[282px] px-4 pt-7 pb-[69px] bg-[#e8e8e8]/20 rounded-[10px] border border-white backdrop-blur-[24.90px] flex-col justify-start items-start gap-[15px] inline-flex">
-          <div className="text-white text-[32px] font-semibold font-['Inter']">
+        <div
+          className={`w-full sm:w-[282px] px-4 pt-7 pb-[69px]
+ 
+  ${isFilterBoxOpen ? "bg-[#f0f0f0] backdrop-blur-xl text-black" : "bg-[#f0f0f0]"}
+  sm:bg-[#e8e8e8]/20 sm:text-white 
+  md:bg-[#e8e8e8]/20 md:text-white 
+  lg:bg-[#e8e8e8]/20 lg:text-white 
+  xl:bg-[#e8e8e8]/20 xl:text-white 
+  sm:backdrop-blur-[24.90px] md:backdrop-blur-[24.90px] lg:backdrop-blur-[24.90px] xl:backdrop-blur-[24.90px] 
+  rounded-[10px] border border-white flex-col justify-start items-start gap-[15px] inline-flex`}
+        >
+          <div className="sm:text-white md:text-white lg:text-white text-[32px] font-semibold font-['Inter']">
             Filter
           </div>
-          <hr className="border-t border-white w-full" />
-          <div className="text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
+          <hr className="w-full h-[2px] sm:bg-white md:bg-white lg:bg-white bg-black border-0" />
+          <div className="sm:text-white md:text-white lg:text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
             Resource Format
           </div>
           <div className="flex-col justify-start items-start gap-[7px] flex">
@@ -120,16 +132,18 @@ const ParentingFilterBox = ({
                     value={kind}
                     checked={checkedKinds[kind]}
                     onChange={handleKindCheckboxChange}
-                    className="custom-checkbox"
+                    className={`custom-checkbox ${
+                      isFilterBoxOpen ? "mobile-open" : ""
+                    }`}
                   />
                 </div>
-                <div className="text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
+                <div className="sm:text-white md:text-white lg:text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
                   {kind}
                 </div>
               </div>
             ))}
           </div>
-          <div className="text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
+          <div className="sm:text-white md:text-white lg:text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
             Type of Resource
           </div>
           <div className="flex-col justify-start items-start gap-[7px] flex">
@@ -144,10 +158,12 @@ const ParentingFilterBox = ({
                     value={subcategoryKey}
                     checked={selectedSubcategories[subcategoryKey]}
                     onChange={handleSubcategoryCheckboxChange}
-                    className="custom-checkbox"
+                    className={`custom-checkbox ${
+                      isFilterBoxOpen ? "mobile-open" : ""
+                    }`}
                   />
                 </div>
-                <div className="text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
+                <div className="sm:text-white md:text-white lg:text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
                   {subcategoryLabels[subcategoryKey]}
                 </div>
               </div>
