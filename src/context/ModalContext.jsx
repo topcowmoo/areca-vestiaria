@@ -6,7 +6,7 @@ export const ModalProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    const hasSeenModal = localStorage.getItem('hasSeenLegalDisclosure');
+    const hasSeenModal = sessionStorage.getItem('hasSeenLegalDisclosure');
     if (!hasSeenModal) {
       setIsModalOpen(true);
     }
@@ -16,7 +16,7 @@ export const ModalProvider = ({ children }) => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    localStorage.setItem('hasSeenLegalDisclosure', 'true');
+    sessionStorage.setItem('hasSeenLegalDisclosure', 'true');
   };
 
   return (
