@@ -84,7 +84,7 @@ const Faq = () => {
 
           {/* Second Column */}
           <div className="w-full lg:w-[539px] flex flex-col gap-[17px]">
-            <div className="hidden lg:block w-[125px] h-[26px] flex items-center justify-center text-white/0 text-[15px] font-bold font-['Inter']"></div>
+            <div className=" lg:block w-[125px] h-[26px] flex items-center justify-center text-white/0 text-[15px] font-bold font-['Inter']"></div>
             <div className="text-[#1f1f1f] text-[20px] sm:text-[22px] font-semibold font-['Inter']">Fees</div>
             <div className="text-black text-[15px] sm:text-[17px] font-normal font-['Inter']">
               Your consultation will be about 75 minutes (that is what you are booked for but may be longer or shorter depending on individual issues) so that the doctor can do a comprehensive assessment and have time to discuss findings directly with you as well as treatment options...
@@ -107,7 +107,7 @@ const Faq = () => {
         <div className="space-y-16 lg:space-y-0 lg:flex lg:gap-[90px] mt-[50px] lg:mt-[100px]">
           {/* First Column */}
           <div className="w-full lg:w-[539px] flex flex-col gap-[17px]">
-            <div className="hidden lg:block w-[125px] h-[26px] flex items-center justify-center text-white/0 text-[15px] font-bold font-['Inter']"></div>
+            <div className=" lg:block w-[125px] h-[26px] flex items-center justify-center text-white/0 text-[15px] font-bold font-['Inter']"></div>
             <div className="text-[#1f1f1f] text-[20px] sm:text-[22px] font-semibold font-['Inter']">
               What can I expect for my consultation?
             </div>
