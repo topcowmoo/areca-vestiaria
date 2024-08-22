@@ -1,23 +1,21 @@
-// Bringing in the required import from 'react-router-dom'
 import { Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
-
+import LegalDisclosure from './components/LegalDisclosure';
+import { ModalProvider } from './context/ModalContext'; // Import the ModalProvider
 
 function App() {
-  // The Outlet component will conditionally swap between the different pages according to the URL
   return (
-    <>
-    
+    <ModalProvider>
+      {/* The LegalDisclosure modal will pop up on the first visit */}
+      <LegalDisclosure />
       <Navbar />
       <main>
         <Outlet />
       </main>
       <Footer />
-      
-    </>
+    </ModalProvider>
   );
 }
 
-export default App
+export default App;
