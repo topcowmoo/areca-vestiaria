@@ -1,7 +1,13 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { useModal } from '../context/useModal';
+
 
 const Footer = () => {
+  const { openModal } = useModal();
+  
+  
+  
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -44,7 +50,16 @@ const Footer = () => {
             The Wellness Hub
           </p>
           <p className="text-gray-200 mt-2 font-extralight font-['Inter']">
-            Website Designed by <span className="font-bold">X BN</span>
+            Website Designed by   
+            
+          <a
+            href ="https://www.brandonuxui.com/contactme-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold hover:underline ml-1"
+            >
+             X BN
+              </a>
           </p>
         </div>
 
@@ -62,11 +77,16 @@ const Footer = () => {
               </Link>
             </li>
             <li className="mb-1">
+              {/* disclosure link to open the modal */}
               <Link
-                to="/disclaimer"
+                to="#"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent the default link behavior
+                  openModal(); // Open the modal 
+                }}
                 className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
               >
-                Disclaimer
+                Legal Disclosure
               </Link>
             </li>
             <li className="mb-1">
@@ -155,13 +175,13 @@ const Footer = () => {
         <div>
           <h2 className="text-lg font-bold mb-4 font-['Inter']">Address</h2>
           <p className="text-white text-[15px] font-light font-['Inter']">
-            Toronto
+            10 Four Seasons Place
           </p>
           <p className="text-white text-[15px] font-light font-['Inter']">
-            10 Four Seasons Pl
+            Suite 1000
           </p>
           <p className="text-white text-[15px] font-light font-['Inter']">
-            Suite 1000, Etobicoke,
+            Toronto ON 
           </p>
           <p className="text-white text-[15px] font-light font-['Inter']">
             ON M9B 6H7
@@ -173,16 +193,16 @@ const Footer = () => {
             Fax: (519) 936-3395
           </p>
           <p className="text-white text-[15px] font-light font-['Inter'] mt-4">
-            Calgary
-          </p>
-          <p className="text-white text-[15px] font-light font-['Inter']">
             1919 Sirocco Dr SW
           </p>
           <p className="text-white text-[15px] font-light font-['Inter']">
-            Unit 304
+            #304
           </p>
           <p className="text-white text-[15px] font-light font-['Inter']">
-            AB T3H 2Y3{" "}
+            Calgary AB
+          </p>
+          <p className="text-white text-[15px] font-light font-['Inter']">
+            AB T3H 2Y3
           </p>
           <p className="text-white text-[15px] font-light font-['Inter'] mt-4">
             Phone: (403) 456-7000
