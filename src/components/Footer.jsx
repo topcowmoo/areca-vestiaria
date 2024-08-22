@@ -23,6 +23,7 @@ const Footer = () => {
     }
   };
 
+
   useEffect(() => {
     if (location.hash === "#second-page") {
       const element = document.getElementById("second-page");
@@ -32,6 +33,13 @@ const Footer = () => {
     }
   }, [location]);
 
+    
+  // Scroll to top when location changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  
   return (
     <footer className="w-full px-4 sm:px-6 md:px-8 lg:px-[52px] pt-10 pb-10 sm:pb-16 lg:pt-20 lg:pb-[106px] bg-black text-white">
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">

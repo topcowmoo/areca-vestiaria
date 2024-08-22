@@ -4,18 +4,14 @@ import { useModal } from '../context/useModal'; // Adjust path accordingly
 const LegalDisclosure = () => {
   const { isModalOpen, closeModal } = useModal();
 
-  const handleBackdropClick = (e) => {
-    if (e.target === e.currentTarget) {
-      closeModal();
-    }
-  };
+ 
 
   return (
     <>
       {isModalOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center pt-44 z-10"
-          onClick={handleBackdropClick}
+          
         >
           <div className="relative w-[85%] lg:w-[957px] bg-white/80 bg-opacity-50 rounded-[18px] p-6">
             <IoCloseSharp
