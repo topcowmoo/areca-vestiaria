@@ -10,7 +10,7 @@ const LegalDisclosure = () => {
     <>
       {isModalOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center pt-44 z-10"
+          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center  z-10"
           
         >
           <div className="relative w-[85%] lg:w-[957px] bg-white/80 bg-opacity-50 rounded-[18px] p-6">
