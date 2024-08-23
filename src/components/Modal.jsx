@@ -1,4 +1,5 @@
 import { IoCloseSharp } from "react-icons/io5";
+import PropTypes from "prop-types";
 
 const Modal = ({ isOpen, onClose, title, children }) => {
   if (!isOpen) return null;
@@ -21,6 +22,13 @@ const Modal = ({ isOpen, onClose, title, children }) => {
       </div>
     </div>
   );
+};
+
+Modal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Modal;
