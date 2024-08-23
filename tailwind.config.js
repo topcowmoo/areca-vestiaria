@@ -52,6 +52,7 @@ export default {
         "adhd-page": "url('/src/assets/adhdpage.png')",
         "couples-page": "url('/src/assets/couplespage.png')",
         "physician-page": "url('/src/assets/physicianpage.png')",
+        "contact-page": "url('/src/assets/contact-page.png')",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

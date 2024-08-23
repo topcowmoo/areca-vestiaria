@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const ModalContext = createContext();
 
@@ -24,6 +25,11 @@ export const ModalProvider = ({ children }) => {
       {children}
     </ModalContext.Provider>
   );
+};
+
+// Define prop types for ModalProvider, not ModalContext
+ModalProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default ModalContext;

@@ -31,7 +31,7 @@ function CouplesResources() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-start flex-grow pb-[100px] -mt-[173px]">
+      <div className="flex flex-col items-center justify-start flex-grow pb-[100px] -mt-[210px]">
         <div className="w-full max-w-[1200px] px-4 py-4 sm:px-6 sm:py-6 mx-auto">
           <div className="flex items-start">
             <GeneralFilter

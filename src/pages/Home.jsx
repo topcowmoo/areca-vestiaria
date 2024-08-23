@@ -42,7 +42,7 @@ function Home() {
           <SearchBar />
           <a
             href="#second-page"
-            className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] underline m-8 pb-4"
+            className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] underline m-8 py-4"
           >
             Explore More
           </a>
@@ -60,17 +60,16 @@ function Home() {
               Sunrise Health & Clinical <br /> Excellence Centre
             </div>
             <div className="w-full text-white text-[10px] md:text-[14px] lg:text-[16px] font-light font-['Inter'] leading-[18px] md:leading-[26px] mt-4">
-              Sun rises everyday - and we believe that in mental health and life
+              The Sun rises everyday - and we believe that in mental health and life
               in general - hope and new beginnings are key ingredients to
               wellness. At SUNRISE, not only do we focus on comprehensive
               psychiatric care - but also wellness as both are essential for
               long term well being. Our team is going to be expanding over time
-              and currently consists of Dr. Mammoliti and Dr. Eletu. <br />
+              and currently consists of Dr. Mammoliti. <br />
               <br />
-              Being a medical doctor, a consultation with Dr. Mammoliti or Dr.
-              Eletu is covered by OHIP as well as ongoing care (your health
+              Being a medical doctor, a consultation with Dr. Mammoliti is covered by OHIP as well as ongoing care (your health
               card) if you have OHIP coverage. THERE IS NO CAPACITY FOR ONGOING
-              PSYCHIATRIC CARE AT THIS TIME WITH EITHER DOCTOR AND CONSULTS ARE
+              PSYCHIATRIC CARE AT THIS TIME WITH DR. MAMMOLITI AND CONSULTS ARE
               AVAILABLE on a limited basis given the demand and expertise
               fields.{" "}
             </div>
@@ -115,24 +114,29 @@ function Home() {
 
       {/* Last page with contact information */}
       <div
-        id="contact-page"
-        className="flex flex-col h-[100vh] bg-page-two bg-cover bg-center p-2 sm:p-6 md:p-12"
-      >
-        <div className="flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12">
-          <div className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-center">
-            <div className="w-full text-white text-[14px] md:text-[18px] lg:text-[20px] font-bold font-['Inter'] leading-[28px] md:leading-[36px] mt-4">
-              Please note, you will need a referral from your Family Doctor to
-              be referred to Dr. Mammoliti for a consultation. The consultation
-              and ongoing care are covered by OHIP (your health card) but not
-              the NO SHOW FEE, LATE FEEor other non-insured services (forms,
-              notes etc). AT THIS TIME REFERRALS ARE SEEN ONLY WHEN THERE ARE
-              LEARNERS PRESENTS FOR TEACHING PURPOSES AND SPECIAL SLOTS ARE
-              CREATED - otherwise referrals are not accepted. REFERRALS ARE
-              ACCEPTED VIA FAX
-            </div>
-          </div>
-        </div>
+  id="contact-page"
+  className="flex flex-col h-[100vh] bg-contact-page bg-cover bg-center p-2 sm:p-6 md:p-12"
+>
+  <div className="flex flex-grow flex-col items-start justify-start mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12 lg:mt-32">
+    <div className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-start">
+      <div className="w-full text-white text-[26px] sm:text-[38px] lg:text-[71px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
+        Contact Us
       </div>
+      <div className="w-full text-white text-[14px] md:text-[16px] lg:text-[19px] font-['Inter'] leading-[28px] md:leading-[36px] mt-4">
+        Please note, you will need a referral from your Family Doctor to be
+        referred to Dr. Mammoliti for a consultation. The consultation and
+        ongoing care are covered by OHIP (your health card) but not the NO
+        SHOW FEE, LATE FEE or other non-insured services (forms, notes etc).
+        AT THIS TIME REFERRALS ARE SEEN ONLY WHEN THERE ARE LEARNERS PRESENTS
+        FOR TEACHING PURPOSES AND SPECIAL SLOTS ARE CREATED - otherwise
+        referrals are not accepted. REFERRALS ARE ACCEPTED VIA FAX.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
       {/* Modal for 'Read More' content */}
       {isModalOpen && (
