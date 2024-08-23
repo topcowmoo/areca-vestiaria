@@ -117,12 +117,12 @@ function Home() {
   id="contact-page"
   className="flex flex-col h-[100vh] bg-contact-page bg-cover bg-center p-2 sm:p-6 md:p-12"
 >
-  <div className="flex flex-grow flex-col items-start justify-start mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12">
+  <div className="flex flex-grow flex-col items-start justify-start mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12 lg:mt-32">
     <div className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-start">
       <div className="w-full text-white text-[26px] sm:text-[38px] lg:text-[71px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
         Contact Us
       </div>
-      <div className="w-full text-white text-[14px] md:text-[18px] lg:text-[19px] font-['Inter'] leading-[28px] md:leading-[36px] mt-4">
+      <div className="w-full text-white text-[14px] md:text-[16px] lg:text-[19px] font-['Inter'] leading-[28px] md:leading-[36px] mt-4">
         Please note, you will need a referral from your Family Doctor to be
         referred to Dr. Mammoliti for a consultation. The consultation and
         ongoing care are covered by OHIP (your health card) but not the NO
