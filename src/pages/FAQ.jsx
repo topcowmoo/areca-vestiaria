@@ -39,7 +39,7 @@ const Faq = () => {
         {/* FAQ Section Intro */}
         <div className="mt-4">
           <div className="text-[15px] sm:text-[17px] text-black font-normal font-['Inter'] mb-8 w-full sm:w-[80%] lg:w-[1198px] mx-auto lg:mx-0">
-            Welcome to our FAQ page! Here, we've compiled answers to the most common questions we receive from our customers. Whether you're new to our services or a long-time client, we hope you find this resource helpful. If your question isn't listed here, please don't hesitate to contact our support team for further assistance.
+            Welcome to our FAQ page! Here, we&apos;ve compiled answers to the most common questions we receive from our customers. Whether you&apos;re new to our services or a long-time client, we hope you find this resource helpful. If your question isn&apos;t listed here, please don&apos;t hesitate to contact our support team for further assistance.
           </div>
         </div>
 
