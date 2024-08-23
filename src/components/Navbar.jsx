@@ -54,7 +54,7 @@ function Navbar() {
       <div className="w-full flex justify-between items-center pl-[21px] pt-[29px] md:hidden">
         <CgMenuRound
           className={`text-white transition-transform duration-300 mobile-menu-icon ${isMobileMenuOpen ? "rotate-90" : ""}`}
-          size={30}
+          size={40}
           onClick={toggleMobileMenu}
         />
       </div>
@@ -70,7 +70,7 @@ function Navbar() {
             <div className="fixed z-20" style={{ top: '29px', left: '21px' }}>
               <CgMenuRound
                 className={`text-white transition-transform duration-300 ${isMobileMenuOpen ? "rotate-90" : ""}`}
-                size={30}
+                size={40}
                 onClick={toggleMobileMenu}
               />
             </div>
@@ -92,11 +92,11 @@ function Navbar() {
           to="/#second-page"
           onClick={() => handleNavigation("/#second-page")}
         >
-          About Me
+          About Us
         </NavItem>
         <li className="self-stretch relative resources-toggle cursor-pointer">
           <div className="flex items-center" onClick={toggleResources}>
-            <span className="text-left text-white text-[21px] font-light font-['Inter'] tracking-wide cursor-pointer mr-[11px] hover:text-white hover:font-semibold">
+            <span className="text-left text-white text-[21px] font-light font-['Inter'] tracking-wide cursor-pointer mr-[11px] hover:text-white hover:underline">
               Resources
             </span>
             <IoTriangleSharp
@@ -162,7 +162,7 @@ const NavItem = ({ to, children, onClick }) => (
     <HashLink
       smooth
       to={to}
-      className="font-['Inter'] hover:text-white hover:font-semibold"
+      className="font-['Inter'] hover:text-white hover:underline"
       onClick={onClick}
     >
       {children}
