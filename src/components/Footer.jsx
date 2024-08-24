@@ -1,13 +1,10 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { useModal } from '../context/useModal';
-
+import { useModal } from "../context/useModal";
 
 const Footer = () => {
   const { openModal } = useModal();
-  
-  
-  
+
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -23,7 +20,6 @@ const Footer = () => {
     }
   };
 
-
   useEffect(() => {
     if (location.hash === "#second-page") {
       const element = document.getElementById("second-page");
@@ -33,15 +29,13 @@ const Footer = () => {
     }
   }, [location]);
 
-    
   // Scroll to top when location changes
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  
   return (
-    <footer className="w-full px-4 sm:px-6 md:px-8 lg:px-[52px] pt-10 pb-10 sm:pb-16 lg:pt-20 lg:pb-[106px] bg-black text-white">
+    <footer className="w-full px-4 sm:px-6 md:px-8 lg:px-auto pt-10 pb-10 sm:pb-16 lg:pt-20 lg:pb-[106px] bg-black text-white">
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
         {/* Logo and Description */}
         <div className="flex flex-col justify-start">
@@ -58,21 +52,23 @@ const Footer = () => {
             The Wellness Hub
           </p>
           <p className="text-gray-200 mt-2 font-extralight font-['Inter']">
-            Website Designed by   
-            
-          <a
-            href ="https://www.brandonuxui.com/contactme-1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold hover:underline ml-1"
+            Website Designed by
+            <a
+              href="https://www.brandonuxui.com/contactme-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold hover:underline ml-1"
             >
-             X BN
-              </a>
+              X BN
+            </a>
           </p>
         </div>
 
         {/* Company Links */}
-        <div>
+        <div
+          className="pl-4
+        "
+        >
           <h2 className="text-lg font-bold mb-4 font-['Inter']">Company</h2>
           <ul>
             <li className="mb-1">
@@ -81,7 +77,7 @@ const Footer = () => {
                 onClick={handleLinkClick}
                 className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
               >
-                About Me
+                About Us
               </Link>
             </li>
             <li className="mb-1">
@@ -90,7 +86,7 @@ const Footer = () => {
                 to="#"
                 onClick={(e) => {
                   e.preventDefault(); // Prevent the default link behavior
-                  openModal(); // Open the modal 
+                  openModal(); // Open the modal
                 }}
                 className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
               >
@@ -189,7 +185,7 @@ const Footer = () => {
             Suite 1000
           </p>
           <p className="text-white text-[15px] font-light font-['Inter']">
-            Toronto ON 
+            Toronto ON
           </p>
           <p className="text-white text-[15px] font-light font-['Inter']">
             ON M9B 6H7
