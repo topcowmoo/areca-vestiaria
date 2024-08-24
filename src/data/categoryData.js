@@ -45,6 +45,6 @@ export const categoryData = [
     id: 8,
     title: "Additional Resources",
     image: "bg-card-seven",
-    link: "/general-resources",
+    link: "/additional-resources",
   },
 ];
