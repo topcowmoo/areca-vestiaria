@@ -13,7 +13,7 @@ const AdditionalResourceFilterBox = ({
   currentPage,
   setFilteredData,
   setIsFilterBoxOpen,
-  isFilterBoxOpen
+  isFilterBoxOpen,
 }) => {
   const [checkedKinds, setCheckedKinds] = useState({
     Article: false,
@@ -100,7 +100,8 @@ const AdditionalResourceFilterBox = ({
         style={{ visibility: isFilterBoxOpen ? "visible" : "hidden" }}
       >
         <div
-          className={`w-full sm:w-[282px] px-4 pt-7 pb-[69px]
+          className={`w-full pt-7 pb-[245px] px-4 sm:w-[282px] md:px-4 md:pt-7 md:pb-[69px] lg:px-4 lg:pt-7 lg:pb-[69px]
+
  
   ${isFilterBoxOpen ? "bg-[#f0f0f0] backdrop-blur-xl text-black" : "bg-[#f0f0f0]"}
   sm:bg-[#e8e8e8]/20 sm:text-white 
