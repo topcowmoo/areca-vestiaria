@@ -21,7 +21,7 @@ const SearchBarWithCommit = ({ category }) => {
           item.title &&
           item.title.toLowerCase().includes(value.toLowerCase())
       );
-      setSearchResults(results.slice(0, 5));
+      setSearchResults(results.slice(0, 3));
     }
   };
 
