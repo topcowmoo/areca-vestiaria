@@ -35,8 +35,8 @@ const Footer = () => {
   }, [location]);
 
   return (
-    <footer className="w-full px-4 sm:px-6 md:px-8 lg:px-auto pt-10 pb-10 sm:pb-16 lg:pt-20 lg:pb-[106px] bg-black text-white">
-      <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+    <footer className="w-full px-4 sm:px-6 md:px-8 lg:px-10 pt-10 pb-10 sm:pb-16 lg:pt-20 lg:pb-[106px] bg-black text-white">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] gap-10">
         {/* Logo and Description */}
         <div className="flex flex-col justify-start">
           <div
@@ -65,10 +65,7 @@ const Footer = () => {
         </div>
 
         {/* Company Links */}
-        <div
-          className="pl-4
-        "
-        >
+        <div>
           <h2 className="text-lg font-bold mb-4 font-['Inter']">Company</h2>
           <ul>
             <li className="mb-1">

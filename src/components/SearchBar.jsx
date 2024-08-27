@@ -18,7 +18,7 @@ const SearchBar = () => {
         (item) =>
           item.title && item.title.toLowerCase().includes(value.toLowerCase())
       );
-      setFilteredData(results.slice(0, 5)); // Limit the results to 5 items
+      setFilteredData(results.slice(0, 3)); // Limit the results to 3 items
     }
   };
 
