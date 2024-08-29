@@ -50,7 +50,7 @@ function Navbar() {
   );
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-10 flex justify-center">
+    <nav className="absolute top-0 left-0 w-full z-30 flex justify-center">
       <div className="w-full flex justify-between items-center pl-[21px] pt-[29px] md:hidden">
         <CgMenuRound
           className={`text-white transition-transform duration-300 mobile-menu-icon ${isMobileMenuOpen ? "rotate-90" : ""}`}
@@ -67,14 +67,17 @@ function Navbar() {
       >
         {isMobileMenuOpen && (
           <>
-            <div className="fixed z-20" style={{ top: '29px', left: '21px' }}>
+            <div className="fixed z-20" style={{ top: "29px", left: "21px" }}>
               <CgMenuRound
                 className={`text-white transition-transform duration-300 ${isMobileMenuOpen ? "rotate-90" : ""}`}
                 size={40}
                 onClick={toggleMobileMenu}
               />
             </div>
-            <div className="flex flex-col items-center lg:hidden" style={{ marginTop: '29px' }}>
+            <div
+              className="flex flex-col items-center lg:hidden"
+              style={{ marginTop: "29px" }}
+            >
               <div className="text-left text-white text-[52.88px] font-extrabold font-['Playfair']">
                 WLNS
               </div>
