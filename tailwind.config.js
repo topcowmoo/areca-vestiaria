@@ -30,7 +30,9 @@ export default {
       },
       boxShadow: {
         "custom-light": "0 0px 10px rgba(0, 0, 0, 0.15)",
-        inner: "inset 0 4px 6px rgba(0, 0, 0, 0.2)",
+        inner: "inset 0 0 12px rgba(0, 0, 0, 0.9)",
+        "custom-inner": "inset 0 0 9px rgba(0, 0, 0, 0.6)",
+        "custom-even": "0 0 25px rgba(0, 0, 0, 0.9)",
       },
       backgroundImage: {
         "page-one": "url('/src/assets/home-1.png')",
@@ -58,9 +60,6 @@ export default {
         inter: ["Inter", "sans-serif"],
         playfair: ["Playfair Display", "serif"],
         urbanist: ["Urbanist", "sans-serif"],
-      },
-      colors: {
-        alt: "#161616",
       },
     },
   },
