@@ -19,11 +19,17 @@ function AngerAndShame() {
   return (
     <div className="relative flex flex-col min-h-screen bg-black">
       {/* Background Image with Gradient Layer */}
-      <div className="relative w-full h-screen min-w-[320px]">
-        <div
-          className="absolute inset-0 w-full h-full bg-anger-page bg-no-repeat bg-center bg-contain z-0"
-        ></div>
-  
+      <div className="relative w-full h-[847px] min-w-[320px]">
+      <div
+  className="absolute inset-0 w-full h-full bg-testanger bg-no-repeat bg-cover [background-position-x:63%] [background-position-y:-190px] z-0"
+></div>
+
+
+
+
+
+
+
         {/* Title and SearchBar positioned near the bottom of the image */}
         <div className="relative z-10 flex flex-col items-center h-full justify-end pb-[575px] md:pb-[490px] lg:pb-[410px]">
           <h1 className="text-center text-white text-[34px] sm:text-[34px] md:text-[71px] lg:text-[71px] font-extrabold font-[playfair]">

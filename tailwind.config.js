@@ -55,6 +55,7 @@ export default {
         "couples-page": "url('/src/assets/couplespage.png')",
         "physician-page": "url('/src/assets/physicianpage.png')",
         "contact-page": "url('/src/assets/contact-page.png')",
+        "testanger": "url('/src/assets/angertest.png')",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
