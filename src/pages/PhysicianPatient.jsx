@@ -20,7 +20,7 @@ function PhysicianPatient() {
     <div className="relative flex flex-col min-h-screen bg-black">
       {/* Background Image with Gradient Layer */}
       <div className="relative w-full h-[847px] min-w-[320px]">
-        <div className="absolute inset-0 w-full h-full bg-physician-page bg-no-repeat bg-contain md:[background-position-y:0%] lg:[background-position-y:-10%] z-0"></div>
+        <div className="absolute inset-0 w-full h-full bg-testtall bg-no-repeat bg-cover [background-position-x:75%] [background-position-y:-100px] md:[background-position-y:-175px] lg:[background-position-y:-290px] xl:[background-position-y:-325px] 2xl:[background-position-y:-375px] z-0"></div>
 
         {/* Title and SearchBar positioned near the bottom of the image */}
         <div className="relative z-10 flex flex-col items-center h-full justify-end pb-[575px] md:pb-[490px] lg:pb-[410px]">
