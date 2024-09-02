@@ -23,7 +23,7 @@ function Home() {
   return (
     <div>
       {/* First section with background and main title */}
-      <header className="flex flex-col h-[75vh] md:h-[100vh] bg-page-one bg-cover bg-center">
+      <header className="flex flex-col h-[100vh] bg-cover bg-page-one bg-no-repeat" style={{ backgroundPosition: '60%' }}>
         <div className="flex flex-grow flex-col items-center justify-center">
           <div className="w-[261px]">
             <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-2">
@@ -48,8 +48,7 @@ function Home() {
       {/* Second section with additional content and 'Read More' button */}
       <section
         id="second-page"
-        className="flex flex-col h-[100vh] bg-page-two bg-cover bg-center p-2 sm:p-6 md:p-12"
-      >
+        className="flex flex-col h-[100vh] bg-testtall bg-cover bg-no-repeat" style={{ backgroundPosition: '89%' }}>
         <div className="flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12">
           <article className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-center">
             <h3 className="w-full text-white text-[26px] sm:text-[38px] lg:text-[61px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
@@ -74,7 +73,7 @@ function Home() {
 
       {/* Section displaying various resources */}
       <section className="max-w-3/4 mx-auto">
-        <div className="w-full flex flex-col bg-[#fcfcfc] bg-center p-3 md:p-6">
+        <div className="w-full flex flex-col bg-slate-400 bg-center p-3 md:p-6">
           {/* Container for Title and Button */}
           <div className="flex justify-between xl:justify-around items-center my-6">
             <h2 className="text-[27px] md:text-[37px] lg:text-[67px] font-bold font-playfair">
@@ -103,8 +102,8 @@ function Home() {
       {/* Last page with contact information */}
       <section
         id="contact-page"
-        className="flex flex-col h-[100vh] bg-contact-page bg-cover bg-center p-2 sm:p-6 md:p-12"
-      >
+        className="flex flex-col h-[100vh] bg-testemotion bg-cover bg-no-repeat" style={{ backgroundPosition: '50%' }}>
+      
         <div className="flex flex-grow flex-col items-start justify-start mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12 lg:mt-32">
           <article className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-start">
             <h3 className="w-full text-white text-[26px] sm:text-[38px] lg:text-[71px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
