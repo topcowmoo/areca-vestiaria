@@ -73,7 +73,7 @@ function Home() {
 
       {/* Section displaying various resources */}
       <section className="max-w-3/4 mx-auto">
-        <div className="w-full flex flex-col bg-slate-400 bg-center p-3 md:p-6">
+        <div className="w-full flex flex-col bg-white bg-center p-3 md:p-6">
           {/* Container for Title and Button */}
           <div className="flex justify-between xl:justify-around items-center my-6">
             <h2 className="text-[27px] md:text-[37px] lg:text-[67px] font-bold font-playfair">
