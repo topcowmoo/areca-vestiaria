@@ -20,7 +20,7 @@ function ParentingResources() {
     <div className="relative flex flex-col min-h-screen bg-black">
       {/* Background Image with Gradient Layer */}
       <div className="relative w-full h-[847px] min-w-[320px]">
-        <div className="absolute inset-0 w-full h-full bg-parenting-page bg-no-repeat bg-cover [background-position-x:27%] [background-position-y:-20px] sm:bg-center md:[background-position-x:27%] lg:[background-position-x:10%] z-0"></div>
+        <div className="absolute inset-0 w-full h-full bg-parenting-page bg-no-repeat bg-cover [background-position-x:27%] [background-position-y:-20px] sm:bg-center md:[background-position-x:17%] lg:[background-position-x:10%] z-0"></div>
 
         {/* Title and SearchBar positioned near the bottom of the image */}
         <div className="relative z-10 flex flex-col items-center h-full justify-end pb-[575px] md:pb-[490px] lg:pb-[410px]">

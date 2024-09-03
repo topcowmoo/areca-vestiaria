@@ -40,7 +40,6 @@ function Therapy() {
         <div className="w-full max-w-[1200px] px-4 py-4 sm:px-6 sm:py-6 mx-auto">
           {/* Container for FilterBox and Directory */}
           <div className="relative flex flex-col w-full gap-[37px]">
-
             {/* Filter Box */}
             <div className="relative flex w-full">
               <GeneralFilter
@@ -51,9 +50,7 @@ function Therapy() {
                 className={`transition-all duration-500 ease-in-out ${
                   !isInitial &&
                   (isFilterBoxOpen ? "animate-slideDown" : "animate-slideUp")
-                } ${
-                  isFilterBoxOpen ? "z-30 sm:z-30" : "z-10"
-                }`}
+                } ${isFilterBoxOpen ? "z-30 sm:z-30" : "z-10"}`}
                 style={{
                   width: "100%",
                   maxWidth: "90%",

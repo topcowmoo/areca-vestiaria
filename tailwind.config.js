@@ -67,6 +67,9 @@ export default {
         playfair: ["Playfair Display", "serif"],
         urbanist: ["Urbanist", "sans-serif"],
       },
+      screens: {
+        '3xl': '1999px',  // Add a new breakpoint for 1920px and up
+      },
     },
   },
   plugins: [],
