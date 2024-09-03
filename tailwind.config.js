@@ -58,6 +58,9 @@ export default {
         "testanger": "url('/src/assets/angertest.png')",
         "testtall": "url('/src/assets/testtall.png')",
         "testemotion": "url('/src/assets/emotest.png')",
+        "testcontact": "url('/src/assets/testcontactus.png')",
+        "testsunrise": "url('/src/assets/testsunrise.png')",
+        "testtherapy": "url('/src/assets/testtherapy.png')",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

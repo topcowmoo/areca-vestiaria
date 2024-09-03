@@ -21,7 +21,7 @@ function AngerAndShame() {
       {/* Background Image with Gradient Layer */}
       <div className="relative w-full h-[847px] min-w-[320px]">
       <div
-  className="absolute inset-0 w-full h-full bg-testanger bg-no-repeat bg-cover [background-position-x:63%] [background-position-y:-190px] z-0"
+  className="absolute inset-0 w-full h-full bg-testanger opacity-50 bg-no-repeat bg-cover [background-position-x:63%] [background-position-y:-190px] z-0"
 ></div>
 
 

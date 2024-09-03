@@ -48,7 +48,7 @@ function Home() {
       {/* Second section with additional content and 'Read More' button */}
       <section
         id="second-page"
-        className="flex flex-col h-[100vh] bg-testtall bg-cover bg-no-repeat" style={{ backgroundPosition: '89%' }}>
+        className="flex flex-col h-[100vh] lg:h-[130vh] xl:h-[130vh] 2xl:h-[150vh] bg-testsunrise bg-cover bg-no-repeat" style={{ backgroundPosition: '90%' }}> 
         <div className="flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12">
           <article className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-center">
             <h3 className="w-full text-white text-[26px] sm:text-[38px] lg:text-[61px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
@@ -102,7 +102,7 @@ function Home() {
       {/* Last page with contact information */}
       <section
         id="contact-page"
-        className="flex flex-col h-[100vh] bg-testemotion bg-cover bg-no-repeat" style={{ backgroundPosition: '50%' }}>
+        className="flex flex-col h-[100vh] lg:h-[120vh] 2xl:h-[130vh] bg-testcontact bg-cover bg-no-repeat" style={{ backgroundPosition: '50%' }}>
       
         <div className="flex flex-grow flex-col items-start justify-start mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12 lg:mt-32">
           <article className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-start">
