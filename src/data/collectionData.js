@@ -1178,7 +1178,7 @@ export const collectionData = [
     category: "Physician Patient",
     subCategory: "",
     title: "ADHD and Physicians",
-    link: "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cjpl.ca/assets/cjplvol7number4.pdf?fbclid=IwAR2jAltAQ1aXwMdPNXWE93Rk2_99t7Ee8plJtXavFNg0vGybNx7aumJX8lo",
+    link: "https://cjpl.ca/assets/cjplvol7number4.pdf?fbclid=IwAR2jAltAQ1aXwMdPNXWE93Rk2_99t7Ee8plJtXavFNg0vGybNx7aumJX8lo",
   },
   {
     id: 148,
@@ -1499,7 +1499,7 @@ export const collectionData = [
     subCategory: "Guideline",
     title:
       "Canadian Psychiatric Association Position Statement on Implications of Cannabis Legalization on Youth and Young Adults",
-    link: "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cpa-apc.org/wp-content/uploads/Cannabis-Academy-Position-Statement-ENG-FINAL-no-footers-web.pdf",
+    link: "https://www.cpa-apc.org/wp-content/uploads/Cannabis-Academy-Position-Statement-ENG-FINAL-no-footers-web.pdf",
   },
   {
     id: 188,
@@ -1539,7 +1539,7 @@ export const collectionData = [
     category: "Additional Resources",
     subCategory: "Guideline",
     title: "Mental Health and Violence APA",
-    link: "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://psychiatryonline.org/doi/pdf/10.5555/appi.books.9781615371099",
+    link: "https://psychiatryonline.org/doi/pdf/10.5555/appi.books.9781615371099",
   },
   {
     id: 193,
