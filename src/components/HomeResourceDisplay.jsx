@@ -1,49 +1,53 @@
 import PropTypes from "prop-types";
+import HomeDirectory from "./HomeDirectory";
 import ResourceCard from "./ResourceCard";
 import { collectionData } from "../data/collectionData";
-import { categoryData } from "../data/categoryData";
-import HomeDirectory from "../components/HomeDirectory";
 
-const CategoryResourceDisplay = ({ category }) => {
-  // Find the matching category data
-  const categoryInfo = categoryData.find((item) => item.title === category);
+// Define the order of categories
+const orderedCategories = [
+  "ADHD Resources",
+  "Parenting Resources",
+  "Attachment & Emotions",
+  "Couples Resources",
+  "Anger & Shame",
+  "Physician Patient",
+  "Therapy",
+  "Additional Resources",
+];
 
-  // Filter resources by the given category
-  const resources = collectionData.filter((item) => item.category === category);
-
-  if (!categoryInfo) {
-    return <p>Category not found.</p>;
-  }
-
-  if (resources.length === 0) {
-    return <p>No resources found for this category.</p>;
-  }
-
+const HomeResourceDisplay = () => {
   return (
-    <div className="flex justify-center items-center my-8">
-      <div className="flex flex-col md:flex-row items-start justify-center w-full">
-        {/* Left side: Main Resource Card */}
-        <div className="w-full md:w-[80%] lg:w-auto">
-          <ResourceCard
-            title={categoryInfo.title}
-            image={categoryInfo.image}
-            size="large"
-            link={categoryInfo.link}
-          />
-        </div>
+    <div className="px-[25px] space-y-10 mb-8">
+      {/* Iterate through the ordered categories */}
+      {orderedCategories.map((category, index) => {
+        // Filter collectionData for resources matching the current category
+        const resources = collectionData.filter(
+          (item) => item.category === category
+        );
 
-        {/* Right side: Scrollable list of related resources */}
-        <div className="w-full md:w-[80%] lg:w-[612px] lg:h-[550px] overflow-y-auto p-1 rounded-md box-border">
-          <HomeDirectory filteredData={resources} />
-        </div>
-      </div>
+        return (
+          <div
+            key={index}
+            className="flex flex-col md:flex-row justify-start items-stretch md:space-x-8 space-y-6 md:space-y-0 lg:space-x-6 xl:space-x-10"
+          >
+            {/* Render a single ResourceCard per category */}
+            <div className="w-full md:w-[400px] lg:w-[590px] flex-none">
+              <ResourceCard category={category} />
+            </div>
+
+            {/* Render Directory with filtered resources */}
+            <div className="w-full md:flex-grow">
+              <HomeDirectory filteredData={resources} category={category} />
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };
 
-// Prop validation
-CategoryResourceDisplay.propTypes = {
-  category: PropTypes.string.isRequired, // category is required and must be a string
+HomeResourceDisplay.propTypes = {
+  category: PropTypes.string,
 };
 
-export default CategoryResourceDisplay;
+export default HomeResourceDisplay;

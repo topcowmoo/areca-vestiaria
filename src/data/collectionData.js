@@ -1512,7 +1512,7 @@ export const collectionData = [
   {
     id: 189,
     kind: "Article",
-    category: "Additional Resourcess",
+    category: "Additional Resources",
     subCategory: "Guideline",
     title: "Mother to Baby Cannabis Use Effect",
     link: "https://mothertobaby.org/fact-sheets/marijuana-pregnancy/?fref=gc&dti=818693151553751",

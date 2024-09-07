@@ -29,8 +29,10 @@ export default {
         slideLeft: "slideLeft 0.4s ease-in-out forwards",
       },
       boxShadow: {
-        "custom-light": "0 0px 10px rgba(0, 0, 0, 0.15)",
-        inner: "inset 0 4px 6px rgba(0, 0, 0, 0.2)",
+        "custom-light": "0 0px 12px rgba(0, 0, 0, 0.2)",
+        inner: "inset 0 0 12px rgba(0, 0, 0, 0.9)",
+        "custom-inner": "inset 0 0 9px rgba(0, 0, 0, 0.6)",
+        "custom-even": "0 0 25px rgba(0, 0, 0, 0.9)",
       },
       backgroundImage: {
         "page-one": "url('/src/assets/home-1.png')",
@@ -47,20 +49,25 @@ export default {
         "parenting-page": "url('/src/assets/parentingpage.png')",
         "additional-page": "url('/src/assets/additionalpage.png')",
         "anger-page": "url('/src/assets/angershamepage.png')",
-        "therapy-page": "url('/src/assets/therapypage.png')",
         "attachment-page": "url('/src/assets/attachmentpage.png')",
         "adhd-page": "url('/src/assets/adhdpage.png')",
         "couples-page": "url('/src/assets/couplespage.png')",
         "physician-page": "url('/src/assets/physicianpage.png')",
         "contact-page": "url('/src/assets/contact-page.png')",
+        "testanger": "url('/src/assets/angertest.png')",
+        "testtall": "url('/src/assets/testtall.png')",
+        "testemotion": "url('/src/assets/emotest.png')",
+        "testcontact": "url('/src/assets/testcontactus.png')",
+        "testsunrise": "url('/src/assets/testsunrise.png')",
+        "testtherapy": "url('/src/assets/testtherapy.png')",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         playfair: ["Playfair Display", "serif"],
         urbanist: ["Urbanist", "sans-serif"],
       },
-      colors: {
-        alt: "#161616",
+      screens: {
+        "3xl": "1999px", // Add a new breakpoint for 1920px and up
       },
     },
   },

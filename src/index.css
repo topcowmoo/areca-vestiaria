@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 /* Custom styles */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -62,3 +63,12 @@ html {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+.home-directory {
+  height: 550px; /* Default for md and larger screens */
+}
+
+@media (max-width: 640px) {
+  .home-directory {
+    height: 300px; /* For small screens */
+  }
+}

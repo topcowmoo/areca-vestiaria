@@ -1,6 +1,17 @@
 import SearchBar from "../components/SearchBar";
-import { categoryData } from "../data/categoryData";
-import ResourceCard from "../components/ResourceCard";
+import AllResourcesCard from "../components/AllResourcesCard";
+
+// Extract the category names from the cardData object
+const categoryNames = Object.keys({
+  "ADHD Resources": {},
+  "Parenting Resources": {},
+  "Attachment & Emotions": {},
+  "Couples Resources": {},
+  "Anger & Shame": {},
+  "Physician Patient": {},
+  "Therapy": {},
+  "Additional Resources": {},
+});
 
 function AllResources() {
   return (
@@ -11,7 +22,7 @@ function AllResources() {
 
         <div className="flex flex-grow flex-col items-center justify-center px-4">
           <div>
-            <h2 className="text-center text-white text-[40px] sm:text-[50px] md:text-[75px] font-extrabold font-playfair">
+            <h2 className="text-center text-white text-[50px] font-extrabold font-playfair">
               Resources
             </h2>
           </div>
@@ -19,16 +30,11 @@ function AllResources() {
           <SearchBar />
         </div>
       </div>
-      <div className="px-4 sm:px-8 md:px-16 lg:px-14 py-8 sm:py-12 md:py-16">
-        <div className="flex flex-wrap justify-center gap-1 lg:gap-8 md:px-10">
-          {categoryData.map((card, index) => (
-            <ResourceCard
-              key={index}
-              title={card.title}
-              image={card.image}
-              link={card.link}
-              size="small"
-            />
+
+      <div className=" py-[20px]">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 p-4">
+          {categoryNames.map((category, index) => (
+            <AllResourcesCard key={index} category={category} />
           ))}
         </div>
       </div>
