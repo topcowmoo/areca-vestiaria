@@ -29,7 +29,7 @@ export default {
         slideLeft: "slideLeft 0.4s ease-in-out forwards",
       },
       boxShadow: {
-        "custom-light": "0 0px 10px rgba(0, 0, 0, 0.15)",
+        "custom-light": "0 0px 12px rgba(0, 0, 0, 0.2)",
         inner: "inset 0 0 12px rgba(0, 0, 0, 0.9)",
         "custom-inner": "inset 0 0 9px rgba(0, 0, 0, 0.6)",
         "custom-even": "0 0 25px rgba(0, 0, 0, 0.9)",
@@ -49,7 +49,6 @@ export default {
         "parenting-page": "url('/src/assets/parentingpage.png')",
         "additional-page": "url('/src/assets/additionalpage.png')",
         "anger-page": "url('/src/assets/angershamepage.png')",
-        "therapy-page": "url('/src/assets/therapypage.png')",
         "attachment-page": "url('/src/assets/attachmentpage.png')",
         "adhd-page": "url('/src/assets/adhdpage.png')",
         "couples-page": "url('/src/assets/couplespage.png')",
@@ -68,7 +67,7 @@ export default {
         urbanist: ["Urbanist", "sans-serif"],
       },
       screens: {
-        '3xl': '1999px',  // Add a new breakpoint for 1920px and up
+        "3xl": "1999px", // Add a new breakpoint for 1920px and up
       },
     },
   },

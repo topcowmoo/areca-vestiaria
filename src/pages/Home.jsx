@@ -26,7 +26,6 @@ function Home() {
     navigate("/all-resources"); // <-- Correctly navigating to /all-resources
   };
 
-
   return (
     <div>
       {/* First section with background and main title */}
@@ -61,16 +60,16 @@ function Home() {
         id="second-page"
         className="relative flex flex-col min-h-screen bg-black"
       >
-        <div className="relative w-full h-screen min-w-[390px]">
+        <div className="relative w-full h-full min-w-[390px]">
           {/* Background Image Container with Brightness Filter */}
           <div className="absolute inset-0 w-full h-full z-0">
-            <div className="w-full h-full bg-testsunrise bg-cover bg-no-repeat [background-position-x:50%] filter brightness-[30%]"></div>
+            <div className="w-full min-h-screen bg-testsunrise bg-cover bg-no-repeat [background-position-x:50%] filter brightness-[30%]"></div>
           </div>
 
           {/* Content */}
           <div className="relative flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12">
             <article className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-center">
-              <h3 className="w-full text-white text-[26px] sm:text-[38px] lg:text-[61px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4 mt-[110px]">
+              <h3 className="w-full text-white text-[26px] sm:text-[38px] lg:text-[53px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
                 Sunrise Health & Clinical <br /> Excellence Centre
               </h3>
               <p className="w-full text-white text-[12px] md:text-[14px] lg:text-[16px] font-light font-['Inter'] leading-[18px] md:leading-[26px] mt-4">
@@ -105,29 +104,23 @@ function Home() {
       <section className="">
         <div className="">
           {/* Container for Title and Button */}
-          <div className="px-[52px] flex justify-between items-center">
-            <h2 className="text-[27px] md:text-[37px] lg:text-[67px] font-bold font-playfair">
+          <div className="flex justify-between items-center px-[25px] py-6">
+            <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair flex-grow">
               Resources
             </h2>
-            <button
-              href="/all-resources"
-              className="bg-black text-white px-4 py-[6px] mt-4 font-inter rounded-md"
-              onClick={handleClick}
-            >
-              View All Resources
-            </button>
+            <div className="ml-auto flex-shrink-0">
+              <button
+                className="bg-black font-bold text-white font-inter rounded-sm px-[6.5px] py-[2.5px] text-[8px] md:text-[14px] md:px-[10px] md:py-[4px] lg:text-[19px] lg:px-[15px] lg:py-[6px] flex-shrink-0"
+                onClick={handleClick}
+              >
+                View All Resources
+              </button>
+            </div>
           </div>
 
           {/* Display various resource categories */}
-          <div className="relative flex flex-col min-h-screen px-12 w-full h-[550px] z-0">
-          <HomeResourceDisplay category="ADHD Resources" />
-          <HomeResourceDisplay category="Parenting Resources" />
-          <HomeResourceDisplay category="Attachment & Emotions" />
-          <HomeResourceDisplay category="Couples Resources" />
-          <HomeResourceDisplay category="Anger & Shame" />
-          <HomeResourceDisplay category="Therapy" />
-          <HomeResourceDisplay category="Physician Patient" />
-          <HomeResourceDisplay category="Additional Resources" />
+          <div className="relative flex flex-col">
+            <HomeResourceDisplay />
           </div>
         </div>
       </section>
@@ -142,7 +135,7 @@ function Home() {
             <div className="w-full h-full bg-testcontact bg-cover bg-no-repeat [background-position-x:50%] filter brightness-[30%]"></div>
           </div>
 
-          <div className="flex flex-grow flex-col items-start justify-start mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12 lg:mt-32">
+          <div className="flex flex-grow flex-col items-start justify-start mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12 lg:mt-12]">
             <article className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-start">
               <h3 className="w-full text-white text-[26px] sm:text-[38px] lg:text-[71px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4 z-10">
                 Contact Us
