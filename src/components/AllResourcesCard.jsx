@@ -47,8 +47,13 @@ const AllResourcesCard = ({ category }) => {
     ${card.backgroundClass} relative overflow-hidden flex bg-cover bg-center bg-no-repeat
     `}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0" /> {/* Optional overlay */}
+      {/* Conditionally render Overlay for specific categories */}
+      {(category === "Attachment & Emotions" ||
+        category === "Therapy" ||
+        category === "Physician Patient" ||
+        category === "Anger & Shame") && (
+        <div className="absolute inset-0 bg-black bg-opacity-60"/>
+      )}
 
       {/* Card Content */}
       <div className="absolute inset-0 flex flex-col justify-between items-start px-3 py-9 md:px-7 md:py-11 z-10 xl:py-32">
