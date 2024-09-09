@@ -40,8 +40,8 @@ const ResourceCard = ({ category }) => {
   const card = cardData[category];
 
   return (
-<div
-  className={`w-full md:w-[400px] lg:w-[590px] xl:w-[612px] 
+    <div
+      className={`w-full md:w-[400px] lg:w-[590px] xl:w-[612px] 
     min-h-12 sm:min-h-[95px] md:min-h-[550px] lg:min-h-[550px] xl:min-h-[550px] 
     rounded-md sm:rounded-[10px] md:rounded-[10px] lg:rounded-[10px] xl:rounded-[10px] 
     relative overflow-hidden flex bg-cover bg-no-repeat
@@ -51,16 +51,17 @@ const ResourceCard = ({ category }) => {
     ${category === "Physician Patient" ? "bg-[center_top_27%]" : ""}
     ${category !== "Attachment & Emotions" && category !== "Therapy" && category !== "Physician Patient" ? "bg-center" : ""}
     `}
->
-
-
-
-  
-      {/* Overlay */}
-      <div className="absolute inset-0" />
+    >
+      {/* Conditionally render Overlay for specific categories */}
+      {(category === "Attachment & Emotions" ||
+        category === "Therapy" ||
+        category === "Physician Patient" ||
+        category === "Anger & Shame") && (
+        <div className="absolute inset-0 bg-black bg-opacity-60" />
+      )}
 
       {/* Card Content */}
-      <div className="absolute inset-0 flex md:flex-col justify-between md:justify-evenly md:items-start lg:flex-col lg:items-start lg:px-[61px] lg:py-24 lg:justify-evenly md:px-9 md:py-16 items-center px-4 z-10">
+      <div className="absolute inset-0 flex md:flex-col justify-between md:justify-evenly md:items-start lg:flex-col lg:items-start lg:px-[61px] lg:py-24 lg:justify-evenly md:px-9 md:py-16 items-center px-4">
         {/* Title */}
         <div className="text-white text-sm sm:text-lg md:text-[50px] lg:text-[71px] xl:text-[75px] font-extrabold font-playfair md:break-words md:leading-tight">
           {category}
