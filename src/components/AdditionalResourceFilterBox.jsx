@@ -6,7 +6,7 @@ import { RiEqualizerFill } from "react-icons/ri";
 const subcategoryLabels = {
   Guideline: "Guideline",
   General: "General",
-  "Borderline Personality Disorder": "Borderline Personality Disorder",
+  BPD: "BPD",
 };
 
 const AdditionalResourceFilterBox = ({
@@ -22,7 +22,7 @@ const AdditionalResourceFilterBox = ({
   });
 
   const [selectedSubcategories, setSelectedSubcategories] = useState({
-    "Borderline Personality Disorder": false,
+    BPD: false,
     Guideline: false,
     General: false,
   });
