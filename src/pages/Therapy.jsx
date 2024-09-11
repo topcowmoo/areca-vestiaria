@@ -71,7 +71,7 @@ function Therapy() {
                   : "ml-0 z-10 pointer-events-auto opacity-100"
               }`}
               style={{
-                minHeight: "calc(80px * 4)", // Ensure the min-height matches the height of 9 rows
+                minHeight: "calc(80px * 6)", // Ensure the min-height matches the height of 9 rows
               }}
             >
               <Directory

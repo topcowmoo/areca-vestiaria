@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 function Directory({ filteredData }) {
   const rowHeight = 70; // Approximate height of each row in pixels
   const maxVisibleRowsDefault = 9; // Default number of rows to display
-  const maxVisibleRowsMobile = 4; // Number of rows on small/mobile screens
+  const maxVisibleRowsMobile = 4.5; // Number of rows on small/mobile screens
   const [maxVisibleRows, setMaxVisibleRows] = useState(maxVisibleRowsDefault);
 
   // Debounced resize handler to adjust row visibility based on screen size
