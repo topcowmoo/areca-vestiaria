@@ -17,7 +17,7 @@ function PhysicianPatient() {
   };
 
   return (
-    <div className="relative flex flex-col min-h-screen bg-black">
+    <div className="relative flex flex-col bg-black">
       {/* Background Image with Gradient Layer */}
       <div className="relative w-full h-[847px] min-w-[320px]">
         <div className="absolute inset-0 w-full h-full bg-testtall opacity-50 bg-no-repeat bg-cover [background-position-x:75%] [background-position-y:-100px] md:[background-position-y:-175px] lg:[background-position-y:-290px] xl:[background-position-y:-325px] 2xl:[background-position-y:-400px] 3xl:[background-position-y:-700px] z-0"></div>
@@ -74,7 +74,7 @@ function PhysicianPatient() {
                   : "ml-0 z-10 pointer-events-auto opacity-100"
               }`}
               style={{
-                minHeight: "calc(80px * 9)", // Ensure the min-height matches the height of 9 rows
+                minHeight: "calc(80px * 4)", // Ensure the min-height matches the height of 9 rows
               }}
             >
               <Directory

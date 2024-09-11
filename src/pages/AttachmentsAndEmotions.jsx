@@ -17,7 +17,7 @@ function AttachmentsAndEmotions() {
   };
 
   return (
-    <div className="relative flex flex-col min-h-screen bg-black">
+    <div className="relative flex flex-col bg-black">
       {/* Background Image with Gradient Layer */}
       <div className="relative w-full h-[847px] min-w-[320px]">
         <div className="absolute inset-0 w-full h-full bg-testemotion opacity-50 bg-no-repeat bg-cover [background-position-x:50%] [background-position-y:-280px] md:[background-position-y:-430px] lg:[background-position-y:-600px] xl:[background-position-y:-850px] 2xl:[background-position-y:-1000px] z-0"></div>
@@ -74,7 +74,7 @@ function AttachmentsAndEmotions() {
                   : "ml-0 z-10 pointer-events-auto opacity-100"
               }`}
               style={{
-                minHeight: "calc(80px * 9)", // Ensure the min-height matches the height of 9 rows
+                minHeight: "calc(80px * 4)", // Ensure the min-height matches the height of 9 rows
               }}
             >
               <Directory
