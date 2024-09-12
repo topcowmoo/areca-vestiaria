@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function HomeDirectory({ filteredData }) {
   return (
-    <div className="home-directory w-full p-3 bg-white rounded-md sm:rounded-[10px] md:rounded-[10px] lg:rounded-[10px] xl:rounded-[10px] shadow-custom-inner flex">
+    <div className="md:w-[300px] lg:w-[425px] xl:w-[500px] 2xl:w-[550px] p-3 bg-white rounded-md sm:rounded-[10px] md:rounded-[10px] lg:rounded-[10px] xl:rounded-[10px] shadow-custom-inner flex h-[300px] md:h-[300px] lg:h-[425px] xl:h-[500px] 2xl:h-[550px]">
       <div className="flex flex-col gap-[15px] h-full overflow-y-auto custom-scrollbar w-full pt-[10px] pb-[10px] pr-[15px] pl-[15px]">
         {filteredData.length > 0 ? (
           filteredData.map((item) => (

@@ -100,15 +100,15 @@ function Home() {
         </div>
       </section>
 
-      {/* Section displaying various resources */}
-      <section className="">
-        <div className="">
-          {/* Container for Title and Button */}
-          <div className="flex justify-between items-center px-[25px] py-6">
-            <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair flex-grow">
+    {/* Section displaying various resource categories */}
+      <section>
+        <div>
+          {/* Title and Button Section */}
+          <div className="flex items-center justify-between">
+            <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair">
               Resources
             </h2>
-            <div className="ml-auto flex-shrink-0">
+            <div>
               <button
                 className="bg-black font-bold text-white font-inter rounded-sm px-[6.5px] py-[2.5px] text-[8px] md:text-[14px] md:px-[10px] md:py-[4px] lg:text-[19px] lg:px-[15px] lg:py-[6px] flex-shrink-0"
                 onClick={handleClick}
@@ -118,10 +118,8 @@ function Home() {
             </div>
           </div>
 
-          {/* Display various resource categories */}
-          <div className="relative flex flex-col">
-            <HomeResourceDisplay />
-          </div>
+          {/* Card and Directory Container */}
+          <HomeResourceDisplay />
         </div>
       </section>
 
