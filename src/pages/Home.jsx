@@ -104,7 +104,7 @@ function Home() {
       <section>
         <div>
           {/* Title and Button Section */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-around">
             <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair">
               Resources
             </h2>
