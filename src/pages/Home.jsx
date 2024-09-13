@@ -100,11 +100,11 @@ function Home() {
         </div>
       </section>
 
-    {/* Section displaying various resource categories */}
+      {/* Section displaying various resource categories */}
       <section>
         <div>
           {/* Title and Button Section */}
-          <div className="flex items-center justify-around">
+          <div className="flex items-center justify-around mt-2 lg:mt-5">
             <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair">
               Resources
             </h2>

@@ -17,7 +17,7 @@ const orderedCategories = [
 
 const HomeResourceDisplay = () => {
   return (
-    <div className="px-[25px] space-y-10 mb-8">
+    <div className=" space-y-10 mb-8">
       {/* Iterate through the ordered categories */}
       {orderedCategories.map((category, index) => {
         // Filter collectionData for resources matching the current category
@@ -27,7 +27,10 @@ const HomeResourceDisplay = () => {
 
         // Return JSX for each category
         return (
-          <div key={index} className="flex flex-col md:flex-row justify-start items-stretch mx-8 md:justify-center md:items-center my-8 space-y-6 md:space-y-0 md:space-x-6">
+          <div
+            key={index}
+            className="flex flex-col md:flex-row justify-start mx-4 items-stretch md:justify-center md:items-center my-4 space-y-6 md:space-y-0 md:space-x-6"
+          >
             {/* ResourceCard */}
             <div>
               <ResourceCard category={category} />
