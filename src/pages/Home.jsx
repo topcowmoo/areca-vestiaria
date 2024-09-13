@@ -102,26 +102,27 @@ function Home() {
 
       {/* Section displaying various resource categories */}
       <section>
-        <div>
-          {/* Title and Button Section */}
-          <div className="flex items-center justify-around mt-2 lg:mt-5">
-            <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair">
-              Resources
-            </h2>
-            <div>
-              <button
-                className="bg-black font-bold text-white font-inter rounded-sm px-[6.5px] py-[2.5px] text-[8px] md:text-[14px] md:px-[10px] md:py-[4px] lg:text-[19px] lg:px-[15px] lg:py-[6px] flex-shrink-0"
-                onClick={handleClick}
-              >
-                View All Resources
-              </button>
-            </div>
-          </div>
+  <div className="max-w-[400px] md:max-w-[700px] lg:max-w-[920px] xl:max-w-[1100px] 2xl:max-w-[1250px] mx-auto">
+    {/* Title and Button Section */}
+    <div className="flex justify-between items-center mt-2 lg:mt-5 px-[18px] md:px-[1px]">
+      <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair">
+        Resources
+      </h2>
+      <button
+        className="bg-black font-bold text-white font-inter rounded-sm px-[6.5px] py-[2.5px] text-[8px] md:text-[14px] md:px-[10px] md:py-[4px] lg:text-[19px] lg:px-[15px] lg:py-[6px] flex-shrink-0"
+        onClick={handleClick}
+      >
+        View All Resources
+      </button>
+    </div>
 
-          {/* Card and Directory Container */}
-          <HomeResourceDisplay />
-        </div>
-      </section>
+    {/* Card and Directory Container */}
+    <div className="mt-5">
+      <HomeResourceDisplay />
+    </div>
+  </div>
+</section>
+
 
       {/* Last page with contact information */}
       <section
