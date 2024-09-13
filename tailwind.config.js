@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
@@ -52,6 +53,10 @@ export default {
         inter: ["Inter", "sans-serif"],
         playfair: ["Playfair Display", "serif"],
         urbanist: ["Urbanist", "sans-serif"],
+      },
+      screens: {
+        'landscape-sm': { 'raw': '(orientation: landscape) and (min-width: 640px)' },
+        'landscape-md': { 'raw': '(orientation: landscape) and (min-width: 768px)' },
       },
     },
   },

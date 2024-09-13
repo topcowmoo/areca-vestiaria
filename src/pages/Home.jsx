@@ -30,7 +30,7 @@ function Home() {
     <div>
       {/* First section with background and main title */}
       <header className="relative flex flex-col min-h-screen bg-black">
-        <div className="relative w-full h-screen min-w-[320px]">
+        <div className="relative w-full h-screen min-w-[320px] landscape-sm:min-h-[575px]">
           <div className="absolute inset-0 w-full h-full bg-page-one bg-cover bg-center bg-no-repeat z-0">
             <div className="flex flex-grow flex-col items-center justify-center z-10">
               <div className="relative z-10 flex flex-col items-center h-full mt-36">
@@ -72,7 +72,7 @@ function Home() {
               <h3 className="w-full text-white text-[26px] sm:text-[38px] lg:text-[53px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
                 Sunrise Health & Clinical <br /> Excellence Centre
               </h3>
-              <p className="w-full text-white text-[12px] md:text-[14px] lg:text-[16px] font-light font-['Inter'] leading-[18px] md:leading-[26px] mt-4">
+              <p className="w-full text-white text-[12px] md:text-[14px] lg:text-[24px] font-light font-['Inter'] leading-[20px] md:leading-[24px] mt-4 galaxy-fold-fix">
                 The Sun rises everyday - and we believe that in mental health
                 and life in general - hope and new beginnings are key
                 ingredients to wellness. At SUNRISE, not only do we focus on
@@ -134,12 +134,12 @@ function Home() {
             <div className="w-full h-full bg-testcontact bg-cover bg-no-repeat [background-position-x:50%] filter brightness-[30%]"></div>
           </div>
 
-          <div className="flex flex-grow flex-col items-start justify-start mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12 lg:mt-12]">
+          <div className="flex flex-grow flex-col items-start justify-start mx-4 sm:mx-8 md:mx-12 my-4 sm:my-11 lg:mt-12]">
             <article className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-start">
               <h3 className="w-full text-white text-[26px] sm:text-[38px] lg:text-[71px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4 z-10">
                 Contact Us
               </h3>
-              <p className="w-full text-white text-[12px] md:text-[16px] lg:text-[19px] font-['Inter'] leading-[28px] md:leading-[36px] mt-4 z-20">
+              <p className="w-full text-white text-[12px] md:text-[16px] lg:text-[19px] font-['Inter'] leading-[28px] lg:leading-[36px] mt-4 z-20">
                 Please note, you will need a referral from your Family Doctor to
                 be referred to Dr. Mammoliti for a consultation. The
                 consultation and ongoing care are covered by OHIP (your health
