@@ -17,7 +17,7 @@ function ADHDResources() {
   };
 
   return (
-    <div className="relative flex flex-col min-h-screen bg-black">
+    <div className="relative flex flex-col bg-black">
       {/* Background Image with Gradient Layer */}
       <div className="relative w-full h-[847px] min-w-[320px]">
         <div className="absolute inset-0 w-full h-full bg-adhd-page bg-no-repeat bg-cover bg-center z-0" style={{ backgroundPosition: '45%' }}></div>
@@ -74,7 +74,7 @@ function ADHDResources() {
                   : "ml-0 z-10 pointer-events-auto opacity-100"
               }`}
               style={{
-                minHeight: "calc(80px * 9)", // Ensure the min-height matches the height of 9 rows
+                minHeight: "calc(80px * 6)", // Ensure the min-height matches the height of 9 rows
               }}
             >
               <Directory

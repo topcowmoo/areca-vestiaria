@@ -1,10 +1,43 @@
 import PropTypes from "prop-types";
+import { useState, useEffect } from "react";
 
 function Directory({ filteredData }) {
   const rowHeight = 70; // Approximate height of each row in pixels
-  const maxVisibleRows = 9; // Number of rows to display before scrolling
-  const maxHeight = rowHeight * maxVisibleRows; // Calculate max height for 9 rows
-  
+  const maxVisibleRowsDefault = 9; // Default number of rows to display
+  const maxVisibleRowsMobile = 4.5; // Number of rows on small/mobile screens
+  const [maxVisibleRows, setMaxVisibleRows] = useState(maxVisibleRowsDefault);
+
+  // Debounced resize handler to adjust row visibility based on screen size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 640) {
+        setMaxVisibleRows(maxVisibleRowsMobile); // Mobile size
+      } else {
+        setMaxVisibleRows(maxVisibleRowsDefault); // Default size
+      }
+    };
+
+    // Run on initial render
+    handleResize();
+
+    // Debounce to optimize resize handling
+    let resizeTimeout;
+    const debouncedResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(handleResize, 100);
+    };
+
+    window.addEventListener("resize", debouncedResize);
+
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener("resize", debouncedResize);
+      clearTimeout(resizeTimeout);
+    };
+  }, []);
+
+  const maxHeight = rowHeight * maxVisibleRows; // Calculate max height based on visible rows
+
   return (
     <div
       className="w-full sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[90%] p-[20px] sm:p-[20px] md:p-[25px] lg:p-[35px] xl:p-[35px] bg-white rounded-[10px] shadow-custom-inner flex mx-auto"

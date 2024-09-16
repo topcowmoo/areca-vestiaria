@@ -30,7 +30,7 @@ function Home() {
     <div>
       {/* First section with background and main title */}
       <header className="relative flex flex-col min-h-screen bg-black">
-        <div className="relative w-full h-screen min-w-[320px]">
+        <div className="relative w-full h-screen min-w-[320px] landscape-sm:min-h-[575px]">
           <div className="absolute inset-0 w-full h-full bg-page-one bg-cover bg-center bg-no-repeat z-0">
             <div className="flex flex-grow flex-col items-center justify-center z-10">
               <div className="relative z-10 flex flex-col items-center h-full mt-36">
@@ -72,7 +72,7 @@ function Home() {
               <h3 className="w-full text-white text-[26px] sm:text-[38px] lg:text-[53px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
                 Sunrise Health & Clinical <br /> Excellence Centre
               </h3>
-              <p className="w-full text-white text-[12px] md:text-[14px] lg:text-[16px] font-light font-['Inter'] leading-[18px] md:leading-[26px] mt-4">
+              <p className="w-full text-white text-[12px] md:text-[14px] lg:text-[24px] font-light font-['Inter'] leading-[20px] md:leading-[24px] mt-4 galaxy-fold-fix">
                 The Sun rises everyday - and we believe that in mental health
                 and life in general - hope and new beginnings are key
                 ingredients to wellness. At SUNRISE, not only do we focus on
@@ -100,30 +100,29 @@ function Home() {
         </div>
       </section>
 
-      {/* Section displaying various resources */}
-      <section className="">
-        <div className="">
-          {/* Container for Title and Button */}
-          <div className="flex justify-between items-center px-[25px] py-6">
-            <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair flex-grow">
-              Resources
-            </h2>
-            <div className="ml-auto flex-shrink-0">
-              <button
-                className="bg-black font-bold text-white font-inter rounded-sm px-[6.5px] py-[2.5px] text-[8px] md:text-[14px] md:px-[10px] md:py-[4px] lg:text-[19px] lg:px-[15px] lg:py-[6px] flex-shrink-0"
-                onClick={handleClick}
-              >
-                View All Resources
-              </button>
-            </div>
-          </div>
+      {/* Section displaying various resource categories */}
+      <section>
+  <div className="max-w-[400px] md:max-w-[700px] lg:max-w-[920px] xl:max-w-[1100px] 2xl:max-w-[1250px] mx-auto">
+    {/* Title and Button Section */}
+    <div className="flex justify-between items-center mt-2 lg:mt-5 px-[18px] md:px-[1px]">
+      <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair">
+        Resources
+      </h2>
+      <button
+        className="bg-black font-bold text-white font-inter rounded-sm px-[6.5px] py-[2.5px] text-[8px] md:text-[14px] md:px-[10px] md:py-[4px] lg:text-[19px] lg:px-[15px] lg:py-[6px] flex-shrink-0"
+        onClick={handleClick}
+      >
+        View All Resources
+      </button>
+    </div>
 
-          {/* Display various resource categories */}
-          <div className="relative flex flex-col">
-            <HomeResourceDisplay />
-          </div>
-        </div>
-      </section>
+    {/* Card and Directory Container */}
+    <div className="mt-5">
+      <HomeResourceDisplay />
+    </div>
+  </div>
+</section>
+
 
       {/* Last page with contact information */}
       <section
@@ -135,12 +134,12 @@ function Home() {
             <div className="w-full h-full bg-testcontact bg-cover bg-no-repeat [background-position-x:50%] filter brightness-[30%]"></div>
           </div>
 
-          <div className="flex flex-grow flex-col items-start justify-start mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12 lg:mt-12]">
+          <div className="flex flex-grow flex-col items-start justify-start mx-4 sm:mx-8 md:mx-12 my-4 sm:my-11 lg:mt-12]">
             <article className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-start">
               <h3 className="w-full text-white text-[26px] sm:text-[38px] lg:text-[71px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4 z-10">
                 Contact Us
               </h3>
-              <p className="w-full text-white text-[12px] md:text-[16px] lg:text-[19px] font-['Inter'] leading-[28px] md:leading-[36px] mt-4 z-20">
+              <p className="w-full text-white text-[12px] md:text-[16px] lg:text-[19px] font-['Inter'] leading-[28px] lg:leading-[36px] mt-4 z-20">
                 Please note, you will need a referral from your Family Doctor to
                 be referred to Dr. Mammoliti for a consultation. The
                 consultation and ongoing care are covered by OHIP (your health
