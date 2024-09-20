@@ -31,7 +31,7 @@ function Home() {
       {/* First section with background and main title */}
       <header className="relative flex flex-col min-h-screen bg-black">
         <div className="relative w-full h-screen min-w-[320px] landscape-sm:min-h-[575px]">
-          <div className="absolute inset-0 w-full h-full bg-page-one bg-cover bg-center bg-no-repeat z-0">
+          <div className="absolute inset-0 w-full h-full bg-home-one bg-cover bg-center bg-no-repeat z-0">
             <div className="flex flex-grow flex-col items-center justify-center z-10">
               <div className="relative z-10 flex flex-col items-center h-full mt-36">
                 <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-2">
@@ -63,7 +63,7 @@ function Home() {
         <div className="relative w-full h-full min-w-[390px]">
           {/* Background Image Container with Brightness Filter */}
           <div className="absolute inset-0 w-full h-full z-0">
-            <div className="w-full min-h-screen bg-testsunrise bg-cover bg-no-repeat [background-position-x:50%] filter brightness-[30%]"></div>
+            <div className="w-full min-h-screen bg-home-two bg-cover bg-no-repeat [background-position-x:50%] filter brightness-[30%]"></div>
           </div>
 
           {/* Content */}
@@ -131,7 +131,7 @@ function Home() {
       >
         <div className="relative w-full h-screen min-w-[390px]">
           <div className="absolute inset-0 w-full h-full z-0">
-            <div className="w-full h-full bg-testcontact bg-cover bg-no-repeat [background-position-x:50%] filter brightness-[30%]"></div>
+            <div className="w-full h-full bg-home-three bg-cover bg-no-repeat [background-position-x:50%] filter brightness-[30%]"></div>
           </div>
 
           <div className="flex flex-grow flex-col items-start justify-start mx-4 sm:mx-8 md:mx-12 my-4 sm:my-11 lg:mt-12]">

@@ -12,7 +12,7 @@ const cardData = {
   },
   "Attachment & Emotions": {
     link: "/attachments-and-emotions",
-    backgroundClass: "bg-testemotion",
+    backgroundClass: "bg-emotions-page",
   },
   "Couples Resources": {
     link: "/couples-resources",
@@ -20,15 +20,15 @@ const cardData = {
   },
   "Anger & Shame": {
     link: "/anger-and-shame",
-    backgroundClass: "bg-testanger",
+    backgroundClass: "bg-anger-page",
   },
   "Physician Patient": {
     link: "/physician-patient-resources",
-    backgroundClass: "bg-testtall",
+    backgroundClass: "bg-physician-page",
   },
   Therapy: {
     link: "/therapy",
-    backgroundClass: "bg-testtherapy",
+    backgroundClass: "bg-therapy-page",
   },
   "Additional Resources": {
     link: "/additional-resources",
