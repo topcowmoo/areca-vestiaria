@@ -8,16 +8,25 @@ import PropTypes from "prop-types";
 function Navbar() {
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [hasResourcesInteracted, setHasResourcesInteracted] = useState(false); // Tracks dropdown interaction
+  const [isResourcesVisible, setIsResourcesVisible] = useState(false); // Tracks visibility
   const navigate = useNavigate();
 
+  // Toggling Resources dropdown
   const toggleResources = useCallback(() => {
     setIsResourcesOpen((prev) => !prev);
-  }, []);
+    if (!hasResourcesInteracted) {
+      setHasResourcesInteracted(true); // Mark as interacted
+    }
+    setIsResourcesVisible((prev) => !prev); // Toggle visibility state
+  }, [hasResourcesInteracted]);
 
+  // Toggling mobile menu (hamburger)
   const toggleMobileMenu = useCallback(() => {
     setIsMobileMenuOpen((prev) => !prev);
   }, []);
 
+  // Close dropdown and mobile menu when clicking outside
   const handleClickOutside = useCallback((event) => {
     if (
       !event.target.closest(".dropdown-menu") &&
@@ -26,6 +35,7 @@ function Navbar() {
     ) {
       setIsResourcesOpen(false);
       setIsMobileMenuOpen(false);
+      setIsResourcesVisible(false); // Hide resources if clicked outside
     }
   }, []);
 
@@ -45,6 +55,7 @@ function Navbar() {
       navigate(path);
       setIsMobileMenuOpen(false);
       setIsResourcesOpen(false);
+      setIsResourcesVisible(false); // Close resources dropdown on navigation
     },
     [navigate]
   );
@@ -97,6 +108,8 @@ function Navbar() {
         >
           About Us
         </NavItem>
+
+        {/* Resources Dropdown */}
         <li className="self-stretch relative resources-toggle cursor-pointer">
           <div className="flex items-center" onClick={toggleResources}>
             <span className="text-left text-white text-[21px] font-light font-['Inter'] tracking-wide cursor-pointer mr-[11px] hover:text-white hover:underline">
@@ -109,46 +122,54 @@ function Navbar() {
               style={{ marginBottom: "-2px" }}
             />
           </div>
-          <div
-            className={`dropdown-menu absolute mt-2 ml-12 py-5 bg-black/25 backdrop-blur-md flex flex-col justify-start items-start gap-4 text-white rounded shadow-lg px-5 z-20 w-[285px] transition-all duration-500 ease-in-out transform origin-top ${
-              isResourcesOpen
-                ? "translate-y-0 scale-y-100 opacity-100 pointer-events-auto visibility-visible"
-                : "-translate-y-2 scale-y-75 opacity-0 pointer-events-none visibility-hidden"
-            }`}
-            style={{ left: "-50px" }}
-          >
-            {[
-              { to: "/adhd-resources", label: "ADHD Resources" },
-              { to: "/parenting-resources", label: "Parenting Resources" },
-              { to: "/couples-resources", label: "Couples Resources" },
-              {
-                to: "/attachments-and-emotions",
-                label: "Attachment & Emotions",
-              },
-              { to: "/anger-and-shame", label: "Anger & Shame" },
-              { to: "/therapy", label: "Therapy" },
-              {
-                to: "/physician-patient-resources",
-                label: "Physician Patient Resources",
-                className: "tracking-tight",
-              },
-              { to: "/additional-resources", label: "Additional Resources" },
-            ].map((item) => (
-              <HashLink
-                key={item.to}
-                smooth
-                to={item.to}
-                className={`text-[17px] font-light font-['Inter'] rounded-md px-3 py-2 hover:text-white hover:font-semibold ${item.className || ""}`}
-                onClick={() => {
-                  setIsResourcesOpen(false);
-                  setIsMobileMenuOpen(false);
-                }}
-              >
-                {item.label}
-              </HashLink>
-            ))}
-          </div>
+
+          {/* Only render dropdown if it's visible, and control animation */}
+          {isResourcesVisible && (
+           <div
+           className={`dropdown-menu absolute mt-2 ml-12 py-5 bg-black/25 backdrop-blur-md flex flex-col justify-start items-start gap-4 text-white rounded shadow-lg px-5 z-20 w-[285px] transition-all transform origin-top ${
+             hasResourcesInteracted // Only animate after interaction
+               ? isResourcesOpen
+                 ? "animate-dropdownSlideDown pointer-events-auto visibility-visible"
+                 : "animate-dropdownSlideUp pointer-events-none visibility-hidden"
+               : "opacity-0 pointer-events-none visibility-hidden"
+           }`}
+           style={{ left: "-50px" }}
+         >
+              {[
+                { to: "/adhd-resources", label: "ADHD Resources" },
+                { to: "/parenting-resources", label: "Parenting Resources" },
+                { to: "/couples-resources", label: "Couples Resources" },
+                {
+                  to: "/attachments-and-emotions",
+                  label: "Attachment & Emotions",
+                },
+                { to: "/anger-and-shame", label: "Anger & Shame" },
+                { to: "/therapy", label: "Therapy" },
+                {
+                  to: "/physician-patient-resources",
+                  label: "Physician Patient Resources",
+                  className: "tracking-tight",
+                },
+                { to: "/additional-resources", label: "Additional Resources" },
+              ].map((item) => (
+                <HashLink
+                  key={item.to}
+                  smooth
+                  to={item.to}
+                  className={`text-[17px] font-light font-['Inter'] rounded-md px-3 py-2 hover:text-white hover:font-semibold ${item.className || ""}`}
+                  onClick={() => {
+                    setIsResourcesOpen(false);
+                    setIsMobileMenuOpen(false);
+                    setIsResourcesVisible(false);
+                  }}
+                >
+                  {item.label}
+                </HashLink>
+              ))}
+            </div>
+          )}
         </li>
+
         <NavItem
           to="/#contact-page"
           onClick={() => handleNavigation("/#contact-page")}

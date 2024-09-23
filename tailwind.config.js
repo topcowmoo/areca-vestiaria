@@ -6,6 +6,14 @@ export default {
   theme: {
     extend: {
       keyframes: {
+        dropdownSlideDown: {
+          "0%": { transform: "translateY(-10%)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        dropdownSlideUp: {
+          "0%": { transform: "translateY(0)", opacity: "1" },
+          "100%": { transform: "translateY(-10%)", opacity: "0" },
+        },
         slideDown: {
           "0%": { transform: "translateY(-50%)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
@@ -28,6 +36,8 @@ export default {
         slideUp: "slideUp 0.4s ease-in-out forwards",
         slideRight: "slideRight 0.4s ease-in-out forwards",
         slideLeft: "slideLeft 0.4s ease-in-out forwards",
+        dropdownSlideDown: "dropdownSlideDown 0.4s ease-in-out forwards",
+        dropdownSlideUp: "dropdownSlideUp 0.4s ease-in-out forwards",
       },
       boxShadow: {
         "custom-light": "0 0px 12px rgba(0, 0, 0, 0.2)",
