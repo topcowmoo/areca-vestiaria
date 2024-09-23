@@ -72,7 +72,7 @@ function Home() {
               <h3 className="w-full text-white text-[26px] sm:text-[38px] lg:text-[53px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
                 Sunrise Health & Clinical <br /> Excellence Centre
               </h3>
-              <p className="w-full text-white text-[12px] md:text-[14px] lg:text-[24px] font-light font-['Inter'] leading-[20px] md:leading-[24px] mt-4 galaxy-fold-fix">
+              <p className="w-full text-white text-[12px] md:text-[14px] lg:text-[24px] font-light font-['Inter'] leading-[20px] md:leading-[24px] lg:leading-[38px] mt-4 galaxy-fold-fix">
                 The Sun rises everyday - and we believe that in mental health
                 and life in general - hope and new beginnings are key
                 ingredients to wellness. At SUNRISE, not only do we focus on
@@ -102,27 +102,26 @@ function Home() {
 
       {/* Section displaying various resource categories */}
       <section>
-  <div className="max-w-[400px] md:max-w-[700px] lg:max-w-[920px] xl:max-w-[1100px] 2xl:max-w-[1250px] mx-auto">
-    {/* Title and Button Section */}
-    <div className="flex justify-between items-center mt-2 lg:mt-5 px-[18px] md:px-[1px]">
-      <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair">
-        Resources
-      </h2>
-      <button
-        className="bg-black font-bold text-white font-inter rounded-sm px-[6.5px] py-[2.5px] text-[8px] md:text-[14px] md:px-[10px] md:py-[4px] lg:text-[19px] lg:px-[15px] lg:py-[6px] flex-shrink-0"
-        onClick={handleClick}
-      >
-        View All Resources
-      </button>
-    </div>
+        <div className="max-w-[400px] md:max-w-[700px] lg:max-w-[920px] xl:max-w-[1100px] 2xl:max-w-[1250px] mx-auto">
+          {/* Title and Button Section */}
+          <div className="flex justify-between items-center mt-2 lg:mt-5 px-[18px] md:px-[1px]">
+            <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair">
+              Resources
+            </h2>
+            <button
+              className="bg-black font-bold text-white font-inter rounded-sm px-[6.5px] py-[2.5px] text-[8px] md:text-[14px] md:px-[10px] md:py-[4px] lg:text-[19px] lg:px-[15px] lg:py-[6px] flex-shrink-0"
+              onClick={handleClick}
+            >
+              View All Resources
+            </button>
+          </div>
 
-    {/* Card and Directory Container */}
-    <div className="mt-5">
-      <HomeResourceDisplay />
-    </div>
-  </div>
-</section>
-
+          {/* Card and Directory Container */}
+          <div className="mt-5">
+            <HomeResourceDisplay />
+          </div>
+        </div>
+      </section>
 
       {/* Last page with contact information */}
       <section
