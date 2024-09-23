@@ -34,6 +34,7 @@ export default {
         inner: "inset 0 0 12px rgba(0, 0, 0, 0.9)",
         "custom-inner": "inset 0 0 9px rgba(0, 0, 0, 0.6)",
         "custom-even": "0 0 25px rgba(0, 0, 0, 0.9)",
+        "custom-dark": "0 0 30px rgba(0, 0, 0, 1.3)",
       },
       backgroundImage: {
         "home-one": "url('/src/assets/homeone.png')",
