@@ -44,7 +44,7 @@ function Home() {
                 {/* Search bar component */}
                 <SearchBar />
                 <a
-                  href="#second-page"
+                  href="#resource-page"
                   className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] underline m-8 py-4"
                 >
                   Explore More
@@ -56,10 +56,7 @@ function Home() {
       </header>
 
       {/* Second section with additional content and 'Read More' button */}
-      <section
-        id="second-page"
-        className="relative flex flex-col min-h-screen bg-black"
-      >
+      <section className="relative flex flex-col min-h-screen bg-black">
         <div className="relative w-full h-full min-w-[390px]">
           {/* Background Image Container with Brightness Filter */}
           <div className="absolute inset-0 w-full h-full z-0">
@@ -101,7 +98,7 @@ function Home() {
       </section>
 
       {/* Section displaying various resource categories */}
-      <section>
+      <section id="resource-page">
         <div className="max-w-[400px] md:max-w-[700px] lg:max-w-[920px] xl:max-w-[1100px] 2xl:max-w-[1250px] mx-auto">
           {/* Title and Button Section */}
           <div className="flex justify-between items-center mt-2 lg:mt-5 px-[18px] md:px-[1px]">
