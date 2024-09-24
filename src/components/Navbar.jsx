@@ -8,17 +8,31 @@ import PropTypes from "prop-types";
 function Navbar() {
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [hasResourcesInteracted, setHasResourcesInteracted] = useState(false); // Tracks dropdown interaction
-  const [isResourcesVisible, setIsResourcesVisible] = useState(false); // Tracks visibility
+  const [hasResourcesInteracted, setHasResourcesInteracted] = useState(false); 
+  const [isResourcesVisible, setIsResourcesVisible] = useState(false); 
+  const [isScrolled, setIsScrolled] = useState(false); 
   const navigate = useNavigate();
+
+  // Detect scroll position apply bg only if mobile closed
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!isMobileMenuOpen) {
+        setIsScrolled(window.scrollY > 50); 
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isMobileMenuOpen]);
 
   // Toggling Resources dropdown
   const toggleResources = useCallback(() => {
     setIsResourcesOpen((prev) => !prev);
     if (!hasResourcesInteracted) {
-      setHasResourcesInteracted(true); // Mark as interacted
+      setHasResourcesInteracted(true); 
     }
-    setIsResourcesVisible((prev) => !prev); // Toggle visibility state
+    setIsResourcesVisible((prev) => !prev); 
   }, [hasResourcesInteracted]);
 
   // Toggling mobile menu (hamburger)
@@ -35,7 +49,7 @@ function Navbar() {
     ) {
       setIsResourcesOpen(false);
       setIsMobileMenuOpen(false);
-      setIsResourcesVisible(false); // Hide resources if clicked outside
+      setIsResourcesVisible(false); 
     }
   }, []);
 
@@ -55,32 +69,47 @@ function Navbar() {
       navigate(path);
       setIsMobileMenuOpen(false);
       setIsResourcesOpen(false);
-      setIsResourcesVisible(false); // Close resources dropdown on navigation
+      setIsResourcesVisible(false); 
     },
     [navigate]
   );
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-30 flex justify-center">
+    <nav
+    className={`fixed top-0 left-0 w-full z-30 flex justify-center transition-colors duration-300 ${
+      isMobileMenuOpen
+        ? "bg-transparent" // Always transparent when the mobile menu is open
+        : isScrolled
+        ? "bg-black/70 text-white pb-6 md:bg-black/70 md:pb-6"
+        : "bg-transparent"
+    }`}
+  >
+  
+
       <div className="w-full flex justify-between items-center pl-[21px] pt-[29px] md:hidden">
         <CgMenuRound
-          className={`text-white transition-transform duration-300 mobile-menu-icon ${isMobileMenuOpen ? "rotate-90" : ""}`}
+          className={`text-white transition-transform duration-300 mobile-menu-icon ${
+            isMobileMenuOpen ? "rotate-90" : ""
+          }`}
           size={40}
           onClick={toggleMobileMenu}
         />
       </div>
       <ul
-        className={`mobile-menu md:flex md:flex-row md:justify-start items-start gap-12 pt-11 ${
-          isMobileMenuOpen
-            ? "fixed top-0 left-0 w-[327px] h-[100vh] px-[21px] py-[29px] bg-black/75 backdrop-blur-[17.70px] flex flex-col justify-start items-start gap-7 overflow-y-auto pointer-events-auto opacity-100 visibility-visible"
-            : "hidden md:flex md:opacity-100 visibility-hidden md:visibility-visible"
-        }`}
-      >
+  className={`mobile-menu md:flex md:flex-row md:justify-start items-start gap-12 pt-11 ${
+    isMobileMenuOpen
+      ? "fixed top-0 left-0 w-[327px] h-[100vh] px-[21px] py-[29px] bg-black/75 backdrop-blur-[17.70px] flex flex-col justify-start items-start gap-7 pointer-events-auto opacity-100 visibility-visible overflow-y-auto" // Allow scrolling within the fixed menu
+      : "hidden md:flex md:opacity-100 visibility-hidden md:visibility-visible"
+  }`}
+>
+
         {isMobileMenuOpen && (
           <>
             <div className="fixed z-20" style={{ top: "29px", left: "21px" }}>
               <CgMenuRound
-                className={`text-white transition-transform duration-300 ${isMobileMenuOpen ? "rotate-90" : ""}`}
+                className={`text-white transition-transform duration-300 ${
+                  isMobileMenuOpen ? "rotate-90" : ""
+                }`}
                 size={40}
                 onClick={toggleMobileMenu}
               />
@@ -116,25 +145,28 @@ function Navbar() {
               Resources
             </span>
             <IoTriangleSharp
-              className={`transform ${isResourcesOpen ? "rotate-0" : "rotate-180"}`}
+              className={`transform ${
+                isResourcesOpen ? "rotate-0" : "rotate-180"
+              }`}
               size={11}
               color="white"
               style={{ marginBottom: "-2px" }}
             />
           </div>
 
-          {/* Only render dropdown if it's visible, and control animation */}
+          {/* Only render dropdown if it's visible */}
           {isResourcesVisible && (
-           <div
-           className={`dropdown-menu absolute mt-2 ml-12 py-5 bg-black/25 backdrop-blur-md flex flex-col justify-start items-start gap-4 text-white rounded shadow-lg px-5 z-20 w-[285px] transition-all transform origin-top ${
-             hasResourcesInteracted // Only animate after interaction
-               ? isResourcesOpen
-                 ? "animate-dropdownSlideDown pointer-events-auto visibility-visible"
-                 : "animate-dropdownSlideUp pointer-events-none visibility-hidden"
-               : "opacity-0 pointer-events-none visibility-hidden"
-           }`}
-           style={{ left: "-50px" }}
-         >
+            <div
+              className={`dropdown-menu absolute mt-2 ml-12 py-5 bg-black/25 backdrop-blur-md flex flex-col justify-start items-start gap-4 text-white rounded shadow-lg px-5 z-20 w-[285px] transition-all transform origin-top ${
+                hasResourcesInteracted
+                  ? isResourcesOpen
+                    ? "animate-dropdownSlideDown pointer-events-auto visibility-visible"
+                    : "animate-dropdownSlideUp pointer-events-none visibility-hidden"
+                  : "opacity-0 pointer-events-none visibility-hidden"
+              }`}
+              style={{ left: "-50px" }}
+            >
+              {/* Dropdown Links */}
               {[
                 { to: "/adhd-resources", label: "ADHD Resources" },
                 { to: "/parenting-resources", label: "Parenting Resources" },
@@ -156,7 +188,9 @@ function Navbar() {
                   key={item.to}
                   smooth
                   to={item.to}
-                  className={`text-[17px] font-light font-['Inter'] rounded-md px-3 py-2 hover:text-white hover:font-semibold ${item.className || ""}`}
+                  className={`text-[17px] font-light font-['Inter'] rounded-md px-3 py-2 hover:text-white hover:font-semibold ${
+                    item.className || ""
+                  }`}
                   onClick={() => {
                     setIsResourcesOpen(false);
                     setIsMobileMenuOpen(false);
