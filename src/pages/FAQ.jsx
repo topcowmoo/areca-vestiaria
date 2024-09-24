@@ -163,10 +163,10 @@ const Faq = () => {
                       4) Other non-OHIP covered services should be discussed directly with the office
                     </p>
                       <p style={{ marginBottom: "20px" }}>
-                      5) OHIP ONLY covers treatment-focused consultations and that is what Dr. Mammoilit provides for patients referred by their Family Doctors.
+                      5) OHIP ONLY covers treatment-focused consultations and that is what Dr. Mammoliti provides for patients referred by their Family Doctors.
                     </p>
                       <p style={{ marginBottom: "20px" }}>
-                      6) Dr. Mammoilit does not provide capacity assessments, CAS parental capacity assessments, forensic assessments or ODSP disability determining assessments.
+                      6) Dr. Mammoliti does not provide capacity assessments, CAS parental capacity assessments, forensic assessments or ODSP disability determining assessments.
                     </p>
                     </p>
                   </div>
