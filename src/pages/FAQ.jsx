@@ -28,7 +28,7 @@ const Faq = () => {
       <div className="w-full h-[136px] left-0 top-0 absolute bg-black z-0" />
 
       {/* FAQ Section */}
-      <div className="relative max-w-[1440px] mx-auto px-4 pt-[150px] sm:pt-[200px] lg:pt-[250px]">
+      <div className="relative max-w-[1440px] mx-auto px-12 pt-[150px] sm:pt-[200px] lg:pt-[250px]">
         {/* FAQ Section Title */}
         <div className="text-center lg:text-left">
           <div className="text-[#090909] text-[32px] sm:text-[45px] lg:text-[65px] font-bold font-['Playfair'] leading-tight lg:leading-none">
