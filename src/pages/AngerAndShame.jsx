@@ -44,7 +44,7 @@ function AngerAndShame() {
       </div>
 
       {/* Content Section */}
-      <div className="relative z-20 flex flex-col items-center justify-start flex-grow pt-2 -mt-[440px] md:pt-8 md:-mt-[370px] lg:pt-10 lg:-mt-[315px]">
+      <div className="relative z-20 flex flex-col items-center justify-start flex-grow pt-2 -mt-[440px] md:pt-8 md:-mt-[370px] lg:pt-10 lg:-mt-[315px] pb-12">
         <div className="w-full max-w-[1200px] px-4 py-4 sm:px-6 sm:py-6 mx-auto">
           {/* Container for FilterBox and Directory */}
           <div className="relative flex flex-col w-full gap-[37px]">

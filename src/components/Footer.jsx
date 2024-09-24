@@ -35,7 +35,7 @@ const Footer = () => {
   }, [location]);
 
   return (
-    <footer className="w-full px-4 sm:px-6 md:px-8 lg:px-10 pt-10 pb-10 sm:pb-16 lg:pt-20 lg:pb-[106px] bg-black text-white">
+    <footer className="w-full px-4 md:px-8 lg:px-10 pb-8 pt-8 bg-[#151515] text-white">
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] gap-10">
         {/* Logo and Description */}
         <div className="flex flex-col justify-start">
@@ -95,7 +95,7 @@ const Footer = () => {
                 to="/faq"
                 className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
               >
-                FAQ
+                Frequently Asked Questions
               </Link>
             </li>
           </ul>
