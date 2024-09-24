@@ -69,7 +69,7 @@ const ResourceCard = ({ category }) => {
         {/* View All Button */}
         <Link
           to={card.link || "#"}
-          className="text-white text-[9px] sm:text-[12px] md:text-[14px] lg:text-[18px] xl:text-[25px] 2xl:text-[30px] font-extrabold font-inter underline md:mt-5"
+          className="text-white text-[9px] sm:text-[12px] md:text-[14px] lg:text-[18px] xl:text-[25px] 2xl:text-[30px] font-inter underline md:mt-5"
         >
           View All
         </Link>
