@@ -63,7 +63,7 @@ const ResourceCard = ({ category }) => {
       {/* Card Content */}
       <div className="absolute inset-0 flex md:flex-col justify-between md:justify-evenly md:items-start lg:flex-col lg:items-start lg:px-[55px] lg:py-24 lg:justify-evenly md:px-9 md:py-16 items-center px-4">
         {/* Title */}
-        <div className="text-white text-sm sm:text-lg md:text-[42px] lg:text-[60px] xl:text-[71px] 2xl:text-[78px] font-extrabold font-playfair md:break-words md:leading-tight">
+        <div className="text-white text-sm sm:text-lg md:text-[34px] lg:text-[50px] xl:text-[58px] 2xl:text-[68px] font-extrabold font-playfair md:break-words md:leading-tight">
           {category}
         </div>
         {/* View All Button */}
