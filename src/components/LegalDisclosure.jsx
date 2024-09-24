@@ -21,8 +21,8 @@ const LegalDisclosure = () => {
             <h2 className="text-center text-black text-[30px] md:text-[40px] font-extrabold font-playfair mb-4">
               Legal Disclosure
             </h2>
-            <div className="bg-white/80 rounded-[18px] mb-4">
-              <p className="text-[#1e1e1e] text-[13px] sm:text-base md:text-[19px] font-normal leading-[18px] font-inter p-6">
+            <div className="bg-white/80 rounded-[18px] mb-8 mt-12">
+              <p className="text-[#1e1e1e] text-[13px] sm:text-base md:text-[19px] font-normal font-inter p-8 text-center lg:leading-[1.75]">
                 Content of this website is meant for Canadian residents only. Content on this website is not sponsored, does not establish patient-doctor relationship, and is only meant for educational and advocacy purposes.
               </p>
             </div>
