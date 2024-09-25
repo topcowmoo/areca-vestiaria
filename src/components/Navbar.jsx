@@ -80,7 +80,7 @@ function Navbar() {
       isMobileMenuOpen
         ? "bg-transparent" // Always transparent when the mobile menu is open
         : isScrolled
-        ? "bg-black/70 text-white pb-6 md:bg-black/70 md:pb-6"
+        ? "bg-black/70 backdrop-blur-md text-white pb-6 md:bg-black/70 md:pb-6"
         : "bg-transparent"
     }`}
   >
