@@ -8,8 +8,8 @@ function HomeDirectory({ filteredData }) {
   bg-white 
   shadow-custom-inner 
   flex 
-  h-[300px] md:h-[300px] lg:h-[425px] xl:h-[500px] 2xl:h-[550px]
-  w-full md:w-[375px] lg:w-[475px] xl:w-[575px] 2xl:w-[675px] 
+  h-[300px] md:h-[250px] lg:h-[350px] xl:h-[400px] 2xl:h-[475px]
+  w-full md:w-[335px] lg:w-[470px] xl:w-[550px] 2xl:w-[700px] 
   rounded-md sm:rounded-[10px] md:rounded-[10px] lg:rounded-[10px] xl:rounded-[10px]"
     >
       <div className="flex flex-col gap-[15px] h-full overflow-y-auto custom-scrollbar w-full pt-[10px] pb-[10px] pr-[15px] pl-[15px]">

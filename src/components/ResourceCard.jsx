@@ -41,8 +41,8 @@ const ResourceCard = ({ category }) => {
 
   return (
     <div
-      className={`w-full md:w-[300px] lg:w-[425px] xl:w-[500px] 2xl:w-[550px]
-    min-h-12 sm:min-h-[95px] md:min-h-[300px] lg:min-h-[425px] xl:min-h-[500px] 2xl:min-h-[550px]
+      className={`w-full md:w-[335px] lg:w-[470px] xl:w-[550px] 2xl:w-[700px]
+    min-h-12 sm:min-h-[95px] md:min-h-[250px] lg:min-h-[350px] xl:min-h-[400px] 2xl:min-h-[475px]
     rounded-md sm:rounded-[10px] md:rounded-[10px] lg:rounded-[10px] xl:rounded-[10px] 
     relative overflow-hidden flex bg-cover bg-no-repeat
     ${card.backgroundClass} 
@@ -63,13 +63,13 @@ const ResourceCard = ({ category }) => {
       {/* Card Content */}
       <div className="absolute inset-0 flex md:flex-col justify-between md:justify-evenly md:items-start lg:flex-col lg:items-start lg:px-[55px] lg:py-24 lg:justify-evenly md:px-9 md:py-16 items-center px-4">
         {/* Title */}
-        <div className="text-white text-sm sm:text-lg md:text-[42px] lg:text-[60px] xl:text-[71px] 2xl:text-[78px] font-extrabold font-playfair md:break-words md:leading-tight">
+        <div className="text-white text-sm sm:text-lg md:text-[34px] lg:text-[50px] xl:text-[58px] 2xl:text-[68px] font-extrabold font-playfair md:break-words md:leading-tight">
           {category}
         </div>
         {/* View All Button */}
         <Link
           to={card.link || "#"}
-          className="text-white text-[9px] sm:text-[12px] md:text-[14px] lg:text-[18px] xl:text-[25px] 2xl:text-[30px] font-extrabold font-inter underline md:mt-5"
+          className="text-white text-[9px] sm:text-[12px] md:text-[14px] lg:text-[18px] xl:text-[25px] 2xl:text-[30px] font-inter underline md:mt-5"
         >
           View All
         </Link>

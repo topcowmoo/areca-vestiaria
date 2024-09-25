@@ -41,8 +41,8 @@ export default {
       },
       boxShadow: {
         "custom-light": "0 0px 12px rgba(0, 0, 0, 0.2)",
-        inner: "inset 0 0 12px rgba(0, 0, 0, 0.9)",
-        "custom-inner": "inset 0 0 9px rgba(0, 0, 0, 0.6)",
+        "inner": "inset 0 0 12px rgba(0, 0, 0, 0.9)",
+        "custom-inner": "inset 0 0 5px rgba(0, 0, 0, 0.2)",
         "custom-even": "0 0 25px rgba(0, 0, 0, 0.9)",
         "custom-dark": "0 0 30px rgba(0, 0, 0, 1.3)",
       },
