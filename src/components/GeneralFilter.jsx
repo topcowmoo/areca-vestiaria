@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 import PropTypes from "prop-types";
 import { collectionData } from "../data/collectionData";
 import { RiEqualizerFill } from "react-icons/ri";
+import { IoCheckmarkSharp } from "react-icons/io5";
 
 const GeneralFilter = ({
   currentPage,
@@ -62,7 +63,7 @@ const GeneralFilter = ({
 
       {/* Animate visibility of the FilterBox */}
       <div
-        className={`w-full mt-[37px] absolute top-full left-0 transition-all duration-500 ease-in-out transform ${
+        className={`w-full mt-[19px] absolute top-full left-0 transition-all duration-500 ease-in-out transform ${
           isFilterBoxOpen
             ? "translate-y-0 opacity-100"
             : "-translate-y-8 opacity-0"
@@ -88,32 +89,35 @@ const GeneralFilter = ({
           <div className="sm:text-white md:text-white lg:text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
             Resource Format
           </div>
-          <div className="flex-col justify-start items-start gap-[7px] flex">
+          <div className="flex-col justify-start items-start gap-[12px] flex">
             {Object.keys(checkedKinds).map((kind) => (
               <div
                 className="justify-start items-center gap-8 inline-flex"
                 key={kind}
               >
-                <div className="justify-start items-start gap-2.5 flex">
+                <label className="relative flex items-center">
                   <input
                     type="checkbox"
                     value={kind}
                     checked={checkedKinds[kind]}
                     onChange={handleKindCheckboxChange}
-                    className={`custom-checkbox ${
-                      isFilterBoxOpen ? "mobile-open" : ""
-                    }`}
+                    className="appearance-none w-6 h-6 bg-white border border-gray-300 rounded-md cursor-pointer checked:bg-black sm:checked:bg-white checked:border-black sm:checked:border-white"
                   />
-                </div>
+                  {/* Checkmark Icon (Visible only when checked) */}
+                  {checkedKinds[kind] && (
+                    <IoCheckmarkSharp className="absolute w-6 h-6 sm:text-black text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                  )}
+                </label>
                 <div className="sm:text-white md:text-white lg:text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
                   {kind}
                 </div>
               </div>
             ))}
           </div>
+          
+          </div>
         </div>
       </div>
-    </div>
   );
 };
 
