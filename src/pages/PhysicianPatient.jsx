@@ -40,7 +40,6 @@ function PhysicianPatient() {
         <div className="w-full max-w-[1200px] px-4 py-4 sm:px-6 sm:py-6 mx-auto">
           {/* Container for FilterBox and Directory */}
           <div className="relative flex flex-col w-full gap-[19px]">
-
             {/* Filter Box */}
             <div className="relative flex w-full">
               <GeneralFilter
@@ -51,9 +50,7 @@ function PhysicianPatient() {
                 className={`transition-all duration-500 ease-in-out ${
                   !isInitial &&
                   (isFilterBoxOpen ? "animate-slideDown" : "animate-slideUp")
-                } ${
-                  isFilterBoxOpen ? "z-30 sm:z-30" : "z-10"
-                }`}
+                } ${isFilterBoxOpen ? "z-30 sm:z-30" : "z-10"}`}
                 style={{
                   width: "100%",
                   maxWidth: "90%",
@@ -68,7 +65,7 @@ function PhysicianPatient() {
 
             {/* Directory */}
             <div
-              className={`relative flex flex-col flex-grow transition-all duration-700 ease-out ${
+              className={`relative flex flex-col flex-grow transition-all duration-700 pb-[50px] sm:pb-[100px] md:pb-[160px] ease-out ${
                 isFilterBoxOpen
                   ? "sm:ml-[310px] sm:z-10 z-0 sm:pointer-events-auto pointer-events-none opacity-0 sm:opacity-100"
                   : "ml-0 z-10 pointer-events-auto opacity-100"

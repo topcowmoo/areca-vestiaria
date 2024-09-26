@@ -20,7 +20,10 @@ function ADHDResources() {
     <div className="relative flex flex-col bg-black">
       {/* Background Image with Gradient Layer */}
       <div className="relative w-full h-[847px] min-w-[320px]">
-        <div className="absolute inset-0 w-full h-full bg-adhd-page bg-no-repeat bg-cover bg-center z-0" style={{ backgroundPosition: '45%' }}></div>
+        <div
+          className="absolute inset-0 w-full h-full bg-adhd-page bg-no-repeat bg-cover bg-center z-0"
+          style={{ backgroundPosition: "45%" }}
+        ></div>
 
         {/* Title and SearchBar positioned near the bottom of the image */}
         <div className="relative z-10 flex flex-col items-center h-full justify-end pb-[575px] md:pb-[490px] lg:pb-[410px]">
@@ -40,7 +43,6 @@ function ADHDResources() {
         <div className="w-full max-w-[1200px] px-4 py-4 sm:px-6 sm:py-6 mx-auto">
           {/* Container for FilterBox and Directory */}
           <div className="relative flex flex-col w-full gap-[19px]">
-
             {/* Filter Box */}
             <div className="relative flex w-full">
               <GeneralFilter
@@ -51,9 +53,7 @@ function ADHDResources() {
                 className={`transition-all duration-500 ease-in-out ${
                   !isInitial &&
                   (isFilterBoxOpen ? "animate-slideDown" : "animate-slideUp")
-                } ${
-                  isFilterBoxOpen ? "z-30 sm:z-30" : "z-10"
-                }`}
+                } ${isFilterBoxOpen ? "z-30 sm:z-30" : "z-10"}`}
                 style={{
                   width: "100%",
                   maxWidth: "90%",
@@ -68,7 +68,7 @@ function ADHDResources() {
 
             {/* Directory */}
             <div
-              className={`relative flex flex-col flex-grow transition-all duration-700 ease-out ${
+              className={`relative flex flex-col flex-grow transition-all duration-700 pb-[50px] sm:pb-[100px] md:pb-[160px] ease-out ${
                 isFilterBoxOpen
                   ? "sm:ml-[310px] sm:z-10 z-0 sm:pointer-events-auto pointer-events-none opacity-0 sm:opacity-100"
                   : "ml-0 z-10 pointer-events-auto opacity-100"

@@ -65,7 +65,7 @@ function Therapy() {
 
             {/* Directory */}
             <div
-              className={`relative flex flex-col flex-grow transition-all duration-700 ease-out ${
+              className={`relative flex flex-col flex-grow transition-all duration-700 pb-[50px] sm:pb-[100px] md:pb-[160px] ease-out ${
                 isFilterBoxOpen
                   ? "sm:ml-[310px] sm:z-10 z-0 sm:pointer-events-auto pointer-events-none opacity-0 sm:opacity-100"
                   : "ml-0 z-10 pointer-events-auto opacity-100"
