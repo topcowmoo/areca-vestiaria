@@ -9,41 +9,6 @@ html {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-}
-
-.custom-checkbox {
-  appearance: none;
-  width: 1.5em;
-  height: 1.5em;
-  background-color: #fff;
-  border: none;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-}
-
-.custom-checkbox:checked::before {
-  content: "✓";
-  font-size: 1.25em;
-  color: #000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-@media (max-width: 640px) {
-  .custom-checkbox.mobile-open {
-    background-color: #000; /* Black background */
-  }
-
-  .custom-checkbox.mobile-open:checked::before {
-    color: #fff; /* White checkmark */
-  }
-}
-
-html {
   scroll-behavior: smooth;
 }
 
@@ -65,7 +30,7 @@ html {
 
 @media only screen and (max-width: 345px) and (min-width: 343px) and (max-height: 883px) and (min-height: 881px) {
   .galaxy-fold-fix {
-    padding-right: 45px; /* Adjust this padding based on your need */
+    padding-right: 45px; 
   }
 }
 
