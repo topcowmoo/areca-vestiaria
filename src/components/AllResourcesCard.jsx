@@ -58,19 +58,21 @@ const AllResourcesCard = ({ category }) => {
       {/* Card Content */}
       <div className="absolute inset-0 flex flex-col justify-between items-start px-3 py-9 md:px-7 md:py-11 z-10 xl:py-32">
         {/* Title Container */}
-        <div className="text-white text-md font-extrabold font-playfair md:text-[35px] lg:text-[47px] xl:text-[50px]">
+        <div className="flex flex-col gap-5 md:gap-9 lg:gap-11 xl:gap-14 2xl:gap-16">
+        <div className="text-white text-md font-extrabold font-playfair md:text-[28px] lg:text-[38px] xl:text-[44px]">
           {category}
         </div>
         
         {/* View All Button Container */}
-        <div className="mb-6 sm:mb-6 md:mt-5 lg:mb-16 xl:mb-52">
-          <Link
-            to={card.link || "#"}
-            className="text-white text-[9px] sm:text-[12px] md:text-[18px] lg:text-[20px] xl:text-[22px] font-extrabold font-inter underline"
-          >
-            View All
-          </Link>
-        </div>
+        <div>
+      <Link
+        to={card.link || "#"}
+        className="text-white text-[9px] sm:text-[12px] md:text-[18px] lg:text-[20px] xl:text-[22px] font-extrabold font-inter underline"
+      >
+        View All
+      </Link>
+    </div>
+    </div>
       </div>
     </div>
   );
