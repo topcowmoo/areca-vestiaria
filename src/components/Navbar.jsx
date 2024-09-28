@@ -157,7 +157,7 @@ function Navbar() {
           {/* Only render dropdown if it's visible */}
           {isResourcesVisible && (
             <div
-              className={`dropdown-menu absolute mt-2 ml-12 py-5 bg-black/25 backdrop-blur-md flex flex-col justify-start items-start gap-4 text-white rounded shadow-lg px-5 z-20 w-[285px] transition-all transform origin-top ${
+              className={`dropdown-menu absolute mt-5 ml-12 py-5 bg-black/25 backdrop-blur-md flex flex-col justify-start items-start gap-4 text-white rounded shadow-lg px-5 z-20 w-[285px] transition-all transform origin-top ${
                 hasResourcesInteracted
                   ? isResourcesOpen
                     ? "animate-dropdownSlideDown pointer-events-auto visibility-visible"
