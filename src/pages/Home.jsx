@@ -138,10 +138,10 @@ function Home() {
    {/* Contact Us Container */}
 <div className="w-full lg:w-[50%] text-left flex flex-col items-start z-10 mt-24 mx-auto">
   <article className="w-full">
-    <h3 className="text-white text-[26px] sm:text-[38px] lg:text-[71px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4 z-20">
+    <h3 className="text-white text-[26px] sm:text-[38px] md:text-[60px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4 z-20">
       Contact Us
     </h3>
-    <p className="text-white text-[17px] font-['Inter'] leading-[40px] mt-4 z-20">
+    <p className="text-white xl:text-[17px] lg:text-[14px]  font-['Inter'] xl:leading-[40px] lg:leading-[30px] mt-6 z-20 leading-[25px] text-[11px] md:text-[18px] md:leading-[35px] ">
       Please note, you will need a referral from your Family Doctor to<br />
       be referred to Dr. Mammoliti for a consultation. The consultation<br />
       and ongoing care are covered by OHIP but not the
@@ -155,7 +155,7 @@ function Home() {
 
 {/* FAQ Section Container */}
 <div className="w-full lg:w-[45%] text-white flex flex-col justify-start items-start space-y-4 z-10 mt-24">
-  <h4 className="text-white font-extrabold text-[22px] sm:text-[30px] lg:text-[38px]">
+  <h4 className="text-white font-bold text-[26px] lg:text-[50px] font-playfair">
     Explore some of our FAQ
   </h4>
 
@@ -163,32 +163,32 @@ function Home() {
 {/* FAQ Buttons */}
 <div className="w-full">
   {/* First Button with Speech Bubble on the Left and Arrow on the Right */}
-  <button className="w-3/4 bg-white text-black flex justify-between items-center p-4 rounded-lg shadow-md mb-3 font-bold">
+  <button className="lg:w-3/4  bg-white text-black flex justify-between items-center md:p-4 p-3 rounded-lg shadow-md mb-3 font-bold md:text-[18px]">
     {/* Speech Bubble Image on the Left */}
     <span className="flex items-center">
-      <img src={speech} alt="Speech bubble" className="w-6 h-6 mr-8" />
+      <img src={speech} alt="Speech bubble" className="w-6 h-6 md:mr-10 mr-4 " />
       What can I expect for my consultation?
     </span>
     {/* Right Arrow Image */}
-    <img src={arrow} alt="Right arrow" className="w-6 h-6" />
+    <img src={arrow} alt="Right arrow" className="md:w-6 lg:h-6 w-4 h-4 ml-3 " />
   </button>
 
   {/* Second Button */}
-  <button className="w-3/4 bg-white text-black flex justify-between items-center p-4 rounded-lg shadow-md mb-3 font-bold">
+  <button className="lg:w-3/4  bg-white text-black flex justify-between items-center lg:p-4 p-3 rounded-lg shadow-md mb-3 font-bold lg:text-[18px]">
     <span className="flex items-center">
-      <img src={speech} alt="Speech bubble" className="w-6 h-6 mr-8" />
+      <img src={speech} alt="Speech bubble" className="w-6 h-6 lg:mr-10 mr-4" />
       What can I expect for my consultation?
     </span>
-    <img src={arrow} alt="Right arrow" className="w-6 h-6" />
+    <img src={arrow} alt="Right arrow" className="lg:w-6 lg:h-6 w-4 h-4 ml-3" />
   </button>
 
   {/* Third Button */}
-  <button className="w-3/4 bg-white text-black flex justify-between items-center p-4 rounded-lg shadow-md mb-3 font-bold">
+  <button className="lg:w-3/4  bg-white text-black flex justify-between items-center lg:p-4 p-3 rounded-lg shadow-md mb-3 font-bold lg:text-[18px]">
     <span className="flex items-center">
-      <img src={speech} alt="Speech bubble" className="w-6 h-6 mr-8 " />
+      <img src={speech} alt="Speech bubble" className="w-6 h-6 lg:mr-10 mr-4 " />
       What can I expect for my consultation?
     </span>
-    <img src={arrow} alt="Right arrow" className="w-6 h-6" />
+    <img src={arrow} alt="Right arrow" className="lg:w-6 lg:h-6 w-4 h-4 ml-3" />
   </button>
 </div>
 
