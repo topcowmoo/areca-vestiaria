@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 
-function Directory({ filteredData }) {
+function Directory({ filteredData, maxRows }) {
   const rowHeight = 70; // Approximate height of each row in pixels
-  const maxVisibleRowsDefault = 9; // Default number of rows to display
+  const maxVisibleRowsDefault = maxRows || 9; // Use maxRows if provided, else default to 9
   const maxVisibleRowsMobile = 4.5; // Number of rows on small/mobile screens
   const [maxVisibleRows, setMaxVisibleRows] = useState(maxVisibleRowsDefault);
 
@@ -34,7 +34,7 @@ function Directory({ filteredData }) {
       window.removeEventListener("resize", debouncedResize);
       clearTimeout(resizeTimeout);
     };
-  }, []);
+  }, [maxVisibleRowsDefault]);
 
   const maxHeight = rowHeight * maxVisibleRows; // Calculate max height based on visible rows
 
@@ -75,6 +75,7 @@ function Directory({ filteredData }) {
 
 Directory.propTypes = {
   filteredData: PropTypes.array.isRequired,
+  maxRows: PropTypes.number, // New prop for max visible rows
 };
 
 export default Directory;

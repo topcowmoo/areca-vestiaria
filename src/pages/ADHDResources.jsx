@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import GeneralFilter from "../components/GeneralFilter";
 import Directory from "../components/Directory";
 import SearchBarWithCommit from "../components/SearchBarWithCommit";
@@ -6,15 +6,43 @@ import SearchBarWithCommit from "../components/SearchBarWithCommit";
 function ADHDResources() {
   const [filteredData, setFilteredData] = useState([]);
   const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(false);
-  const [isInitial, setIsInitial] = useState(true); // Initial state to control first interaction
-  const category = "ADHD Resources"; // Category specific to this page
+  const [isInitial, setIsInitial] = useState(true);
+  const [maxRows, setMaxRows] = useState(6.75); // Default max rows for ADHD
+  const category = "ADHD Resources";
 
+  // Handle filter box toggle
   const handleFilterBoxToggle = () => {
     if (isInitial) {
       setIsInitial(false);
     }
     setIsFilterBoxOpen(!isFilterBoxOpen);
   };
+
+  // Adjust row count based on screen size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 640) {
+        setMaxRows(8); // Mobile size (sm)
+      } else if (window.innerWidth <= 768) {
+        setMaxRows(5.75); // Small screens (md)
+      } else if (window.innerWidth <= 820) { // Specific handling for iPad Air
+        setMaxRows(5.75); // Adjust maxRows for iPad Air
+      } else if (window.innerWidth <= 1024) {
+        setMaxRows(6.4); // Medium screens (lg)
+      } else if (window.innerWidth <= 1280) {
+        setMaxRows(7); // Extra-large screens (xl)
+      } else {
+        setMaxRows(7); // Everything above xl
+      }
+    };
+
+    // Run once on initial render
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="relative flex flex-col bg-black">
@@ -74,11 +102,12 @@ function ADHDResources() {
                   : "ml-0 z-10 pointer-events-auto opacity-100"
               }`}
               style={{
-                minHeight: "calc(80px * 6)", // Ensure the min-height matches the height of 9 rows
+                minHeight: "calc(80px * 6)",
               }}
             >
               <Directory
                 filteredData={filteredData}
+                maxRows={maxRows} // Pass the dynamically adjusted row count here
                 className="flex-1 min-w-[75%] w-full px-4 py-4 sm:w-[90%] sm:px-6 sm:py-6 md:w-full lg:w-full"
               />
             </div>
