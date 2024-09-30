@@ -170,7 +170,7 @@ function Home() {
       What can I expect for my consultation?
     </span>
     {/* Right Arrow Image */}
-    <img src={arrow} alt="Right arrow" className="lg:w-6 xl:h-6 w-4 h-4 ml-3 " />
+    <img src={arrow} alt="Right arrow" className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4" />
   </button>
 
   {/* Second Button */}
@@ -179,7 +179,7 @@ function Home() {
       <img src={speech} alt="Speech bubble" className="w-6 h-6 xl:mr-10 mr-4" />
       What can I expect for my consultation?
     </span>
-    <img src={arrow} alt="Right arrow" className="lg:w-6 xl:h-6 w-4 h-4 ml-3" />
+    <img src={arrow} alt="Right arrow" className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4" />
   </button>
 
   {/* Third Button */}
@@ -188,7 +188,7 @@ function Home() {
       <img src={speech} alt="Speech bubble" className="w-6 h-6 xl:mr-10 mr-4 " />
       What can I expect for my consultation?
     </span>
-    <img src={arrow} alt="Right arrow" className="lg:w-6 xl:h-6 w-4 h-4 ml-3" />
+    <img src={arrow} alt="Right arrow" className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4" />
   </button>
 </div>
 
