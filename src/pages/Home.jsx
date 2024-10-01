@@ -163,30 +163,30 @@ function Home() {
 {/* FAQ Buttons */}
 <div className="w-full">
   {/* First Button with Speech Bubble on the Left and Arrow on the Right */}
-  <button className="2xl:w-3/4  bg-white text-black flex justify-between items-center 2xl:p-4 xl:p-3 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2 ">
+  <button className="min-w-[300px] 2xl:w-3/4   bg-white text-black flex justify-between items-center 2xl:p-4 xl:p-3 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2 ">
     {/* Speech Bubble Image on the Left */}
     <span className="flex items-center">
       <img src={speech} alt="Speech bubble" className="w-6 h-6 xl:mr-10 mr-4 " />
-      What can I expect for my consultation?
+      What can I expect for a consultation?
     </span>
     {/* Right Arrow Image */}
     <img src={arrow} alt="Right arrow" className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4" />
   </button>
 
   {/* Second Button */}
-  <button className="2xl:w-3/4  bg-white text-black flex justify-between items-center 2xl:p-4 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2">
+  <button className="min-w-[300px] 2xl:w-3/4   bg-white text-black flex justify-between items-center 2xl:p-4 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2">
     <span className="flex items-center">
       <img src={speech} alt="Speech bubble" className="w-6 h-6 xl:mr-10 mr-4" />
-      What can I expect for my consultation?
+      What can I expect for general policy?
     </span>
     <img src={arrow} alt="Right arrow" className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4" />
   </button>
 
   {/* Third Button */}
-  <button className="2xl:w-3/4  bg-white text-black flex justify-between items-center 2xl:p-4 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2">
+  <button className="min-w-[300px] 2xl:w-3/4  bg-white text-black flex justify-between items-center 2xl:p-4 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2">
     <span className="flex items-center">
       <img src={speech} alt="Speech bubble" className="w-6 h-6 xl:mr-10 mr-4 " />
-      What can I expect for my consultation?
+      Missed appointments or service fees?
     </span>
     <img src={arrow} alt="Right arrow" className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4" />
   </button>
