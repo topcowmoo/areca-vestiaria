@@ -66,6 +66,7 @@ export default {
         urbanist: ["Urbanist", "sans-serif"],
       },
       screens: {
+        xs: "375px", // Added custom `xs` breakpoint
         "landscape-sm": {
           raw: "(orientation: landscape) and (min-width: 640px)",
         },
