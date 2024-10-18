@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { IoCloseSharp } from "react-icons/io5";
+import { scrollWithOffset } from "../utils/scrollHelper";
 import SearchBar from "../components/SearchBar";
 import HomeResourceDisplay from "../components/HomeResourceDisplay";
 import speech from "../assets/speech.png";
@@ -45,12 +47,14 @@ function Home() {
 
                 {/* Search bar component */}
                 <SearchBar />
-                <a
-                  href="#resource-page"
+                <HashLink
+                  smooth
+                  to="#resource-page"
+                  scroll={scrollWithOffset}
                   className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] underline m-8 py-4"
                 >
                   Explore More
-                </a>
+                </HashLink>
               </div>
             </div>
           </div>

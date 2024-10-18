@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { IoTriangleSharp } from "react-icons/io5";
 import { CgMenuRound } from "react-icons/cg";
+import { scrollWithOffset } from "../utils/scrollHelper";
 import PropTypes from "prop-types";
 
 function Navbar() {
@@ -217,6 +218,7 @@ const NavItem = ({ to, children, onClick }) => (
     <HashLink
       smooth
       to={to}
+      scroll={scrollWithOffset}
       className="font-['Inter'] hover:text-white hover:underline"
       onClick={onClick}
     >
