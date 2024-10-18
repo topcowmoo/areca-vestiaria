@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import SearchBar from "../components/SearchBar";
 import HomeResourceDisplay from "../components/HomeResourceDisplay";
-import speech from '../assets/speech.png';
-import arrow from '../assets/arrow.png';
+import speech from "../assets/speech.png";
+import arrow from "../assets/arrow.png";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -66,7 +66,10 @@ function Home() {
           </div>
 
           {/* Content */}
-          <div className="relative flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12">
+          <div
+            id="about-us"
+            className="relative flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12"
+          >
             <article className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-center">
               <h3 className="w-full text-white text-[26px] sm:text-[38px] lg:text-[53px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
                 Sunrise Health & Clinical <br /> Excellence Centre
@@ -124,86 +127,112 @@ function Home() {
 
       {/* Last page with contact information */}
       <section
-  id="contact-page "
-  className="relative flex flex-col min-h-screen bg-black "
->
-  <div className="relative w-full h-screen min-w-[344px]">
-    <div className="absolute inset-0 w-full h-full z-0">
-      <div className="w-full h-full bg-home-three bg-cover bg-no-repeat [background-position-x:50%] filter brightness-[30%]"></div>
-    </div>
+        id="contact-page "
+        className="relative flex flex-col min-h-screen bg-black "
+      >
+        <div className="relative w-full h-screen min-w-[344px]">
+          <div className="absolute inset-0 w-full h-full z-0">
+            <div className="w-full h-full bg-home-three bg-cover bg-no-repeat [background-position-x:50%] filter brightness-[30%]"></div>
+          </div>
 
-    <div className="flex flex-grow flex-col lg:flex-row items-start justify-between mx-4 sm:mx-8 md:mx-12 my-4 sm:my-11 lg:mt-12 max-w-full ">
-      
+          <div className="flex flex-grow flex-col lg:flex-row items-start justify-between mx-4 sm:mx-8 md:mx-12 my-4 sm:my-11 lg:mt-12 max-w-full ">
+            {/* Contact Us Container */}
+            <div
+              id="contact-page"
+              className="w-full lg:w-[50%] text-left flex flex-col items-start z-10 2xl:mt-12 mx-auto md:mt-12 md:ml-2 2xl:ml-8 lg:mt-12 "
+            >
+              <article className="w-full">
+                <h3 className="text-white text-[26px] sm:text-[38px] lg:text-[55px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4 z-20 mt-12 lg:mt-2 xl:mt-3 ml-2 ">
+                  Contact Us
+                </h3>
+                <p className="text-white 2xl:text-[17px] xl:text-[14px]  font-['Inter'] 2xl:leading-[40px] lg:leading-[30px] mt-6 z-20 leading-[20px] text-[9px] md:text-[18px] md:leading-[35px] lg:text-[14px] ">
+                  Please note, you will need a referral from your Family Doctor
+                  to
+                  <br />
+                  be referred to Dr. Mammoliti for a consultation. The
+                  consultation
+                  <br />
+                  and ongoing care are covered by OHIP but not the NO SHOW FEE,
+                  <br /> LATE FEE or other non-insured services. At this time
+                  referrals are <br />
+                  seen only when there are learners present for teaching
+                  purposes
+                  <br /> and special slots are created - otherwise referrals are
+                  not accepted. <br />
+                  REFERRALS ARE ACCEPTED VIA FAX.
+                </p>
+              </article>
+            </div>
 
-   {/* Contact Us Container */}
-<div className="w-full lg:w-[50%] text-left flex flex-col items-start z-10 2xl:mt-12 mx-auto md:mt-12 md:ml-2 2xl:ml-8 lg:mt-12 ">
-  <article className="w-full">
-    <h3 className="text-white text-[26px] sm:text-[38px] lg:text-[55px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4 z-20 mt-12 lg:mt-2 xl:mt-3 ml-2 ">
-      Contact Us
-    </h3>
-    <p className="text-white 2xl:text-[17px] xl:text-[14px]  font-['Inter'] 2xl:leading-[40px] lg:leading-[30px] mt-6 z-20 leading-[20px] text-[9px] md:text-[18px] md:leading-[35px] lg:text-[14px] ">
-      Please note, you will need a referral from your Family Doctor to<br />
-      be referred to Dr. Mammoliti for a consultation. The consultation<br />
-      and ongoing care are covered by OHIP but not the
-      NO SHOW FEE,<br /> LATE FEE or other non-insured services.
-      At this time referrals are <br />seen only when there are learners present for
-      teaching purposes<br /> and special slots are created - otherwise referrals
-      are not accepted. <br />REFERRALS ARE ACCEPTED VIA FAX.
-    </p>
-  </article>
-</div>
+            {/* FAQ Section Container */}
+            <div className="w-full lg:w-[45%] text-white flex flex-col justify-start items-start space-y-4 z-10 mt-24 xs:mt-10">
+              <h4 className="text-white font-bold text-[26px] 2xl:text-[50px] lg:text-[35px] font-playfair lg:mt-6 xl:mt-4">
+                Explore some of our FAQ
+              </h4>
 
-{/* FAQ Section Container */}
-<div className="w-full lg:w-[45%] text-white flex flex-col justify-start items-start space-y-4 z-10 mt-24 xs:mt-10">
-  <h4 className="text-white font-bold text-[26px] 2xl:text-[50px] lg:text-[35px] font-playfair lg:mt-6 xl:mt-4">
-    Explore some of our FAQ
-  </h4>
+              {/* FAQ Buttons */}
+              <div className="w-full">
+                {/* First Button with Speech Bubble on the Left and Arrow on the Right */}
+                <button className="min-w-[300px] 2xl:w-3/4   bg-white text-black flex justify-between items-center 2xl:p-4 xl:p-3 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2 ">
+                  {/* Speech Bubble Image on the Left */}
+                  <span className="flex items-center">
+                    <img
+                      src={speech}
+                      alt="Speech bubble"
+                      className="w-6 h-6 xl:mr-10 mr-4 "
+                    />
+                    What can I expect for a consultation?
+                  </span>
+                  {/* Right Arrow Image */}
+                  <img
+                    src={arrow}
+                    alt="Right arrow"
+                    className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4"
+                  />
+                </button>
 
+                {/* Second Button */}
+                <button className="min-w-[300px] 2xl:w-3/4   bg-white text-black flex justify-between items-center 2xl:p-4 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2">
+                  <span className="flex items-center">
+                    <img
+                      src={speech}
+                      alt="Speech bubble"
+                      className="w-6 h-6 xl:mr-10 mr-4"
+                    />
+                    What can I expect for general policy?
+                  </span>
+                  <img
+                    src={arrow}
+                    alt="Right arrow"
+                    className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4"
+                  />
+                </button>
 
-{/* FAQ Buttons */}
-<div className="w-full">
-  {/* First Button with Speech Bubble on the Left and Arrow on the Right */}
-  <button className="min-w-[300px] 2xl:w-3/4   bg-white text-black flex justify-between items-center 2xl:p-4 xl:p-3 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2 ">
-    {/* Speech Bubble Image on the Left */}
-    <span className="flex items-center">
-      <img src={speech} alt="Speech bubble" className="w-6 h-6 xl:mr-10 mr-4 " />
-      What can I expect for a consultation?
-    </span>
-    {/* Right Arrow Image */}
-    <img src={arrow} alt="Right arrow" className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4" />
-  </button>
+                {/* Third Button */}
+                <button className="min-w-[300px] 2xl:w-3/4  bg-white text-black flex justify-between items-center 2xl:p-4 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2">
+                  <span className="flex items-center">
+                    <img
+                      src={speech}
+                      alt="Speech bubble"
+                      className="w-6 h-6 xl:mr-10 mr-4 "
+                    />
+                    Missed appointments or service fees?
+                  </span>
+                  <img
+                    src={arrow}
+                    alt="Right arrow"
+                    className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4"
+                  />
+                </button>
+              </div>
 
-  {/* Second Button */}
-  <button className="min-w-[300px] 2xl:w-3/4   bg-white text-black flex justify-between items-center 2xl:p-4 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2">
-    <span className="flex items-center">
-      <img src={speech} alt="Speech bubble" className="w-6 h-6 xl:mr-10 mr-4" />
-      What can I expect for general policy?
-    </span>
-    <img src={arrow} alt="Right arrow" className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4" />
-  </button>
-
-  {/* Third Button */}
-  <button className="min-w-[300px] 2xl:w-3/4  bg-white text-black flex justify-between items-center 2xl:p-4 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2">
-    <span className="flex items-center">
-      <img src={speech} alt="Speech bubble" className="w-6 h-6 xl:mr-10 mr-4 " />
-      Missed appointments or service fees?
-    </span>
-    <img src={arrow} alt="Right arrow" className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4" />
-  </button>
-</div>
-
-
-
-<a href="faq" className="text-white underline mt-2">See All Frequently Asked Questions</a>
-
-</div>
-
-    </div>
-  </div>
-</section>
-
-
-
+              <a href="faq" className="text-white underline mt-2">
+                See All Frequently Asked Questions
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Modal for 'Read More' content */}
       {isModalOpen && (
