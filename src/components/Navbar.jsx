@@ -3,21 +3,22 @@ import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { IoTriangleSharp } from "react-icons/io5";
 import { CgMenuRound } from "react-icons/cg";
+import { scrollWithOffset } from "../utils/scrollHelper";
 import PropTypes from "prop-types";
 
 function Navbar() {
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [hasResourcesInteracted, setHasResourcesInteracted] = useState(false); 
-  const [isResourcesVisible, setIsResourcesVisible] = useState(false); 
-  const [isScrolled, setIsScrolled] = useState(false); 
+  const [hasResourcesInteracted, setHasResourcesInteracted] = useState(false);
+  const [isResourcesVisible, setIsResourcesVisible] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
 
   // Detect scroll position apply bg only if mobile closed
   useEffect(() => {
     const handleScroll = () => {
       if (!isMobileMenuOpen) {
-        setIsScrolled(window.scrollY > 50); 
+        setIsScrolled(window.scrollY > 50);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -30,9 +31,9 @@ function Navbar() {
   const toggleResources = useCallback(() => {
     setIsResourcesOpen((prev) => !prev);
     if (!hasResourcesInteracted) {
-      setHasResourcesInteracted(true); 
+      setHasResourcesInteracted(true);
     }
-    setIsResourcesVisible((prev) => !prev); 
+    setIsResourcesVisible((prev) => !prev);
   }, [hasResourcesInteracted]);
 
   // Toggling mobile menu (hamburger)
@@ -49,7 +50,7 @@ function Navbar() {
     ) {
       setIsResourcesOpen(false);
       setIsMobileMenuOpen(false);
-      setIsResourcesVisible(false); 
+      setIsResourcesVisible(false);
     }
   }, []);
 
@@ -69,23 +70,21 @@ function Navbar() {
       navigate(path);
       setIsMobileMenuOpen(false);
       setIsResourcesOpen(false);
-      setIsResourcesVisible(false); 
+      setIsResourcesVisible(false);
     },
     [navigate]
   );
 
   return (
     <nav
-    className={`fixed top-0 left-0 w-full z-30 flex justify-center transition-colors duration-300 ${
-      isMobileMenuOpen
-        ? "bg-transparent" // Always transparent when the mobile menu is open
-        : isScrolled
-        ? "bg-black/70 backdrop-blur-md text-white pb-6 md:bg-black/70 md:pb-6"
-        : "bg-transparent"
-    }`}
-  >
-  
-
+      className={`fixed top-0 left-0 w-full z-30 flex justify-center transition-colors duration-300 ${
+        isMobileMenuOpen
+          ? "bg-transparent" // Always transparent when the mobile menu is open
+          : isScrolled
+          ? "bg-black/70 backdrop-blur-md text-white pb-6 md:bg-black/70 md:pb-6"
+          : "bg-transparent"
+      }`}
+    >
       <div className="w-full flex justify-between items-center pl-[21px] pt-[29px] md:hidden">
         <CgMenuRound
           className={`text-white transition-transform duration-300 mobile-menu-icon ${
@@ -96,13 +95,12 @@ function Navbar() {
         />
       </div>
       <ul
-  className={`mobile-menu md:flex md:flex-row md:justify-start items-start gap-12 pt-11 ${
-    isMobileMenuOpen
-      ? "fixed top-0 left-0 w-[327px] h-[100vh] px-[21px] py-[29px] bg-black/75 backdrop-blur-[17.70px] flex flex-col justify-start items-start gap-7 pointer-events-auto opacity-100 visibility-visible overflow-y-auto" // Allow scrolling within the fixed menu
-      : "hidden md:flex md:opacity-100 visibility-hidden md:visibility-visible"
-  }`}
->
-
+        className={`mobile-menu md:flex md:flex-row md:justify-start items-start gap-12 pt-11 ${
+          isMobileMenuOpen
+            ? "fixed top-0 left-0 w-[327px] h-[100vh] px-[21px] py-[29px] bg-black/75 backdrop-blur-[17.70px] flex flex-col justify-start items-start gap-7 pointer-events-auto opacity-100 visibility-visible overflow-y-auto" // Allow scrolling within the fixed menu
+            : "hidden md:flex md:opacity-100 visibility-hidden md:visibility-visible"
+        }`}
+      >
         {isMobileMenuOpen && (
           <>
             <div className="fixed z-20" style={{ top: "29px", left: "21px" }}>
@@ -132,7 +130,7 @@ function Navbar() {
           Home
         </NavItem>
         <NavItem
-          to="/#second-page"
+          to="/#about-us"
           onClick={() => handleNavigation("/#second-page")}
         >
           About Us
@@ -220,6 +218,7 @@ const NavItem = ({ to, children, onClick }) => (
     <HashLink
       smooth
       to={to}
+      scroll={scrollWithOffset}
       className="font-['Inter'] hover:text-white hover:underline"
       onClick={onClick}
     >
