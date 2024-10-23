@@ -5,8 +5,9 @@ import { IoCloseSharp } from "react-icons/io5";
 import { scrollWithOffset } from "../utils/scrollHelper";
 import SearchBar from "../components/SearchBar";
 import HomeResourceDisplay from "../components/HomeResourceDisplay";
-import speech from "../assets/speech.png";
-import arrow from "../assets/arrow.png";
+import speech from "/speech.png";
+import arrow from "/arrow.png";
+
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,6 +36,7 @@ function Home() {
       {/* First section with background and main title */}
       <header className="relative flex flex-col min-h-screen bg-black">
         <div className="relative w-full h-screen min-w-[320px] landscape-sm:min-h-[575px]">
+          
           <div className="absolute inset-0 w-full h-full bg-home-one bg-cover bg-center bg-no-repeat z-0">
             <div className="flex flex-grow flex-col items-center justify-center z-10">
               <div className="relative z-10 flex flex-col items-center h-full mt-36">
@@ -66,7 +68,15 @@ function Home() {
         <div className="relative w-full h-full min-w-[390px]">
           {/* Background Image Container with Brightness Filter */}
           <div className="absolute inset-0 w-full h-full z-0">
-            <div className="w-full min-h-screen bg-home-two bg-cover bg-no-repeat [background-position-x:50%] filter brightness-[30%]"></div>
+            <div className="w-full min-h-screen bg-home-two bg-cover bg-no-repeat [background-position-x:50%] ">
+            <div
+      className="absolute inset-0 w-full h-full pointer-events-none"
+      style={{
+        background:
+          "linear-gradient(to top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 1))",
+      }}
+    ></div>
+            </div>
           </div>
 
           {/* Content */}
@@ -136,7 +146,15 @@ function Home() {
       >
         <div className="relative w-full h-screen min-w-[344px]">
           <div className="absolute inset-0 w-full h-full z-0">
-            <div className="w-full h-full bg-home-three bg-cover bg-no-repeat [background-position-x:50%] filter brightness-[30%]"></div>
+            <div className="w-full h-full bg-home-three bg-cover bg-no-repeat [background-position-x:50%]">
+            <div
+      className="absolute inset-0 w-full h-full pointer-events-none"
+      style={{
+        background:
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 1))",
+      }}
+    ></div>
+            </div>
           </div>
 
           <div className="flex flex-grow flex-col lg:flex-row items-start justify-between mx-4 sm:mx-8 md:mx-12 my-4 sm:my-11 lg:mt-12 max-w-full ">

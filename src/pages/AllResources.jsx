@@ -17,7 +17,14 @@ function AllResources() {
   return (
     <div>
       {/* Top Page + NavBar */}
-      <div className="flex flex-col h-[50vh] sm:h-[60vh] md:h-[70vh] bg-resource-image bg-cover bg-center">
+      <div className="flex flex-col h-[800px] bg-resource-image bg-cover bg-center bg-no-repeat">
+      <div 
+      className="absolute inset-0 w-full h-full pointer-events-none"
+      style={{
+        background: 
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1))",
+      }}
+    ></div>
         <div className="flex justify-center"></div>
 
         <div className="flex flex-grow flex-col items-center justify-center px-4">

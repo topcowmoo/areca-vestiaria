@@ -20,7 +20,14 @@ function CouplesResources() {
     <div className="relative flex flex-col bg-black">
       {/* Background Image with Gradient Layer */}
       <div className="relative w-full h-[847px] min-w-[320px]">
-        <div className="absolute inset-0 w-full h-full bg-couples-page bg-no-repeat bg-cover bg-center z-0"></div>
+        <div className="absolute inset-0 w-full h-[27vh] sm:h-full bg-mobile-couples-page sm:bg-couples-page bg-no-repeat bg-contain bg-center z-0 iphone-se-max:h-[33vh] galaxy-s8-max:h-[29vh] galaxy-z-fold-max:h-[23vh]"></div>
+        <div 
+      className="absolute inset-0 w-full h-full pointer-events-none"
+      style={{
+        background: 
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1))",
+      }}
+    ></div>
 
         {/* Title and SearchBar positioned near the bottom of the image */}
         <div className="relative z-10 flex flex-col items-center h-full justify-end pb-[575px] md:pb-[490px] lg:pb-[410px]">

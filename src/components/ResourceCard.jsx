@@ -52,14 +52,6 @@ const ResourceCard = ({ category }) => {
     ${category !== "Attachment & Emotions" && category !== "Therapy" && category !== "Physician Patient" ? "bg-center" : ""}
     `}
     >
-      {/* Conditionally render Overlay for specific categories */}
-      {(category === "Attachment & Emotions" ||
-        category === "Therapy" ||
-        category === "Physician Patient" ||
-        category === "Anger & Shame") && (
-        <div className="absolute inset-0 bg-black bg-opacity-60" />
-      )}
-
       {/* Card Content */}
       <div className="absolute inset-0 flex md:flex-col justify-between md:justify-evenly md:items-start lg:flex-col lg:items-start lg:px-[55px] lg:py-24 lg:justify-evenly md:px-9 md:py-16 items-center px-4">
         {/* Title */}
