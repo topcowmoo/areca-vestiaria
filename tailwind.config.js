@@ -85,9 +85,13 @@ export default {
         "landscape-md": {
           raw: "(orientation: landscape) and (min-width: 768px)",
         },
-        "iphone-se-max": {'max': '375px'}, // Added custom `iphone-se` breakpoint
-        "galaxy-s8-max": {'max': '360px'},
-        "galaxy-z-fold-max": {'max': '344px'},
+        'galaxy-z-fold-max': {'max': '344px'},  // Galaxy Z Fold and smaller
+        'galaxy-s8-max': {'max': '360px'},  // Galaxy S8 and smaller
+        'iphone-12-max': {'min': '390px'},  // iPhone 12 and smaller
+        'galaxy-s20-max': {'min': '412px'},  // Galaxy S20 and larger
+        'iphone-xr-max': {'min': '414px'},  // iPhone XR and larger
+        'surface-duo-max': {'min': '540px'},  // Surface Duo and larger
+        'ipad-mini': {'min': '768px'},  // iPad Mini and larger
       },
     },
   },
