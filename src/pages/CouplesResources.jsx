@@ -51,12 +51,25 @@ landscape-iphone-12:h-[91vh]
   landscape-surface-pro:h-[49vh]"
         ></div>
 
-        <div
-        // className="absolute inset-0 w-full h-full pointer-events-none"
-        //   style={{
-        //     background:
-        //       "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 1) 100%)",
-        //   }}
+<div
+          className="
+            absolute inset-0 w-full pointer-events-none 
+            h-[33vh] galaxy-z-fold-max:!h-[23vh] galaxy-s8-max:h-[29vh] 
+            iphone-12-max:h-[27vh] galaxy-s20-max:h-[26.5vh] 
+            iphone-xr-max:h-[27.5vh] surface-duo-max:h-[44vh] 
+            ipad-mini:h-[38vh] nest-hub:h-[82vh] 
+            ipad-pro-height:h-[34vh] nest-hub-max:h-[60vh] 
+            full-hd-max:h-[45vh] sm:h-[75vh]
+            landscape-iphone-se:h-[70vh] landscape-surface-duo:h-[52vh]
+            landscape-galaxy-s8:h-[74vh] landscape-galaxy-z-fold:h-[96vh]
+            landscape-iphone-12:h-[91vh] landscape-iphone-xr:h-[88vh]
+            landscape-pixel-7:h-[85vh] landscape-iphone-14:h-[82vh]
+            landscape-ipad-mini:h-[58vh] landscape-ipad-air:h-[55vh]
+            landscape-ipad-pro:!h-[45vh] landscape-surface-pro:h-[49vh]"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.3) 90%, rgba(0, 0, 0, 1) 100%)",
+          }}
         ></div>
 
         {/* Title and SearchBar positioned near the bottom of the image */}
