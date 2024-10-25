@@ -28,7 +28,7 @@ function CouplesResources() {
   iphone-12-max:h-[27vh] 
   galaxy-s20-max:h-[26.5vh] 
   iphone-xr-max:h-[27.5vh] 
-  iphone-14-max:h-[31vh]
+  iphone-14-max:h-[30.4vh]
   surface-duo-max:h-[44vh] 
   ipad-mini:h-[38vh] 
   nest-hub:h-[82vh] 
@@ -56,7 +56,7 @@ landscape-iphone-12:h-[91vh]
           className="
             absolute inset-0 w-full pointer-events-none 
             h-[33vh] galaxy-z-fold-max:!h-[23vh] galaxy-s8-max:h-[29vh] 
-            iphone-12-max:h-[27vh] galaxy-s20-max:h-[26.5vh] 
+            iphone-12-max:h-[27vh] iphone-14-max:h-[30.4vh] galaxy-s20-max:h-[26.5vh] 
             iphone-xr-max:h-[27.5vh] surface-duo-max:h-[44vh] 
             ipad-mini:h-[38vh] nest-hub:h-[82vh] 
             ipad-pro-height:h-[34vh] nest-hub-max:h-[60vh] 
