@@ -114,6 +114,7 @@ export default {
         "iphone-12-max": { min: "390px" }, // iPhone 12 and smaller
         "galaxy-s20-max": { min: "412px" }, // Galaxy S20 and larger
         "iphone-xr-max": { min: "414px" }, // iPhone XR and larger
+        "iphone-14-max": { min: "430px" }, // iPhone 14 and larger
         "surface-duo-max": { min: "540px" }, // Surface Duo and larger
         "ipad-mini": { min: "768px" }, // iPad Mini and larger
         "ipad-air-max": { min: "820px" }, // iPad Air and larger
