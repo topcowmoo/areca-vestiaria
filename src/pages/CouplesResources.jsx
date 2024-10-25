@@ -28,7 +28,7 @@ function CouplesResources() {
   iphone-12-max:h-[27vh] 
   galaxy-s20-max:h-[26.5vh] 
   iphone-xr-max:h-[27.5vh] 
-  iphone-14-max:h-[27.1vh]
+  iphone-14-max:h-[31vh]
   surface-duo-max:h-[44vh] 
   ipad-mini:h-[38vh] 
   nest-hub:h-[82vh] 
