@@ -50,7 +50,7 @@ export default {
         "home-one":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/homeone.webp')",
         "mobile-home-one":
-          "url('htthttps://drmammbucket.s3.us-east-1.amazonaws.com/mobilehomeone.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobilehomeone.webp')",
         "home-two":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/aboutus.webp')",
         "mobile-home-two":
@@ -62,7 +62,7 @@ export default {
         "resource-image":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/resourcepage.webp')",
         "mobile-resource-image":
-          "url('hthttps://drmammbucket.s3.us-east-1.amazonaws.com/mobile-resource.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-resource.webp')",
         "parenting-page":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/parenting.webp')",
         "mobile-parenting-page":
@@ -70,7 +70,7 @@ export default {
         "additional-page":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/additional.webp')",
         "mobile-additional-page":
-          "url('hhttps://drmammbucket.s3.us-east-1.amazonaws.com/mobile-additional.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-additional.webp')",
         "adhd-page":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/adhd.webp')",
         "mobile-adhd-page":
