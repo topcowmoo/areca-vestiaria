@@ -20,14 +20,58 @@ function Therapy() {
     <div className="relative flex flex-col bg-black">
       {/* Background Image with Gradient Layer */}
       <div className="relative w-full h-[847px] min-w-[320px]">
-        <div className="absolute inset-0 w-full h-full bg-therapy-page bg-no-repeat bg-cover bg-top z-0"></div>
+      <div
+          className="
+  absolute inset-0 w-full h-[35.2vh] 
+  galaxy-z-fold-max:!h-[24.4vh] 
+  galaxy-s8-max:h-[30.5vh] 
+  iphone-12-max:h-[29vh] 
+  galaxy-s20-max:h-[28.2vh] 
+  iphone-xr-max:h-[28.9vh] 
+  iphone-14-max:h-[28.8vh]
+  surface-duo-max:h-[46.9vh] 
+  ipad-mini:h-[38vh] 
+  nest-hub:h-[82vh] 
+  ipad-pro-height:h-[37vh] 
+  nest-hub-max:h-[70.7vh] 
+  full-hd-max:h-[45vh] 
+  sm:h-[75vh] 
+  bg-mobile-therapy-page bg-no-repeat bg-contain bg-center z-0 
+  sm:bg-therapy-page sm:bg-cover
+  landscape-iphone-se:h-[80vh]
+  landscape-surface-duo:h-[65vh]
+  landscape-galaxy-s8:h-[98vh]
+landscape-galaxy-z-fold:h-[99vh]
+landscape-iphone-12:h-[98vh]
+  landscape-iphone-xr:h-[98vh]
+  landscape-pixel-7:h-[98vh]
+  landscape-iphone-14:h-[82vh]
+  landscape-ipad-mini:h-[64vh]
+  landscape-ipad-air:h-[66vh]
+  landscape-ipad-pro:!h-[59vh]
+  landscape-surface-pro:h-[66vh]"
+        ></div>
+      
         <div
-      className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{
-        background:
-          "linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 1))",
-      }}
-    ></div>
+          className="
+            absolute inset-0 w-full pointer-events-none 
+            h-[35.2vh] galaxy-z-fold-max:!h-[24.4vh] galaxy-s8-max:h-[30.5vh] 
+            iphone-12-max:h-[29vh] iphone-14-max:h-[28.8vh] galaxy-s20-max:h-[28.2vh] 
+            iphone-xr-max:h-[28.9vh] surface-duo-max:h-[46.9vh] 
+            ipad-mini:h-[38vh] nest-hub:h-[82vh] 
+            ipad-pro-height:h-[37vh] nest-hub-max:h-[70.7vh] 
+            full-hd-max:h-[45vh] sm:h-[75vh]
+            landscape-iphone-se:h-[80vh] landscape-surface-duo:h-[65vh]
+            landscape-galaxy-s8:h-[98vh] landscape-galaxy-z-fold:h-[99vh]
+            landscape-iphone-12:h-[98vh] landscape-iphone-xr:h-[98vh]
+            landscape-pixel-7:h-[98vh] landscape-iphone-14:h-[82vh]
+            landscape-ipad-mini:h-[64vh] landscape-ipad-air:h-[66vh]
+            landscape-ipad-pro:!h-[59vh] landscape-surface-pro:h-[66vh]"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 2) 100%)",
+          }}
+        ></div>
 
         {/* Title and SearchBar positioned near the bottom of the image */}
         <div className="relative z-10 flex flex-col items-center h-full justify-end pb-[575px] md:pb-[490px] lg:pb-[410px]">

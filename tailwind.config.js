@@ -90,7 +90,7 @@ export default {
         "therapy-page":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/therapy.webp')",
         "mobile-therapy-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-therapy.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-therapy-page.webp')",
         "physician-page":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/physician.webp')",
         "mobile-physician-page":
