@@ -60,7 +60,7 @@ export default {
         "mobile-home-three":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-contactus.webp')",
         "resource-image":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/resources.webpp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/resources.webp')",
         "mobile-resource-image":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-resources.webp')",
         "parenting-page":
@@ -88,7 +88,7 @@ export default {
         "mobile-emotions-page":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-attachment.webp')",
         "therapy-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/therapy.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/therapy4.webp')",
         "mobile-therapy-page":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-therapy.webp')",
         "physician-page":
