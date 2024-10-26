@@ -20,14 +20,62 @@ function AngerAndShame() {
     <div className="relative flex flex-col bg-black">
       {/* Background Image with Gradient Layer */}
       <div className="relative w-full h-[847px] min-w-[320px]">
-        <div className="absolute inset-0 w-full h-full bg-anger-page bg-no-repeat bg-cover [background-position-x:60%] [background-position-y:-190px] z-0"></div>
-        <div
-      className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{
-        background:
-          "linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 1))",
-      }}
-    ></div>
+      <div
+          className="
+  absolute inset-0 w-full h-[42vh] 
+  galaxy-z-fold-max:!h-[32.8vh] 
+  galaxy-s8-max:h-[40vh] 
+  iphone-12-max:h-[35vh] 
+  galaxy-s20-max:h-[33vh] 
+  iphone-xr-max:h-[32.5vh] 
+  iphone-14-max:h-[32vh]
+  surface-duo-max:h-[47vh] 
+  ipad-mini:h-[41vh]
+  ipad-air-max:h-[39vh]
+  asus-zenbook-max:h-[37.5vh]
+  suface-pro-max:h-[37.5vh] 
+  nest-hub:h-[108vh] 
+  ipad-pro-height:h-[51vh] 
+  nest-hub-max:h-[82vh] 
+  full-hd-max:h-[65vh]
+  ultra-wide:h-[50vh] 
+  sm:h-[75vh] 
+  bg-mobile-anger-page bg-no-repeat bg-cover bg-center z-0 
+  sm:bg-anger-page sm:bg-cover
+  landscape-iphone-se:h-[92vh]
+  landscape-surface-duo:h-[75vh]
+  landscape-galaxy-s8:h-[115.5vh]
+landscape-galaxy-z-fold:h-[144.3vh]
+landscape-iphone-12:h-[113vh]
+  landscape-iphone-xr:h-[112vh]
+  landscape-pixel-7:h-[106vh]
+  landscape-iphone-14:h-[98vh]
+  landscape-ipad-mini:h-[81vh]
+  landscape-ipad-air:h-[79.5vh]
+  landscape-ipad-pro:!h-[67vh]
+  landscape-surface-pro:h-[73vh]"
+        ></div>
+
+<div
+          className="
+            absolute inset-0 w-full pointer-events-none 
+            h-[42vh] galaxy-z-fold-max:!h-[32.8vh] galaxy-s8-max:h-[40vh] 
+            iphone-12-max:h-[35vh] iphone-14-max:h-[32vh] asus-zenbook-max:h-[37.5vh] surface-pro-max:h-[37.5vh] galaxy-s20-max:h-[33vh] 
+            iphone-xr-max:h-[32.5vh] surface-duo-max:h-[47vh] 
+            ipad-mini:h-[41vh] ipad-air-max:h-[39vh] nest-hub:h-[108vh] 
+            ipad-pro-height:h-[51vh] nest-hub-max:h-[82vh] 
+            full-hd-max:h-[65vh] ultra-wide:h-[50vh] sm:h-[75vh]
+            landscape-iphone-se:h-[92vh] landscape-surface-duo:h-[75vh]
+            landscape-galaxy-s8:h-[115.5vh] landscape-galaxy-z-fold:h-[144.3vh]
+            landscape-iphone-12:h-[113vh] landscape-iphone-xr:h-[112vh]
+            landscape-pixel-7:h-[106vh] landscape-iphone-14:h-[98vh]
+            landscape-ipad-mini:h-[81vh] landscape-ipad-air:h-[79.5vh]
+            landscape-ipad-pro:!h-[67vh] landscape-surface-pro:h-[73vh]"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 1) 100%)",
+          }}
+        ></div>
 
         {/* Title and SearchBar positioned near the bottom of the image */}
         <div className="relative z-10 flex flex-col items-center h-full justify-end pb-[575px] md:pb-[490px] lg:pb-[410px]">
