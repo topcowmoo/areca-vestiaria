@@ -22,54 +22,58 @@ function CouplesResources() {
       <div className="relative w-full h-[847px] min-w-[320px]">
         <div
           className="
-  absolute inset-0 w-full h-[33vh] 
-  galaxy-z-fold-max:!h-[23vh] 
-  galaxy-s8-max:h-[29vh] 
-  iphone-12-max:h-[27vh] 
-  galaxy-s20-max:h-[26.5vh] 
-  iphone-xr-max:h-[27.5vh] 
-  iphone-14-max:h-[30.4vh]
-  surface-duo-max:h-[44vh] 
-  ipad-mini:h-[38vh] 
-  nest-hub:h-[82vh] 
-  ipad-pro-height:h-[34vh] 
-  nest-hub-max:h-[60vh] 
-  full-hd-max:h-[45vh] 
+  absolute inset-0 w-full h-[42vh] 
+  galaxy-z-fold-max:!h-[32.8vh] 
+  galaxy-s8-max:h-[40vh] 
+  iphone-12-max:h-[35vh] 
+  galaxy-s20-max:h-[33vh] 
+  iphone-xr-max:h-[32.5vh] 
+  iphone-14-max:h-[32vh]
+  surface-duo-max:h-[47vh] 
+  ipad-mini:h-[41vh]
+  ipad-air-max:h-[39vh]
+  asus-zenbook-max:h-[37.5vh]
+  suface-pro-max:h-[37.5vh] 
+  nest-hub:h-[108vh] 
+  ipad-pro-height:h-[51vh] 
+  nest-hub-max:h-[82vh] 
+  full-hd-max:h-[65vh]
+  ultra-wide:h-[50vh] 
   sm:h-[75vh] 
-  bg-mobile-couples-page bg-no-repeat bg-contain bg-center z-0 
+  bg-mobile-couples-page bg-no-repeat bg-cover bg-center z-0 
   sm:bg-couples-page sm:bg-cover
-  landscape-iphone-se:h-[70vh]
-  landscape-surface-duo:h-[52vh]
-  landscape-galaxy-s8:h-[74vh]
-landscape-galaxy-z-fold:h-[96vh]
-landscape-iphone-12:h-[91vh]
-  landscape-iphone-xr:h-[88vh]
-  landscape-pixel-7:h-[85vh]
-  landscape-iphone-14:h-[82vh]
-  landscape-ipad-mini:h-[58vh]
-  landscape-ipad-air:h-[55vh]
-  landscape-ipad-pro:!h-[45vh]
-  landscape-surface-pro:h-[49vh]"
+  landscape-iphone-se:h-[92vh]
+  landscape-surface-duo:h-[75vh]
+  landscape-galaxy-s8:h-[115.5vh]
+landscape-galaxy-z-fold:h-[144.3vh]
+landscape-iphone-12:h-[113vh]
+  landscape-iphone-xr:h-[112vh]
+  landscape-pixel-7:h-[106vh]
+  landscape-iphone-14:h-[98vh]
+  landscape-ipad-mini:h-[81vh]
+  landscape-ipad-air:h-[79.5vh]
+  landscape-ipad-pro:!h-[67vh]
+  landscape-surface-pro:h-[73vh]"
         ></div>
 
 <div
           className="
             absolute inset-0 w-full pointer-events-none 
-            h-[33vh] galaxy-z-fold-max:!h-[23vh] galaxy-s8-max:h-[29vh] 
-            iphone-12-max:h-[27vh] iphone-14-max:h-[30.4vh] galaxy-s20-max:h-[26.5vh] 
-            iphone-xr-max:h-[27.5vh] surface-duo-max:h-[44vh] 
-            ipad-mini:h-[38vh] nest-hub:h-[82vh] 
-            ipad-pro-height:h-[34vh] nest-hub-max:h-[60vh] 
-            full-hd-max:h-[45vh] sm:h-[75vh]
-            landscape-iphone-se:h-[70vh] landscape-surface-duo:h-[52vh]
-            landscape-galaxy-s8:h-[74vh] landscape-galaxy-z-fold:h-[96vh]
-            landscape-iphone-12:h-[91vh] landscape-iphone-xr:h-[88vh]
-            landscape-pixel-7:h-[85vh] landscape-iphone-14:h-[82vh]
-            landscape-ipad-mini:h-[58vh] landscape-ipad-air:h-[55vh]
-            landscape-ipad-pro:!h-[45vh] landscape-surface-pro:h-[49vh]"
+            h-[42vh] galaxy-z-fold-max:!h-[32.8vh] galaxy-s8-max:h-[40vh] 
+            iphone-12-max:h-[35vh] iphone-14-max:h-[32vh] asus-zenbook-max:h-[37.5vh] surface-pro-max:h-[37.5vh] galaxy-s20-max:h-[33vh] 
+            iphone-xr-max:h-[32.5vh] surface-duo-max:h-[47vh] 
+            ipad-mini:h-[41vh] ipad-air-max:h-[39vh] nest-hub:h-[108vh] 
+            ipad-pro-height:h-[51vh] nest-hub-max:h-[82vh] 
+            full-hd-max:h-[65vh] ultra-wide:h-[50vh] sm:h-[75vh]
+            landscape-iphone-se:h-[92vh] landscape-surface-duo:h-[75vh]
+            landscape-galaxy-s8:h-[115.5vh] landscape-galaxy-z-fold:h-[144.3vh]
+            landscape-iphone-12:h-[113vh] landscape-iphone-xr:h-[112vh]
+            landscape-pixel-7:h-[106vh] landscape-iphone-14:h-[98vh]
+            landscape-ipad-mini:h-[81vh] landscape-ipad-air:h-[79.5vh]
+            landscape-ipad-pro:!h-[67vh] landscape-surface-pro:h-[73vh]"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.3) 90%, rgba(0, 0, 0, 1) 100%)",
+              "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 1) 100%)",
           }}
         ></div>
 

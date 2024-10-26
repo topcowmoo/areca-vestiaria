@@ -48,53 +48,53 @@ export default {
       },
       backgroundImage: {
         "home-one":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/homeone.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/homeone.webp')",
         "mobile-home-one":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobilehomeone.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-homeone.webp')",
         "home-two":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/aboutus.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/aboutus.webp')",
         "mobile-home-two":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-aboutus.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-aboutus.webp')",
         "home-three":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/contactus.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/contactus.webpp')",
         "mobile-home-three":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-contactus.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-contactus.webp')",
         "resource-image":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/resourcepage.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/resources.webpp')",
         "mobile-resource-image":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-resource.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-resources.webp')",
         "parenting-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/parenting.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/parenting.webp')",
         "mobile-parenting-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-parenting.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-parenting.webp')",
         "additional-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/additional.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/additional.webp')",
         "mobile-additional-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-additional.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-additional.webp')",
         "adhd-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/adhd.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/adhd.webp')",
         "mobile-adhd-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-adhd.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-adhd.webp')",
         "couples-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/couples.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/couples.webp')",
         "mobile-couples-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-couples.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-couples.webp')",
         "anger-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/anger.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/anger.webp')",
         "mobile-anger-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-anger.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-anger.webp')",
         "emotions-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/attachment.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/attachment.webp')",
         "mobile-emotions-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-attachment.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-attachment.webp')",
         "therapy-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/therapy.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/therapy.webp')",
         "mobile-therapy-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-therapy-page.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-therapy.webp')",
         "physician-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/physician.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/physician.webp')",
         "mobile-physician-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/mobile-physician.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-physician.webp')",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
@@ -118,6 +118,7 @@ export default {
         "surface-duo-max": { min: "540px" }, // Surface Duo and larger
         "ipad-mini": { min: "768px" }, // iPad Mini and larger
         "ipad-air-max": { min: "820px" }, // iPad Air and larger
+        "asus-zenbook-max": { min: "853px" }, // Asus Zenbook and larger
         "suface-pro-max": { min: "912px" }, // Surface Pro and larger
         "nest-hub": { min: "1024px" }, // Nest Hub and larger
         "ipad-pro-height": {
@@ -125,21 +126,47 @@ export default {
         }, // iPad Pro and larger
         "nest-hub-max": { min: "1280px" }, // Nest Hub and larger
         "full-hd-max": { min: "1920px" }, // Full HD (1920px)
+        "ultra-wide": { min: "2560px" }, // Ultra wide (2560px)
 
-        "landscape-iphone-se": { raw: "(max-width: 667px) and (max-height: 375px) and (orientation: landscape)" },
-"landscape-surface-duo": { raw: "(min-width: 668px) and (max-width: 720px) and (max-height: 540px) and (orientation: landscape)" },
-"landscape-galaxy-s8": { raw: "(min-width: 721px) and (max-width: 740px) and (min-height: 360px) and (orientation: landscape)" },
-"landscape-galaxy-z-fold": { raw: "(min-width: 741px) and (max-width: 882px) and (max-height: 344px) and (orientation: landscape)" },
-"landscape-iphone-12": { raw: "(min-width: 820px) and (max-width: 844px) and (orientation: landscape)" },
-"landscape-iphone-xr": { raw: "(min-width: 845px) and (max-width: 896px) and (min-height: 414px) and (orientation: landscape)" },
-"landscape-pixel-7": { raw: "(min-width: 897px) and (max-width: 915px) and (min-height: 412px) and (orientation: landscape)" },
-"landscape-iphone-14": { raw: "(min-width: 916px) and (max-width: 932px) and (min-height: 430px) and (orientation: landscape)" },
-"landscape-ipad-mini": { raw: "(min-width: 933px) and (max-width: 1024px) and (min-height: 768px) and (orientation: landscape)" },
-"landscape-ipad-air": { raw: "(min-width: 1025px) and (max-width: 1180px) and (min-height: 820px) and (orientation: landscape)" },
-"landscape-zenbook-fold": { raw: "(min-width: 1181px) and (max-width: 1280px) and (max-height: 853px) and (orientation: landscape)" },
-"landscape-ipad-pro": { raw: "(min-width: 1281px) and (max-width: 1366px) and (min-height: 1024px) and (orientation: landscape)" },
-"landscape-surface-pro": { raw: "(min-width: 1367px) and (max-width: 1368px) and (min-height: 912px) and (orientation: landscape)" },
- 
+        "landscape-iphone-se": {
+          raw: "(max-width: 667px) and (max-height: 375px) and (orientation: landscape)",
+        },
+        "landscape-surface-duo": {
+          raw: "(min-width: 668px) and (max-width: 720px) and (max-height: 540px) and (orientation: landscape)",
+        },
+        "landscape-galaxy-s8": {
+          raw: "(min-width: 721px) and (max-width: 740px) and (min-height: 360px) and (orientation: landscape)",
+        },
+        "landscape-galaxy-z-fold": {
+          raw: "(min-width: 741px) and (max-width: 882px) and (max-height: 344px) and (orientation: landscape)",
+        },
+        "landscape-iphone-12": {
+          raw: "(min-width: 820px) and (max-width: 844px) and (orientation: landscape)",
+        },
+        "landscape-iphone-xr": {
+          raw: "(min-width: 845px) and (max-width: 896px) and (min-height: 414px) and (orientation: landscape)",
+        },
+        "landscape-pixel-7": {
+          raw: "(min-width: 897px) and (max-width: 915px) and (min-height: 412px) and (orientation: landscape)",
+        },
+        "landscape-iphone-14": {
+          raw: "(min-width: 916px) and (max-width: 932px) and (min-height: 430px) and (orientation: landscape)",
+        },
+        "landscape-ipad-mini": {
+          raw: "(min-width: 933px) and (max-width: 1024px) and (min-height: 768px) and (orientation: landscape)",
+        },
+        "landscape-ipad-air": {
+          raw: "(min-width: 1025px) and (max-width: 1180px) and (min-height: 820px) and (orientation: landscape)",
+        },
+        "landscape-zenbook-fold": {
+          raw: "(min-width: 1181px) and (max-width: 1280px) and (max-height: 853px) and (orientation: landscape)",
+        },
+        "landscape-ipad-pro": {
+          raw: "(min-width: 1281px) and (max-width: 1366px) and (min-height: 1024px) and (orientation: landscape)",
+        },
+        "landscape-surface-pro": {
+          raw: "(min-width: 1367px) and (max-width: 1368px) and (min-height: 912px) and (orientation: landscape)",
+        },
       },
     },
   },
