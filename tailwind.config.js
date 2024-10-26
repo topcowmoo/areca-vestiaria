@@ -72,9 +72,9 @@ export default {
         "mobile-additional-page":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-additional.webp')",
         "adhd-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/adhd.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/adhd2.webp)",
         "mobile-adhd-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-adhd.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-adhd2.webp')",
         "couples-page":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/couples.webp')",
         "mobile-couples-page":
