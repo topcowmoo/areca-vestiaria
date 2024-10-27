@@ -36,7 +36,7 @@ function AllResources() {
         ipad-pro-height:h-[51vh] 
         nest-hub-max:h-[82vh] 
         full-hd-max:h-[75vh]
-        ultra-wide:h-[65vh]
+        ultra-wide:h-[70vh]
         sm:h-[75vh] 
         bg-mobile-resource-image bg-no-repeat bg-cover bg-center z-0 
         sm:bg-resource sm:bg-cover
@@ -69,7 +69,16 @@ function AllResources() {
       </div>
 
       <div className=" py-[20px]">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 p-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 
+        p-6 gap-6
+        galaxy-z-fold-max:p-4 galaxy-z-fold-max:gap-4 
+        galaxy-s8-max:p-6 galaxy-s8-max:gap-6
+        iphone-12-max:p-6 iphone-12-max:gap-6
+        galaxy-s20-max:p-6 galaxy-s20-max:gap-6 
+        surface-duo-max:p-8 surface-duo-max:gap-8
+        nest-hub:p-9 nest-hub:gap-9 
+        xl:gap-12 xl:p-14 
+        ultra-wide:gap-14 ultra-wide:p-20">
           {categoryNames.map((category, index) => (
             <AllResourcesCard key={index} category={category} />
           ))}
