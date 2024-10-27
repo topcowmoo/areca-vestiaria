@@ -56,7 +56,7 @@ export default {
         "mobile-home-two":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-aboutus.webp')",
         "home-three":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/contactus.webpp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/contactus.webp')",
         "mobile-home-three":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-contactus.webp')",
         "resource-image":
@@ -72,9 +72,9 @@ export default {
         "mobile-additional-page":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-additional.webp')",
         "adhd-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/adhd2.webp)",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/adhd.webp')",
         "mobile-adhd-page":
-          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-adhd2.webp')",
+          "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/mobile-adhd.webp')",
         "couples-page":
           "url('https://drmammbucket.s3.us-east-1.amazonaws.com/Resized/couples.webp')",
         "mobile-couples-page":
@@ -172,3 +172,4 @@ export default {
   },
   plugins: [],
 };
+
