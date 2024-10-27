@@ -11,18 +11,18 @@ const Footer = () => {
   const handleLinkClick = (e) => {
     if (location.pathname === "/") {
       e.preventDefault();
-      const element = document.getElementById("second-page");
+      const element = document.getElementById("about-us");
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      navigate("/#second-page");
+      navigate("/#about-us");
     }
   };
 
   useEffect(() => {
-    if (location.hash === "#second-page") {
-      const element = document.getElementById("second-page");
+    if (location.hash === "#about-us") {
+      const element = document.getElementById("about-us");
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
@@ -70,7 +70,7 @@ const Footer = () => {
           <ul>
             <li className="mb-1">
               <Link
-                to="/#second-page"
+                to="/#about-us"
                 onClick={handleLinkClick}
                 className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
               >
