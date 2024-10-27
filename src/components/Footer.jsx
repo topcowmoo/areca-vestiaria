@@ -11,18 +11,18 @@ const Footer = () => {
   const handleLinkClick = (e) => {
     if (location.pathname === "/") {
       e.preventDefault();
-      const element = document.getElementById("second-page");
+      const element = document.getElementById("about-us");
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      navigate("/#second-page");
+      navigate("/#about-us");
     }
   };
 
   useEffect(() => {
-    if (location.hash === "#second-page") {
-      const element = document.getElementById("second-page");
+    if (location.hash === "#about-us") {
+      const element = document.getElementById("about-us");
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
@@ -70,7 +70,7 @@ const Footer = () => {
           <ul>
             <li className="mb-1">
               <Link
-                to="/#second-page"
+                to="/#about-us"
                 onClick={handleLinkClick}
                 className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
               >
@@ -96,77 +96,6 @@ const Footer = () => {
                 className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
               >
                 Frequently Asked Questions
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Resources Links */}
-        <div>
-          <h2 className="text-lg font-bold mb-4 font-['Inter']">Resources</h2>
-          <ul>
-            <li className="mb-1">
-              <Link
-                to="/adhd-resources"
-                className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
-              >
-                ADHD Resources
-              </Link>
-            </li>
-            <li className="mb-1">
-              <Link
-                to="/parenting-resources"
-                className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
-              >
-                Parenting Resources
-              </Link>
-            </li>
-            <li className="mb-1">
-              <Link
-                to="/attachments-and-emotions"
-                className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
-              >
-                Attachment & Emotions
-              </Link>
-            </li>
-            <li className="mb-1">
-              <Link
-                to="/couples-resources"
-                className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
-              >
-                Couple Resources
-              </Link>
-            </li>
-            <li className="mb-1">
-              <Link
-                to="/anger-and-shame"
-                className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
-              >
-                Anger and Shame
-              </Link>
-            </li>
-            <li className="mb-1">
-              <Link
-                to="/therapy"
-                className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
-              >
-                Therapy Resources
-              </Link>
-            </li>
-            <li className="mb-1">
-              <Link
-                to="/physician-patient-resources"
-                className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
-              >
-                Physician Patient Resources
-              </Link>
-            </li>
-            <li className="mb-1">
-              <Link
-                to="/additional-resources"
-                className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
-              >
-                Additional Resources
               </Link>
             </li>
           </ul>
