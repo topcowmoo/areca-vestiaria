@@ -1,21 +1,24 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useModal } from "../context/useModal";
+import { scrollWithOffset } from "../utils/scrollHelper"; // Import the helper function
 
 const Footer = () => {
   const { openModal } = useModal();
-
   const location = useLocation();
   const navigate = useNavigate();
 
+  // Handle link click with offset scrolling
   const handleLinkClick = (e) => {
+    e.preventDefault(); // Prevent default link behavior
+
     if (location.pathname === "/") {
-      e.preventDefault();
       const element = document.getElementById("about-us");
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        scrollWithOffset(element); // Use the helper function
       }
     } else {
+      // Navigate to the home page and scroll to the section after rendering
       navigate("/#about-us");
     }
   };
@@ -24,7 +27,7 @@ const Footer = () => {
     if (location.hash === "#about-us") {
       const element = document.getElementById("about-us");
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        scrollWithOffset(element); // Ensure offset when the hash is detected
       }
     }
   }, [location]);
@@ -71,18 +74,17 @@ const Footer = () => {
             <li className="mb-1">
               <Link
                 to="/#about-us"
-                onClick={handleLinkClick}
+                onClick={handleLinkClick} // Use the handler with offset scrolling
                 className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
               >
                 About Us
               </Link>
             </li>
             <li className="mb-1">
-              {/* disclosure link to open the modal */}
               <Link
                 to="#"
                 onClick={(e) => {
-                  e.preventDefault(); // Prevent the default link behavior
+                  e.preventDefault();
                   openModal(); // Open the modal
                 }}
                 className="text-white text-[15px] font-light font-['Inter'] hover:text-gray-400"
