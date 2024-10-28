@@ -8,7 +8,6 @@ import HomeResourceDisplay from "../components/HomeResourceDisplay";
 import speech from "/speech.png";
 import arrow from "/arrow.png";
 
-
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate(); // <-- useNavigate hook should be at the top level of the component
@@ -28,56 +27,136 @@ function Home() {
   };
 
   const handleClick = () => {
-    navigate("/all-resources"); // <-- Correctly navigating to /all-resources
+    navigate("/all-resources"); // <--To /all-resources
   };
 
   return (
     <div>
       {/* First section with background and main title */}
-      <header className="relative flex flex-col min-h-screen bg-black">
-        <div className="relative w-full h-screen min-w-[320px] landscape-sm:min-h-[575px]">
-          
-          <div className="absolute inset-0 w-full h-full bg-home-one bg-cover bg-center bg-no-repeat z-0">
-            <div className="flex flex-grow flex-col items-center justify-center z-10">
-              <div className="relative z-10 flex flex-col items-center h-full mt-36">
-                <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-2">
-                  WLNS
-                </h1>
-                <h2 className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter mb-8">
-                  The Wellness Hub
-                </h2>
+      <header className="relative flex flex-col bg-black">
+        <div className="relative w-full min-w-[320px] sm:min-h-screen">
+          <div
+            className="
+          absolute inset-0 w-full sm:h-full h-[35.2vh] 
+  galaxy-z-fold-max:!h-[24.4vh] 
+  galaxy-s8-max:h-[30.4vh] 
+  iphone-12-max:h-[28.9vh] 
+  galaxy-s20-max:h-[28.19vh] 
+  iphone-xr-max:h-[28.9vh] 
+iphone-14-max:h-[28.9vh]
+  surface-duo-max:h-[46.9vh] 
+  ipad-mini:h-[100vh]
+  ipad-air-max:h-[100vh]
+  asus-zenbook-max:h-[100vh]
+  suface-pro-max:h-[100vh] 
+  nest-hub:h-[100vh] 
+  ipad-pro-height:h-[100vh] 
+  nest-hub-max:h-[100vh] 
+  full-hd-max:h-[100vh]
+  ultra-wide:h-[100vh] 
+  bg-mobile-home-one bg-cover bg-center bg-no-repeat z-0
+  sm:bg-home-one sm:bg-cover
+  landscape-iphone-se:h-[92vh]
+  landscape-surface-duo:h-[75vh]
+  landscape-galaxy-s8:h-[115.5vh]
+  landscape-galaxy-z-fold:h-[144.3vh]
+  landscape-iphone-12:h-[113vh]
+  landscape-iphone-xr:h-[112vh]
+  landscape-pixel-7:h-[106vh]
+  landscape-ipad-mini:h-[81vh]
+  landscape-ipad-air:h-[79.5vh]
+  landscape-ipad-pro:!h-[67vh]
+  landscape-surface-pro:h-[73vh]"
+          ></div>
 
-                {/* Search bar component */}
-                <SearchBar />
-                <HashLink
-                  smooth
-                  to="#resource-page"
-                  scroll={scrollWithOffset}
-                  className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] underline m-8 py-4"
-                >
-                  Explore More
-                </HashLink>
-              </div>
+          <div className="flex flex-grow flex-col items-center justify-center z-10">
+            <div className="relative z-10 flex flex-col items-center h-full mt-6 sm:mt-50">
+              <h1 className="text-center text-white text-[22px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1">
+                WLNS
+              </h1>
+              <h2 className="text-center text-white text-[11px] sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8">
+                The Wellness Hub
+              </h2>
+
+              {/* Search bar component */}
+              <SearchBar />
+              <HashLink
+                smooth
+                to="#resource-page"
+                scroll={scrollWithOffset}
+                className="text-center text-white text-[10px] sm:text-base md:text-[19px] font-light font-['Inter'] underline pb-6"
+              >
+                Explore More
+              </HashLink>
             </div>
           </div>
         </div>
       </header>
 
       {/* Second section with additional content and 'Read More' button */}
-      <section className="relative flex flex-col min-h-screen bg-black">
+      <section className="relative flex flex-col bg-black">
         <div className="relative w-full h-full min-w-[390px]">
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
           {/* Background Image Container with Brightness Filter */}
           <div className="absolute inset-0 w-full h-full z-0">
-            <div className="w-full min-h-screen bg-home-two bg-cover bg-no-repeat [background-position-x:50%] ">
-            <div
-      className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{
-        background:
-          "linear-gradient(to top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 1))",
-      }}
-    ></div>
-            </div>
-          </div>
+            
+          <div
+            className="
+          absolute inset-0 w-full sm:h-full h-[35.2vh] 
+  galaxy-z-fold-max:!h-[100vh] 
+  galaxy-s8-max:h-[30.4vh] 
+  iphone-12-max:h-[29vh] 
+  galaxy-s20-max:h-[28.19vh] 
+  iphone-xr-max:h-[28.9vh] 
+iphone-14-max:h-[30vh]
+  surface-duo-max:h-[46.9vh] 
+  ipad-mini:h-[100vh]
+  ipad-air-max:h-[100vh]
+  asus-zenbook-max:h-[100vh]
+  suface-pro-max:h-[100vh] 
+  nest-hub:h-[100vh] 
+  ipad-pro-height:h-[100vh] 
+  nest-hub-max:h-[100vh] 
+  full-hd-max:h-[100vh]
+  ultra-wide:h-[100vh] 
+  bg-mobile-home-two bg-contain bg-center bg-no-repeat z-0
+  sm:bg-home-two sm:bg-cover
+  landscape-iphone-se:h-[92vh]
+  landscape-surface-duo:h-[75vh]
+  landscape-galaxy-s8:h-[115.5vh]
+  landscape-galaxy-z-fold:h-[144.3vh]
+  landscape-iphone-12:h-[113vh]
+  landscape-iphone-xr:h-[112vh]
+  landscape-pixel-7:h-[106vh]
+  landscape-ipad-mini:h-[81vh]
+  landscape-ipad-air:h-[79.5vh]
+  landscape-ipad-pro:!h-[67vh]
+  landscape-surface-pro:h-[73vh]"
+          ></div>
+            
+      
+              <div
+                className="absolute inset-0 w-full h-full pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(to top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 1))",
+                }}
+              ></div>
+              </div>
 
           {/* Content */}
           <div
@@ -85,10 +164,10 @@ function Home() {
             className="relative flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12"
           >
             <article className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-center">
-              <h3 className="w-full text-white text-[26px] sm:text-[38px] lg:text-[53px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4">
+              <h3 className="w-full text-white text-[18px] sm:text-[38px] lg:text-[53px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4 lg:mt-20">
                 Sunrise Health & Clinical <br /> Excellence Centre
               </h3>
-              <p className="w-full text-white text-[12px] md:text-[14px] lg:text-[24px] font-light font-['Inter'] leading-[20px] md:leading-[24px] lg:leading-[38px] mt-4 galaxy-fold-fix">
+              <p className="w-full text-white text-[8px] md:text-[14px] lg:text-[24px] font-light font-['Inter'] leading-4 md:leading-[24px] lg:leading-[38px] mt-1">
                 The Sun rises everyday - and we believe that in mental health
                 and life in general - hope and new beginnings are key
                 ingredients to wellness. At SUNRISE, not only do we focus on
@@ -107,7 +186,7 @@ function Home() {
               {/* Button to open the modal */}
               <button
                 onClick={handleOpenModal}
-                className="mt-4 md:mt-7 px-4 py-2 bg-white text-sm md:text-md font-inter rounded text-alt hover:text-white hover:bg-alt"
+                className="mt-4 md:mt-7 px-2 py-1 bg-white text-[6px] md:text-md font-inter rounded text-alt hover:text-white hover:bg-alt"
               >
                 Read More
               </button>
@@ -147,13 +226,13 @@ function Home() {
         <div className="relative w-full h-screen min-w-[344px]">
           <div className="absolute inset-0 w-full h-full z-0">
             <div className="w-full h-full bg-home-three bg-cover bg-no-repeat [background-position-x:50%]">
-            <div
-      className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{
-        background:
-          "linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 1))",
-      }}
-    ></div>
+              <div
+                className="absolute inset-0 w-full h-full pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 1))",
+                }}
+              ></div>
             </div>
           </div>
 
