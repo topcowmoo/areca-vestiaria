@@ -48,7 +48,7 @@ const SearchBar = () => {
     <div className="relative flex flex-col items-center justify-center p-4">
       <div
         className="
-        w-[247px] h-[33px] pl-3.5 pr-[9.43px] py-[2.57px] 
+        w-[186px] h-[22px] pl-3.5 pr-[9.43px] py-[2.57px] 
         bg-white rounded-[13.71px] shadow-[0_0_15px_5px_rgba(255,255,255,0.5)] flex items-center 
         border border-gray-200 focus-within:shadow-[0_0_15px_5px_rgba(255,255,255,0.4)]
         sm:w-[247px] sm:h-[33px] sm:pl-3.5 sm:pr-[9.43px] sm:py-[2.57px] 
@@ -60,8 +60,8 @@ const SearchBar = () => {
           type="text"
           className={`flex-grow bg-transparent focus:outline-none text-[#373636] font-semibold font-['Inter'] ${
             query
-              ? "text-[12px] sm:text-[12px] md:text-base lg:text-base"
-              : "text-[12px] sm:text-[12px] md:text-base lg:text-base"
+              ? "text-[9px] sm:text-[12px] md:text-base lg:text-base"
+              : "text-[9px] sm:text-[12px] md:text-base lg:text-base"
           }`}
           placeholder="Search Topic..."
           value={query}
@@ -76,7 +76,7 @@ const SearchBar = () => {
       {/* Search Result container */}
       {isFocused && query.length >= 3 && (
         <div
-          className={`absolute top-[60px] w-[247px] sm:w-[247px] md:w-[482px] lg:w-[482px] bg-white rounded-[10px] p-2 shadow-lg z-10 border border-gray-200 transition-opacity duration-300 ease-in-out opacity-100`}
+          className={`absolute top-[45px] w-[186px] sm:w-[247px] md:w-[482px] lg:w-[482px] bg-white rounded-[10px] p-1 shadow-lg z-10 border border-gray-200 transition-opacity duration-300 ease-in-out opacity-100`}
         >
           {filteredData.length > 0 ? (
             <div className="flex flex-col justify-start items-start gap-2.5">
@@ -89,12 +89,12 @@ const SearchBar = () => {
                   className="w-full no-underline hover:underline"
                 >
                   <div className="w-full truncate">
-                    <span className="text-[#1f1f1f] text-[12px] sm:text-[12px] md:text-base lg:text-base font-normal font-['Inter'] truncate">
+                    <span className="text-[#1f1f1f] text-[8px] sm:text-[12px] md:text-base lg:text-base font-normal font-['Inter'] truncate">
                       {highlightQuery(item.title)}
                     </span>
                     {item !== filteredData[filteredData.length - 1] && (
                       <div
-                        className="w-full border-t mt-2 mb-2"
+                        className="w-full border-t mt-1 mb-1"
                         style={{ borderColor: "#0000007D" }}
                       ></div>
                     )}
@@ -103,7 +103,7 @@ const SearchBar = () => {
               ))}
             </div>
           ) : (
-            <p className="text-[#bababa] text-[12px] sm:text-[12px] md:text-base lg:text-base font-semibold font-['Inter']">
+            <p className="text-[#bababa] text-[8px] sm:text-[12px] md:text-base lg:text-base font-semibold font-['Inter']">
               No results found
             </p>
           )}

@@ -85,12 +85,12 @@ function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="w-full flex justify-between items-center pl-[21px] pt-[29px] md:hidden">
+      <div className="w-full flex justify-between items-center pl-[21\px] pt-[29px] md:hidden">
         <CgMenuRound
           className={`text-white transition-transform duration-300 mobile-menu-icon ${
             isMobileMenuOpen ? "rotate-90" : ""
           }`}
-          size={40}
+          size={25}
           onClick={toggleMobileMenu}
         />
       </div>
