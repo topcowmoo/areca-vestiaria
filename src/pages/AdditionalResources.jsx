@@ -78,7 +78,7 @@ landscape-iphone-12:h-[113vh]
         ></div>
 
         {/* Title and SearchBar positioned near the bottom of the image */}
-        <div className="relative z-10 flex flex-col items-center h-full justify-end pb-[575px] md:pb-[490px] lg:pb-[410px]">
+        <div className="relative z-40 flex flex-col items-center h-full mt-28 pb-[575px] md:pb-[490px] lg:pb-[410px]">
           <h1 className="text-center text-white text-[34px] sm:text-[34px] md:text-[71px] lg:text-[71px] font-extrabold font-[playfair]">
             Additional Resources
           </h1>
@@ -91,7 +91,7 @@ landscape-iphone-12:h-[113vh]
       </div>
 
       {/* Content Section */}
-      <div className="relative z-20 flex flex-col items-center justify-start flex-grow pt-2 -mt-[440px] md:pt-8 md:-mt-[370px] lg:pt-10 lg:-mt-[315px] pb-12">
+      <div className="relative z-20 flex flex-col items-center justify-start flex-grow pt-2 -mt-[525px] md:pt-8 md:-mt-[370px] lg:pt-10 lg:-mt-[315px] pb-12">
         <div className="w-full max-w-[1200px] px-4 py-4 sm:px-6 sm:py-6 mx-auto">
           {/* Container for FilterBox and Directory */}
           <div className="relative flex flex-col w-full gap-[19px]">
