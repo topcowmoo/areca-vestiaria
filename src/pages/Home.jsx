@@ -178,7 +178,8 @@ iphone-14-max:h-[50vh]
               <p className="w-full text-white text-[12px] md:text-[14px] lg:text-[24px] font-light font-['Inter'] leading-4 md:leading-[24px] lg:leading-[38px] mt-1 
               galaxy-z-fold-max:text-[11px] galaxy-z-fold-max:pr-9
               galaxy-s8-max:text-[10px] galaxy-s8-max:pr-9
-              ">
+              "
+              style={{ textAlign: "justify" }}>
                 The Sun rises everyday - and we believe that in mental health
                 and life in general - hope and new beginnings are key
                 ingredients to wellness. At SUNRISE, not only do we focus on
@@ -197,7 +198,7 @@ iphone-14-max:h-[50vh]
               {/* Button to open the modal */}
               <button
                 onClick={handleOpenModal}
-                className="mt-5 md:mt-7 px-4 py-2 bg-white text-[8px] md:text-md font-inter rounded text-alt hover:text-white hover:bg-alt"
+                className="mt-11 px-4 py-2 bg-white text-[8px] md:text-md font-inter rounded text-alt hover:text-white hover:bg-alt"
               >
                 Read More
               </button>
@@ -304,13 +305,11 @@ iphone-14-max:h-[50vh]
 
       {/* Centered Paragraph Block */}
 <div className="w-full lg:w-[50%] justify-center flex">
-  <p className="font-inter text-white text-[12px] md:text-[18px] lg:text-[14px] leading-[20px] md:leading-[35px] galaxy-z-fold-max:text-[10px] galaxy-s8-max:text-[10.5px]">
+  <p className="font-inter text-white px-9 text-[12.5px] md:text-[18px] lg:text-[14px] leading-[20px] md:leading-[35px] galaxy-z-fold-max:text-[10px] galaxy-s8-max:text-[10.5px]"
+  style={{ textAlign: "justify" }}>
     Please note, you will need a referral from your Family Doctor to
-    <br />
     be referred to Dr. Mammoliti for a consultation. The consultation
-    <br />
-    and ongoing care are covered by OHIP but not the NO SHOW FEE,
-    <br /> LATE FEE or other non-insured services...
+    and ongoing care are covered by OHIP but not the NO SHOW FEE, LATE FEE or other non-insured services.
   </p>
 </div>
 
@@ -324,7 +323,7 @@ iphone-14-max:h-[50vh]
 
         {/* Centered FAQ Buttons */}
         <div className="flex flex-col items-center space-y-3 font-inter">
-          <button className="min-w-[300px] 2xl:w-3/4 bg-white text-black flex justify-between items-center p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+          <button className="min-w-[360px] 2xl:w-3/4 bg-white text-black flex justify-between items-center p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
             <span className="flex items-center">
               <img src={speech} alt="Speech bubble" className="w-6 h-6 mr-4" />
               What can I expect for a consultation?
@@ -332,7 +331,7 @@ iphone-14-max:h-[50vh]
             <img src={arrow} alt="Arrow" className="w-4 h-4" />
           </button>
 
-          <button className="min-w-[300px] 2xl:w-3/4 bg-white text-black flex justify-between items-center p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+          <button className="min-w-[360px] 2xl:w-3/4 bg-white text-black flex justify-between items-center p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
             <span className="flex items-center">
               <img src={speech} alt="Speech bubble" className="w-6 h-6 mr-4" />
               What can I expect for general policy?
@@ -340,7 +339,7 @@ iphone-14-max:h-[50vh]
             <img src={arrow} alt="Arrow" className="w-4 h-4" />
           </button>
 
-          <button className="min-w-[300px] 2xl:w-3/4 bg-white text-black flex justify-between items-center p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+          <button className="min-w-[360px] 2xl:w-3/4 bg-white text-black flex justify-between items-center p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
             <span className="flex items-center">
               <img src={speech} alt="Speech bubble" className="w-6 h-6 mr-4" />
               Missed appointments or service fees?
