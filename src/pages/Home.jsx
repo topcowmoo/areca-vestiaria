@@ -117,7 +117,7 @@ function Home() {
 
       {/* ABOUT US second section with additional content and 'Read More' button */}
       <section className="relative flex flex-col bg-black">
-        <div className="relative w-full h-[50vh] min-w-[390px]">
+        <div className="relative w-full h-[55vh] min-w-[390px]">
 
           {/* Background Image Container */}
           <div className="absolute inset-0 w-full h-[100vh] z-0">
@@ -130,7 +130,7 @@ function Home() {
   iphone-12-max:h-[29vh] 
   galaxy-s20-max:h-[28.19vh] 
   iphone-xr-max:h-[28.9vh] 
-iphone-14-max:h-[50vh]
+iphone-14-max:h-[55vh]
   surface-duo-max:h-[46.9vh] 
   ipad-mini:h-[100vh]
   ipad-air-max:h-[90vh]
@@ -198,7 +198,7 @@ iphone-14-max:h-[50vh]
               {/* Button to open the modal */}
               <button
                 onClick={handleOpenModal}
-                className="mt-11 px-4 py-2 bg-white text-[8px] md:text-md font-inter rounded text-alt hover:text-white hover:bg-alt"
+                className="mt-8 px-4 py-2 bg-white text-[8px] md:text-md font-inter rounded text-alt hover:text-white hover:bg-alt"
               >
                 Read More
               </button>
