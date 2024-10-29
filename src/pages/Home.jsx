@@ -34,16 +34,16 @@ function Home() {
     <div>
       {/* First section with background and main title */}
       <header className="relative flex flex-col bg-black">
-        <div className="relative w-full min-w-[320px] sm:min-h-screen">
+        <div className="relative w-full min-w-[320px] min-h-[40vh] sm:h-[100vh]">
           <div
             className="
-          absolute inset-0 w-full sm:h-full h-[35.2vh] 
-  galaxy-z-fold-max:!h-[24.4vh] 
-  galaxy-s8-max:h-[30.4vh] 
+          absolute inset-0 w-full h-[52vh]
+  galaxy-z-fold-max:!h-[46vh]
+  galaxy-s8-max:h-[44vh] 
   iphone-12-max:h-[28.9vh] 
   galaxy-s20-max:h-[28.19vh] 
   iphone-xr-max:h-[28.9vh] 
-iphone-14-max:h-[28.9vh]
+  iphone-14-max:h-[40vh]
   surface-duo-max:h-[46.9vh] 
   ipad-mini:h-[100vh]
   ipad-air-max:h-[100vh]
@@ -55,7 +55,7 @@ iphone-14-max:h-[28.9vh]
   full-hd-max:h-[100vh]
   ultra-wide:h-[100vh] 
   bg-mobile-home-one bg-cover bg-center bg-no-repeat z-0
-  sm:bg-home-one sm:bg-cover
+  sm:bg-home-one
   landscape-iphone-se:h-[92vh]
   landscape-surface-duo:h-[75vh]
   landscape-galaxy-s8:h-[115.5vh]
@@ -63,18 +63,40 @@ iphone-14-max:h-[28.9vh]
   landscape-iphone-12:h-[113vh]
   landscape-iphone-xr:h-[112vh]
   landscape-pixel-7:h-[106vh]
+  landscape-iphone-14:h-[100vh]
   landscape-ipad-mini:h-[81vh]
   landscape-ipad-air:h-[79.5vh]
   landscape-ipad-pro:!h-[67vh]
   landscape-surface-pro:h-[73vh]"
           ></div>
 
+<div
+          className="
+            absolute inset-0 w-full pointer-events-none 
+            h-[52vh] galaxy-z-fold-max:!h-[46vh] galaxy-s8-max:h-[44vh] 
+            iphone-12-max:h-[35vh] iphone-14-max:h-[40vh] asus-zenbook-max:h-[37.5vh] surface-pro-max:h-[37.5vh] galaxy-s20-max:h-[33vh] 
+            iphone-xr-max:h-[32.5vh] surface-duo-max:h-[47vh] 
+            ipad-mini:h-[41vh] ipad-air-max:h-[100vh] nest-hub:h-[108vh] 
+            ipad-pro-height:h-[51vh] nest-hub-max:h-[82vh] 
+            full-hd-max:h-[65vh] ultra-wide:h-[50vh] sm:h-[75vh]
+            landscape-iphone-se:h-[92vh] landscape-surface-duo:h-[75vh]
+            landscape-galaxy-s8:h-[115.5vh] landscape-galaxy-z-fold:h-[144.3vh]
+            landscape-iphone-12:h-[113vh] landscape-iphone-xr:h-[112vh]
+            landscape-pixel-7:h-[106vh] landscape-iphone-14:h-[100vh]
+            landscape-ipad-mini:h-[81vh] landscape-ipad-air:h-[79.5vh]
+            landscape-ipad-pro:!h-[67vh] landscape-surface-pro:h-[73vh]"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 1) 100%)",
+          }}
+        ></div>
+
           <div className="flex flex-grow flex-col items-center justify-center z-10">
-            <div className="relative z-10 flex flex-col items-center h-full mt-6 sm:mt-50">
-              <h1 className="text-center text-white text-[22px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1">
+            <div className="relative z-10 flex flex-col items-center h-full mt-16 sm:mt-36">
+              <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1">
                 WLNS
               </h1>
-              <h2 className="text-center text-white text-[11px] sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8">
+              <h2 className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8">
                 The Wellness Hub
               </h2>
 
@@ -84,7 +106,7 @@ iphone-14-max:h-[28.9vh]
                 smooth
                 to="#resource-page"
                 scroll={scrollWithOffset}
-                className="text-center text-white text-[10px] sm:text-base md:text-[19px] font-light font-['Inter'] underline pb-6"
+                className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] underline m-2 py-4"
               >
                 Explore More
               </HashLink>
@@ -93,39 +115,25 @@ iphone-14-max:h-[28.9vh]
         </div>
       </header>
 
-      {/* Second section with additional content and 'Read More' button */}
+      {/* ABOUT US second section with additional content and 'Read More' button */}
       <section className="relative flex flex-col bg-black">
-        <div className="relative w-full h-full min-w-[390px]">
+        <div className="relative w-full h-[50vh] min-w-[390px]">
 
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-          {/* Background Image Container with Brightness Filter */}
-          <div className="absolute inset-0 w-full h-full z-0">
+          {/* Background Image Container */}
+          <div className="absolute inset-0 w-full h-[100vh] z-0">
             
           <div
             className="
-          absolute inset-0 w-full sm:h-full h-[35.2vh] 
-  galaxy-z-fold-max:!h-[100vh] 
-  galaxy-s8-max:h-[30.4vh] 
+          absolute inset-0 w-full sm:h-full h-[60vh] 
+  galaxy-z-fold-max:!h-[50vh] 
+  galaxy-s8-max:h-[55vh] 
   iphone-12-max:h-[29vh] 
   galaxy-s20-max:h-[28.19vh] 
   iphone-xr-max:h-[28.9vh] 
-iphone-14-max:h-[30vh]
+iphone-14-max:h-[50vh]
   surface-duo-max:h-[46.9vh] 
   ipad-mini:h-[100vh]
-  ipad-air-max:h-[100vh]
+  ipad-air-max:h-[90vh]
   asus-zenbook-max:h-[100vh]
   suface-pro-max:h-[100vh] 
   nest-hub:h-[100vh] 
@@ -133,8 +141,8 @@ iphone-14-max:h-[30vh]
   nest-hub-max:h-[100vh] 
   full-hd-max:h-[100vh]
   ultra-wide:h-[100vh] 
-  bg-mobile-home-two bg-contain bg-center bg-no-repeat z-0
-  sm:bg-home-two sm:bg-cover
+  bg-mobile-home-two bg-cover bg-center bg-no-repeat z-0
+  sm:bg-home-two
   landscape-iphone-se:h-[92vh]
   landscape-surface-duo:h-[75vh]
   landscape-galaxy-s8:h-[115.5vh]
@@ -164,10 +172,13 @@ iphone-14-max:h-[30vh]
             className="relative flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12"
           >
             <article className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-center">
-              <h3 className="w-full text-white text-[18px] sm:text-[38px] lg:text-[53px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4 lg:mt-20">
+              <h3 className="w-full text-white text-[26px] sm:text-[38px] lg:text-[53px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mt-14 mb-4 lg:mt-20">
                 Sunrise Health & Clinical <br /> Excellence Centre
               </h3>
-              <p className="w-full text-white text-[8px] md:text-[14px] lg:text-[24px] font-light font-['Inter'] leading-4 md:leading-[24px] lg:leading-[38px] mt-1">
+              <p className="w-full text-white text-[12px] md:text-[14px] lg:text-[24px] font-light font-['Inter'] leading-4 md:leading-[24px] lg:leading-[38px] mt-1 
+              galaxy-z-fold-max:text-[11px] galaxy-z-fold-max:pr-9
+              galaxy-s8-max:text-[10px] galaxy-s8-max:pr-9
+              ">
                 The Sun rises everyday - and we believe that in mental health
                 and life in general - hope and new beginnings are key
                 ingredients to wellness. At SUNRISE, not only do we focus on
@@ -186,7 +197,7 @@ iphone-14-max:h-[30vh]
               {/* Button to open the modal */}
               <button
                 onClick={handleOpenModal}
-                className="mt-4 md:mt-7 px-2 py-1 bg-white text-[6px] md:text-md font-inter rounded text-alt hover:text-white hover:bg-alt"
+                className="mt-5 md:mt-7 px-4 py-2 bg-white text-[8px] md:text-md font-inter rounded text-alt hover:text-white hover:bg-alt"
               >
                 Read More
               </button>
@@ -199,8 +210,8 @@ iphone-14-max:h-[30vh]
       <section id="resource-page">
         <div className="max-w-[400px] md:max-w-[690px] lg:max-w-[960px] xl:max-w-[1115px] 2xl:max-w-[1420px] mx-auto">
           {/* Title and Button Section */}
-          <div className="flex justify-between items-center mt-2 lg:mt-5 px-[18px] md:px-[1px]">
-            <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair">
+          <div className="flex justify-between items-center mt-4 lg:mt-5 px-[18px] md:px-[1px]">
+            <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair galaxy-s8-max:mt-16 sm:mt-96">
               Resources
             </h2>
             <button
@@ -218,122 +229,136 @@ iphone-14-max:h-[30vh]
         </div>
       </section>
 
-      {/* Last page with contact information */}
+      {/* CONTACT US information */}
       <section
-        id="contact-page "
-        className="relative flex flex-col min-h-screen bg-black "
-      >
-        <div className="relative w-full h-screen min-w-[344px]">
-          <div className="absolute inset-0 w-full h-full z-0">
-            <div className="w-full h-full bg-home-three bg-cover bg-no-repeat [background-position-x:50%]">
-              <div
-                className="absolute inset-0 w-full h-full pointer-events-none"
-                style={{
-                  background:
-                    "linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 1))",
-                }}
-              ></div>
-            </div>
-          </div>
+  id="contact-page"
+  className="relative flex flex-col h-[85vh] bg-black"
+>
+  <div className="relative w-full h-screen min-w-[344px]">
+    <div className="absolute inset-0 w-full h-full z-0">
+      <div
+        className="
+          absolute inset-0 w-full h-full 
+          galaxy-z-fold-max:!h-[80vh] 
+          galaxy-s8-max:h-[85vh] 
+          iphone-12-max:h-[29vh] 
+          galaxy-s20-max:h-[28.19vh] 
+          iphone-xr-max:h-[28.9vh] 
+          iphone-14-max:h-[80vh]
+          surface-duo-max:h-[46.9vh] 
+          ipad-mini:h-[100vh]
+          ipad-air-max:h-[100vh]
+          asus-zenbook-max:h-[100vh]
+          suface-pro-max:h-[100vh] 
+          nest-hub:h-[100vh] 
+          ipad-pro-height:h-[100vh] 
+          nest-hub-max:h-[100vh] 
+          full-hd-max:h-[100vh]
+          ultra-wide:h-[100vh] 
+          bg-mobile-home-three bg-cover bg-center bg-no-repeat z-0
+          sm:bg-home-three sm:bg-cover
+          landscape-iphone-se:h-[92vh]
+          landscape-surface-duo:h-[75vh]
+          landscape-galaxy-s8:h-[115.5vh]
+          landscape-galaxy-z-fold:h-[144.3vh]
+          landscape-iphone-12:h-[113vh]
+          landscape-iphone-xr:h-[112vh]
+          landscape-pixel-7:h-[106vh]
+          landscape-ipad-mini:h-[81vh]
+          landscape-ipad-air:h-[79.5vh]
+          landscape-ipad-pro:!h-[67vh]
+          landscape-surface-pro:h-[73vh]"
+      ></div>
 
-          <div className="flex flex-grow flex-col lg:flex-row items-start justify-between mx-4 sm:mx-8 md:mx-12 my-4 sm:my-11 lg:mt-12 max-w-full ">
-            {/* Contact Us Container */}
-            <div
-              id="contact-page"
-              className="w-full lg:w-[50%] text-left flex flex-col items-start z-10 2xl:mt-12 mx-auto md:mt-12 md:ml-2 2xl:ml-8 lg:mt-12 "
-            >
-              <article className="w-full">
-                <h3 className="text-white text-[26px] sm:text-[38px] lg:text-[55px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mb-4 z-20 mt-12 lg:mt-2 xl:mt-3 ml-2 ">
-                  Contact Us
-                </h3>
-                <p className="text-white 2xl:text-[17px] xl:text-[14px]  font-['Inter'] 2xl:leading-[40px] lg:leading-[30px] mt-6 z-20 leading-[20px] text-[9px] md:text-[18px] md:leading-[35px] lg:text-[14px] ">
-                  Please note, you will need a referral from your Family Doctor
-                  to
-                  <br />
-                  be referred to Dr. Mammoliti for a consultation. The
-                  consultation
-                  <br />
-                  and ongoing care are covered by OHIP but not the NO SHOW FEE,
-                  <br /> LATE FEE or other non-insured services. At this time
-                  referrals are <br />
-                  seen only when there are learners present for teaching
-                  purposes
-                  <br /> and special slots are created - otherwise referrals are
-                  not accepted. <br />
-                  REFERRALS ARE ACCEPTED VIA FAX.
-                </p>
-              </article>
-            </div>
+      <div
+        className="
+          absolute inset-0 w-full pointer-events-none 
+          h-[42vh] galaxy-z-fold-max:!h-[80vh] galaxy-s8-max:h-[85vh] 
+          iphone-12-max:h-[35vh] iphone-14-max:h-[80vh] 
+          asus-zenbook-max:h-[37.5vh] surface-pro-max:h-[37.5vh] 
+          galaxy-s20-max:h-[33vh] iphone-xr-max:h-[32.5vh] 
+          surface-duo-max:h-[47vh] ipad-mini:h-[41vh] ipad-air-max:h-[39vh] 
+          nest-hub:h-[108vh] ipad-pro-height:h-[51vh] 
+          nest-hub-max:h-[82vh] full-hd-max:h-[65vh] ultra-wide:h-[50vh] 
+          sm:h-[75vh] landscape-iphone-se:h-[92vh] 
+          landscape-surface-duo:h-[75vh] landscape-galaxy-s8:h-[115.5vh] 
+          landscape-galaxy-z-fold:h-[144.3vh] landscape-iphone-12:h-[113vh] 
+          landscape-iphone-xr:h-[112vh] landscape-pixel-7:h-[106vh] 
+          landscape-iphone-14:h-[100vh] landscape-ipad-mini:h-[81vh] 
+          landscape-ipad-air:h-[79.5vh] landscape-ipad-pro:!h-[67vh] 
+          landscape-surface-pro:h-[73vh]"
+        style={{
+          background:
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 1) 100%)",            
+        }}
+      ></div>
+    </div>
 
-            {/* FAQ Section Container */}
-            <div className="w-full lg:w-[45%] text-white flex flex-col justify-start items-start space-y-4 z-10 mt-24 xs:mt-10">
-              <h4 className="text-white font-bold text-[26px] 2xl:text-[50px] lg:text-[35px] font-playfair lg:mt-6 xl:mt-4">
-                Explore some of our FAQ
-              </h4>
+    {/* Basic Container for Contact Us and FAQ */}
+    <div className="relative flex flex-col h-full space-y-6">
+      {/* Contact Us Section */}
+      <div className="w-full lg:w-[50%]">
+        <h3 className="text-white text-[22px] sm:text-[38px] lg:text-[55px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mt-20 mb-8 ml-5">
+          Contact Us
+        </h3>
 
-              {/* FAQ Buttons */}
-              <div className="w-full">
-                {/* First Button with Speech Bubble on the Left and Arrow on the Right */}
-                <button className="min-w-[300px] 2xl:w-3/4   bg-white text-black flex justify-between items-center 2xl:p-4 xl:p-3 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2 ">
-                  {/* Speech Bubble Image on the Left */}
-                  <span className="flex items-center">
-                    <img
-                      src={speech}
-                      alt="Speech bubble"
-                      className="w-6 h-6 xl:mr-10 mr-4 "
-                    />
-                    What can I expect for a consultation?
-                  </span>
-                  {/* Right Arrow Image */}
-                  <img
-                    src={arrow}
-                    alt="Right arrow"
-                    className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4"
-                  />
-                </button>
+      {/* Centered Paragraph Block */}
+<div className="w-full lg:w-[50%] justify-center flex">
+  <p className="font-inter text-white text-[12px] md:text-[18px] lg:text-[14px] leading-[20px] md:leading-[35px] galaxy-z-fold-max:text-[10px] galaxy-s8-max:text-[10.5px]">
+    Please note, you will need a referral from your Family Doctor to
+    <br />
+    be referred to Dr. Mammoliti for a consultation. The consultation
+    <br />
+    and ongoing care are covered by OHIP but not the NO SHOW FEE,
+    <br /> LATE FEE or other non-insured services...
+  </p>
+</div>
 
-                {/* Second Button */}
-                <button className="min-w-[300px] 2xl:w-3/4   bg-white text-black flex justify-between items-center 2xl:p-4 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2">
-                  <span className="flex items-center">
-                    <img
-                      src={speech}
-                      alt="Speech bubble"
-                      className="w-6 h-6 xl:mr-10 mr-4"
-                    />
-                    What can I expect for general policy?
-                  </span>
-                  <img
-                    src={arrow}
-                    alt="Right arrow"
-                    className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4"
-                  />
-                </button>
 
-                {/* Third Button */}
-                <button className="min-w-[300px] 2xl:w-3/4  bg-white text-black flex justify-between items-center 2xl:p-4 p-3 rounded-lg shadow-md mb-3 font-bold text-[11px] lg:text-[16px] xs:p-2">
-                  <span className="flex items-center">
-                    <img
-                      src={speech}
-                      alt="Speech bubble"
-                      className="w-6 h-6 xl:mr-10 mr-4 "
-                    />
-                    Missed appointments or service fees?
-                  </span>
-                  <img
-                    src={arrow}
-                    alt="Right arrow"
-                    className="2xl:w-6 2xl:h-6 w-4 h-4 ml-3 lg:h-4 lg:w-4"
-                  />
-                </button>
-              </div>
 
-              <a href="faq" className="text-white underline mt-2">
-                See All Frequently Asked Questions
-              </a>
-            </div>
-          </div>
+      {/* FAQ Section */}
+      <div className="w-full lg:w-[45%]">
+        <h4 className="text-white font-bold text-[22px] lg:text-[35px] font-playfair ml-5 mt-10 mb-8">
+          Explore some of our FAQ
+        </h4>
+
+        {/* Centered FAQ Buttons */}
+        <div className="flex flex-col items-center space-y-3 font-inter">
+          <button className="min-w-[300px] 2xl:w-3/4 bg-white text-black flex justify-between items-center p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+            <span className="flex items-center">
+              <img src={speech} alt="Speech bubble" className="w-6 h-6 mr-4" />
+              What can I expect for a consultation?
+            </span>
+            <img src={arrow} alt="Arrow" className="w-4 h-4" />
+          </button>
+
+          <button className="min-w-[300px] 2xl:w-3/4 bg-white text-black flex justify-between items-center p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+            <span className="flex items-center">
+              <img src={speech} alt="Speech bubble" className="w-6 h-6 mr-4" />
+              What can I expect for general policy?
+            </span>
+            <img src={arrow} alt="Arrow" className="w-4 h-4" />
+          </button>
+
+          <button className="min-w-[300px] 2xl:w-3/4 bg-white text-black flex justify-between items-center p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+            <span className="flex items-center">
+              <img src={speech} alt="Speech bubble" className="w-6 h-6 mr-4" />
+              Missed appointments or service fees?
+            </span>
+            <img src={arrow} alt="Arrow" className="w-4 h-4" />
+          </button>
         </div>
-      </section>
+
+        <a href="faq" className="font-inter text-white underline text-[14px] mt-8 ml-5 block ">
+          See All Frequently Asked Questions
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
 
       {/* Modal for 'Read More' content */}
       {isModalOpen && (
