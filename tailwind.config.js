@@ -111,6 +111,7 @@ export default {
         },
         "galaxy-z-fold-max": { max: "344px" }, // Galaxy Z Fold and smaller
         "galaxy-s8-max": { max: "360px" }, // Galaxy S8 and smaller
+        "iphone-se-max": { max: "375px" }, // iPhone SE and smaller
         "iphone-12-max": { min: "390px" }, // iPhone 12 and smaller
         "galaxy-s20-max": { min: "412px" }, // Galaxy S20 and larger
         "iphone-xr-max": { min: "414px" }, // iPhone XR and larger
