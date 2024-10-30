@@ -38,13 +38,13 @@ function Home() {
           <div
             className="
           absolute inset-0 w-full h-[50vh]
-  galaxy-z-fold-max:!h-[46vh]
+  galaxy-z-fold-max:!h-[39vh]
   galaxy-s8-max:h-[44vh] 
   iphone-12-max:h-[28.9vh] 
-  galaxy-s20-max:h-[28.19vh] 
+  galaxy-s20-max:h-[39vh] 
   iphone-xr-max:h-[40vh] 
   iphone-14-max:h-[40vh]
-  surface-duo-max:h-[46.9vh] 
+  surface-duo-max:h-[46vh] 
   ipad-mini:h-[100vh]
   ipad-air-max:h-[100vh]
   asus-zenbook-max:h-[100vh]
@@ -73,10 +73,10 @@ function Home() {
           <div
             className="
             absolute inset-0 w-full pointer-events-none 
-            h-[50vh] galaxy-z-fold-max:!h-[46vh] galaxy-s8-max:h-[44vh] 
-            iphone-12-max:h-[35vh] iphone-14-max:h-[40vh] asus-zenbook-max:h-[37.5vh] surface-pro-max:h-[37.5vh] galaxy-s20-max:h-[33vh] 
-            iphone-xr-max:h-[40vh] surface-duo-max:h-[47vh] 
-            ipad-mini:h-[41vh] ipad-air-max:h-[100vh] nest-hub:h-[108vh] 
+            h-[50vh] galaxy-z-fold-max:!h-[39vh] galaxy-s8-max:h-[44vh] 
+            iphone-12-max:h-[28.9vh] iphone-14-max:h-[40vh] asus-zenbook-max:h-[37.5vh] surface-pro-max:h-[37.5vh] galaxy-s20-max:h-[39vh] 
+            iphone-xr-max:h-[40vh] surface-duo-max:h-[46vh] 
+            ipad-mini:h-[100vh] ipad-air-max:h-[100vh] nest-hub:h-[108vh] 
             ipad-pro-height:h-[51vh] nest-hub-max:h-[82vh] 
             full-hd-max:h-[65vh] ultra-wide:h-[50vh] sm:h-[75vh]
             landscape-iphone-se:h-[92vh] landscape-surface-duo:h-[75vh]
@@ -123,13 +123,13 @@ function Home() {
             <div
               className="
           absolute inset-0 w-full sm:h-full h-[65vh] 
-  galaxy-z-fold-max:!h-[50vh] 
-  galaxy-s8-max:h-[55vh] 
+  galaxy-z-fold-max:!h-[55vh] 
+  galaxy-s8-max:h-[62vh] 
   iphone-12-max:h-[29vh] 
-  galaxy-s20-max:h-[28.19vh] 
+  galaxy-s20-max:h-[55vh] 
   iphone-xr-max:h-[55vh] 
-iphone-14-max:h-[55vh]
-  surface-duo-max:h-[46.9vh] 
+  iphone-14-max:h-[55vh]
+  surface-duo-max:h-[55vh] 
   ipad-mini:h-[100vh]
   ipad-air-max:h-[90vh]
   asus-zenbook-max:h-[100vh]
@@ -169,23 +169,19 @@ iphone-14-max:h-[55vh]
             className="relative flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12"
           >
             <article className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-center">
-              <h3 className="w-full text-white text-[22px] iphone-14-max:text-[26px] sm:text-[38px] lg:text-[53px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mt-16 mb-4 lg:mt-20">
+              <h3 className="w-full text-white text-[22px] iphone-14-max:text-[26px] ipad-mini:text-[38px] lg:text-[53px] font-extrabold font-playfair leading-tight md:leading-normal mt-16 mb-4 md:mt-24">
                 Sunrise Health & Clinical <br /> Excellence Centre
               </h3>
               <p
-                className="w-full text-white md:text-[14px] lg:text-[24px] font-light font-['Inter'] leading-4 md:leading-[24px] lg:leading-[38px] mt-1
-              galaxy-z-fold-max:text-[11px] galaxy-z-fold-max:pr-9
-              galaxy-s8-max:text-[10px] galaxy-s8-max:pr-9
+                className="w-full text-white lg:text-[24px] font-light font-['Inter'] leading-4 md:leading-[24px] lg:leading-[38px] mt-1
+              galaxy-z-fold-max:!text-[11px] galaxy-z-fold-max:!pr-11
+              galaxy-s8-max:!text-[11px] galaxy-s8-max:!pr-9
               iphone-se-max:text-[11px] iphone-se-max:pr-4
-              
-              
+              iphone-12-max:text-[11px] iphone-12-max:pr-4
               iphone-xr-max:text-[11.5px]
               iphone-14-max:text-[12px]
-
-
-
-
-
+              surface-duo-max:text-[12px]
+              ipad-mini:text-[16px] 
               "
                 style={{ textAlign: "justify" }}
               >
@@ -207,7 +203,7 @@ iphone-14-max:h-[55vh]
               {/* Button to open the modal */}
               <button
                 onClick={handleOpenModal}
-                className="mt-8 px-4 py-2 bg-white text-[8px] md:text-md font-inter rounded text-alt hover:text-black hover:bg-alt iphone-se-max:mt-5"
+                className="mt-8 px-4 py-2 bg-white text-[8px] md:text-sm font-inter rounded text-alt hover:text-black hover:bg-alt iphone-se-max:mt-5 surface-duo-max:mt-5 ipad-mini:mt-9"
               >
                 Read More
               </button>
@@ -221,11 +217,14 @@ iphone-14-max:h-[55vh]
         <div className="max-w-[400px] md:max-w-[690px] lg:max-w-[960px] xl:max-w-[1115px] 2xl:max-w-[1420px] mx-auto">
           {/* Title and Button Section */}
           <div className="flex justify-between items-center mt-4 lg:mt-5 px-[18px] md:px-[1px]">
-            <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair galaxy-s8-max:mt-16 iphone-se-max:mt-16 sm:mt-96">
+            <h2 className="text-[28px] md:text-[50px] lg:text-[76px] font-bold font-playfair galaxy-z-fold-max:!mt-1  galaxy-s8-max:mt-16 iphone-se-max:mt-16 sm:mt-96">
               Resources
             </h2>
             <button
-              className="bg-[#393939] shadow-custom-even font-bold text-white font-inter rounded-[4px] px-[6.5px] py-[2.5px] text-[8px] md:text-[14px] md:px-[10px] md:py-[4px] lg:text-[19px] lg:px-[15px] lg:py-[6px] flex-shrink-0 iphone-se-max:mt-16 z-10"
+              className="bg-[#393939] shadow-custom-even font-bold text-white font-inter rounded-[4px] px-[6.5px] py-[2.5px] text-[8px] md:text-[14px] md:px-[10px] md:py-[4px] lg:text-[19px] lg:px-[15px] lg:py-[6px] flex-shrink-0
+              galaxy-z-fold-max:!mt-1 
+              iphone-se-max:mt-16  z-10
+              ipad-mini:mt-96"
               onClick={handleClick}
             >
               View All Resources
@@ -242,7 +241,7 @@ iphone-14-max:h-[55vh]
       {/* CONTACT US information */}
       <section
         id="contact-page"
-        className="relative flex flex-col h-[85vh] bg-black"
+        className="relative flex flex-col h-[80vh] bg-black"
       >
         <div className="relative w-full h-screen min-w-[344px]">
           <div className="absolute inset-0 w-full h-full z-0">
@@ -250,13 +249,13 @@ iphone-14-max:h-[55vh]
               className="
           absolute inset-0 w-full h-[62vh] 
           galaxy-z-fold-max:!h-[80vh] 
-          galaxy-s8-max:h-[85vh] 
-          iphone-12-max:h-[29vh] 
-          galaxy-s20-max:h-[28.19vh] 
+          galaxy-s8-max:h-[78vh] 
+          iphone-12-max:h-[75vh] 
+          galaxy-s20-max:h-[80vh] 
           iphone-xr-max:h-[78vh] 
           iphone-14-max:h-[80vh]
-          surface-duo-max:h-[46.9vh] 
-          ipad-mini:h-[100vh]
+          surface-duo-max:h-[80vh] 
+          ipad-mini:h-[80vh]
           ipad-air-max:h-[100vh]
           asus-zenbook-max:h-[100vh]
           suface-pro-max:h-[100vh] 
@@ -283,11 +282,11 @@ iphone-14-max:h-[55vh]
             <div
               className="
           absolute inset-0 w-full pointer-events-none 
-          h-[62vh] galaxy-z-fold-max:!h-[80vh] galaxy-s8-max:h-[85vh] 
-          iphone-12-max:h-[35vh] iphone-14-max:h-[80vh] 
+          h-[62vh] galaxy-z-fold-max:!h-[80vh] galaxy-s8-max:h-[78vh] 
+          iphone-12-max:h-[75vh] iphone-14-max:h-[80vh] 
           asus-zenbook-max:h-[37.5vh] surface-pro-max:h-[37.5vh] 
-          galaxy-s20-max:h-[33vh] iphone-xr-max:h-[78vh] 
-          surface-duo-max:h-[47vh] ipad-mini:h-[41vh] ipad-air-max:h-[39vh] 
+          galaxy-s20-max:h-[80vh] iphone-xr-max:h-[78vh] 
+          surface-duo-max:h-[60vh] ipad-mini:h-[80vh] ipad-air-max:h-[39vh] 
           nest-hub:h-[108vh] ipad-pro-height:h-[51vh] 
           nest-hub-max:h-[82vh] full-hd-max:h-[65vh] ultra-wide:h-[50vh] 
           sm:h-[75vh] landscape-iphone-se:h-[92vh] 
@@ -308,14 +307,25 @@ iphone-14-max:h-[55vh]
           <div className="relative flex flex-col h-full space-y-6">
             {/* Contact Us Section */}
             <div className="w-full lg:w-[50%]">
-              <h3 className="text-white text-[22px] sm:text-[38px] lg:text-[55px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mt-7 iphone-xr-max:mt-14 iphone-14-max:mt-20 mb-8 ml-5">
+              <h3 className="text-white text-[22px] sm:text-[38px] lg:text-[55px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mt-8 
+              iphone-12-max:mt-10 
+              iphone-xr-max:mt-14 
+              iphone-14-max:mt-20 
+              surface-duo-max:text-[24px] surface-duo-max:mt-10
+              ipad-mini:text-[38px]
+              mb-8 ml-5">
                 Contact Us
               </h3>
 
               {/* Centered Paragraph Block */}
               <div className="w-full lg:w-[50%] justify-center flex">
                 <p
-                  className="font-inter text-white px-9 text-[12.5px] md:text-[18px] lg:text-[14px] leading-[20px] md:leading-[35px] galaxy-z-fold-max:text-[10px] galaxy-s8-max:text-[10.5px]"
+                  className="
+                  font-inter text-white px-5 text-[12.5px] lg:text-[14px] leading-[20px] md:leading-[23px] 
+                  galaxy-z-fold-max:!text-[12.5px] 
+                  galaxy-s8-max:text-[12.5px]
+                  surface-duo-max:text-[13px]
+                  ipad-mini:text-[16px]"
                   style={{ textAlign: "justify" }}
                 >
                   Please note, you will need a referral from your Family Doctor
@@ -327,13 +337,24 @@ iphone-14-max:h-[55vh]
 
               {/* FAQ Section */}
               <div className="w-full lg:w-[45%]">
-                <h4 className="text-white font-bold text-[22px] lg:text-[35px] font-playfair ml-5 mt-10 mb-8">
+                <h4 className="text-white font-bold text-[22px] lg:text-[35px] font-playfair ml-5 mt-10 mb-8 surface-duo-max:text-[24px] ipad-mini:text-[38px]">
                   Explore some of our FAQ
                 </h4>
 
                 {/* Centered FAQ Buttons */}
                 <div className="flex flex-col items-center space-y-3 font-inter">
-                  <button className="min-w-[305px] iphone-xr-max:min-w-[340px] iphone-14-max:min-w-[360px] 2xl:w-3/4 bg-white text-black flex justify-between items-center p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+                  <button className="
+                  min-w-[330px]
+                  galaxy-z-fold-max:!min-w-[305px]
+                  galaxy-s8-max:min-w-[315px]
+                  iphone-12-max:min-w-[348px] 
+                  galaxy-s20-max:min-w-[370px]
+                  iphone-xr-max:min-w-[370px] 
+                  iphone-14-max:min-w-[390px]
+                  surface-duo-max:min-w-[500px]
+                  ipad-mini:min-w-[730px] 
+                  2xl:w-3/4 bg-white text-black flex justify-between items-center 
+                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
                     <span className="flex items-center">
                       <img
                         src={speech}
@@ -345,7 +366,18 @@ iphone-14-max:h-[55vh]
                     <img src={arrow} alt="Arrow" className="w-4 h-4" />
                   </button>
 
-                  <button className="min-w-[305px] iphone-xr-max:min-w-[340px] iphone-14-max:min-w-[360px] 2xl:w-3/4 bg-white text-black flex justify-between items-center p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+                  <button className=" 
+                  min-w-[330px]
+                  galaxy-z-fold-max:!min-w-[305px]
+                  galaxy-s8-max:min-w-[315px]
+                  iphone-12-max:min-w-[348px]
+                  galaxy-s20-max:min-w-[370px]
+                  iphone-xr-max:min-w-[370px] 
+                  iphone-14-max:min-w-[390px]
+                  surface-duo-max:min-w-[500px]
+                  ipad-mini:min-w-[730px] 
+                  2xl:w-3/4 bg-white text-black flex justify-between items-center 
+                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
                     <span className="flex items-center">
                       <img
                         src={speech}
@@ -357,7 +389,18 @@ iphone-14-max:h-[55vh]
                     <img src={arrow} alt="Arrow" className="w-4 h-4" />
                   </button>
 
-                  <button className="min-w-[305px] iphone-xr-max:min-w-[340px] iphone-14-max:min-w-[360px] 2xl:w-3/4 bg-white text-black flex justify-between items-center p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+                  <button className=" 
+                  min-w-[330px]
+                  galaxy-z-fold-max!min-w-[305px]
+                  galaxy-s8-max:min-w-[315px] 
+                  iphone-12-max:min-w-[348px]
+                  galaxy-s20-max:min-w-[370px]
+                  iphone-xr-max:min-w-[370px] 
+                  iphone-14-max:min-w-[390px]
+                  surface-duo-max:min-w-[500px]
+                  ipad-mini:min-w-[730px]
+                  2xl:w-3/4 bg-white text-black flex justify-between items-center 
+                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
                     <span className="flex items-center">
                       <img
                         src={speech}
@@ -372,7 +415,7 @@ iphone-14-max:h-[55vh]
 
                 <a
                   href="faq"
-                  className="font-inter text-white underline text-[14px] mt-8 ml-5 block "
+                  className="font-inter text-white underline text-[14px] ipad-mini:text-[16px] mt-8 ml-5 block"
                 >
                   See All Frequently Asked Questions
                 </a>
