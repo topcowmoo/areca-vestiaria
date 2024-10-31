@@ -75,7 +75,7 @@ function Home() {
             asus-zenbook-max:h-[100vh]
             nest-hub:h-[100vh] 
             ipad-pro-height:h-[100vh] 
-            nest-hub-max:h-[82vh] 
+            nest-hub-max:h-[100vh] 
             full-hd-max:h-[100vh] 
             ultra-wide:h-[50vh] 
             sm:h-[75vh]
@@ -142,7 +142,7 @@ function Home() {
   surface-pro-max:h-[100vh] 
   nest-hub:h-[110vh] 
   ipad-pro-height:h-[100vh] 
-  nest-hub-max:h-[100vh] 
+  nest-hub-max:h-[100vh]
   full-hd-max:h-[100vh] full-hd-max:bg-top
   ultra-wide:h-[100vh] 
   bg-mobile-home-two bg-cover bg-center bg-no-repeat z-0
@@ -225,7 +225,7 @@ function Home() {
         <div className="max-w-[400px] md:max-w-[690px] lg:max-w-[960px] xl:max-w-[1115px] 2xl:max-w-[1420px] mx-auto">
           {/* Title and Button Section */}
           <div className="flex justify-between items-center mt-4 lg:mt-5 px-[18px] md:px-[1px]">
-            <h2 className="text-[28px] md:text-[50px] lg:text-[65px] font-bold font-playfair galaxy-z-fold-max:!mt-1  galaxy-s8-max:mt-16 iphone-se-max:mt-16 ipad-air-max:mt-72 nest-hub:mt-80 full-hd-max:mt-96 sm:mt-96">
+            <h2 className="text-[28px] md:text-[50px] lg:text-[65px] font-bold font-playfair galaxy-z-fold-max:!mt-1  galaxy-s8-max:mt-16 iphone-se-max:mt-16 ipad-air-max:mt-72 nest-hub:mt-80 nest-hub-max:mt-96 full-hd-max:mt-96 sm:mt-96">
               Resources
             </h2>
             <button
@@ -235,6 +235,7 @@ function Home() {
               ipad-mini:mt-96
               ipad-air-max:mt-72
               nest-hub:mt-80
+              nest-hub-max:mt-96
               full-hd-max:mt-96"
               onClick={handleClick}
             >
@@ -293,13 +294,13 @@ function Home() {
             <div
               className="
           absolute inset-0 w-full pointer-events-none 
-          h-[62vh] galaxy-z-fold-max:!h-[80vh] galaxy-s8-max:h-[78vh] 
+          h-[62vh] galaxy-z-fold-max:h-[80vh] galaxy-s8-max:h-[78vh] 
           iphone-12-max:h-[75vh] iphone-14-max:h-[80vh] 
-          asus-zenbook-max:!h-[80vh] surface-pro-max:!h-[80vh]
+          asus-zenbook-max:h-[80vh] surface-pro-max:h-[80vh]
           galaxy-s20-max:h-[80vh] iphone-xr-max:h-[78vh] 
           surface-duo-max:h-[80vh] ipad-mini:h-[80vh] ipad-air-max:h-[80vh] 
-          nest-hub:!h-[100vh] ipad-pro-height:h-[51vh] 
-          nest-hub-max:h-[82vh] full-hd-max:h-[65vh] ultra-wide:h-[50vh] 
+          nest-hub:h-[100vh] ipad-pro-height:h-[51vh] 
+          nest-hub-max:h-[100vh] full-hd-max:h-[65vh] ultra-wide:h-[50vh] 
           sm:h-[75vh] landscape-iphone-se:h-[92vh] 
           landscape-surface-duo:h-[75vh] landscape-galaxy-s8:h-[115.5vh] 
           landscape-galaxy-z-fold:h-[144.3vh] landscape-iphone-12:h-[113vh] 
@@ -325,6 +326,7 @@ function Home() {
               surface-duo-max:text-[24px] surface-duo-max:mt-10
               ipad-mini:text-[38px]
               nest-hub:text-[40px] nest-hub:mt-6
+              nest-hub-max:text-[50px] nest-hub-max:mt-10
               full-hd-max:text-[65px] full-hd-max:mt-14
               mb-8 ml-5">
                 Contact Us
@@ -352,7 +354,7 @@ function Home() {
 
               {/* FAQ Section */}
               <div className="w-full">
-                <h4 className="text-white font-bold text-[22px] font-playfair ml-5 mt-10 mb-8 surface-duo-max:text-[24px] ipad-mini:text-[38px] nest-hub:text-[40px] full-hd-max:text-[65px]">
+                <h4 className="text-white font-bold text-[22px] font-playfair ml-5 mt-10 mb-8 surface-duo-max:text-[24px] ipad-mini:text-[38px] nest-hub:text-[40px] nest-hub-max:text-[50px] full-hd-max:text-[65px]">
                   Explore some of our FAQ
                 </h4>
 
@@ -372,6 +374,7 @@ function Home() {
                   asus-zenbook-max:min-w-[810px]
                  surface-pro-max:min-w-[870px]
                  nest-hub:min-w-[970px]
+                 nest-hub-max:min-w-[1230px]
                  full-hd-max:min-w-[1875px]
                  bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
