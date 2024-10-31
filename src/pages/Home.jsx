@@ -48,11 +48,11 @@ function Home() {
   ipad-mini:h-[100vh]
   ipad-air-max:h-[100vh]
   asus-zenbook-max:h-[100vh]
-  surface-pro-max:!h-[90vh] 
-  nest-hub:!h-[100vh] 
-  ipad-pro-height:!h-[100vh]
+  surface-pro-max:h-[90vh] 
+  nest-hub:h-[100vh] 
+  ipad-pro-height:h-[100vh]
   nest-hub-max:h-[100vh] 
-  full-hd-max:h-[100vh]
+  full-hd-max:h-[100vh] full-hd-max:bg-top
   ultra-wide:h-[100vh] 
   bg-mobile-home-one bg-cover bg-center bg-no-repeat z-0
   sm:bg-home-one
@@ -72,11 +72,11 @@ function Home() {
             surface-duo-max:h-[45vh] 
             ipad-mini:h-[100vh]
             ipad-air-max:h-[100vh]
-            asus-zenbook-max:!h-[100vh]
-            nest-hub:!h-[100vh] 
+            asus-zenbook-max:h-[100vh]
+            nest-hub:h-[100vh] 
             ipad-pro-height:h-[100vh] 
             nest-hub-max:h-[82vh] 
-            full-hd-max:h-[65vh] 
+            full-hd-max:h-[100vh] 
             ultra-wide:h-[50vh] 
             sm:h-[75vh]
             landscape-iphone-se:h-[92vh]
@@ -86,10 +86,9 @@ function Home() {
   landscape-iphone-12:h-[113vh]
   landscape-iphone-xr:h-[112vh]
   landscape-pixel-7:h-[106vh]
-  landscape-iphone-14:h-[100vh]
   landscape-ipad-mini:h-[81vh]
   landscape-ipad-air:h-[79.5vh]
-  landscape-ipad-pro:!h-[67vh]
+  landscape-ipad-pro:h-[67vh]
   landscape-surface-pro:h-[73vh]
             "
             style={{
@@ -130,7 +129,7 @@ function Home() {
             <div
               className="
           absolute inset-0 w-full sm:h-full h-[65vh] 
-  galaxy-z-fold-max:!h-[55vh] 
+  galaxy-z-fold-max:h-[55vh] 
   galaxy-s8-max:h-[62vh] 
   iphone-12-max:h-[29vh] 
   galaxy-s20-max:h-[55vh] 
@@ -139,12 +138,12 @@ function Home() {
   surface-duo-max:h-[55vh] 
   ipad-mini:h-[100vh]
   ipad-air-max:h-[90vh]
-  asus-zenbook-max:!h-[85vh]
+  asus-zenbook-max:h-[85vh]
   surface-pro-max:h-[100vh] 
-  nest-hub:!h-[110vh] 
+  nest-hub:h-[110vh] 
   ipad-pro-height:h-[100vh] 
   nest-hub-max:h-[100vh] 
-  full-hd-max:h-[100vh]
+  full-hd-max:h-[100vh] full-hd-max:bg-top
   ultra-wide:h-[100vh] 
   bg-mobile-home-two bg-cover bg-center bg-no-repeat z-0
   sm:bg-home-two
@@ -157,7 +156,7 @@ function Home() {
   landscape-pixel-7:h-[106vh]
   landscape-ipad-mini:h-[81vh]
   landscape-ipad-air:h-[79.5vh]
-  landscape-ipad-pro:!h-[67vh]
+  landscape-ipad-pro:h-[67vh]
   landscape-surface-pro:h-[73vh]"
             ></div>
 
@@ -176,7 +175,7 @@ function Home() {
             className="relative flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12"
           >
             <article className="w-full md:w-[80%] lg:w-[70%] flex flex-grow flex-col items-start justify-center">
-              <h3 className="w-full text-white text-[22px] iphone-14-max:text-[26px] ipad-mini:text-[38px] nest-hub:mt-16 lg:text-[53px] font-extrabold font-playfair leading-tight md:leading-normal mt-16 mb-4 md:mt-24">
+              <h3 className="w-full text-white text-[22px] iphone-14-max:text-[26px] ipad-mini:text-[38px] nest-hub:mt-16 full-hd-max:text-[76px] font-extrabold font-playfair leading-tight md:leading-normal mt-16 mb-4 md:mt-24">
                 Sunrise Health & Clinical <br /> Excellence Centre
               </h3>
               <p
@@ -189,7 +188,8 @@ function Home() {
               iphone-14-max:text-[12px]
               surface-duo-max:text-[12px]
               ipad-mini:text-[16px]
-              nest-hub:!text-[16px] 
+              nest-hub:text-[16px]
+              full-hd-max:text-[20px] 
               "
                 style={{ textAlign: "justify" }}
               >
@@ -225,7 +225,7 @@ function Home() {
         <div className="max-w-[400px] md:max-w-[690px] lg:max-w-[960px] xl:max-w-[1115px] 2xl:max-w-[1420px] mx-auto">
           {/* Title and Button Section */}
           <div className="flex justify-between items-center mt-4 lg:mt-5 px-[18px] md:px-[1px]">
-            <h2 className="text-[28px] md:text-[50px] lg:text-[65px] font-bold font-playfair galaxy-z-fold-max:!mt-1  galaxy-s8-max:mt-16 iphone-se-max:mt-16 ipad-air-max:mt-72 nest-hub:mt-80 sm:mt-96">
+            <h2 className="text-[28px] md:text-[50px] lg:text-[65px] font-bold font-playfair galaxy-z-fold-max:!mt-1  galaxy-s8-max:mt-16 iphone-se-max:mt-16 ipad-air-max:mt-72 nest-hub:mt-80 full-hd-max:mt-96 sm:mt-96">
               Resources
             </h2>
             <button
@@ -234,7 +234,8 @@ function Home() {
               iphone-se-max:mt-16  z-10
               ipad-mini:mt-96
               ipad-air-max:mt-72
-              nest-hub:mt-80"
+              nest-hub:mt-80
+              full-hd-max:mt-96"
               onClick={handleClick}
             >
               View All Resources
@@ -258,7 +259,7 @@ function Home() {
             <div
               className="
           absolute inset-0 w-full h-[62vh] 
-          galaxy-z-fold-max:!h-[80vh] 
+          galaxy-z-fold-max:h-[80vh] 
           galaxy-s8-max:h-[78vh] 
           iphone-12-max:h-[75vh] 
           galaxy-s20-max:h-[80vh] 
@@ -267,12 +268,12 @@ function Home() {
           surface-duo-max:h-[80vh] 
           ipad-mini:h-[80vh]
           ipad-air-max:h-[80-vh]
-          asus-zenbook-max:!h-[80vh]
-          surface-pro-max:!h-[80vh] 
-          nest-hub:!h-[100vh] 
+          asus-zenbook-max:h-[80vh]
+          surface-pro-max:h-[80vh] 
+          nest-hub:h-[100vh] 
           ipad-pro-height:h-[100vh] 
-          nest-hub-max:h-[100vh] 
-          full-hd-max:h-[100vh]
+          nest-hub-max:h-[100vh]
+          full-hd-max:h-[100vh] full-hd-max:bg-top
           ultra-wide:h-[100vh] 
           bg-mobile-home-three bg-cover bg-center bg-no-repeat z-0
           sm:bg-home-three sm:bg-cover
@@ -285,7 +286,7 @@ function Home() {
           landscape-pixel-7:h-[106vh]
           landscape-ipad-mini:h-[81vh]
           landscape-ipad-air:h-[79.5vh]
-          landscape-ipad-pro:!h-[67vh]
+          landscape-ipad-pro:h-[67vh]
           landscape-surface-pro:h-[73vh]"
             ></div>
 
@@ -323,7 +324,8 @@ function Home() {
               iphone-14-max:mt-20 
               surface-duo-max:text-[24px] surface-duo-max:mt-10
               ipad-mini:text-[38px]
-              nest-hub:!text-[40px] nest-hub:mt-6
+              nest-hub:text-[40px] nest-hub:mt-6
+              full-hd-max:text-[65px] full-hd-max:mt-14
               mb-8 ml-5">
                 Contact Us
               </h3>
@@ -332,12 +334,13 @@ function Home() {
               <div className="w-full justify-center flex">
                 <p
                   className="
-                  font-inter text-white px-5 text-[12.5px] leading-[20px] md:leading-[23px] 
+                  font-inter text-white px-5 text-[12.5px] leading-[20px] md:leading-[23px] xl:leading-9
                   galaxy-z-fold-max:!text-[12.5px] 
                   galaxy-s8-max:text-[12.5px]
                   surface-duo-max:text-[13px]
                   ipad-mini:text-[16px]
-                  nest-hub:!text-[18px]"
+                  nest-hub:text-[18px]
+                  full-hd-max:text-[22px]"
                   style={{ textAlign: "justify" }}
                 >
                   Please note, you will need a referral from your Family Doctor
@@ -349,7 +352,7 @@ function Home() {
 
               {/* FAQ Section */}
               <div className="w-full">
-                <h4 className="text-white font-bold text-[22px] font-playfair ml-5 mt-10 mb-8 surface-duo-max:text-[24px] ipad-mini:text-[38px] nest-hub:text-[40px]">
+                <h4 className="text-white font-bold text-[22px] font-playfair ml-5 mt-10 mb-8 surface-duo-max:text-[24px] ipad-mini:text-[38px] nest-hub:text-[40px] full-hd-max:text-[65px]">
                   Explore some of our FAQ
                 </h4>
 
@@ -369,6 +372,7 @@ function Home() {
                   asus-zenbook-max:min-w-[810px]
                  surface-pro-max:min-w-[870px]
                  nest-hub:min-w-[970px]
+                 full-hd-max:min-w-[1875px]
                  bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
                     <span className="flex items-center">
@@ -439,7 +443,7 @@ function Home() {
 
                 <a
                   href="faq"
-                  className="font-inter text-white underline text-[14px] ipad-mini:text-[16px] mt-8 ml-5 lg:mt-10 block"
+                  className="font-inter text-white underline text-[14px] ipad-mini:text-[16px] full-hd-max:text-[18px] mt-8 ml-5 lg:ml-6 lg:mt-14 block"
                 >
                   See All Frequently Asked Questions
                 </a>
