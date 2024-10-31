@@ -38,7 +38,7 @@ function Home() {
           <div
             className="
           absolute inset-0 w-full h-[50vh]
-  galaxy-z-fold-max:!h-[39vh]
+  galaxy-z-fold-max:h-[39vh]
   galaxy-s8-max:h-[44vh] 
   iphone-12-max:h-[28.9vh] 
   galaxy-s20-max:h-[39vh] 
@@ -48,12 +48,12 @@ function Home() {
   ipad-mini:h-[100vh]
   ipad-air-max:h-[100vh]
   asus-zenbook-max:h-[100vh]
-  surface-pro-max:h-[90vh] 
+  surface-pro-max:h-[90vh]
   nest-hub:h-[100vh] 
   ipad-pro-height:h-[100vh]
   nest-hub-max:h-[100vh] 
   full-hd-max:h-[100vh] full-hd-max:bg-top
-  ultra-wide:h-[100vh] 
+  ultra-wide:h-[100vh] ultra-wide:bg-right
   bg-mobile-home-one bg-cover bg-center bg-no-repeat z-0
   sm:bg-home-one
   "
@@ -77,7 +77,7 @@ function Home() {
             ipad-pro-height:h-[100vh] 
             nest-hub-max:h-[100vh] 
             full-hd-max:h-[100vh] 
-            ultra-wide:h-[50vh] 
+            ultra-wide:h-[100vh] 
             sm:h-[75vh]
             landscape-iphone-se:h-[92vh]
   landscape-surface-duo:h-[75vh]
@@ -131,7 +131,7 @@ function Home() {
           absolute inset-0 w-full sm:h-full h-[65vh] 
   galaxy-z-fold-max:h-[55vh] 
   galaxy-s8-max:h-[62vh] 
-  iphone-12-max:h-[29vh] 
+  iphone-12-max:h-[55vh] 
   galaxy-s20-max:h-[55vh] 
   iphone-xr-max:h-[55vh] 
   iphone-14-max:h-[55vh]
@@ -141,7 +141,7 @@ function Home() {
   asus-zenbook-max:h-[85vh]
   surface-pro-max:h-[100vh] 
   nest-hub:h-[110vh] 
-  ipad-pro-height:h-[100vh] 
+  ipad-pro-height:h-[75vh] 
   nest-hub-max:h-[100vh]
   full-hd-max:h-[100vh] full-hd-max:bg-top
   ultra-wide:h-[100vh] 
@@ -299,7 +299,7 @@ function Home() {
           asus-zenbook-max:h-[80vh] surface-pro-max:h-[80vh]
           galaxy-s20-max:h-[80vh] iphone-xr-max:h-[78vh] 
           surface-duo-max:h-[80vh] ipad-mini:h-[80vh] ipad-air-max:h-[80vh] 
-          nest-hub:h-[100vh] ipad-pro-height:h-[51vh] 
+          nest-hub:h-[100vh] ipad-pro-height:h-[100vh] 
           nest-hub-max:h-[100vh] full-hd-max:h-[65vh] ultra-wide:h-[50vh] 
           sm:h-[75vh] landscape-iphone-se:h-[92vh] 
           landscape-surface-duo:h-[75vh] landscape-galaxy-s8:h-[115.5vh] 
