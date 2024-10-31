@@ -120,7 +120,7 @@ export default {
         "ipad-mini": { min: "768px" }, // iPad Mini and larger
         "ipad-air-max": { min: "820px" }, // iPad Air and larger
         "asus-zenbook-max": { min: "853px" }, // Asus Zenbook and larger
-        "suface-pro-max": { min: "912px" }, // Surface Pro and larger
+        "surface-pro-max": { min: "912px" }, // Surface Pro and larger
         "nest-hub": { min: "1024px" }, // Nest Hub and larger
         "ipad-pro-height": {
           raw: "(min-width: 1024px) and (min-height: 1366px)",
