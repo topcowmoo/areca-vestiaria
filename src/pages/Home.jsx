@@ -389,7 +389,7 @@ function Home() {
                   <button className="
                   min-w-[333px]
                   galaxy-z-fold-max:!min-w-[305px]
-                  galaxy-s8-max:min-w-[315px]
+                  galaxy-s8-max:min-w-[320px]
                   iphone-12-max:min-w-[348px] 
                   galaxy-s20-max:min-w-[370px]
                   iphone-xr-max:min-w-[370px] 
@@ -418,7 +418,7 @@ function Home() {
                   <button className=" 
                   min-w-[333px]
                   galaxy-z-fold-max:!min-w-[305px]
-                  galaxy-s8-max:min-w-[315px]
+                  galaxy-s8-max:min-w-[320px]
                   iphone-12-max:min-w-[348px]
                   galaxy-s20-max:min-w-[370px]
                   iphone-xr-max:min-w-[370px] 
@@ -445,7 +445,7 @@ function Home() {
                   <button className=" 
                   min-w-[333px]
                   galaxy-z-fold-max!min-w-[305px]
-                  galaxy-s8-max:min-w-[315px] 
+                  galaxy-s8-max:min-w-[320px] 
                   iphone-12-max:min-w-[348px]
                   galaxy-s20-max:min-w-[370px]
                   iphone-xr-max:min-w-[370px] 
