@@ -175,7 +175,8 @@ function Home() {
             className="relative flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12"
           >
             <article className="w-full lg:w-[70%] flex flex-grow flex-col items-start justify-center">
-              <h3 className="w-full text-white text-[22px] 
+              <h3 className="w-full text-white text-[22px]
+              galaxy-z-fold-max:mt-28
               iphone-14-max:text-[26px] 
               ipad-mini:text-[42px] ipad-mini:mt-48
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-64 asus-zenbook-max:ml-10
@@ -185,10 +186,9 @@ function Home() {
                 Sunrise Health & Clinical <br /> Excellence Centre
               </h3>
               <p
-                className="w-full text-white font-light font-['Inter'] leading-4 md:leading-[34px] lg:leading-[24px] mt-1
-              galaxy-z-fold-max:!text-[11px] galaxy-z-fold-max:!pr-11
-              galaxy-s8-max:!text-[11px] galaxy-s8-max:!pr-9
-              iphone-se-max:text-[11px] iphone-se-max:pr-4
+                className="w-full text-[11px] pr-4 text-white font-light font-['Inter'] leading-4 md:leading-[34px] lg:leading-[24px] mt-1
+              galaxy-z-fold-max:!pr-12 
+              galaxy-s8-max:pr-8
               iphone-12-max:text-[11px] iphone-12-max:pr-4
               iphone-xr-max:text-[11.5px]
               iphone-14-max:text-[12px]
@@ -330,6 +330,7 @@ function Home() {
             {/* Contact Us Section */}
             <div className="w-full">
               <h3 className="text-white text-[22px] sm:text-[38px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mt-8
+              galaxy-z-fold-max:mt-24
               iphone-12-max:mt-10 
               iphone-xr-max:mt-14 
               iphone-14-max:mt-20
@@ -444,7 +445,7 @@ function Home() {
 
                   <button className=" 
                   min-w-[333px]
-                  galaxy-z-fold-max!min-w-[305px]
+                  galaxy-z-fold-max:!min-w-[305px]
                   galaxy-s8-max:min-w-[320px] 
                   iphone-12-max:min-w-[348px]
                   galaxy-s20-max:min-w-[370px]
