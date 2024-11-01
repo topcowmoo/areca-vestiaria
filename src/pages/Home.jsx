@@ -177,6 +177,7 @@ function Home() {
             <article className="w-full lg:w-[70%] flex flex-grow flex-col items-start justify-center">
               <h3 className="w-full text-white text-[22px]
               galaxy-z-fold-max:mt-28
+              iphone-xr-max:mt-28
               iphone-14-max:text-[26px] 
               ipad-mini:text-[42px] ipad-mini:mt-48
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-64 asus-zenbook-max:ml-10
@@ -190,7 +191,7 @@ function Home() {
               galaxy-z-fold-max:!pr-12 
               galaxy-s8-max:pr-8
               iphone-12-max:text-[11px] iphone-12-max:pr-4
-              iphone-xr-max:text-[11.5px]
+              iphone-xr-max:text-[11px] iphone-xr-max:pr-2
               iphone-14-max:text-[12px]
               ipad-mini:text-[16px] ipad-mini:pr-1 
               asus-zenbook-max:text-[16px] asus-zenbook-max:px-10
@@ -332,7 +333,7 @@ function Home() {
               <h3 className="text-white text-[22px] sm:text-[38px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mt-8
               galaxy-z-fold-max:mt-24
               iphone-12-max:mt-10 
-              iphone-xr-max:mt-14 
+              iphone-xr-max:mt-28 iphone-xr-max:ml-7
               iphone-14-max:mt-20
               surface-duo-max:text-[24px] surface-duo-max:mt-10
               ipad-mini:text-[42px] ipad-mini:ml-10 ipad-mini:mt-24
@@ -354,6 +355,7 @@ function Home() {
                   font-inter text-white px-5 text-[12.5px] leading-[20px] md:leading-[34px] xl:leading-9
                   galaxy-z-fold-max:!text-[12.5px] 
                   galaxy-s8-max:text-[12.5px]
+                  iphone-xr-max:text-[12.5px] iphone-xr-max:ml-2 iphone-xr-max:mr-2
                   surface-duo-max:text-[13px]
                   ipad-mini:text-[16px] ipad-mini:mx-6 ipad-mini:mb-6 ipad-mini:-mt-6
                   ipad-air-max:text-[16px] ipad-air-max:mx-12
@@ -374,6 +376,7 @@ function Home() {
               {/* FAQ Section */}
               <div className="w-full">
                 <h4 className="text-white font-bold text-[22px] font-playfair ml-5 mt-10 mb-8
+                iphone-xr-max:ml-7
                 surface-duo-max:text-[24px]
                 ipad-mini:text-[42px] ipad-mini:ml-10 
                 ipad-air-max:text-[42px] ipad-air-max:ml-[70px]
@@ -393,7 +396,7 @@ function Home() {
                   galaxy-s8-max:min-w-[320px]
                   iphone-12-max:min-w-[348px] 
                   galaxy-s20-max:min-w-[370px]
-                  iphone-xr-max:min-w-[370px] 
+                  iphone-xr-max:min-w-[360px] 
                   iphone-14-max:min-w-[390px]
                   surface-duo-max:min-w-[500px]
                   ipad-mini:min-w-[685px]
@@ -422,7 +425,7 @@ function Home() {
                   galaxy-s8-max:min-w-[320px]
                   iphone-12-max:min-w-[348px]
                   galaxy-s20-max:min-w-[370px]
-                  iphone-xr-max:min-w-[370px] 
+                  iphone-xr-max:min-w-[360px] 
                   iphone-14-max:min-w-[390px]
                   surface-duo-max:min-w-[500px]
                   ipad-mini:min-w-[685px]
@@ -449,7 +452,7 @@ function Home() {
                   galaxy-s8-max:min-w-[320px] 
                   iphone-12-max:min-w-[348px]
                   galaxy-s20-max:min-w-[370px]
-                  iphone-xr-max:min-w-[370px] 
+                  iphone-xr-max:min-w-[360px] 
                   iphone-14-max:min-w-[390px]
                   surface-duo-max:min-w-[500px]
                   ipad-mini:min-w-[685px]
@@ -476,6 +479,7 @@ function Home() {
                   className="font-inter text-white underline 
                   text-[14px]
                   iphone-se-max:ml-5
+                  iphone-xr-max:ml-7
                   ipad-mini:text-[16px] 
                   ipad-air-max:text-[16px]
                   asus-zenbook-max:text-[16px] asus-zenbook-max:ml-[88px]
