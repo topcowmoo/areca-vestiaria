@@ -111,6 +111,7 @@ export default {
         },
         "galaxy-z-fold-max": { max: "344px" }, // Galaxy Z Fold and smaller
         "galaxy-s8-max": { max: "360px" }, // Galaxy S8 and smaller
+        "iphone-se-max": { max: "375px" }, // iPhone SE and smaller
         "iphone-12-max": { min: "390px" }, // iPhone 12 and smaller
         "galaxy-s20-max": { min: "412px" }, // Galaxy S20 and larger
         "iphone-xr-max": { min: "414px" }, // iPhone XR and larger
@@ -119,7 +120,7 @@ export default {
         "ipad-mini": { min: "768px" }, // iPad Mini and larger
         "ipad-air-max": { min: "820px" }, // iPad Air and larger
         "asus-zenbook-max": { min: "853px" }, // Asus Zenbook and larger
-        "suface-pro-max": { min: "912px" }, // Surface Pro and larger
+        "surface-pro-max": { min: "912px" }, // Surface Pro and larger
         "nest-hub": { min: "1024px" }, // Nest Hub and larger
         "ipad-pro-height": {
           raw: "(min-width: 1024px) and (min-height: 1366px)",
