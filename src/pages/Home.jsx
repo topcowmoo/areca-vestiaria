@@ -372,7 +372,7 @@ function Home() {
 
               {/* FAQ Section */}
               <div className="w-full">
-                <h4 className="text-white font-bold text-[22px] font-playfair ml-5 mt-10 mb-8 
+                <h4 className="text-white font-bold text-[22px] font-playfair ml-5 mt-10 mb-8
                 surface-duo-max:text-[24px]
                 ipad-mini:text-[42px] ipad-mini:ml-10 
                 ipad-air-max:text-[42px] ipad-air-max:ml-[70px]
@@ -387,7 +387,7 @@ function Home() {
                 {/* Centered FAQ Buttons */}
                 <div className="flex flex-col items-center space-y-3 font-inter">
                   <button className="
-                  min-w-[330px]
+                  min-w-[333px]
                   galaxy-z-fold-max:!min-w-[305px]
                   galaxy-s8-max:min-w-[315px]
                   iphone-12-max:min-w-[348px] 
@@ -416,7 +416,7 @@ function Home() {
                   </button>
 
                   <button className=" 
-                  min-w-[330px]
+                  min-w-[333px]
                   galaxy-z-fold-max:!min-w-[305px]
                   galaxy-s8-max:min-w-[315px]
                   iphone-12-max:min-w-[348px]
@@ -443,7 +443,7 @@ function Home() {
                   </button>
 
                   <button className=" 
-                  min-w-[330px]
+                  min-w-[333px]
                   galaxy-z-fold-max!min-w-[305px]
                   galaxy-s8-max:min-w-[315px] 
                   iphone-12-max:min-w-[348px]
@@ -473,7 +473,8 @@ function Home() {
                 <a
                   href="faq"
                   className="font-inter text-white underline 
-                  text-[14px] 
+                  text-[14px]
+                  iphone-se-max:ml-5
                   ipad-mini:text-[16px] 
                   ipad-air-max:text-[16px]
                   asus-zenbook-max:text-[16px] asus-zenbook-max:ml-[88px]
