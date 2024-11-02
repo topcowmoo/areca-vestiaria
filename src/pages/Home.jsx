@@ -99,7 +99,7 @@ function Home() {
 
           <div className="flex flex-grow flex-col items-center justify-center z-10">
             <div className="relative z-10 flex flex-col items-center h-full mt-16 sm:mt-36">
-              <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1">
+              <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 full-hd-max:mt-20">
                 WLNS
               </h1>
               <h2 className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8">
@@ -140,7 +140,7 @@ function Home() {
   ipad-mini:h-[100vh]
   ipad-air-max:h-[90vh]
   asus-zenbook-max:h-[85vh]
-  surface-pro-max:!h-[70vh]
+  surface-pro-max:h-[70vh]
   nest-hub:h-[100vh] 
   ipad-pro-height:h-[75vh] 
   nest-hub-max:h-[100vh]
@@ -189,7 +189,7 @@ function Home() {
               surface-pro-max:mt-52 surface-pro-max:text-[42px] surface-pro-max:ml-16
               nest-hub:mt-16 nest-hub:-ml-3
               ipad-pro-height:ml-0 ipad-pro-height:mt-52 
-              full-hd-max:text-[76px] 
+              full-hd-max:text-[76px] full-hd-max:ml-24 full-hd-max:mt-32
               font-extrabold font-playfair leading-tight md:leading-normal mt-16 mb-4 md:mt-48d">
                 Sunrise Health & Clinical <br /> Excellence Centre
               </h3>
@@ -208,7 +208,7 @@ function Home() {
               surface-pro-max:text-[16px] surface-pro-max:ml-16 surface-pro-max:pr-32
               nest-hub:text-[16px] nest-hub:-ml-3 nest-hub:pr-0
               ipad-pro-height:ml-0 ipad-pro-height:pr-0
-              full-hd-max:text-[20px] 
+              full-hd-max:text-[20px] full-hd-max:pr-44 full-hd-max:ml-24
               "
                 style={{ textAlign: "justify" }}
               >
@@ -240,7 +240,8 @@ function Home() {
                 asus-zenbook-max:ml-10
                 surface-pro-max:ml-16
                 nest-hub:mt-11 nest-hub:-ml-3 
-                ipad-pro-height:ml-0"
+                ipad-pro-height:ml-0
+                full-hd-max:ml-24"
               >
                 Read More
               </button>
@@ -261,10 +262,10 @@ function Home() {
             ipad-mini:mt-[450px] 
             ipad-air-max:mt-[320px] 
             asus-zenbook-max:mt-[500px] 
-            surface-pro-max:!mt-56 
+            surface-pro-max:mt-56 
             nest-hub:mt-96
-            nest-hub-max:mt-96 
-            full-hd-max:mt-[500px] 
+            nest-hub-max:mt-96 full-hd-max:-ml-[115px]
+            full-hd-max:mt-96
             ultra-wide:mt-[650px] sm:mt-96">
               Resources
             </h2>
@@ -276,10 +277,10 @@ function Home() {
               ipad-mini:mt-[450px]
               ipad-air-max:mt-[320px]
               asus-zenbook-max:mt-[500px]
-              surface-pro-max:!mt-56
+              surface-pro-max:mt-56
               nest-hub:mt-80
               nest-hub-max:mt-96
-              full-hd-max:mt-[500px]
+              full-hd-max:mt-96 full-hd-max:-mr-[115px]
               ultra-wide:mt-[650px]"
               onClick={handleClick}
             >
@@ -352,7 +353,7 @@ function Home() {
           nest-hub:h-[100vh] 
           ipad-pro-height:h-[100vh] 
           nest-hub-max:h-[100vh] 
-          full-hd-max:h-[65vh] 
+          full-hd-max:h-[100vh] 
           ultra-wide:h-[50vh] 
           sm:h-[75vh] landscape-iphone-se:h-[92vh] 
           landscape-surface-duo:h-[75vh] landscape-galaxy-s8:h-[115.5vh] 
@@ -387,7 +388,7 @@ function Home() {
               nest-hub-max:text-[50px]
               ipad-pro-height:ml-8 ipad-pro-height:mt-72
               nest-hub-max:mt-10
-              full-hd-max:text-[65px] full-hd-max:mt-14
+              full-hd-max:text-[65px] full-hd-max:mt-14 full-hd-max:ml-[135px] full-hd-max:mb-20
               ultra-wide:text-[96px] ultra-wide:mt-40 ultra-wide:mb-24
               mb-8 ml-5">
                 Contact Us
@@ -410,7 +411,7 @@ function Home() {
                   surface-pro-max:text-[16px] surface-pro-max:ml-24 surface-pro-max:pr-14
                   nest-hub:text-[18px]
                   ipad-pro-height:ml-4 ipad-pro-height:-mr-5
-                  full-hd-max:text-[22px]
+                  full-hd-max:text-[22px] full-hd-max:ml-[120px] full-hd-max:pr-[90px]
                   ultra-wide:text-[38px] ultra-wide:mb-24"
                   style={{ textAlign: "justify" }}
                 >
@@ -435,8 +436,8 @@ function Home() {
                 nest-hub:text-[42px]
                 ipad-pro-height:ml-8
                 nest-hub-max:text-[50px] 
-                full-hd-max:text-[65px] ultra-wide:text-[96px] 
-                ultra-wide:mb-24">
+                full-hd-max:text-[65px] full-hd-max:ml-[135px]
+                 ultra-wide:text-[96px] ultra-wide:mb-24">
                   Explore some of our FAQ
                 </h4>
 
@@ -457,9 +458,9 @@ function Home() {
                  surface-pro-max:min-w-[680px]
                  nest-hub:min-w-[970px]
                  nest-hub-max:min-w-[1230px]
-                 full-hd-max:min-w-[1875px]
+                 full-hd-max:min-w-[1628px] full-hd-max:mr-4
                  bg-white text-black flex justify-between items-center 
-                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[22px]">
                     <span className="flex items-center">
                       <img
                         src={speech}
@@ -468,7 +469,7 @@ function Home() {
                       />
                       What can I expect for a consultation?
                     </span>
-                    <img src={arrow} alt="Arrow" className="w-4 h-4" />
+                    <img src={arrow} alt="Arrow" className="w-6 h-6" />
                   </button>
 
                   <button className=" 
@@ -485,8 +486,9 @@ function Home() {
                   asus-zenbook-max:min-w-[680px]
                     surface-pro-max:min-w-[680px]
                     nest-hub:min-w-[970px]
+                     full-hd-max:min-w-[1628px] full-hd-max:mr-4
                   bg-white text-black flex justify-between items-center 
-                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+                  p-3 rounded-lg shadow-md text-[11px] lg:text-[22px]">
                     <span className="flex items-center">
                       <img
                         src={speech}
@@ -495,7 +497,7 @@ function Home() {
                       />
                       What can I expect for general policy?
                     </span>
-                    <img src={arrow} alt="Arrow" className="w-4 h-4" />
+                    <img src={arrow} alt="Arrow" className="w-6 h-6" />
                   </button>
 
                   <button className=" 
@@ -512,8 +514,9 @@ function Home() {
                   asus-zenbook-max:min-w-[680px]
                   surface-pro-max:min-w-[680px]
                   nest-hub:min-w-[970px]
+                   full-hd-max:min-w-[1628px] full-hd-max:mr-4
                    bg-white text-black flex justify-between items-center 
-                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[22px]">
                     <span className="flex items-center">
                       <img
                         src={speech}
@@ -522,7 +525,7 @@ function Home() {
                       />
                       Missed appointments or service fees?
                     </span>
-                    <img src={arrow} alt="Arrow" className="w-4 h-4" />
+                    <img src={arrow} alt="Arrow" className="w-6 h-6" />
                   </button>
                 </div>
 
@@ -542,7 +545,8 @@ function Home() {
                   surface-pro-max:text-[16px] surface-pro-max:ml-[119px]
                   ipad-air-max:ml-[70px]
                   ipad-pro-height:ml-8 
-                  full-hd-max:text-[18px] mt-8 ml-11 lg:ml-6 lg:mt-14 ultra-wide:text-[28px] block"
+                  full-hd-max:text-[18px] full-hd-max:ml-[135px]
+                   mt-8 ml-11 lg:ml-6 lg:mt-14 ultra-wide:text-[28px] block"
                 >
                   See All Frequently Asked Questions
                 </a>
