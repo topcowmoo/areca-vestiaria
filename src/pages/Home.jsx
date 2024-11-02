@@ -122,42 +122,6 @@ function Home() {
       </header>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       {/* ABOUT US second section with additional content and 'Read More' button */}
       <section className="relative flex flex-col bg-black">
         <div className="relative w-full h-[55vh] min-w-[390px]">
@@ -176,7 +140,7 @@ function Home() {
   ipad-mini:h-[100vh]
   ipad-air-max:h-[90vh]
   asus-zenbook-max:h-[85vh]
-  surface-pro-max:h-[100vh]
+  surface-pro-max:!h-[70vh]
   nest-hub:h-[110vh] 
   ipad-pro-height:h-[75vh] 
   nest-hub-max:h-[100vh]
@@ -220,9 +184,10 @@ function Home() {
               iphone-xr-max:mt-28
               iphone-14-max:text-[26px] iphone-14-max:ml-4
               surface-duo-max:text-[26px] surface-duo-max:mt-24 surface-duo-max:ml-[72px]
-              ipad-mini:text-[42px] ipad-mini:mt-48
+              ipad-mini:text-[42px] ipad-mini:mt-36 ipad-mini:ml-0
+              ipad-air-max:text-[42px] ipad-air-max:mt-24 ipad-air-max:ml-5
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-64 asus-zenbook-max:ml-10
-              surface-pro-max:mt-[420px] surface-pro-max:text-[42px] 
+              surface-pro-max:mt-52 surface-pro-max:text-[42px] surface-pro-max:ml-16
               nest-hub:mt-16 full-hd-max:text-[76px] 
               font-extrabold font-playfair leading-tight md:leading-normal mt-16 mb-4 md:mt-48d">
                 Sunrise Health & Clinical <br /> Excellence Centre
@@ -236,9 +201,10 @@ function Home() {
               iphone-xr-max:text-[11px] iphone-xr-max:pr-2
               iphone-14-max:text-[12px] iphone-14-max:ml-4 iphone-14-max:pr-6
               surface-duo-max:ml-[72px] surface-duo-max:pr-36
-              ipad-mini:text-[16px] ipad-mini:pr-1 
+              ipad-mini:text-[16px] ipad-mini:ml-0 ipad-mini:pr-0
+              ipad-air-max:text-[16px] ipad-air-max:ml-5 ipad-air-max:pr-9
               asus-zenbook-max:text-[16px] asus-zenbook-max:mx-10 asus-zenbook-max:pr-16
-              surface-pro-max:text-[16px] surface-pro-max:ml-0
+              surface-pro-max:text-[16px] surface-pro-max:ml-16 surface-pro-max:pr-32
               nest-hub:text-[16px]
               full-hd-max:text-[20px] 
               "
@@ -267,8 +233,10 @@ function Home() {
                 galaxy-s20-max:ml-2
                 iphone-14-max:ml-4
                 surface-duo-max:mt-5 surface-duo-max:ml-[72px]
-                ipad-mini:mt-9 
-                asus-zenbook-max:ml-10 
+                ipad-mini:mt-9 ipad-mini:-ml-1
+                ipad-air-max:ml-5
+                asus-zenbook-max:ml-10
+                surface-pro-max:ml-16
                 nest-hub:mt-11"
               >
                 Read More
@@ -283,7 +251,7 @@ function Home() {
         <div className="max-w-[400px] md:max-w-[690px] lg:max-w-[960px] xl:max-w-[1115px] 2xl:max-w-[1420px] mx-auto">
           {/* Title and Button Section */}
           <div className="flex justify-between items-center mt-4 lg:mt-5 px-[18px] md:px-[1px]">
-            <h2 className="text-[28px] md:text-[50px] lg:text-[65px] font-bold font-playfair galaxy-z-fold-max:!mt-14  galaxy-s8-max:mt-16 iphone-se-max:mt-16 surface-duo-max:mt-28 ipad-mini:mt-[450px] ipad-air-max:mt-[415px] asus-zenbook-max:mt-[375px] surface-pro-max:mt-[600px] nest-hub:mt-80 nest-hub-max:mt-96 full-hd-max:mt-[500px] ultra-wide:mt-[650px] sm:mt-96">
+            <h2 className="text-[28px] md:text-[50px] lg:text-[65px] font-bold font-playfair galaxy-z-fold-max:!mt-14  galaxy-s8-max:mt-16 iphone-se-max:mt-16 surface-duo-max:mt-28 ipad-mini:mt-[450px] ipad-air-max:mt-[320px] asus-zenbook-max:mt-[375px] surface-pro-max:!mt-56 nest-hub:mt-80 nest-hub-max:mt-96 full-hd-max:mt-[500px] ultra-wide:mt-[650px] sm:mt-96">
               Resources
             </h2>
             <button
@@ -292,9 +260,9 @@ function Home() {
               iphone-se-max:mt-16  z-10
               surface-duo-max:mt-28
               ipad-mini:mt-[450px]
-              ipad-air-max:mt-[415px]
+              ipad-air-max:mt-[320px]
               asus-zenbook-max:mt-[375px]
-              surface-pro-max:mt-[600px]
+              surface-pro-max:!mt-56
               nest-hub:mt-80
               nest-hub-max:mt-96
               full-hd-max:mt-[500px]
@@ -356,13 +324,23 @@ function Home() {
             <div
               className="
           absolute inset-0 w-full pointer-events-none 
-          h-[62vh] galaxy-z-fold-max:h-[80vh] galaxy-s8-max:h-[78vh] 
-          iphone-12-max:h-[75vh] iphone-14-max:h-[80vh] 
-          asus-zenbook-max:h-[80vh] surface-pro-max:h-[80vh]
-          galaxy-s20-max:h-[80vh] iphone-xr-max:h-[78vh] 
-          surface-duo-max:h-[80vh] ipad-mini:h-[80vh] ipad-air-max:h-[80vh] 
-          nest-hub:h-[100vh] ipad-pro-height:h-[100vh] 
-          nest-hub-max:h-[100vh] full-hd-max:h-[65vh] ultra-wide:h-[50vh] 
+          h-[62vh] 
+          galaxy-z-fold-max:h-[80vh] 
+          galaxy-s8-max:h-[78vh] 
+          iphone-12-max:h-[75vh]
+          galaxy-s20-max:h-[80vh]
+          iphone-xr-max:h-[78vh]  
+          iphone-14-max:h-[80vh] 
+          surface-duo-max:h-[80vh] 
+          ipad-mini:h-[80vh] 
+          ipad-air-max:h-[80vh]
+          asus-zenbook-max:h-[80vh]
+          surface-pro-max:h-[80vh]
+          nest-hub:h-[100vh] 
+          ipad-pro-height:h-[100vh] 
+          nest-hub-max:h-[100vh] 
+          full-hd-max:h-[65vh] 
+          ultra-wide:h-[50vh] 
           sm:h-[75vh] landscape-iphone-se:h-[92vh] 
           landscape-surface-duo:h-[75vh] landscape-galaxy-s8:h-[115.5vh] 
           landscape-galaxy-z-fold:h-[144.3vh] landscape-iphone-12:h-[113vh] 
@@ -388,10 +366,10 @@ function Home() {
               iphone-xr-max:mt-28 iphone-xr-max:ml-7
               iphone-14-max:mt-20 iphone-14-max:ml-9
               surface-duo-max:text-[24px] surface-duo-max:mt-10 surface-duo-max:ml-[86px]
-              ipad-mini:text-[42px] ipad-mini:ml-10 ipad-mini:mt-24
-              ipad-air-max:text-[42px] ipad-air-max:ml-[66px] ipad-air-max:mt-44
+              ipad-mini:text-[42px] ipad-mini:ml-10 ipad-mini:mt-10
+              ipad-air-max:text-[42px] ipad-air-max:ml-[70px] ipad-air-max:mt-12
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-52 asus-zenbook-max:ml-[84px]
-              surface-pro-max:text-[42px] surface-pro-max:mt-64 surface-pro-max:ml-[115px]
+              surface-pro-max:text-[42px] surface-pro-max:mt-56 surface-pro-max:ml-[115px]
               nest-hub:text-[40px] nest-hub:mt-6
               nest-hub-max:text-[50px] nest-hub-max:mt-10
               full-hd-max:text-[65px] full-hd-max:mt-14
@@ -411,10 +389,10 @@ function Home() {
                   iphone-xr-max:text-[12.5px] iphone-xr-max:ml-2 iphone-xr-max:mr-2
                   iphone-14-max:ml-4
                   surface-duo-max:text-[13px] surface-duo-max:ml-[66px] surface-duo-max:pr-20
-                  ipad-mini:text-[16px] ipad-mini:mx-6 ipad-mini:mb-6 ipad-mini:-mt-6
-                  ipad-air-max:text-[16px] ipad-air-max:mx-12
+                  ipad-mini:text-[16px] ipad-mini:ml-6 ipad-mini:mb-6 ipad-mini:-mt-6 ipad-mini:pr-8
+                  ipad-air-max:text-[16px] ipad-air-max:ml-[52px] ipad-air-max:pr-14
                   asus-zenbook-max:text-[16px] asus-zenbook-max:mx-16
-                  surface-pro-max:text-[16px] surface-pro-max:mx-24
+                  surface-pro-max:text-[16px] surface-pro-max:ml-24 surface-pro-max:pr-14
                   nest-hub:text-[18px]
                   full-hd-max:text-[22px]
                   ultra-wide:text-[38px] ultra-wide:mb-24"
