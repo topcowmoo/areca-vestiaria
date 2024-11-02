@@ -458,9 +458,9 @@ function Home() {
                  surface-pro-max:min-w-[680px]
                  nest-hub:min-w-[970px]
                  nest-hub-max:min-w-[1230px]
-                 full-hd-max:min-w-[1628px] full-hd-max:mr-4
+            full-hd-max:min-w-[1628px] full-hd-max:mr-4 full-hd-max:text-[22px] full-hd-max:font-normal
                  bg-white text-black flex justify-between items-center 
-                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[22px]">
+                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
                     <span className="flex items-center">
                       <img
                         src={speech}
@@ -469,7 +469,7 @@ function Home() {
                       />
                       What can I expect for a consultation?
                     </span>
-                    <img src={arrow} alt="Arrow" className="w-6 h-6" />
+                    <img src={arrow} alt="Arrow" className="w-4 h-4 full-hd-max:w-6 full-hd-max:h-6" />
                   </button>
 
                   <button className=" 
@@ -486,9 +486,9 @@ function Home() {
                   asus-zenbook-max:min-w-[680px]
                     surface-pro-max:min-w-[680px]
                     nest-hub:min-w-[970px]
-                     full-hd-max:min-w-[1628px] full-hd-max:mr-4
+                    full-hd-max:min-w-[1628px] full-hd-max:mr-4 full-hd-max:text-[22px] full-hd-max:font-normal
                   bg-white text-black flex justify-between items-center 
-                  p-3 rounded-lg shadow-md text-[11px] lg:text-[22px]">
+                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
                     <span className="flex items-center">
                       <img
                         src={speech}
@@ -497,7 +497,7 @@ function Home() {
                       />
                       What can I expect for general policy?
                     </span>
-                    <img src={arrow} alt="Arrow" className="w-6 h-6" />
+                    <img src={arrow} alt="Arrow" className="w-4 h-4 full-hd-max:w-6 full-hd-max:h-6" />
                   </button>
 
                   <button className=" 
@@ -514,9 +514,9 @@ function Home() {
                   asus-zenbook-max:min-w-[680px]
                   surface-pro-max:min-w-[680px]
                   nest-hub:min-w-[970px]
-                   full-hd-max:min-w-[1628px] full-hd-max:mr-4
+                    full-hd-max:min-w-[1628px] full-hd-max:mr-4 full-hd-max:text-[22px] full-hd-max:font-normal
                    bg-white text-black flex justify-between items-center 
-                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[22px]">
+                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
                     <span className="flex items-center">
                       <img
                         src={speech}
@@ -525,7 +525,7 @@ function Home() {
                       />
                       Missed appointments or service fees?
                     </span>
-                    <img src={arrow} alt="Arrow" className="w-6 h-6" />
+                    <img src={arrow} alt="Arrow" className="w-4 h-4 full-hd-max:w-6 full-hd-max:h-6" />
                   </button>
                 </div>
 
