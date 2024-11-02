@@ -141,7 +141,7 @@ function Home() {
   ipad-air-max:h-[90vh]
   asus-zenbook-max:h-[85vh]
   surface-pro-max:!h-[70vh]
-  nest-hub:h-[110vh] 
+  nest-hub:h-[100vh] 
   ipad-pro-height:h-[75vh] 
   nest-hub-max:h-[100vh]
   full-hd-max:h-[100vh] full-hd-max:bg-top
@@ -175,7 +175,7 @@ function Home() {
             id="about-us"
             className="relative flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12"
           >
-            <article className="w-full lg:w-[70%] flex flex-grow flex-col items-start justify-center">
+            <article className="w-full flex flex-grow flex-col items-start justify-center">
               <h3 className="w-full text-white text-[22px]
               galaxy-z-fold-max:mt-28
               galaxy-s20-max:ml-2
@@ -188,7 +188,9 @@ function Home() {
               ipad-air-max:text-[42px] ipad-air-max:mt-24 ipad-air-max:ml-5
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-64 asus-zenbook-max:ml-10
               surface-pro-max:mt-52 surface-pro-max:text-[42px] surface-pro-max:ml-16
-              nest-hub:mt-16 full-hd-max:text-[76px] 
+              nest-hub:mt-16 nest-hub:-ml-3
+              ipad-pro-height:ml-0 ipad-pro-height:mt-52 
+              full-hd-max:text-[76px] 
               font-extrabold font-playfair leading-tight md:leading-normal mt-16 mb-4 md:mt-48d">
                 Sunrise Health & Clinical <br /> Excellence Centre
               </h3>
@@ -205,7 +207,8 @@ function Home() {
               ipad-air-max:text-[16px] ipad-air-max:ml-5 ipad-air-max:pr-9
               asus-zenbook-max:text-[16px] asus-zenbook-max:mx-10 asus-zenbook-max:pr-16
               surface-pro-max:text-[16px] surface-pro-max:ml-16 surface-pro-max:pr-32
-              nest-hub:text-[16px]
+              nest-hub:text-[16px] nest-hub:-ml-3 nest-hub:pr-0
+              ipad-pro-height:ml-0 ipad-pro-height:pr-0
               full-hd-max:text-[20px] 
               "
                 style={{ textAlign: "justify" }}
@@ -237,7 +240,8 @@ function Home() {
                 ipad-air-max:ml-5
                 asus-zenbook-max:ml-10
                 surface-pro-max:ml-16
-                nest-hub:mt-11"
+                nest-hub:mt-11 nest-hub:-ml-3 
+                ipad-pro-height:ml-0"
               >
                 Read More
               </button>
@@ -251,7 +255,18 @@ function Home() {
         <div className="max-w-[400px] md:max-w-[690px] lg:max-w-[960px] xl:max-w-[1115px] 2xl:max-w-[1420px] mx-auto">
           {/* Title and Button Section */}
           <div className="flex justify-between items-center mt-4 lg:mt-5 px-[18px] md:px-[1px]">
-            <h2 className="text-[28px] md:text-[50px] lg:text-[65px] font-bold font-playfair galaxy-z-fold-max:!mt-14  galaxy-s8-max:mt-16 iphone-se-max:mt-16 surface-duo-max:mt-28 ipad-mini:mt-[450px] ipad-air-max:mt-[320px] asus-zenbook-max:mt-[375px] surface-pro-max:!mt-56 nest-hub:mt-80 nest-hub-max:mt-96 full-hd-max:mt-[500px] ultra-wide:mt-[650px] sm:mt-96">
+            <h2 className="text-[28px] md:text-[50px] lg:text-[65px] font-bold font-playfair
+            galaxy-z-fold-max:!mt-14  galaxy-s8-max:mt-16 
+            iphone-se-max:mt-16 
+            surface-duo-max:mt-28 
+            ipad-mini:mt-[450px] 
+            ipad-air-max:mt-[320px] 
+            asus-zenbook-max:mt-[375px] 
+            surface-pro-max:!mt-56 
+            nest-hub:mt-96
+            nest-hub-max:mt-96 
+            full-hd-max:mt-[500px] 
+            ultra-wide:mt-[650px] sm:mt-96">
               Resources
             </h2>
             <button
@@ -371,7 +386,9 @@ function Home() {
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-52 asus-zenbook-max:ml-[84px]
               surface-pro-max:text-[42px] surface-pro-max:mt-56 surface-pro-max:ml-[115px]
               nest-hub:text-[40px] nest-hub:mt-6
-              nest-hub-max:text-[50px] nest-hub-max:mt-10
+              nest-hub-max:text-[50px]
+              ipad-pro-height:ml-8 ipad-pro-height:mt-72
+              nest-hub-max:mt-10
               full-hd-max:text-[65px] full-hd-max:mt-14
               ultra-wide:text-[96px] ultra-wide:mt-40 ultra-wide:mb-24
               mb-8 ml-5">
@@ -394,6 +411,7 @@ function Home() {
                   asus-zenbook-max:text-[16px] asus-zenbook-max:mx-16
                   surface-pro-max:text-[16px] surface-pro-max:ml-24 surface-pro-max:pr-14
                   nest-hub:text-[18px]
+                  ipad-pro-height:ml-4 ipad-pro-height:-mr-5
                   full-hd-max:text-[22px]
                   ultra-wide:text-[38px] ultra-wide:mb-24"
                   style={{ textAlign: "justify" }}
@@ -416,7 +434,9 @@ function Home() {
                 ipad-air-max:text-[42px] ipad-air-max:ml-[70px]
                 asus-zenbook-max:text-[42px] asus-zenbook-max:ml-[84px]
                 surface-pro-max:text-[42px] surface-pro-max:ml-[115px]
-                nest-hub:text-[42px] nest-hub-max:text-[50px] 
+                nest-hub:text-[42px]
+                ipad-pro-height:ml-8
+                nest-hub-max:text-[50px] 
                 full-hd-max:text-[65px] ultra-wide:text-[96px] 
                 ultra-wide:mb-24">
                   Explore some of our FAQ
@@ -522,7 +542,8 @@ function Home() {
                   ipad-air-max:text-[16px]
                   asus-zenbook-max:text-[16px] asus-zenbook-max:ml-[88px]
                   surface-pro-max:text-[16px] surface-pro-max:ml-[119px]
-                  ipad-air-max:ml-[70px] 
+                  ipad-air-max:ml-[70px]
+                  ipad-pro-height:ml-8 
                   full-hd-max:text-[18px] mt-8 ml-11 lg:ml-6 lg:mt-14 ultra-wide:text-[28px] block"
                 >
                   See All Frequently Asked Questions
