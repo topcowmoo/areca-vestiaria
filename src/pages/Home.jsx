@@ -121,6 +121,43 @@ function Home() {
         </div>
       </header>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       {/* ABOUT US second section with additional content and 'Read More' button */}
       <section className="relative flex flex-col bg-black">
         <div className="relative w-full h-[55vh] min-w-[390px]">
@@ -135,7 +172,7 @@ function Home() {
   galaxy-s20-max:h-[55vh] 
   iphone-xr-max:h-[55vh] 
   iphone-14-max:h-[55vh]
-  surface-duo-max:h-[55vh] 
+  surface-duo-max:h-[70vh] 
   ipad-mini:h-[100vh]
   ipad-air-max:h-[90vh]
   asus-zenbook-max:h-[85vh]
@@ -177,8 +214,12 @@ function Home() {
             <article className="w-full lg:w-[70%] flex flex-grow flex-col items-start justify-center">
               <h3 className="w-full text-white text-[22px]
               galaxy-z-fold-max:mt-28
+              galaxy-s20-max:ml-2
+              iphone-12-max:mt-[78px]
+              galaxy-s20-max:mt-32
               iphone-xr-max:mt-28
-              iphone-14-max:text-[26px] 
+              iphone-14-max:text-[26px] iphone-14-max:ml-4
+              surface-duo-max:text-[26px] surface-duo-max:mt-24 surface-duo-max:ml-[72px]
               ipad-mini:text-[42px] ipad-mini:mt-48
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-64 asus-zenbook-max:ml-10
               surface-pro-max:mt-[420px] surface-pro-max:text-[42px] 
@@ -190,12 +231,14 @@ function Home() {
                 className="w-full text-[11px] pr-4 text-white font-light font-['Inter'] leading-4 md:leading-[34px] lg:leading-[24px] mt-1
               galaxy-z-fold-max:!pr-12 
               galaxy-s8-max:pr-8
-              iphone-12-max:text-[11px] iphone-12-max:pr-4
+              iphone-12-max:text-[11px] iphone-12-max:pr-1
+              galaxy-s20-max:ml-2 galaxy-s20-max:pr-3
               iphone-xr-max:text-[11px] iphone-xr-max:pr-2
-              iphone-14-max:text-[12px]
+              iphone-14-max:text-[12px] iphone-14-max:ml-4 iphone-14-max:pr-6
+              surface-duo-max:ml-[72px] surface-duo-max:pr-36
               ipad-mini:text-[16px] ipad-mini:pr-1 
-              asus-zenbook-max:text-[16px] asus-zenbook-max:px-10
-              surface-pro-max:text-[16px]
+              asus-zenbook-max:text-[16px] asus-zenbook-max:mx-10 asus-zenbook-max:pr-16
+              surface-pro-max:text-[16px] surface-pro-max:ml-0
               nest-hub:text-[16px]
               full-hd-max:text-[20px] 
               "
@@ -219,7 +262,14 @@ function Home() {
               {/* Button to open the modal */}
               <button
                 onClick={handleOpenModal}
-                className="mt-8 px-4 py-2 bg-white text-[8px] md:text-sm font-inter rounded text-alt hover:text-black hover:bg-alt iphone-se-max:mt-5 surface-duo-max:mt-5 ipad-mini:mt-9 asus-zenbook-max:ml-10 nest-hub:mt-11"
+                className="mt-8 px-4 py-2 bg-white text-[8px] md:text-sm font-inter rounded text-alt hover:text-black hover:bg-alt 
+                iphone-se-max:mt-5
+                galaxy-s20-max:ml-2
+                iphone-14-max:ml-4
+                surface-duo-max:mt-5 surface-duo-max:ml-[72px]
+                ipad-mini:mt-9 
+                asus-zenbook-max:ml-10 
+                nest-hub:mt-11"
               >
                 Read More
               </button>
@@ -233,13 +283,14 @@ function Home() {
         <div className="max-w-[400px] md:max-w-[690px] lg:max-w-[960px] xl:max-w-[1115px] 2xl:max-w-[1420px] mx-auto">
           {/* Title and Button Section */}
           <div className="flex justify-between items-center mt-4 lg:mt-5 px-[18px] md:px-[1px]">
-            <h2 className="text-[28px] md:text-[50px] lg:text-[65px] font-bold font-playfair galaxy-z-fold-max:!mt-14  galaxy-s8-max:mt-16 iphone-se-max:mt-16 ipad-mini:mt-[450px] ipad-air-max:mt-[415px] asus-zenbook-max:mt-[375px] surface-pro-max:mt-[600px] nest-hub:mt-80 nest-hub-max:mt-96 full-hd-max:mt-[500px] ultra-wide:mt-[650px] sm:mt-96">
+            <h2 className="text-[28px] md:text-[50px] lg:text-[65px] font-bold font-playfair galaxy-z-fold-max:!mt-14  galaxy-s8-max:mt-16 iphone-se-max:mt-16 surface-duo-max:mt-28 ipad-mini:mt-[450px] ipad-air-max:mt-[415px] asus-zenbook-max:mt-[375px] surface-pro-max:mt-[600px] nest-hub:mt-80 nest-hub-max:mt-96 full-hd-max:mt-[500px] ultra-wide:mt-[650px] sm:mt-96">
               Resources
             </h2>
             <button
               className="bg-[#393939] shadow-custom-even font-bold text-white font-inter rounded-[4px] px-[6.5px] py-[2.5px] text-[8px] md:text-[14px] md:px-[10px] md:py-[4px] lg:text-[16px] lg:px-[15px] lg:py-[6px] flex-shrink-0
               galaxy-z-fold-max:!mt-14 
               iphone-se-max:mt-16  z-10
+              surface-duo-max:mt-28
               ipad-mini:mt-[450px]
               ipad-air-max:mt-[415px]
               asus-zenbook-max:mt-[375px]
@@ -332,10 +383,11 @@ function Home() {
             <div className="w-full">
               <h3 className="text-white text-[22px] sm:text-[38px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mt-8
               galaxy-z-fold-max:mt-24
-              iphone-12-max:mt-10 
+              iphone-12-max:mt-14 
+              galaxy-s20-max:ml-7 galaxy-s20-max:mt-28
               iphone-xr-max:mt-28 iphone-xr-max:ml-7
-              iphone-14-max:mt-20
-              surface-duo-max:text-[24px] surface-duo-max:mt-10
+              iphone-14-max:mt-20 iphone-14-max:ml-9
+              surface-duo-max:text-[24px] surface-duo-max:mt-10 surface-duo-max:ml-[86px]
               ipad-mini:text-[42px] ipad-mini:ml-10 ipad-mini:mt-24
               ipad-air-max:text-[42px] ipad-air-max:ml-[66px] ipad-air-max:mt-44
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-52 asus-zenbook-max:ml-[84px]
@@ -355,8 +407,10 @@ function Home() {
                   font-inter text-white px-5 text-[12.5px] leading-[20px] md:leading-[34px] xl:leading-9
                   galaxy-z-fold-max:!text-[12.5px] 
                   galaxy-s8-max:text-[12.5px]
+                  galaxy-s20-max:ml-2
                   iphone-xr-max:text-[12.5px] iphone-xr-max:ml-2 iphone-xr-max:mr-2
-                  surface-duo-max:text-[13px]
+                  iphone-14-max:ml-4
+                  surface-duo-max:text-[13px] surface-duo-max:ml-[66px] surface-duo-max:pr-20
                   ipad-mini:text-[16px] ipad-mini:mx-6 ipad-mini:mb-6 ipad-mini:-mt-6
                   ipad-air-max:text-[16px] ipad-air-max:mx-12
                   asus-zenbook-max:text-[16px] asus-zenbook-max:mx-16
@@ -376,8 +430,10 @@ function Home() {
               {/* FAQ Section */}
               <div className="w-full">
                 <h4 className="text-white font-bold text-[22px] font-playfair ml-5 mt-10 mb-8
+                galaxy-s20-max:ml-7
                 iphone-xr-max:ml-7
-                surface-duo-max:text-[24px]
+                iphone-14-max:ml-9
+                surface-duo-max:text-[24px] surface-duo-max:ml-[87px]
                 ipad-mini:text-[42px] ipad-mini:ml-10 
                 ipad-air-max:text-[42px] ipad-air-max:ml-[70px]
                 asus-zenbook-max:text-[42px] asus-zenbook-max:ml-[84px]
@@ -395,10 +451,10 @@ function Home() {
                   galaxy-z-fold-max:!min-w-[305px]
                   galaxy-s8-max:min-w-[320px]
                   iphone-12-max:min-w-[348px] 
-                  galaxy-s20-max:min-w-[370px]
+                  galaxy-s20-max:min-w-[360px]
                   iphone-xr-max:min-w-[360px] 
-                  iphone-14-max:min-w-[390px]
-                  surface-duo-max:min-w-[500px]
+                  iphone-14-max:min-w-[360px]
+                  surface-duo-max:min-w-[370px]
                   ipad-mini:min-w-[685px]
                   ipad-air-max:min-w-[685px]
                   asus-zenbook-max:min-w-[680px]
@@ -424,10 +480,10 @@ function Home() {
                   galaxy-z-fold-max:!min-w-[305px]
                   galaxy-s8-max:min-w-[320px]
                   iphone-12-max:min-w-[348px]
-                  galaxy-s20-max:min-w-[370px]
+                  galaxy-s20-max:min-w-[360px]
                   iphone-xr-max:min-w-[360px] 
-                  iphone-14-max:min-w-[390px]
-                  surface-duo-max:min-w-[500px]
+                  iphone-14-max:min-w-[360px]
+                surface-duo-max:min-w-[370px]
                   ipad-mini:min-w-[685px]
                   ipad-air-max:min-w-[685px]
                   asus-zenbook-max:min-w-[680px]
@@ -451,10 +507,10 @@ function Home() {
                   galaxy-z-fold-max:!min-w-[305px]
                   galaxy-s8-max:min-w-[320px] 
                   iphone-12-max:min-w-[348px]
-                  galaxy-s20-max:min-w-[370px]
+                  galaxy-s20-max:min-w-[360px]
                   iphone-xr-max:min-w-[360px] 
-                  iphone-14-max:min-w-[390px]
-                  surface-duo-max:min-w-[500px]
+                  iphone-14-max:min-w-[360px]
+                surface-duo-max:min-w-[370px]
                   ipad-mini:min-w-[685px]
                   ipad-air-max:min-w-[685px]
                   asus-zenbook-max:min-w-[680px]
@@ -479,8 +535,12 @@ function Home() {
                   className="font-inter text-white underline 
                   text-[14px]
                   iphone-se-max:ml-5
+                  iphone-12-max:ml-6
+                  galaxy-s20-max:ml-7
                   iphone-xr-max:ml-7
-                  ipad-mini:text-[16px] 
+                  iphone-14-max:ml-9
+                  surface-duo-max:ml-[87px]
+                  ipad-mini:text-[16px] ipad-mini:ml-10
                   ipad-air-max:text-[16px]
                   asus-zenbook-max:text-[16px] asus-zenbook-max:ml-[88px]
                   surface-pro-max:text-[16px] surface-pro-max:ml-[119px]
@@ -494,6 +554,10 @@ function Home() {
           </div>
         </div>
       </section>
+
+
+
+
 
       {/* Modal for 'Read More' content */}
       {isModalOpen && (
