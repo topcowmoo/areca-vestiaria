@@ -177,6 +177,7 @@ function Home() {
             <article className="w-full flex flex-grow flex-col items-start justify-center">
               <h3 className="w-full text-white text-[22px]
               galaxy-z-fold-max:mt-28
+              galaxy-s8-max:mt-20
               galaxy-s20-max:ml-2 galaxy-s20-max:mt-20
               iphone-12-max:mt-[78px]
               iphone-xr-max:mt-28
