@@ -39,7 +39,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full px-4 md:px-8 lg:px-10 pb-8 pt-8 bg-[#151515] text-white">
-      <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] gap-10">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.75fr_1.5fr_1.5fr_1.5fr] gap-10">
         {/* Logo and Description */}
         <div className="flex flex-col justify-start">
           <div

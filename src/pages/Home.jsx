@@ -265,7 +265,7 @@ function Home() {
             surface-pro-max:mt-56 
             nest-hub:mt-96
             nest-hub-max:mt-96 full-hd-max:-ml-[115px]
-            full-hd-max:mt-96
+            full-hd-max:mt-[415px]
             ultra-wide:mt-[650px] sm:mt-96">
               Resources
             </h2>
@@ -280,7 +280,7 @@ function Home() {
               surface-pro-max:mt-56
               nest-hub:mt-80
               nest-hub-max:mt-96
-              full-hd-max:mt-96 full-hd-max:-mr-[115px]
+              full-hd-max:mt-[415px] full-hd-max:-mr-[115px]
               ultra-wide:mt-[650px]"
               onClick={handleClick}
             >
@@ -289,7 +289,7 @@ function Home() {
           </div>
 
           {/* Card and Directory Container */}
-          <div className="mt-5">
+          <div className="mt-5 mb-14">
             <HomeResourceDisplay />
           </div>
         </div>
