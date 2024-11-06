@@ -424,7 +424,7 @@ function Home() {
 
               {/* FAQ Section */}
               <div className="w-full">
-                <h4 className="text-white font-bold text-[22px] font-playfair ml-5 mt-10 mb-8
+                <h4 className="text-white font-bold text-[22px] font-playfair ml-5 mt-7 mb-8
                 galaxy-s20-max:ml-7
                 iphone-xr-max:ml-7
                 iphone-14-max:ml-9
@@ -533,7 +533,7 @@ function Home() {
                   href="faq"
                   className="font-inter text-white underline 
                   text-[14px]
-                  iphone-se-max:ml-5
+                  iphone-se-max:ml-6
                   iphone-12-max:ml-6
                   galaxy-s20-max:ml-7
                   iphone-xr-max:ml-7
@@ -546,7 +546,7 @@ function Home() {
                   ipad-air-max:ml-[70px]
                   ipad-pro-height:ml-8 
                   full-hd-max:text-[18px] full-hd-max:ml-[135px]
-                   mt-8 ml-11 lg:ml-6 lg:mt-14 ultra-wide:text-[28px] block"
+                   mt-6 ml-11 lg:ml-6 lg:mt-14 ultra-wide:text-[28px] block"
                 >
                   See All Frequently Asked Questions
                 </a>
