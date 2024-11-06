@@ -259,7 +259,7 @@ function Home() {
             galaxy-z-fold-max:!mt-14  galaxy-s8-max:mt-16 
             iphone-se-max:mt-16 
             surface-duo-max:mt-28 
-            ipad-mini:mt-[450px] 
+            ipad-mini:mt-[390px] 
             ipad-air-max:mt-[320px] 
             asus-zenbook-max:mt-[500px] 
             surface-pro-max:mt-56 
@@ -274,7 +274,7 @@ function Home() {
               galaxy-z-fold-max:!mt-14 
               iphone-se-max:mt-16  z-10
               surface-duo-max:mt-28
-              ipad-mini:mt-[450px]
+              ipad-mini:mt-[390px]
               ipad-air-max:mt-[320px]
               asus-zenbook-max:mt-[500px]
               surface-pro-max:mt-56
