@@ -536,7 +536,7 @@ function Home() {
                   iphone-se-max:ml-6
                   iphone-12-max:ml-6
                   galaxy-s20-max:ml-7
-                  iphone-xr-max:ml-7
+                  iphone-xr-max:ml-7 iphone-xr-max:mt-9
                   iphone-14-max:ml-9
                   surface-duo-max:ml-[87px]
                   ipad-mini:text-[16px] ipad-mini:ml-10
