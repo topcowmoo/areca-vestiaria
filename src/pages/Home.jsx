@@ -186,7 +186,7 @@ function Home() {
               ipad-mini:text-[42px] ipad-mini:mt-36 ipad-mini:ml-0
               ipad-air-max:text-[42px] ipad-air-max:mt-24 ipad-air-max:ml-5
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-64 asus-zenbook-max:ml-10
-              surface-pro-max:mt-52 surface-pro-max:text-[42px] surface-pro-max:ml-16
+              surface-pro-max:mt-6 surface-pro-max:text-[38px] surface-pro-max:ml-16
               nest-hub:mt-16 nest-hub:-ml-3
               ipad-pro-height:ml-0 ipad-pro-height:mt-52 
               full-hd-max:text-[76px] full-hd-max:ml-24 full-hd-max:mt-32
@@ -205,7 +205,7 @@ function Home() {
               ipad-mini:text-[16px] ipad-mini:ml-0 ipad-mini:pr-0
               ipad-air-max:text-[16px] ipad-air-max:ml-5 ipad-air-max:pr-9
               asus-zenbook-max:text-[16px] asus-zenbook-max:mx-10 asus-zenbook-max:pr-16
-              surface-pro-max:text-[16px] surface-pro-max:ml-16 surface-pro-max:pr-32
+              surface-pro-max:text-[12.5px] surface-pro-max:ml-16 surface-pro-max:pr-32
               nest-hub:text-[16px] nest-hub:-ml-3 nest-hub:pr-0
               ipad-pro-height:ml-0 ipad-pro-height:pr-0
               full-hd-max:text-[20px] full-hd-max:pr-44 full-hd-max:ml-24
@@ -238,7 +238,7 @@ function Home() {
                 ipad-mini:mt-9 ipad-mini:-ml-1
                 ipad-air-max:ml-5
                 asus-zenbook-max:ml-10
-                surface-pro-max:ml-16
+                surface-pro-max:ml-16 surface-pro-max:px-3 surface-pro-max:py-1 surface-pro-max:mt-4 surface-pro-max:text-[12px]
                 nest-hub:mt-11 nest-hub:-ml-3 
                 ipad-pro-height:ml-0
                 full-hd-max:ml-24"
@@ -262,7 +262,7 @@ function Home() {
             ipad-mini:mt-[390px] 
             ipad-air-max:mt-[320px] 
             asus-zenbook-max:mt-[500px] 
-            surface-pro-max:mt-56 
+            surface-pro-max:mt-32
             nest-hub:mt-96
             nest-hub-max:mt-96 full-hd-max:-ml-[115px]
             full-hd-max:mt-[415px]
@@ -277,7 +277,7 @@ function Home() {
               ipad-mini:mt-[390px]
               ipad-air-max:mt-[320px]
               asus-zenbook-max:mt-[500px]
-              surface-pro-max:mt-56
+              surface-pro-max:mt-32
               nest-hub:mt-80
               nest-hub-max:mt-96
               full-hd-max:mt-[415px] full-hd-max:-mr-[115px]
@@ -315,7 +315,7 @@ function Home() {
           ipad-mini:h-[80vh]
           ipad-air-max:h-[80-vh]
           asus-zenbook-max:h-[80vh]
-          surface-pro-max:h-[80vh] 
+          surface-pro-max:h-[70vh]
           nest-hub:h-[100vh] 
           ipad-pro-height:h-[100vh] 
           nest-hub-max:h-[100vh]
@@ -323,16 +323,7 @@ function Home() {
           ultra-wide:h-[100vh] 
           bg-mobile-home-three bg-cover bg-center bg-no-repeat z-0
           sm:bg-home-three sm:bg-cover
-          landscape-iphone-se:h-[92vh]
-          landscape-surface-duo:h-[75vh]
-          landscape-galaxy-s8:h-[115.5vh]
-          landscape-galaxy-z-fold:h-[144.3vh]
-          landscape-iphone-12:h-[113vh]
-          landscape-pixel-7:h-[106vh]
-          landscape-ipad-mini:h-[81vh]
-          landscape-ipad-air:h-[79.5vh]
-          landscape-ipad-pro:h-[67vh]
-          landscape-surface-pro:h-[73vh]"
+          "
             ></div>
 
             <div
@@ -349,19 +340,14 @@ function Home() {
           ipad-mini:h-[80vh] 
           ipad-air-max:h-[80vh]
           asus-zenbook-max:h-[80vh]
-          surface-pro-max:h-[80vh]
+          surface-pro-max:h-[70vh]
           nest-hub:h-[100vh] 
           ipad-pro-height:h-[100vh] 
           nest-hub-max:h-[100vh] 
           full-hd-max:h-[100vh] 
           ultra-wide:h-[50vh] 
           sm:h-[75vh] landscape-iphone-se:h-[92vh] 
-          landscape-surface-duo:h-[75vh] landscape-galaxy-s8:h-[115.5vh] 
-          landscape-galaxy-z-fold:h-[144.3vh] landscape-iphone-12:h-[113vh] 
-          landscape-iphone-xr:h-[112vh] landscape-pixel-7:h-[106vh] 
-          landscape-iphone-14:h-[100vh] landscape-ipad-mini:h-[81vh] 
-          landscape-ipad-air:h-[79.5vh] landscape-ipad-pro:!h-[67vh] 
-          landscape-surface-pro:h-[73vh]"
+          "
               style={{
                 background:
                   "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 1) 100%)",
@@ -383,7 +369,7 @@ function Home() {
               ipad-mini:text-[42px] ipad-mini:ml-10 ipad-mini:mt-10
               ipad-air-max:text-[42px] ipad-air-max:ml-[70px] ipad-air-max:mt-12
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-10 asus-zenbook-max:ml-[84px]
-              surface-pro-max:text-[42px] surface-pro-max:mt-56 surface-pro-max:ml-[115px]
+              surface-pro-max:text-[42px] surface-pro-max:mt-9 surface-pro-max:ml-[115px]
               nest-hub:text-[40px] nest-hub:mt-6
               nest-hub-max:text-[50px]
               ipad-pro-height:ml-8 ipad-pro-height:mt-72
