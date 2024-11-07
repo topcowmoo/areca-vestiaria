@@ -99,7 +99,7 @@ function Home() {
 
           <div className="flex flex-grow flex-col items-center justify-center z-10">
             <div className="relative z-10 flex flex-col items-center h-full mt-16 sm:mt-36">
-              <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 full-hd-max:mt-20">
+              <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 surface-duo-max:-mt-8 full-hd-max:mt-20">
                 WLNS
               </h1>
               <h2 className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8">
@@ -112,7 +112,7 @@ function Home() {
                 smooth
                 to="#resource-page"
                 scroll={scrollWithOffset}
-                className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] underline m-2 py-4"
+                className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] underline m-2 py-4 surface-duo-max:-mt-2"
               >
                 Explore More
               </HashLink>
