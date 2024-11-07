@@ -99,7 +99,7 @@ function Home() {
 
           <div className="flex flex-grow flex-col items-center justify-center z-10">
             <div className="relative z-10 flex flex-col items-center h-full mt-16 sm:mt-36">
-              <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 galaxy-z-fold-max:-mt-8 surface-duo-max:-mt-8 full-hd-max:mt-20">
+              <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 galaxy-z-fold-max:-mt-8 surface-duo-max:-mt-8 asus-zenbook-max:mt-12 full-hd-max:mt-20">
                 WLNS
               </h1>
               <h2 className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8">
@@ -185,7 +185,7 @@ function Home() {
               surface-duo-max:text-[26px] surface-duo-max:mt-24 surface-duo-max:ml-[72px]
               ipad-mini:text-[42px] ipad-mini:mt-36 ipad-mini:ml-0
               ipad-air-max:text-[42px] ipad-air-max:mt-24 ipad-air-max:ml-5
-              asus-zenbook-max:text-[42px] asus-zenbook-max:mt-64 asus-zenbook-max:ml-10
+              asus-zenbook-max:text-[42px] asus-zenbook-max:mt-56 asus-zenbook-max:ml-10
               surface-pro-max:mt-6 surface-pro-max:text-[38px] surface-pro-max:ml-16
               nest-hub:mt-16 nest-hub:-ml-3
               ipad-pro-height:ml-0 ipad-pro-height:mt-52 
