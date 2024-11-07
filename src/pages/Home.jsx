@@ -99,10 +99,10 @@ function Home() {
 
           <div className="flex flex-grow flex-col items-center justify-center z-10">
             <div className="relative z-10 flex flex-col items-center h-full mt-16 sm:mt-36">
-              <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 galaxy-z-fold-max:-mt-8 surface-duo-max:-mt-8 asus-zenbook-max:mt-12 full-hd-max:mt-20">
+              <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 galaxy-z-fold-max:-mt-8 surface-duo-max:-mt-8 asus-zenbook-max:mt-12 nest-hub:-mt-6 full-hd-max:mt-20">
                 WLNS
               </h1>
-              <h2 className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8">
+              <h2 className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8 nest-hub:mb-2">
                 The Wellness Hub
               </h2>
 
@@ -206,7 +206,7 @@ function Home() {
               ipad-air-max:text-[16px] ipad-air-max:ml-5 ipad-air-max:pr-9
               asus-zenbook-max:text-[16px] asus-zenbook-max:mx-10 asus-zenbook-max:pr-16
               surface-pro-max:text-[12.5px] surface-pro-max:ml-16 surface-pro-max:pr-32
-              nest-hub:text-[16px] nest-hub:-ml-3 nest-hub:pr-0
+              nest-hub:text-[16px] nest-hub:-ml-3 
               ipad-pro-height:ml-0 ipad-pro-height:pr-0
               full-hd-max:text-[20px] full-hd-max:pr-44 full-hd-max:ml-24
               "
@@ -263,7 +263,7 @@ function Home() {
             ipad-air-max:mt-[320px] 
             asus-zenbook-max:mt-[500px] 
             surface-pro-max:mt-32
-            nest-hub:mt-96
+            nest-hub:mt-[280px]
             nest-hub-max:mt-96 full-hd-max:-ml-[115px]
             full-hd-max:mt-[415px]
             ultra-wide:mt-[650px] sm:mt-96">
@@ -278,7 +278,7 @@ function Home() {
               ipad-air-max:mt-[320px]
               asus-zenbook-max:mt-[500px]
               surface-pro-max:mt-32
-              nest-hub:mt-80
+               nest-hub:mt-[280px]
               nest-hub-max:mt-96
               full-hd-max:mt-[415px] full-hd-max:-mr-[115px]
               ultra-wide:mt-[650px]"
@@ -370,7 +370,7 @@ function Home() {
               ipad-air-max:text-[42px] ipad-air-max:ml-[70px] ipad-air-max:mt-12
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-10 asus-zenbook-max:ml-[84px]
               surface-pro-max:text-[42px] surface-pro-max:mt-9 surface-pro-max:ml-[115px]
-              nest-hub:text-[40px] nest-hub:mt-6
+              nest-hub:text-[40px] nest-hub:mt-6 nest-hub:ml-8
               nest-hub-max:text-[50px]
               ipad-pro-height:ml-8 ipad-pro-height:mt-72
               nest-hub-max:mt-10
@@ -395,7 +395,7 @@ function Home() {
                   ipad-air-max:text-[16px] ipad-air-max:ml-[52px] ipad-air-max:pr-14
                   asus-zenbook-max:text-[16px] asus-zenbook-max:mx-16
                   surface-pro-max:text-[16px] surface-pro-max:ml-24 surface-pro-max:pr-14
-                  nest-hub:text-[18px]
+                  nest-hub:text-[18px] nest-hub:ml-4
                   ipad-pro-height:ml-4 ipad-pro-height:-mr-5
                   full-hd-max:text-[22px] full-hd-max:ml-[120px] full-hd-max:pr-[90px]
                   ultra-wide:text-[38px] ultra-wide:mb-24"
@@ -419,7 +419,7 @@ function Home() {
                 ipad-air-max:text-[42px] ipad-air-max:ml-[70px]
                 asus-zenbook-max:text-[42px] asus-zenbook-max:ml-[84px]
                 surface-pro-max:text-[42px] surface-pro-max:ml-[115px]
-                nest-hub:text-[42px]
+                nest-hub:text-[42px] nest-hub:ml-8
                 ipad-pro-height:ml-8
                 nest-hub-max:text-[50px] 
                 full-hd-max:text-[65px] full-hd-max:ml-[135px]
@@ -530,6 +530,7 @@ function Home() {
                   asus-zenbook-max:text-[16px] asus-zenbook-max:ml-[88px]
                   surface-pro-max:text-[16px] surface-pro-max:ml-[119px]
                   ipad-air-max:ml-[70px]
+                  nest-hub:text-[16px] nest-hub:ml-8
                   ipad-pro-height:ml-8 
                   full-hd-max:text-[18px] full-hd-max:ml-[135px]
                    mt-6 ml-11 lg:ml-6 lg:mt-14 ultra-wide:text-[28px] block"
