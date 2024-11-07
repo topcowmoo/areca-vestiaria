@@ -99,7 +99,7 @@ function Home() {
 
           <div className="flex flex-grow flex-col items-center justify-center z-10">
             <div className="relative z-10 flex flex-col items-center h-full mt-16 sm:mt-36">
-              <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 surface-duo-max:-mt-8 full-hd-max:mt-20">
+              <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 galaxy-z-fold-max:-mt-8 surface-duo-max:-mt-8 full-hd-max:mt-20">
                 WLNS
               </h1>
               <h2 className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8">
@@ -112,7 +112,7 @@ function Home() {
                 smooth
                 to="#resource-page"
                 scroll={scrollWithOffset}
-                className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] underline m-2 py-4 surface-duo-max:-mt-2"
+                className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] underline m-2 py-4 galaxy-z-fold-max:-mt-3 surface-duo-max:-mt-2"
               >
                 Explore More
               </HashLink>
@@ -176,7 +176,7 @@ function Home() {
           >
             <article className="w-full flex flex-grow flex-col items-start justify-center">
               <h3 className="w-full text-white text-[22px]
-              galaxy-z-fold-max:mt-28
+              galaxy-z-fold-max:!mt-28
               galaxy-s8-max:mt-20
               galaxy-s20-max:ml-2 galaxy-s20-max:mt-20
               iphone-12-max:mt-[78px]
@@ -305,7 +305,7 @@ function Home() {
             <div
               className="
           absolute inset-0 w-full h-[62vh] 
-          galaxy-z-fold-max:h-[80vh] 
+          galaxy-z-fold-max:!h-[80vh] 
           galaxy-s8-max:h-[78vh] 
           iphone-12-max:h-[75vh] 
           galaxy-s20-max:h-[80vh] 
@@ -330,7 +330,7 @@ function Home() {
               className="
           absolute inset-0 w-full pointer-events-none 
           h-[62vh] 
-          galaxy-z-fold-max:h-[80vh] 
+          galaxy-z-fold-max:!h-[80vh] 
           galaxy-s8-max:h-[78vh] 
           iphone-12-max:h-[75vh]
           galaxy-s20-max:h-[80vh]
