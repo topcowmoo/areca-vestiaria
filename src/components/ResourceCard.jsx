@@ -41,7 +41,7 @@ const ResourceCard = ({ category }) => {
 
   return (
     <div
-      className={`w-full md:w-[335px] lg:w-[470px] xl:w-[550px] 2xl:w-[700px]
+      className={`w-full md:w-[335px] lg:w-[470px] xl:w-[550px] 2xl:w-[700px] ultra-wide:w-[1000px]
     min-h-12 sm:min-h-[95px] md:min-h-[250px] lg:min-h-[350px] xl:min-h-[400px] 2xl:min-h-[475px]
     rounded-md sm:rounded-[10px] md:rounded-[10px] lg:rounded-[10px] xl:rounded-[10px] 
     relative overflow-hidden flex bg-cover bg-no-repeat full-hd-max:w-[815px]
