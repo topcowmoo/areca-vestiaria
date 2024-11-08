@@ -121,11 +121,7 @@ export default {
         "ipad-air-max": { min: "820px" }, // iPad Air and larger
         "asus-zenbook-max": { min: "853px" }, // Asus Zenbook and larger
         "surface-pro-max": { min: "912px" }, // Surface Pro and larger
-        "nest-hub": { min: "1024px" }, // Nest Hub and larger
-        "ipad-pro-height": {
-          raw: "(min-width: 1024px) and (min-height: 1366px)",
-        }, // iPad Pro and larger
-        "nest-hub-max": { min: "1280px" }, // Nest Hub and larger
+        "ipad-pro-height": { min: "1024px" }, // iPad Pro and larger
         "full-hd-max": { min: "1920px" }, // Full HD (1920px)
         "ultra-wide": { min: "2560px" }, // Ultra wide (2560px)
 
