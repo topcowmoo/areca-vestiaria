@@ -139,7 +139,7 @@ function Navbar() {
         {/* Resources Dropdown */}
         <li className="self-stretch relative resources-toggle cursor-pointer">
           <div className="flex items-center" onClick={toggleResources}>
-            <span className="text-left text-white text-[21px] font-light font-['Inter'] tracking-wide cursor-pointer mr-[11px] hover:text-white hover:underline">
+            <span className="text-left text-white text-[21px] ultra-wide:text-[29px] font-light font-['Inter'] tracking-wide cursor-pointer mr-[11px] hover:text-white hover:underline">
               Resources
             </span>
             <IoTriangleSharp
@@ -155,7 +155,7 @@ function Navbar() {
           {/* Only render dropdown if it's visible */}
           {isResourcesVisible && (
             <div
-              className={`dropdown-menu absolute mt-5 ml-12 py-5 bg-black/25 backdrop-blur-md flex flex-col justify-start items-start gap-4 text-white rounded shadow-lg px-5 z-20 w-[285px] transition-all transform origin-top ${
+              className={`dropdown-menu absolute mt-5 ml-12 py-5 bg-black/25 backdrop-blur-md flex flex-col justify-start items-start gap-4 text-white rounded shadow-lg px-5 z-20 w-[285px] ultra-wide:w-[325px] transition-all transform origin-top ${
                 hasResourcesInteracted
                   ? isResourcesOpen
                     ? "animate-dropdownSlideDown pointer-events-auto visibility-visible"
@@ -186,7 +186,7 @@ function Navbar() {
                   key={item.to}
                   smooth
                   to={item.to}
-                  className={`text-[17px] font-light font-['Inter'] rounded-md px-3 py-2 hover:text-white hover:font-semibold ${
+                  className={`text-[17px] ultra-wide:text-[20px] font-light font-['Inter'] rounded-md px-3 py-2 hover:text-white hover:font-semibold ${
                     item.className || ""
                   }`}
                   onClick={() => {
@@ -214,7 +214,7 @@ function Navbar() {
 }
 
 const NavItem = ({ to, children, onClick }) => (
-  <li className="self-stretch text-left text-white text-[21px] font-light font-['Inter'] tracking-wide">
+  <li className="self-stretch text-left text-white text-[21px] ultra-wide:text-[29px] font-light font-['Inter'] tracking-wide">
     <HashLink
       smooth
       to={to}
