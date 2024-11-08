@@ -32,9 +32,7 @@ function AllResources() {
         ipad-air-max:h-[39vh]
         asus-zenbook-max:h-[37.5vh]
         suface-pro-max:h-[37.5vh] 
-        nest-hub:h-[108vh] 
         ipad-pro-height:h-[51vh] 
-        nest-hub-max:h-[82vh] 
         full-hd-max:h-[75vh]
         ultra-wide:h-[70vh]
         sm:h-[75vh] 
@@ -76,7 +74,6 @@ function AllResources() {
         iphone-12-max:p-6 iphone-12-max:gap-6
         galaxy-s20-max:p-6 galaxy-s20-max:gap-6 
         surface-duo-max:p-8 surface-duo-max:gap-8
-        nest-hub:p-9 nest-hub:gap-9 
         xl:gap-12 xl:p-14 
         ultra-wide:gap-14 ultra-wide:p-20">
           {categoryNames.map((category, index) => (

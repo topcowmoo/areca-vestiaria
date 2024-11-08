@@ -49,9 +49,7 @@ function Home() {
   ipad-air-max:h-[100vh]
   asus-zenbook-max:h-[100vh]
   surface-pro-max:h-[90vh]
-  nest-hub:h-[100vh] 
   ipad-pro-height:h-[100vh]
-  nest-hub-max:h-[100vh] 
   full-hd-max:h-[100vh] full-hd-max:bg-top
   ultra-wide:h-[100vh] ultra-wide:bg-right
   bg-mobile-home-one bg-cover bg-center bg-no-repeat z-0
@@ -72,24 +70,11 @@ function Home() {
             surface-duo-max:h-[45vh] 
             ipad-mini:h-[100vh]
             ipad-air-max:h-[100vh]
-            asus-zenbook-max:h-[100vh]
-            nest-hub:h-[100vh] 
+            asus-zenbook-max:h-[100vh] 
             ipad-pro-height:h-[100vh] 
-            nest-hub-max:h-[100vh] 
             full-hd-max:h-[100vh] 
             ultra-wide:h-[100vh] 
             sm:h-[75vh]
-            landscape-iphone-se:h-[92vh]
-  landscape-surface-duo:h-[75vh]
-  landscape-galaxy-s8:h-[115.5vh]
-  landscape-galaxy-z-fold:h-[144.3vh]
-  landscape-iphone-12:h-[113vh]
-  landscape-iphone-xr:h-[112vh]
-  landscape-pixel-7:h-[106vh]
-  landscape-ipad-mini:h-[81vh]
-  landscape-ipad-air:h-[79.5vh]
-  landscape-ipad-pro:h-[67vh]
-  landscape-surface-pro:h-[73vh]
             "
             style={{
               background:
@@ -99,12 +84,12 @@ function Home() {
 
           <div className="flex flex-grow flex-col items-center justify-center z-10">
             <div className="relative z-10 flex flex-col items-center h-full mt-16 sm:mt-36">
-              <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 galaxy-z-fold-max:-mt-8 surface-duo-max:-mt-8 asus-zenbook-max:mt-12 nest-hub:-mt-6 nest-hub-max:mt-9 
+              <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 galaxy-z-fold-max:-mt-8 surface-duo-max:-mt-8 asus-zenbook-max:mt-12
               full-hd-max:mt-20
               ultra-wide:text-[135px]">
                 WLNS
               </h1>
-              <h2 className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8 nest-hub:mb-2 ultra-wide:text-[43px] ultra-wide:mb-11">
+              <h2 className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8 ultra-wide:text-[43px] ultra-wide:mb-11">
                 The Wellness Hub
               </h2>
 
@@ -143,23 +128,11 @@ function Home() {
   ipad-air-max:h-[90vh]
   asus-zenbook-max:h-[85vh]
   surface-pro-max:h-[70vh]
-  nest-hub:h-[100vh] 
-  ipad-pro-height:h-[75vh] 
-  nest-hub-max:h-[100vh]
+  ipad-pro-height:h-[75vh]
   full-hd-max:h-[100vh] full-hd-max:bg-top
   ultra-wide:h-[100vh] 
   bg-mobile-home-two bg-cover bg-center bg-no-repeat z-0
-  sm:bg-home-two
-  landscape-iphone-se:h-[92vh]
-  landscape-surface-duo:h-[75vh]
-  landscape-galaxy-s8:h-[115.5vh]
-  landscape-galaxy-z-fold:h-[144.3vh]
-  landscape-iphone-12:h-[113vh]
-  landscape-iphone-xr:h-[112vh]
-  landscape-ipad-mini:h-[81vh]
-  landscape-ipad-air:h-[79.5vh]
-  landscape-ipad-pro:h-[67vh]
-  landscape-surface-pro:h-[73vh]"
+  sm:bg-home-two"
             ></div>
 
             <div
@@ -189,9 +162,7 @@ function Home() {
               ipad-air-max:text-[42px] ipad-air-max:mt-24 ipad-air-max:ml-5
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-56 asus-zenbook-max:ml-10
               surface-pro-max:mt-6 surface-pro-max:text-[38px] surface-pro-max:ml-16
-              nest-hub:mt-16 nest-hub:-ml-3
-              ipad-pro-height:ml-0 ipad-pro-height:mt-52 
-              nest-hub-max:mt-28 nest-hub-max:text-[50px] nest-hub-max:ml-10
+              ipad-pro-height:ml-0 ipad-pro-height:mt-52
               full-hd-max:text-[76px] full-hd-max:ml-24 full-hd-max:mt-32
               ultra-wide:ml-56 ultra-wide:mt-56 ultra-wide:mb-24
               font-extrabold font-playfair leading-tight md:leading-normal mt-16 mb-4 md:mt-48d">
@@ -210,9 +181,7 @@ function Home() {
               ipad-air-max:text-[16px] ipad-air-max:ml-5 ipad-air-max:pr-9
               asus-zenbook-max:text-[16px] asus-zenbook-max:mx-10 asus-zenbook-max:pr-16
               surface-pro-max:text-[12.5px] surface-pro-max:ml-16 surface-pro-max:pr-32
-              nest-hub:text-[16px] nest-hub:-ml-3 
               ipad-pro-height:ml-0 ipad-pro-height:pr-0
-              nest-hub-max:leading-loose nest-hub-max:ml-10
               full-hd-max:text-[20px] full-hd-max:pr-44 full-hd-max:ml-24
               ultra-wide:ml-56 ultra-wide:text-[26px] ultra-wide:pr-[420px]
               "
@@ -245,9 +214,7 @@ function Home() {
                 ipad-air-max:ml-5
                 asus-zenbook-max:ml-10
                 surface-pro-max:ml-16 surface-pro-max:px-3 surface-pro-max:py-1 surface-pro-max:mt-4 surface-pro-max:text-[12px]
-                nest-hub:mt-11 nest-hub:-ml-3 
                 ipad-pro-height:ml-0
-                nest-hub-max:text-[14px] nest-hub-max:px-5 nest-hub-max:py-2 nest-hub-max:ml-10
                 full-hd-max:ml-24
                 ultra-wide:ml-[220px] ultra-wide:px-6 ultra-wide:py-3 ultra-wide:text-[22px] ultra-wide:mt-32
                 "
@@ -272,8 +239,6 @@ function Home() {
             ipad-air-max:mt-[320px] 
             asus-zenbook-max:mt-[500px] 
             surface-pro-max:mt-32
-            nest-hub:mt-[280px]
-            nest-hub-max:mt-96 
             full-hd-max:-ml-[115px] full-hd-max:mt-[415px]
             ultra-wide:mt-[600px] ultra-wide:-ml-[305px]
             sm:mt-96">
@@ -288,8 +253,6 @@ function Home() {
               ipad-air-max:mt-[320px]
               asus-zenbook-max:mt-[500px]
               surface-pro-max:mt-32
-               nest-hub:mt-[280px]
-              nest-hub-max:mt-96
               full-hd-max:mt-[415px] full-hd-max:-mr-[115px]
               ultra-wide:mt-[600px] ultra-wide:-mr-[305px]
               "
@@ -327,9 +290,7 @@ function Home() {
           ipad-air-max:h-[80-vh]
           asus-zenbook-max:h-[80vh]
           surface-pro-max:h-[70vh]
-          nest-hub:h-[100vh] 
-          ipad-pro-height:h-[100vh] 
-          nest-hub-max:h-[100vh]
+          ipad-pro-height:h-[100vh]
           full-hd-max:h-[100vh] full-hd-max:bg-top
           ultra-wide:h-[100vh] 
           bg-mobile-home-three bg-cover bg-center bg-no-repeat z-0
@@ -352,9 +313,7 @@ function Home() {
           ipad-air-max:h-[80vh]
           asus-zenbook-max:h-[80vh]
           surface-pro-max:h-[70vh]
-          nest-hub:h-[100vh] 
           ipad-pro-height:h-[100vh] 
-          nest-hub-max:h-[100vh] 
           full-hd-max:h-[100vh] 
           ultra-wide:h-[100vh] 
           sm:h-[75vh] landscape-iphone-se:h-[92vh] 
@@ -381,10 +340,7 @@ function Home() {
               ipad-air-max:text-[42px] ipad-air-max:ml-[70px] ipad-air-max:mt-12
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-10 asus-zenbook-max:ml-[84px]
               surface-pro-max:text-[42px] surface-pro-max:mt-9 surface-pro-max:ml-[115px]
-              nest-hub:text-[40px] nest-hub:mt-6 nest-hub:ml-8
-              nest-hub-max:text-[50px]
               ipad-pro-height:ml-8 ipad-pro-height:mt-72
-              nest-hub-max:mt-20 nest-hub-max:ml-[76px]
               full-hd-max:text-[65px] full-hd-max:mt-14 full-hd-max:ml-[135px] full-hd-max:mb-20
               ultra-wide:text-[96px] ultra-wide:mt-40 ultra-wide:mb-32 ultra-wide:ml-[275px]
               mb-8 ml-5">
@@ -406,9 +362,7 @@ function Home() {
                   ipad-air-max:text-[16px] ipad-air-max:ml-[52px] ipad-air-max:pr-14
                   asus-zenbook-max:text-[16px] asus-zenbook-max:mx-16
                   surface-pro-max:text-[16px] surface-pro-max:ml-24 surface-pro-max:pr-14
-                  nest-hub:text-[18px] nest-hub:ml-4
                   ipad-pro-height:ml-4 ipad-pro-height:-mr-5
-                  nest-hub-max:ml-[61px]
                   full-hd-max:text-[22px] full-hd-max:ml-[120px] full-hd-max:pr-[90px]
                   ultra-wide:text-[32px] ultra-wide:mb-24 ultra-wide:leading-loose ultra-wide:ml-[260px] ultra-wide:pr-[220px]
                   "
@@ -432,9 +386,7 @@ function Home() {
                 ipad-air-max:text-[42px] ipad-air-max:ml-[70px]
                 asus-zenbook-max:text-[42px] asus-zenbook-max:ml-[84px]
                 surface-pro-max:text-[42px] surface-pro-max:ml-[115px]
-                nest-hub:text-[42px] nest-hub:ml-8
                 ipad-pro-height:ml-8
-                nest-hub-max:text-[50px] nest-hub-max:ml-[76px] 
                 full-hd-max:text-[65px] full-hd-max:ml-[135px]
                  ultra-wide:text-[96px] ultra-wide:mb-24 ultra-wide:ml-[275px]">
                   Explore some of our FAQ
@@ -455,8 +407,6 @@ function Home() {
                   ipad-air-max:min-w-[685px]
                   asus-zenbook-max:min-w-[680px]
                  surface-pro-max:min-w-[680px]
-                 nest-hub:min-w-[970px]
-                 nest-hub-max:min-w-[1125px]
             full-hd-max:min-w-[1628px] full-hd-max:mr-4 full-hd-max:text-[22px] full-hd-max:font-normal
               ultra-wide:min-w-[2000px]
                  bg-white text-black flex justify-between items-center 
@@ -485,8 +435,6 @@ function Home() {
                   ipad-air-max:min-w-[685px]
                   asus-zenbook-max:min-w-[680px]
                     surface-pro-max:min-w-[680px]
-                    nest-hub:min-w-[970px]
-                       nest-hub-max:min-w-[1125px]
                     full-hd-max:min-w-[1628px] full-hd-max:mr-4 full-hd-max:text-[22px] full-hd-max:font-normal
                     ultra-wide:min-w-[2000px]
                   bg-white text-black flex justify-between items-center 
@@ -515,8 +463,6 @@ function Home() {
                   ipad-air-max:min-w-[685px]
                   asus-zenbook-max:min-w-[680px]
                   surface-pro-max:min-w-[680px]
-                  nest-hub:min-w-[970px]
-                     nest-hub-max:min-w-[1125px]
                     full-hd-max:min-w-[1628px] full-hd-max:mr-4 full-hd-max:text-[22px] full-hd-max:font-normal
                       ultra-wide:min-w-[2000px]
                    bg-white text-black flex justify-between items-center 
@@ -548,9 +494,7 @@ function Home() {
                   asus-zenbook-max:text-[16px] asus-zenbook-max:ml-[88px]
                   surface-pro-max:text-[16px] surface-pro-max:ml-[119px]
                   ipad-air-max:ml-[70px]
-                  nest-hub:text-[16px] nest-hub:ml-8
                   ipad-pro-height:ml-8
-                  nest-hub-max:ml-[76px]
                   full-hd-max:text-[18px] full-hd-max:ml-[135px]
                   ultra-wide:ml-[275px] ultra-wide:mt-20
                    mt-6 ml-11 lg:ml-6 lg:mt-14 ultra-wide:text-[28px] block"
