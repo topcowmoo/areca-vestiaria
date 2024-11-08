@@ -84,9 +84,11 @@ function Home() {
 
           <div className="flex flex-grow flex-col items-center justify-center z-10">
             <div className="relative z-10 flex flex-col items-center h-full mt-16 sm:mt-36">
-              <h1 className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 galaxy-z-fold-max:-mt-8 surface-duo-max:-mt-8 asus-zenbook-max:mt-12
+              <h1
+                className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 galaxy-z-fold-max:-mt-8 surface-duo-max:-mt-8 asus-zenbook-max:mt-12
               full-hd-max:mt-20
-              ultra-wide:text-[135px]">
+              ultra-wide:text-[135px]"
+              >
                 WLNS
               </h1>
               <h2 className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8 ultra-wide:text-[43px] ultra-wide:mb-11">
@@ -108,7 +110,6 @@ function Home() {
         </div>
       </header>
 
-
       {/* ABOUT US second section with additional content and 'Read More' button */}
       <section className="relative flex flex-col bg-black">
         <div className="relative w-full h-[55vh] min-w-[390px]">
@@ -128,7 +129,7 @@ function Home() {
   ipad-air-max:h-[90vh]
   asus-zenbook-max:h-[85vh]
   surface-pro-max:h-[70vh]
-  ipad-pro-height:h-[75vh]
+  ipad-pro-height:h-[85vh] ipad-pro-height:bg-top
   full-hd-max:h-[100vh] full-hd-max:bg-top
   ultra-wide:h-[100vh] 
   bg-mobile-home-two bg-cover bg-center bg-no-repeat z-0
@@ -150,7 +151,8 @@ function Home() {
             className="relative flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12"
           >
             <article className="w-full flex flex-grow flex-col items-start justify-center">
-              <h3 className="w-full text-white text-[22px]
+              <h3
+                className="w-full text-white text-[22px]
               galaxy-z-fold-max:!mt-28
               galaxy-s8-max:mt-20
               galaxy-s20-max:ml-2 galaxy-s20-max:mt-20
@@ -162,14 +164,15 @@ function Home() {
               ipad-air-max:text-[42px] ipad-air-max:mt-24 ipad-air-max:ml-5
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-56 asus-zenbook-max:ml-10
               surface-pro-max:mt-6 surface-pro-max:text-[38px] surface-pro-max:ml-16
-              ipad-pro-height:ml-0 ipad-pro-height:mt-52
+              ipad-pro-height:ml-[73px] ipad-pro-height:mt-36
               full-hd-max:text-[76px] full-hd-max:ml-24 full-hd-max:mt-32
               ultra-wide:ml-56 ultra-wide:mt-56 ultra-wide:mb-24
-              font-extrabold font-playfair leading-tight md:leading-normal mt-16 mb-4 md:mt-48d">
+              font-extrabold font-playfair leading-tight md:leading-normal mt-16 mb-4 md:mt-48d"
+              >
                 Sunrise Health & Clinical <br /> Excellence Centre
               </h3>
               <p
-                className="w-full text-[11px] pr-4 text-white font-light font-['Inter'] leading-4 md:leading-[34px] lg:leading-[24px] mt-1
+                className="w-full text-[11px] pr-4 text-white font-light font-['Inter'] leading-4 md:leading-[34px] lg:leading-[30px] mt-1
               galaxy-z-fold-max:!pr-12 
               galaxy-s8-max:pr-8
               iphone-12-max:text-[11px] iphone-12-max:pr-1
@@ -181,7 +184,7 @@ function Home() {
               ipad-air-max:text-[16px] ipad-air-max:ml-5 ipad-air-max:pr-9
               asus-zenbook-max:text-[16px] asus-zenbook-max:mx-10 asus-zenbook-max:pr-16
               surface-pro-max:text-[12.5px] surface-pro-max:ml-16 surface-pro-max:pr-32
-              ipad-pro-height:ml-0 ipad-pro-height:pr-0
+              ipad-pro-height:ml-[73px] ipad-pro-height:pr-40 ipad-pro-height:text-[15px]
               full-hd-max:text-[20px] full-hd-max:pr-44 full-hd-max:ml-24
               ultra-wide:ml-56 ultra-wide:text-[26px] ultra-wide:pr-[420px]
               "
@@ -214,7 +217,7 @@ function Home() {
                 ipad-air-max:ml-5
                 asus-zenbook-max:ml-10
                 surface-pro-max:ml-16 surface-pro-max:px-3 surface-pro-max:py-1 surface-pro-max:mt-4 surface-pro-max:text-[12px]
-                ipad-pro-height:ml-0
+                ipad-pro-height:ml-[73px] ipad-pro-height:mt-10
                 full-hd-max:ml-24
                 ultra-wide:ml-[220px] ultra-wide:px-6 ultra-wide:py-3 ultra-wide:text-[22px] ultra-wide:mt-32
                 "
@@ -231,7 +234,8 @@ function Home() {
         <div className="max-w-[400px] md:max-w-[690px] lg:max-w-[960px] xl:max-w-[1115px] 2xl:max-w-[1420px] mx-auto">
           {/* Title and Button Section */}
           <div className="flex justify-between items-center mt-4 lg:mt-5 px-[18px] md:px-[1px]">
-            <h2 className="text-[28px] md:text-[50px] lg:text-[65px] font-bold font-playfair
+            <h2
+              className="text-[28px] md:text-[50px] lg:text-[65px] font-bold font-playfair
             galaxy-z-fold-max:!mt-14  galaxy-s8-max:mt-16 
             iphone-se-max:mt-16 
             surface-duo-max:mt-28 
@@ -239,9 +243,11 @@ function Home() {
             ipad-air-max:mt-[320px] 
             asus-zenbook-max:mt-[500px] 
             surface-pro-max:mt-32
+            ipad-pro-height:mt-64
             full-hd-max:-ml-[115px] full-hd-max:mt-[415px]
             ultra-wide:mt-[600px] ultra-wide:-ml-[305px]
-            sm:mt-96">
+            sm:mt-96"
+            >
               Resources
             </h2>
             <button
@@ -253,6 +259,7 @@ function Home() {
               ipad-air-max:mt-[320px]
               asus-zenbook-max:mt-[500px]
               surface-pro-max:mt-32
+              ipad-pro-height:mt-64
               full-hd-max:mt-[415px] full-hd-max:-mr-[115px]
               ultra-wide:mt-[600px] ultra-wide:-mr-[305px]
               "
@@ -263,7 +270,7 @@ function Home() {
           </div>
 
           {/* Card and Directory Container */}
-          <div className="mt-5 mb-14 ultra-wide:mb-28">
+          <div className="mt-5 mb-14 ipad-pro-height:mb-16 ultra-wide:mb-28">
             <HomeResourceDisplay />
           </div>
         </div>
@@ -290,7 +297,7 @@ function Home() {
           ipad-air-max:h-[80-vh]
           asus-zenbook-max:h-[80vh]
           surface-pro-max:h-[70vh]
-          ipad-pro-height:h-[100vh]
+          ipad-pro-height:h-[90vh] ipad-pro-height:bg-top
           full-hd-max:h-[100vh] full-hd-max:bg-top
           ultra-wide:h-[100vh] 
           bg-mobile-home-three bg-cover bg-center bg-no-repeat z-0
@@ -313,10 +320,10 @@ function Home() {
           ipad-air-max:h-[80vh]
           asus-zenbook-max:h-[80vh]
           surface-pro-max:h-[70vh]
-          ipad-pro-height:h-[100vh] 
+          ipad-pro-height:h-[90vh] 
           full-hd-max:h-[100vh] 
           ultra-wide:h-[100vh] 
-          sm:h-[75vh] landscape-iphone-se:h-[92vh] 
+          sm:h-[75vh] 
           "
               style={{
                 background:
@@ -329,7 +336,8 @@ function Home() {
           <div className="relative flex flex-col h-full space-y-6">
             {/* Contact Us Section */}
             <div className="w-full">
-              <h3 className="text-white text-[22px] sm:text-[38px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mt-8
+              <h3
+                className="text-white text-[22px] sm:text-[38px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mt-8
               galaxy-z-fold-max:mt-24
               iphone-12-max:mt-14 
               galaxy-s20-max:ml-7 galaxy-s20-max:mt-28
@@ -340,10 +348,11 @@ function Home() {
               ipad-air-max:text-[42px] ipad-air-max:ml-[70px] ipad-air-max:mt-12
               asus-zenbook-max:text-[42px] asus-zenbook-max:mt-10 asus-zenbook-max:ml-[84px]
               surface-pro-max:text-[42px] surface-pro-max:mt-9 surface-pro-max:ml-[115px]
-              ipad-pro-height:ml-8 ipad-pro-height:mt-72
+              ipad-pro-height:mt-28 ipad-pro-height:ml-32 ipad-pro-height:mb-11
               full-hd-max:text-[65px] full-hd-max:mt-14 full-hd-max:ml-[135px] full-hd-max:mb-20
               ultra-wide:text-[96px] ultra-wide:mt-40 ultra-wide:mb-32 ultra-wide:ml-[275px]
-              mb-8 ml-5">
+              mb-8 ml-5"
+              >
                 Contact Us
               </h3>
 
@@ -362,7 +371,7 @@ function Home() {
                   ipad-air-max:text-[16px] ipad-air-max:ml-[52px] ipad-air-max:pr-14
                   asus-zenbook-max:text-[16px] asus-zenbook-max:mx-16
                   surface-pro-max:text-[16px] surface-pro-max:ml-24 surface-pro-max:pr-14
-                  ipad-pro-height:ml-4 ipad-pro-height:-mr-5
+                  ipad-pro-height:ml-28 ipad-pro-height:text-[17px]
                   full-hd-max:text-[22px] full-hd-max:ml-[120px] full-hd-max:pr-[90px]
                   ultra-wide:text-[32px] ultra-wide:mb-24 ultra-wide:leading-loose ultra-wide:ml-[260px] ultra-wide:pr-[220px]
                   "
@@ -377,7 +386,8 @@ function Home() {
 
               {/* FAQ Section */}
               <div className="w-full">
-                <h4 className="text-white font-bold text-[22px] font-playfair ml-5 mt-7 mb-8
+                <h4
+                  className="text-white font-bold text-[22px] font-playfair ml-5 mt-7 mb-8
                 galaxy-s20-max:ml-7
                 iphone-xr-max:ml-7
                 iphone-14-max:ml-9
@@ -386,15 +396,17 @@ function Home() {
                 ipad-air-max:text-[42px] ipad-air-max:ml-[70px]
                 asus-zenbook-max:text-[42px] asus-zenbook-max:ml-[84px]
                 surface-pro-max:text-[42px] surface-pro-max:ml-[115px]
-                ipad-pro-height:ml-8
+                ipad-pro-height:ml-32
                 full-hd-max:text-[65px] full-hd-max:ml-[135px]
-                 ultra-wide:text-[96px] ultra-wide:mb-24 ultra-wide:ml-[275px]">
+                 ultra-wide:text-[96px] ultra-wide:mb-24 ultra-wide:ml-[275px]"
+                >
                   Explore some of our FAQ
                 </h4>
 
                 {/* Centered FAQ Buttons */}
                 <div className="flex flex-col items-center space-y-3 font-inter">
-                  <button className="
+                  <button
+                    className="
                   min-w-[333px]
                   galaxy-z-fold-max:!min-w-[305px]
                   galaxy-s8-max:min-w-[320px]
@@ -407,10 +419,12 @@ function Home() {
                   ipad-air-max:min-w-[685px]
                   asus-zenbook-max:min-w-[680px]
                  surface-pro-max:min-w-[680px]
+                 ipad-pro-height:min-w-[1110px]
             full-hd-max:min-w-[1628px] full-hd-max:mr-4 full-hd-max:text-[22px] full-hd-max:font-normal
               ultra-wide:min-w-[2000px]
                  bg-white text-black flex justify-between items-center 
-                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
+                  >
                     <span className="flex items-center">
                       <img
                         src={speech}
@@ -419,10 +433,15 @@ function Home() {
                       />
                       What can I expect for a consultation?
                     </span>
-                    <img src={arrow} alt="Arrow" className="w-4 h-4 full-hd-max:w-6 full-hd-max:h-6" />
+                    <img
+                      src={arrow}
+                      alt="Arrow"
+                      className="w-4 h-4 full-hd-max:w-6 full-hd-max:h-6"
+                    />
                   </button>
 
-                  <button className=" 
+                  <button
+                    className=" 
                   min-w-[333px]
                   galaxy-z-fold-max:!min-w-[305px]
                   galaxy-s8-max:min-w-[320px]
@@ -435,10 +454,12 @@ function Home() {
                   ipad-air-max:min-w-[685px]
                   asus-zenbook-max:min-w-[680px]
                     surface-pro-max:min-w-[680px]
+                    ipad-pro-height:min-w-[1110px]
                     full-hd-max:min-w-[1628px] full-hd-max:mr-4 full-hd-max:text-[22px] full-hd-max:font-normal
                     ultra-wide:min-w-[2000px]
                   bg-white text-black flex justify-between items-center 
-                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
+                  >
                     <span className="flex items-center">
                       <img
                         src={speech}
@@ -447,10 +468,15 @@ function Home() {
                       />
                       What can I expect for general policy?
                     </span>
-                    <img src={arrow} alt="Arrow" className="w-4 h-4 full-hd-max:w-6 full-hd-max:h-6" />
+                    <img
+                      src={arrow}
+                      alt="Arrow"
+                      className="w-4 h-4 full-hd-max:w-6 full-hd-max:h-6"
+                    />
                   </button>
 
-                  <button className=" 
+                  <button
+                    className=" 
                   min-w-[333px]
                   galaxy-z-fold-max:!min-w-[305px]
                   galaxy-s8-max:min-w-[320px] 
@@ -463,10 +489,12 @@ function Home() {
                   ipad-air-max:min-w-[685px]
                   asus-zenbook-max:min-w-[680px]
                   surface-pro-max:min-w-[680px]
+                  ipad-pro-height:min-w-[1110px]
                     full-hd-max:min-w-[1628px] full-hd-max:mr-4 full-hd-max:text-[22px] full-hd-max:font-normal
                       ultra-wide:min-w-[2000px]
                    bg-white text-black flex justify-between items-center 
-                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]">
+                  p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
+                  >
                     <span className="flex items-center">
                       <img
                         src={speech}
@@ -475,7 +503,11 @@ function Home() {
                       />
                       Missed appointments or service fees?
                     </span>
-                    <img src={arrow} alt="Arrow" className="w-4 h-4 full-hd-max:w-6 full-hd-max:h-6" />
+                    <img
+                      src={arrow}
+                      alt="Arrow"
+                      className="w-4 h-4 full-hd-max:w-6 full-hd-max:h-6"
+                    />
                   </button>
                 </div>
 
@@ -494,10 +526,10 @@ function Home() {
                   asus-zenbook-max:text-[16px] asus-zenbook-max:ml-[88px]
                   surface-pro-max:text-[16px] surface-pro-max:ml-[119px]
                   ipad-air-max:ml-[70px]
-                  ipad-pro-height:ml-8
+                  ipad-pro-height:ml-32 ipad-pro-height:mt-11
                   full-hd-max:text-[18px] full-hd-max:ml-[135px]
                   ultra-wide:ml-[275px] ultra-wide:mt-20
-                   mt-6 ml-11 lg:ml-6 lg:mt-14 ultra-wide:text-[28px] block"
+                   mt-6 ml-11 ultra-wide:text-[28px] block"
                 >
                   See All Frequently Asked Questions
                 </a>
@@ -506,10 +538,6 @@ function Home() {
           </div>
         </div>
       </section>
-
-
-
-
 
       {/* Modal for 'Read More' content */}
       {isModalOpen && (
