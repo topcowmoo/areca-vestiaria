@@ -54,6 +54,7 @@ function Home() {
   ultra-wide:h-[100vh] ultra-wide:bg-right
   bg-mobile-home-one bg-cover bg-center bg-no-repeat z-0
   sm:bg-home-one
+  landscape-iphone-se:h-[100vh]
   "
           ></div>
 
@@ -75,6 +76,7 @@ function Home() {
             full-hd-max:h-[100vh] 
             ultra-wide:h-[100vh] 
             sm:h-[75vh]
+            landscape-iphone-se:h-[100vh]
             "
             style={{
               background:
@@ -85,13 +87,22 @@ function Home() {
           <div className="flex flex-grow flex-col items-center justify-center z-10">
             <div className="relative z-10 flex flex-col items-center h-full mt-16 sm:mt-36">
               <h1
-                className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 galaxy-z-fold-max:-mt-8 surface-duo-max:-mt-8 asus-zenbook-max:mt-12
-              full-hd-max:mt-20
-              ultra-wide:text-[135px]"
+                className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 
+                galaxy-z-fold-max:-mt-8 
+                surface-duo-max:-mt-8 
+                asus-zenbook-max:mt-12
+                full-hd-max:mt-20
+                ultra-wide:text-[135px]
+                landscape-iphone-se:-mt-24
+                "
               >
                 WLNS
               </h1>
-              <h2 className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8 ultra-wide:text-[43px] ultra-wide:mb-11">
+              <h2
+                className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8 
+              ultra-wide:text-[43px] ultra-wide:mb-11
+              landscape-iphone-se:mb-3"
+              >
                 The Wellness Hub
               </h2>
 
@@ -101,7 +112,10 @@ function Home() {
                 smooth
                 to="#resource-page"
                 scroll={scrollWithOffset}
-                className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] underline m-2 py-4 galaxy-z-fold-max:-mt-3 surface-duo-max:-mt-2"
+                className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] underline m-2 py-4 
+                galaxy-z-fold-max:-mt-3 
+                surface-duo-max:-mt-2
+                "
               >
                 Explore More
               </HashLink>
@@ -133,7 +147,9 @@ function Home() {
   full-hd-max:h-[100vh] full-hd-max:bg-top
   ultra-wide:h-[100vh] 
   bg-mobile-home-two bg-cover bg-center bg-no-repeat z-0
-  sm:bg-home-two"
+  sm:bg-home-two
+  landscape-iphone-se:h-[100vh]
+  "
             ></div>
 
             <div
@@ -167,7 +183,9 @@ function Home() {
               ipad-pro-height:ml-[73px] ipad-pro-height:mt-36
               full-hd-max:text-[76px] full-hd-max:ml-24 full-hd-max:mt-32
               ultra-wide:ml-56 ultra-wide:mt-56 ultra-wide:mb-24
-              font-extrabold font-playfair leading-tight md:leading-normal mt-16 mb-4 md:mt-48d"
+              font-extrabold font-playfair leading-tight md:leading-normal mt-16 mb-4 md:mt-48d
+              landscape-iphone-se:mt-0
+              "
               >
                 Sunrise Health & Clinical <br /> Excellence Centre
               </h3>
@@ -246,7 +264,9 @@ function Home() {
             ipad-pro-height:mt-64
             full-hd-max:-ml-[115px] full-hd-max:mt-[415px]
             ultra-wide:mt-[600px] ultra-wide:-ml-[305px]
-            sm:mt-96"
+            sm:mt-96
+            landscape-iphone-se:mt-48 landscape-iphone-se:-ml-[48px]
+            "
             >
               Resources
             </h2>
@@ -262,6 +282,7 @@ function Home() {
               ipad-pro-height:mt-64
               full-hd-max:mt-[415px] full-hd-max:-mr-[115px]
               ultra-wide:mt-[600px] ultra-wide:-mr-[305px]
+              landscape-iphone-se:mt-48 landscape-iphone-se:-mr-[40px]
               "
               onClick={handleClick}
             >
@@ -279,7 +300,7 @@ function Home() {
       {/* CONTACT US information */}
       <section
         id="contact-page"
-        className="relative flex flex-col h-[80vh] lg:h-[100vh] bg-black"
+        className="relative flex flex-col h-[80vh] lg:h-[100vh] landscape-iphone-se:h-[120vh] bg-black"
       >
         <div className="relative w-full h-screen min-w-[344px]">
           <div className="absolute inset-0 w-full h-full z-0">
@@ -302,6 +323,7 @@ function Home() {
           ultra-wide:h-[100vh] 
           bg-mobile-home-three bg-cover bg-center bg-no-repeat z-0
           sm:bg-home-three sm:bg-cover
+          landscape-iphone-se:h-[120vh]
           "
             ></div>
 
@@ -324,6 +346,7 @@ function Home() {
           full-hd-max:h-[100vh] 
           ultra-wide:h-[100vh] 
           sm:h-[75vh] 
+          landscape-iphone-se:h-[120vh]
           "
               style={{
                 background:
@@ -351,7 +374,8 @@ function Home() {
               ipad-pro-height:mt-28 ipad-pro-height:ml-32 ipad-pro-height:mb-11
               full-hd-max:text-[65px] full-hd-max:mt-14 full-hd-max:ml-[135px] full-hd-max:mb-20
               ultra-wide:text-[96px] ultra-wide:mt-40 ultra-wide:mb-32 ultra-wide:ml-[275px]
-              mb-8 ml-5"
+              mb-8 ml-5
+              landscape-iphone-se:ml-[110px] landscape-iphone-se:mb-4 landscape-iphone-se:mt-5"
               >
                 Contact Us
               </h3>
@@ -374,6 +398,7 @@ function Home() {
                   ipad-pro-height:ml-28 ipad-pro-height:text-[17px]
                   full-hd-max:text-[22px] full-hd-max:ml-[120px] full-hd-max:pr-[90px]
                   ultra-wide:text-[32px] ultra-wide:mb-24 ultra-wide:leading-loose ultra-wide:ml-[260px] ultra-wide:pr-[220px]
+                  landscape-iphone-se:ml-[92px] landscape-iphone-se:-mb-4 landscape-iphone-se:mr-10
                   "
                   style={{ textAlign: "justify" }}
                 >
@@ -398,7 +423,9 @@ function Home() {
                 surface-pro-max:text-[42px] surface-pro-max:ml-[115px]
                 ipad-pro-height:ml-32
                 full-hd-max:text-[65px] full-hd-max:ml-[135px]
-                 ultra-wide:text-[96px] ultra-wide:mb-24 ultra-wide:ml-[275px]"
+                ultra-wide:text-[96px] ultra-wide:mb-24 ultra-wide:ml-[275px]
+                landscape-iphone-se:ml-[110px] landscape-iphone-se:mb-4
+                "
                 >
                   Explore some of our FAQ
                 </h4>
@@ -422,6 +449,7 @@ function Home() {
                  ipad-pro-height:min-w-[1110px]
             full-hd-max:min-w-[1628px] full-hd-max:mr-4 full-hd-max:text-[22px] full-hd-max:font-normal
               ultra-wide:min-w-[2000px]
+              landscape-iphone-se:min-w-[445px]
                  bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -457,6 +485,7 @@ function Home() {
                     ipad-pro-height:min-w-[1110px]
                     full-hd-max:min-w-[1628px] full-hd-max:mr-4 full-hd-max:text-[22px] full-hd-max:font-normal
                     ultra-wide:min-w-[2000px]
+                    landscape-iphone-se:min-w-[445px]
                   bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -492,6 +521,7 @@ function Home() {
                   ipad-pro-height:min-w-[1110px]
                     full-hd-max:min-w-[1628px] full-hd-max:mr-4 full-hd-max:text-[22px] full-hd-max:font-normal
                       ultra-wide:min-w-[2000px]
+                      landscape-iphone-se:min-w-[445px]
                    bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -529,7 +559,8 @@ function Home() {
                   ipad-pro-height:ml-32 ipad-pro-height:mt-11
                   full-hd-max:text-[18px] full-hd-max:ml-[135px]
                   ultra-wide:ml-[275px] ultra-wide:mt-20
-                   mt-6 ml-11 ultra-wide:text-[28px] block"
+                   mt-6 ml-11 ultra-wide:text-[28px] block
+                   landscape-iphone-se:mt-5 landscape-iphone-se:ml-[110px]"
                 >
                   See All Frequently Asked Questions
                 </a>
