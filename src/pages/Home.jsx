@@ -34,7 +34,7 @@ function Home() {
     <div>
       {/* First section with background and main title */}
       <header className="relative flex flex-col bg-black">
-        <div className="relative w-full min-w-[320px] min-h-[40vh] sm:h-[100vh] landscape-galaxy-z-fold:h-[160vh] landscape-iphone-12:h-[120vh]">
+        <div className="relative w-full min-w-[320px] min-h-[40vh] sm:h-[100vh] landscape-galaxy-z-fold:h-[160vh] landscape-iphone-12:h-[120vh] landscape-iphone-xr:h-[110vh]">
           <div
             className="
           absolute inset-0 w-full h-[50vh]
@@ -59,6 +59,7 @@ function Home() {
   landscape-galaxy-s8:h-[100vh]
   landscape-galaxy-z-fold:h-[160vh]
   landscape-iphone-12:h-[120vh]
+  landscape-iphone-xr:h-[110vh]
   "
           ></div>
 
@@ -85,6 +86,7 @@ function Home() {
             landscape-galaxy-s8:h-[100vh]
             landscape-galaxy-z-fold:h-[160vh]
             landscape-iphone-12:h-[120vh]
+            landscape-iphone-xr:h-[110vh]
             "
             style={{
               background:
@@ -104,6 +106,7 @@ function Home() {
                 landscape-iphone-se:-mt-24
                 landscape-galaxy-s8:-mt-24
                 landscape-galaxy-z-fold:-mt-10
+                landscape-iphone-xr:-mt-7
                 "
               >
                 WLNS
@@ -115,6 +118,7 @@ function Home() {
               landscape-galaxy-s8:mb-3
               landscape-galaxy-z-fold:mb-4
               landscape-iphone-12:mb-4
+              landscape-iphone-xr:mb-4
               "
               >
                 The Wellness Hub
@@ -167,6 +171,7 @@ function Home() {
   landscape-galaxy-s8:h-[100vh]
   landscape-galaxy-z-fold:h-[185vh]
   landscape-iphone-12:h-[160vh]
+  landscape-iphone-xr:h-[160vh]
   "
             ></div>
 
@@ -207,6 +212,7 @@ function Home() {
               landscape-galaxy-s8:mt-3
               landscape-galaxy-z-fold:mt-7 landscape-galaxy-z-fold:ml-12
               landscape-iphone-12:mt-5 landscape-iphone-12:ml-8
+              landscape-iphone-xr:mt-11 landscape-iphone-xr:ml-[60px]
               "
               >
                 Sunrise Health & Clinical <br /> Excellence Centre
@@ -230,6 +236,7 @@ function Home() {
               landscape-surface-duo:text-[13px]
               landscape-galaxy-z-fold:ml-12 landscape-galaxy-z-fold:pr-24
               landscape-iphone-12:ml-8 landscape-iphone-12:pr-16
+              landscape-iphone-xr:ml-[60px] landscape-iphone-xr:pr-[115px]
               "
                 style={{ textAlign: "justify" }}
               >
@@ -266,6 +273,7 @@ function Home() {
                 landscape-surface-duo:mt-6
                 landscape-galaxy-z-fold:ml-12
                 landscape-iphone-12:ml-8
+                landscape-iphone-xr:ml-[60px]
                 ">
                 Read More
               </button>
@@ -297,6 +305,7 @@ function Home() {
             landscape-galaxy-s8:mt-[180px] landscape-galaxy-s8:-ml-[84px]
             landscape-galaxy-z-fold:mt-[465px]
             landscape-iphone-12:mt-[430px]
+            landscape-iphone-xr:mt-[450px]
             ">
               Resources
             </h2>
@@ -317,6 +326,7 @@ function Home() {
               landscape-galaxy-s8:mt-[180px] landscape-galaxy-s8:-mr-[84px]
              landscape-galaxy-z-fold:mt-[465px]
              landscape-iphone-12:mt-[430px]
+             landscape-iphone-xr:mt-[450px]
               "
               onClick={handleClick}
             >
@@ -339,7 +349,8 @@ function Home() {
         landscape-surface-duo:h-[95vh] 
         landscape-galaxy-s8:h-[145vh] 
         landscape-galaxy-z-fold:h-[180vh]  
-        landscape-iphone-12:h-[160vh] bg-black"
+        landscape-iphone-12:h-[160vh]
+        landscape-iphone-xr:h-[150vh] bg-black"
       >
         <div className="relative w-full h-screen min-w-[344px]">
           <div className="absolute inset-0 w-full h-full z-0">
@@ -367,6 +378,7 @@ function Home() {
           landscape-galaxy-s8:h-[145vh]
           landscape-galaxy-z-fold:h-[180vh]
            landscape-iphone-12:h-[160vh]
+           landscape-iphone-xr:h-[150vh]
           "
             ></div>
 
@@ -394,6 +406,7 @@ function Home() {
           landscape-galaxy-s8:h-[145vh]
           landscape-galaxy-z-fold:h-[180vh]
           landscape-iphone-12:h-[160vh]
+          landscape-iphone-xr:h-[150vh]
           "
               style={{
                 background:
@@ -426,6 +439,7 @@ function Home() {
               landscape-surface-duo:ml-[103px]
               landscape-galaxy-s8:ml-[105px]
                landscape-iphone-12:ml-[72px] landscape-iphone-12:mt-6
+               landscape-iphone-xr:ml-[105px] landscape-iphone-xr:mt-8
               ">
                 Contact Us
               </h3>
@@ -452,6 +466,7 @@ function Home() {
                   landscape-surface-duo:ml-[83px]
                   landscape-galaxy-s8:ml-[87px]
                   landscape-iphone-12:ml-[55px]
+                  landscape-iphone-xr:ml-[85px] landscape-iphone-xr:mr-11
                   "
                   style={{ textAlign: "justify" }}
                 >
@@ -481,6 +496,7 @@ function Home() {
                 landscape-surface-duo:ml-[103px]
                 landscape-galaxy-s8:ml-[105px]
                  landscape-iphone-12:ml-[72px]
+                 landscape-iphone-xr:ml-[105px]
                 "
                 >
                   Explore some of our FAQ
@@ -510,6 +526,7 @@ function Home() {
               landscape-galaxy-s8:min-w-[527px]
               landscape-galaxy-z-fold:min-w-[710px]
               landscape-iphone-12:min-w-[700px]
+              landscape-iphone-xr:min-w-[682px]
                  bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -550,6 +567,7 @@ function Home() {
                      landscape-galaxy-s8:min-w-[527px]
                      landscape-galaxy-z-fold:min-w-[710px]
                      landscape-iphone-12:min-w-[700px]
+                     landscape-iphone-xr:min-w-[682px]
                   bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -590,6 +608,7 @@ function Home() {
                        landscape-galaxy-s8:min-w-[527px]
                        landscape-galaxy-z-fold:min-w-[710px]
                        landscape-iphone-12:min-w-[700px]
+                       landscape-iphone-xr:min-w-[682px]
                    bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -632,6 +651,7 @@ function Home() {
                    landscape-surface-duo:ml-[103px] landscape-surface-duo:mt-8
                    landscape-galaxy-s8:ml-[105px]
                    landscape-iphone-12:ml-[72px]
+                   landscape-iphone-xr:ml-[105px]
                    ">
                   See All Frequently Asked Questions
                 </a>
