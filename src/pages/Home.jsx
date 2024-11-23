@@ -34,7 +34,8 @@ function Home() {
     <div>
       {/* First section with background and main title */}
       <header className="relative flex flex-col bg-black">
-        <div className="relative w-full min-w-[320px] min-h-[40vh] sm:h-[100vh] landscape-galaxy-z-fold:h-[160vh] landscape-iphone-12:h-[120vh] landscape-iphone-xr:h-[110vh]">
+        <div className="relative w-full min-w-[320px] min-h-[40vh] sm:h-[100vh] 
+        landscape-galaxy-z-fold:h-[160vh] landscape-iphone-12:h-[120vh] landscape-iphone-xr:h-[110vh] landscape-pixel-7:h-[115vh]">
           <div
             className="
           absolute inset-0 w-full h-[50vh]
@@ -60,6 +61,7 @@ function Home() {
   landscape-galaxy-z-fold:h-[160vh]
   landscape-iphone-12:h-[120vh]
   landscape-iphone-xr:h-[110vh]
+  landscape-pixel-7:h-[115vh]
   "
           ></div>
 
@@ -87,6 +89,7 @@ function Home() {
             landscape-galaxy-z-fold:h-[160vh]
             landscape-iphone-12:h-[120vh]
             landscape-iphone-xr:h-[110vh]
+            landscape-pixel-7:h-[115vh]
             "
             style={{
               background:
@@ -107,8 +110,8 @@ function Home() {
                 landscape-galaxy-s8:-mt-24
                 landscape-galaxy-z-fold:-mt-10
                 landscape-iphone-xr:-mt-7
-                "
-              >
+                landscape-pixel-7:-mt-7
+                ">
                 WLNS
               </h1>
               <h2
@@ -119,8 +122,8 @@ function Home() {
               landscape-galaxy-z-fold:mb-4
               landscape-iphone-12:mb-4
               landscape-iphone-xr:mb-4
-              "
-              >
+              landscape-pixel-7:mb-4
+              ">
                 The Wellness Hub
               </h2>
 
@@ -172,6 +175,7 @@ function Home() {
   landscape-galaxy-z-fold:h-[185vh]
   landscape-iphone-12:h-[160vh]
   landscape-iphone-xr:h-[160vh]
+  landscape-pixel-7:h-[145vh]
   "
             ></div>
 
@@ -237,6 +241,7 @@ function Home() {
               landscape-galaxy-z-fold:ml-12 landscape-galaxy-z-fold:pr-24
               landscape-iphone-12:ml-8 landscape-iphone-12:pr-16
               landscape-iphone-xr:ml-[60px] landscape-iphone-xr:pr-[115px]
+              landscape-pixel-7:text-[15px]
               "
                 style={{ textAlign: "justify" }}
               >
@@ -306,6 +311,7 @@ function Home() {
             landscape-galaxy-z-fold:mt-[465px]
             landscape-iphone-12:mt-[430px]
             landscape-iphone-xr:mt-[450px]
+            landscape-pixel-7:mt-[400px]
             ">
               Resources
             </h2>
@@ -327,6 +333,7 @@ function Home() {
              landscape-galaxy-z-fold:mt-[465px]
              landscape-iphone-12:mt-[430px]
              landscape-iphone-xr:mt-[450px]
+             landscape-pixel-7:mt-[400px]
               "
               onClick={handleClick}
             >
@@ -350,7 +357,8 @@ function Home() {
         landscape-galaxy-s8:h-[145vh] 
         landscape-galaxy-z-fold:h-[180vh]  
         landscape-iphone-12:h-[160vh]
-        landscape-iphone-xr:h-[150vh] bg-black"
+        landscape-iphone-xr:h-[150vh]
+        landscape-pixel-7:h-[155vh] bg-black"
       >
         <div className="relative w-full h-screen min-w-[344px]">
           <div className="absolute inset-0 w-full h-full z-0">
@@ -379,6 +387,7 @@ function Home() {
           landscape-galaxy-z-fold:h-[180vh]
            landscape-iphone-12:h-[160vh]
            landscape-iphone-xr:h-[150vh]
+           landscape-pixel-7:h-[155vh]
           "
             ></div>
 
@@ -407,6 +416,7 @@ function Home() {
           landscape-galaxy-z-fold:h-[180vh]
           landscape-iphone-12:h-[160vh]
           landscape-iphone-xr:h-[150vh]
+          landscape-pixel-7:h-[155vh]
           "
               style={{
                 background:
