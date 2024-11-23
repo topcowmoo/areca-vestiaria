@@ -34,7 +34,7 @@ function Home() {
     <div>
       {/* First section with background and main title */}
       <header className="relative flex flex-col bg-black">
-        <div className="relative w-full min-w-[320px] min-h-[40vh] sm:h-[100vh]">
+        <div className="relative w-full min-w-[320px] min-h-[40vh] sm:h-[100vh] landscape-galaxy-z-fold:h-[160vh]">
           <div
             className="
           absolute inset-0 w-full h-[50vh]
@@ -57,6 +57,7 @@ function Home() {
   landscape-iphone-se:h-[100vh]
   landscape-surface-duo:h-[100vh]
   landscape-galaxy-s8:h-[100vh]
+  landscape-galaxy-z-fold:h-[160vh]
   "
           ></div>
 
@@ -81,6 +82,7 @@ function Home() {
             landscape-iphone-se:h-[100vh]
             landscape-surface-duo:h-[100vh]
             landscape-galaxy-s8:h-[100vh]
+            landscape-galaxy-z-fold:h-[160vh]
             "
             style={{
               background:
@@ -99,6 +101,7 @@ function Home() {
                 ultra-wide:text-[135px]
                 landscape-iphone-se:-mt-24
                 landscape-galaxy-s8:-mt-24
+                landscape-galaxy-z-fold:-mt-10
                 "
               >
                 WLNS
@@ -108,6 +111,7 @@ function Home() {
               ultra-wide:text-[43px] ultra-wide:mb-11
               landscape-iphone-se:mb-3
               landscape-galaxy-s8:mb-3
+              landscape-galaxy-z-fold:mb-4
               "
               >
                 The Wellness Hub
@@ -158,6 +162,7 @@ function Home() {
   landscape-iphone-se:h-[100vh]
   landscape-surface-duo:h-[80vh]
   landscape-galaxy-s8:h-[100vh]
+  landscape-galaxy-z-fold:h-[185vh]
   "
             ></div>
 
@@ -196,6 +201,7 @@ function Home() {
               landscape-iphone-se:mt-0
               landscape-surface-duo:mt-7 landscape-surface-duo:text-[28px]
               landscape-galaxy-s8:mt-3
+              landscape-galaxy-z-fold:mt-7 landscape-galaxy-z-fold:ml-12
               "
               >
                 Sunrise Health & Clinical <br /> Excellence Centre
@@ -217,6 +223,7 @@ function Home() {
               full-hd-max:text-[20px] full-hd-max:pr-44 full-hd-max:ml-24
               ultra-wide:ml-56 ultra-wide:text-[26px] ultra-wide:pr-[420px]
               landscape-surface-duo:text-[13px]
+              landscape-galaxy-z-fold:ml-12 landscape-galaxy-z-fold:pr-24
               "
                 style={{ textAlign: "justify" }}
               >
@@ -251,8 +258,8 @@ function Home() {
                 full-hd-max:ml-24
                 ultra-wide:ml-[220px] ultra-wide:px-6 ultra-wide:py-3 ultra-wide:text-[22px] ultra-wide:mt-32
                 landscape-surface-duo:mt-6
-                "
-              >
+                landscape-galaxy-z-fold:ml-12
+                ">
                 Read More
               </button>
             </article>
@@ -281,6 +288,7 @@ function Home() {
             landscape-iphone-se:mt-48 landscape-iphone-se:-ml-[48px]
             landscape-surface-duo:mt-[150px] landscape-surface-duo:-ml-[75px]
             landscape-galaxy-s8:mt-[180px] landscape-galaxy-s8:-ml-[84px]
+            landscape-galaxy-z-fold:mt-[465px]
             "
             >
               Resources
@@ -300,6 +308,7 @@ function Home() {
               landscape-iphone-se:mt-48 landscape-iphone-se:-mr-[40px]
               landscape-surface-duo:mt-[150px] landscape-surface-duo:-mr-[75px]
               landscape-galaxy-s8:mt-[180px] landscape-galaxy-s8:-mr-[84px]
+             landscape-galaxy-z-fold:mt-[465px]
               "
               onClick={handleClick}
             >
@@ -317,7 +326,7 @@ function Home() {
       {/* CONTACT US information */}
       <section
         id="contact-page"
-        className="relative flex flex-col h-[80vh] lg:h-[100vh] landscape-iphone-se:h-[120vh] landscape-surface-duo:h-[95vh] landscape-galaxy-s8:h-[145vh] bg-black"
+        className="relative flex flex-col h-[80vh] lg:h-[100vh] landscape-iphone-se:h-[120vh] landscape-surface-duo:h-[95vh] landscape-galaxy-s8:h-[145vh] landscape-galaxy-z-fold:h-[180vh] bg-black"
       >
         <div className="relative w-full h-screen min-w-[344px]">
           <div className="absolute inset-0 w-full h-full z-0">
@@ -343,6 +352,7 @@ function Home() {
           landscape-iphone-se:h-[120vh]
           landscape-surface-duo:h-[95vh]
           landscape-galaxy-s8:h-[145vh]
+          landscape-galaxy-z-fold:h-[180vh]
           "
             ></div>
 
@@ -368,6 +378,7 @@ function Home() {
           landscape-iphone-se:h-[120vh]
           landscape-surface-duo:h-[95vh]
           landscape-galaxy-s8:h-[145vh]
+          landscape-galaxy-z-fold:h-[180vh]
           "
               style={{
                 background:
@@ -479,6 +490,7 @@ function Home() {
               landscape-iphone-se:min-w-[445px]
               landscape-surface-duo:min-w-[510px]
               landscape-galaxy-s8:min-w-[527px]
+              landscape-galaxy-z-fold:min-w-[710px]
                  bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -517,6 +529,7 @@ function Home() {
                     landscape-iphone-se:min-w-[445px]
                      landscape-surface-duo:min-w-[510px]
                      landscape-galaxy-s8:min-w-[527px]
+                     landscape-galaxy-z-fold:min-w-[710px]
                   bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -555,6 +568,7 @@ function Home() {
                       landscape-iphone-se:min-w-[445px]
                        landscape-surface-duo:min-w-[510px]
                        landscape-galaxy-s8:min-w-[527px]
+                       landscape-galaxy-z-fold:min-w-[710px]
                    bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
