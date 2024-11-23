@@ -37,7 +37,8 @@ function Home() {
         <div className="relative w-full min-w-[320px] min-h-[40vh] sm:h-[100vh] 
         landscape-galaxy-z-fold:h-[160vh] landscape-iphone-12:h-[120vh] 
         landscape-iphone-xr:h-[110vh] landscape-pixel-7:h-[115vh]
-        landscape-iphone-14:h-[120vh]">
+        landscape-iphone-14:h-[120vh]
+        landscape-ipad-air:h-[90vh]">
           <div
             className="
           absolute inset-0 w-full h-[50vh]
@@ -66,6 +67,7 @@ function Home() {
   landscape-pixel-7:h-[115vh]
   landscape-iphone-14:h-[120vh]
   landscape-ipad-mini:h-[100vh]
+  landscape-ipad-air:h-[90vh]
   "
           ></div>
 
@@ -96,6 +98,7 @@ function Home() {
             landscape-pixel-7:h-[115vh]
             landscape-iphone-14:h-[120vh]
             landscape-ipad-mini:h-[100vh]
+            landscape-ipad-air:h-[90vh]
             "
             style={{
               background:
@@ -118,6 +121,7 @@ function Home() {
                 landscape-iphone-xr:-mt-7
                 landscape-pixel-7:-mt-7
                 landscape-iphone-14:-mt-7
+                landscape-ipad-air:mt-1
                 ">
                 WLNS
               </h1>
@@ -186,6 +190,7 @@ function Home() {
   landscape-pixel-7:h-[145vh]
   landscape-iphone-14:h-[150vh]
   landscape-ipad-mini:h-[85vh]
+  landscape-ipad-air:h-[80vh]
   "
             ></div>
 
@@ -229,6 +234,7 @@ function Home() {
               landscape-iphone-xr:mt-11 landscape-iphone-xr:ml-[60px]
               landscape-iphone-14:mt-14 landscape-iphone-14:ml-20
               landscape-ipad-mini:mt-24  landscape-ipad-mini:ml-8 landscape-ipad-mini:text-[42px]
+              landscape-ipad-air:text-[48px] landscape-ipad-air:mt-24 landscape-ipad-air:ml-16
               "
               >
                 Sunrise Health & Clinical <br /> Excellence Centre
@@ -256,6 +262,7 @@ function Home() {
               landscape-pixel-7:text-[15px]
               landscape-iphone-14:text-[15px] landscape-iphone-14:ml-20 landscape-iphone-14:pr-[155px]
               landscape-ipad-mini:ml-8 landscape-ipad-mini:text-[16px] landscape-ipad-mini:pr-14
+              landscape-ipad-air:text-[17px] landscape-ipad-air:ml-16 landscape-ipad-air:pr-32
               "
                 style={{ textAlign: "justify" }}
               >
@@ -294,7 +301,7 @@ function Home() {
                 landscape-iphone-12:ml-8
                 landscape-iphone-xr:ml-[60px]
                 landscape-iphone-14:ml-20
-                landscape-ipad-mini:ml-8
+                landscape-ipad-air:ml-16
                 ">
                 Read More
               </button>
@@ -329,6 +336,7 @@ function Home() {
             landscape-iphone-xr:mt-[450px]
             landscape-pixel-7:mt-[400px]
             landscape-iphone-14:mt-[245px] landscape-ipad-mini:ml-10 landscape-ipad-mini:text-[55px]
+            landscape-ipad-air:mt-52 landscape-ipad-air:text-[55px] 
             ">
               Resources
             </h2>
@@ -353,6 +361,7 @@ function Home() {
              landscape-pixel-7:mt-[400px]
              landscape-iphone-14:mt-[415px]
              landscape-ipad-mini:mr-10 landscape-ipad-mini:mt-[245px]
+             landscape-ipad-air:mt-56
               "
               onClick={handleClick}
             >
@@ -380,6 +389,7 @@ function Home() {
         landscape-pixel-7:h-[155vh]
         landscape-iphone-14:h-[155vh]
         landscape-ipad-mini:h-[90vh]
+         landscape-ipad-air:h-[90vh]
          bg-black"
       >
         <div className="relative w-full h-screen min-w-[344px]">
@@ -411,7 +421,8 @@ function Home() {
            landscape-iphone-xr:h-[150vh]
            landscape-pixel-7:h-[155vh]
           landscape-iphone-14:h-[155vh]
-          landscape-ipad-mini:h-[90vh]"
+          landscape-ipad-mini:h-[90vh]
+           landscape-ipad-air:h-[90vh]"
             ></div>
 
             <div
@@ -442,6 +453,7 @@ function Home() {
           landscape-pixel-7:h-[155vh]
           landscape-iphone-14:h-[155vh]
           landscape-ipad-mini:h-[90vh]
+          landscape-ipad-air:h-[90vh]
           "
               style={{
                 background:
@@ -477,6 +489,7 @@ function Home() {
                landscape-iphone-xr:ml-[105px] landscape-iphone-xr:mt-8
                landscape-iphone-14:mt-12
                landscape-ipad-mini:ml-[72px]
+               landscape-ipad-air:text-[52px] landscape-ipad-air:ml-28  landscape-ipad-air:mt-20
               ">
                 Contact Us
               </h3>
@@ -505,6 +518,7 @@ function Home() {
                   landscape-iphone-12:ml-[55px]
                   landscape-iphone-xr:ml-[85px] landscape-iphone-xr:mr-11
                   landscape-ipad-mini:ml-[55px] landscape-ipad-mini:pr-2
+                  landscape-ipad-air:ml-[96px] landscape-ipad-air:text-[17px]
                   "
                   style={{ textAlign: "justify" }}
                 >
@@ -536,6 +550,7 @@ function Home() {
                  landscape-iphone-12:ml-[72px]
                  landscape-iphone-xr:ml-[105px]
                  landscape-ipad-mini:ml-[72px]
+                 landscape-ipad-air:text-[52px] landscape-ipad-air:ml-28
                 "
                 >
                   Explore some of our FAQ
@@ -568,6 +583,7 @@ function Home() {
               landscape-iphone-xr:min-w-[682px]
               landscape-iphone-14:min-w-[700px]
               landscape-ipad-mini:min-w-[870px]
+               landscape-ipad-air:min-w-[945px]
                  bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -611,6 +627,7 @@ function Home() {
                      landscape-iphone-xr:min-w-[682px]
                      landscape-iphone-14:min-w-[700px]
                      landscape-ipad-mini:min-w-[870px]
+                     landscape-ipad-air:min-w-[945px]
                   bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -654,6 +671,7 @@ function Home() {
                        landscape-iphone-xr:min-w-[682px]
                        landscape-iphone-14:min-w-[700px]
                        landscape-ipad-mini:min-w-[870px]
+                        landscape-ipad-air:min-w-[945px]
                    bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -698,6 +716,7 @@ function Home() {
                    landscape-iphone-12:ml-[72px]
                    landscape-iphone-xr:ml-[105px]
                    landscape-ipad-mini:ml-[72px]
+                   landscape-ipad-air:ml-28
                    ">
                   See All Frequently Asked Questions
                 </a>
