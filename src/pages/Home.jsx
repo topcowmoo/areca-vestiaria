@@ -65,7 +65,7 @@ function Home() {
   landscape-iphone-xr:h-[110vh]
   landscape-pixel-7:h-[115vh]
   landscape-iphone-14:h-[120vh]
-
+  landscape-ipad-mini:h-[100vh]
   "
           ></div>
 
@@ -95,6 +95,7 @@ function Home() {
             landscape-iphone-xr:h-[110vh]
             landscape-pixel-7:h-[115vh]
             landscape-iphone-14:h-[120vh]
+            landscape-ipad-mini:h-[100vh]
             "
             style={{
               background:
@@ -184,6 +185,7 @@ function Home() {
   landscape-iphone-xr:h-[160vh]
   landscape-pixel-7:h-[145vh]
   landscape-iphone-14:h-[150vh]
+  landscape-ipad-mini:h-[85vh]
   "
             ></div>
 
@@ -226,6 +228,7 @@ function Home() {
               landscape-iphone-12:mt-5 landscape-iphone-12:ml-8
               landscape-iphone-xr:mt-11 landscape-iphone-xr:ml-[60px]
               landscape-iphone-14:mt-14 landscape-iphone-14:ml-20
+              landscape-ipad-mini:mt-24  landscape-ipad-mini:ml-8 landscape-ipad-mini:text-[42px]
               "
               >
                 Sunrise Health & Clinical <br /> Excellence Centre
@@ -252,6 +255,7 @@ function Home() {
               landscape-iphone-xr:ml-[60px] landscape-iphone-xr:pr-[115px]
               landscape-pixel-7:text-[15px]
               landscape-iphone-14:text-[15px] landscape-iphone-14:ml-20 landscape-iphone-14:pr-[155px]
+              landscape-ipad-mini:ml-8 landscape-ipad-mini:text-[16px] landscape-ipad-mini:pr-14
               "
                 style={{ textAlign: "justify" }}
               >
@@ -290,6 +294,7 @@ function Home() {
                 landscape-iphone-12:ml-8
                 landscape-iphone-xr:ml-[60px]
                 landscape-iphone-14:ml-20
+                landscape-ipad-mini:ml-8
                 ">
                 Read More
               </button>
@@ -323,7 +328,7 @@ function Home() {
             landscape-iphone-12:mt-[430px]
             landscape-iphone-xr:mt-[450px]
             landscape-pixel-7:mt-[400px]
-            landscape-iphone-14:mt-[415px]
+            landscape-iphone-14:mt-[245px] landscape-ipad-mini:ml-10 landscape-ipad-mini:text-[55px]
             ">
               Resources
             </h2>
@@ -347,6 +352,7 @@ function Home() {
              landscape-iphone-xr:mt-[450px]
              landscape-pixel-7:mt-[400px]
              landscape-iphone-14:mt-[415px]
+             landscape-ipad-mini:mr-10 landscape-ipad-mini:mt-[245px]
               "
               onClick={handleClick}
             >
@@ -372,7 +378,9 @@ function Home() {
         landscape-iphone-12:h-[160vh]
         landscape-iphone-xr:h-[150vh]
         landscape-pixel-7:h-[155vh]
-        landscape-iphone-14:h-[155vh] bg-black"
+        landscape-iphone-14:h-[155vh]
+        landscape-ipad-mini:h-[90vh]
+         bg-black"
       >
         <div className="relative w-full h-screen min-w-[344px]">
           <div className="absolute inset-0 w-full h-full z-0">
@@ -402,7 +410,8 @@ function Home() {
            landscape-iphone-12:h-[160vh]
            landscape-iphone-xr:h-[150vh]
            landscape-pixel-7:h-[155vh]
-          landscape-iphone-14:h-[155vh]"
+          landscape-iphone-14:h-[155vh]
+          landscape-ipad-mini:h-[90vh]"
             ></div>
 
             <div
@@ -432,6 +441,7 @@ function Home() {
           landscape-iphone-xr:h-[150vh]
           landscape-pixel-7:h-[155vh]
           landscape-iphone-14:h-[155vh]
+          landscape-ipad-mini:h-[90vh]
           "
               style={{
                 background:
@@ -466,6 +476,7 @@ function Home() {
                landscape-iphone-12:ml-[72px] landscape-iphone-12:mt-6
                landscape-iphone-xr:ml-[105px] landscape-iphone-xr:mt-8
                landscape-iphone-14:mt-12
+               landscape-ipad-mini:ml-[72px]
               ">
                 Contact Us
               </h3>
@@ -493,6 +504,7 @@ function Home() {
                   landscape-galaxy-s8:ml-[87px]
                   landscape-iphone-12:ml-[55px]
                   landscape-iphone-xr:ml-[85px] landscape-iphone-xr:mr-11
+                  landscape-ipad-mini:ml-[55px] landscape-ipad-mini:pr-2
                   "
                   style={{ textAlign: "justify" }}
                 >
@@ -523,6 +535,7 @@ function Home() {
                 landscape-galaxy-s8:ml-[105px]
                  landscape-iphone-12:ml-[72px]
                  landscape-iphone-xr:ml-[105px]
+                 landscape-ipad-mini:ml-[72px]
                 "
                 >
                   Explore some of our FAQ
@@ -554,6 +567,7 @@ function Home() {
               landscape-iphone-12:min-w-[700px]
               landscape-iphone-xr:min-w-[682px]
               landscape-iphone-14:min-w-[700px]
+              landscape-ipad-mini:min-w-[870px]
                  bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -596,6 +610,7 @@ function Home() {
                      landscape-iphone-12:min-w-[700px]
                      landscape-iphone-xr:min-w-[682px]
                      landscape-iphone-14:min-w-[700px]
+                     landscape-ipad-mini:min-w-[870px]
                   bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -638,6 +653,7 @@ function Home() {
                        landscape-iphone-12:min-w-[700px]
                        landscape-iphone-xr:min-w-[682px]
                        landscape-iphone-14:min-w-[700px]
+                       landscape-ipad-mini:min-w-[870px]
                    bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -681,6 +697,7 @@ function Home() {
                    landscape-galaxy-s8:ml-[105px]
                    landscape-iphone-12:ml-[72px]
                    landscape-iphone-xr:ml-[105px]
+                   landscape-ipad-mini:ml-[72px]
                    ">
                   See All Frequently Asked Questions
                 </a>

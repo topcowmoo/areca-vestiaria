@@ -42,7 +42,7 @@ const ResourceCard = ({ category }) => {
   return (
     <div
       className={`w-full md:w-[335px] lg:w-[470px] xl:w-[550px] 2xl:w-[700px] ultra-wide:w-[1000px]
-    min-h-12 sm:min-h-[95px] md:min-h-[250px] lg:min-h-[350px] xl:min-h-[400px] 2xl:min-h-[475px]
+    min-h-12 sm:min-h-[95px] md:min-h-[250px] lg:min-h-[350px] xl:min-h-[400px] 2xl:min-h-[475px] landscape-ipad-mini:w-[427px]
     landscape-iphone-se:w-[452px] landscape-iphone-se:-ml-[45px]
     landscape-surface-duo:-ml-[75px] landscape-surface-duo:w-[516px]
     landscape-galaxy-s8:-ml-[84px] landscape-galaxy-s8:w-[537px]

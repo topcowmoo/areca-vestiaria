@@ -9,7 +9,7 @@ function HomeDirectory({ filteredData }) {
   shadow-custom-inner 
   flex 
   h-[300px] md:h-[250px] lg:h-[350px] xl:h-[400px] 2xl:h-[475px]
-  w-full md:w-[335px] lg:w-[470px] xl:w-[550px] 2xl:w-[700px] ultra-wide:w-[1000px]
+  w-full md:w-[335px] lg:w-[470px] xl:w-[550px] 2xl:w-[700px] ultra-wide:w-[1000px] landscape-ipad-mini:w-[427px]
   landscape-iphone-se:w-[452px] landscape-iphone-se:-ml-[45px]
   landscape-surface-duo:-ml-[75px] landscape-surface-duo:w-[516px]
   landscape-galaxy-s8:-ml-[84px] landscape-galaxy-s8:w-[537px]
