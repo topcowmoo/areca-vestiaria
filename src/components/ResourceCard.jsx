@@ -45,6 +45,7 @@ const ResourceCard = ({ category }) => {
     min-h-12 sm:min-h-[95px] md:min-h-[250px] lg:min-h-[350px] xl:min-h-[400px] 2xl:min-h-[475px]
     landscape-iphone-se:w-[452px] landscape-iphone-se:-ml-[45px]
     landscape-surface-duo:-ml-[75px] landscape-surface-duo:w-[516px]
+    landscape-galaxy-s8:-ml-[84px] landscape-galaxy-s8:w-[537px]
     rounded-md sm:rounded-[10px] md:rounded-[10px] lg:rounded-[10px] xl:rounded-[10px] 
     relative overflow-hidden flex bg-cover bg-no-repeat full-hd-max:w-[815px]
     ${card.backgroundClass} 
