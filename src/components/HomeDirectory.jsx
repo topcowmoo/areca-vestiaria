@@ -12,6 +12,7 @@ function HomeDirectory({ filteredData }) {
   w-full md:w-[335px] lg:w-[470px] xl:w-[550px] 2xl:w-[700px] ultra-wide:w-[1000px]
   landscape-iphone-se:w-[452px] landscape-iphone-se:-ml-[45px]
   landscape-surface-duo:-ml-[75px] landscape-surface-duo:w-[516px]
+  landscape-galaxy-s8:-ml-[84px] landscape-galaxy-s8:w-[537px]
   rounded-md sm:rounded-[10px] md:rounded-[10px] lg:rounded-[10px] xl:rounded-[10px] full-hd-max:w-[815px]"
     >
       <div className="flex flex-col gap-[15px] h-full overflow-y-auto custom-scrollbar w-full pt-[10px] pb-[10px] pr-[15px] pl-[15px]">
