@@ -35,7 +35,9 @@ function Home() {
       {/* First section with background and main title */}
       <header className="relative flex flex-col bg-black">
         <div className="relative w-full min-w-[320px] min-h-[40vh] sm:h-[100vh] 
-        landscape-galaxy-z-fold:h-[160vh] landscape-iphone-12:h-[120vh] landscape-iphone-xr:h-[110vh] landscape-pixel-7:h-[115vh]">
+        landscape-galaxy-z-fold:h-[160vh] landscape-iphone-12:h-[120vh] 
+        landscape-iphone-xr:h-[110vh] landscape-pixel-7:h-[115vh]
+        landscape-iphone-14:h-[120vh]">
           <div
             className="
           absolute inset-0 w-full h-[50vh]
@@ -62,6 +64,8 @@ function Home() {
   landscape-iphone-12:h-[120vh]
   landscape-iphone-xr:h-[110vh]
   landscape-pixel-7:h-[115vh]
+  landscape-iphone-14:h-[120vh]
+
   "
           ></div>
 
@@ -90,6 +94,7 @@ function Home() {
             landscape-iphone-12:h-[120vh]
             landscape-iphone-xr:h-[110vh]
             landscape-pixel-7:h-[115vh]
+            landscape-iphone-14:h-[120vh]
             "
             style={{
               background:
@@ -111,6 +116,7 @@ function Home() {
                 landscape-galaxy-z-fold:-mt-10
                 landscape-iphone-xr:-mt-7
                 landscape-pixel-7:-mt-7
+                landscape-iphone-14:-mt-7
                 ">
                 WLNS
               </h1>
@@ -123,6 +129,7 @@ function Home() {
               landscape-iphone-12:mb-4
               landscape-iphone-xr:mb-4
               landscape-pixel-7:mb-4
+              landscape-iphone-14:mb-4
               ">
                 The Wellness Hub
               </h2>
@@ -176,6 +183,7 @@ function Home() {
   landscape-iphone-12:h-[160vh]
   landscape-iphone-xr:h-[160vh]
   landscape-pixel-7:h-[145vh]
+  landscape-iphone-14:h-[150vh]
   "
             ></div>
 
@@ -217,6 +225,7 @@ function Home() {
               landscape-galaxy-z-fold:mt-7 landscape-galaxy-z-fold:ml-12
               landscape-iphone-12:mt-5 landscape-iphone-12:ml-8
               landscape-iphone-xr:mt-11 landscape-iphone-xr:ml-[60px]
+              landscape-iphone-14:mt-14 landscape-iphone-14:ml-20
               "
               >
                 Sunrise Health & Clinical <br /> Excellence Centre
@@ -242,6 +251,7 @@ function Home() {
               landscape-iphone-12:ml-8 landscape-iphone-12:pr-16
               landscape-iphone-xr:ml-[60px] landscape-iphone-xr:pr-[115px]
               landscape-pixel-7:text-[15px]
+              landscape-iphone-14:text-[15px] landscape-iphone-14:ml-20 landscape-iphone-14:pr-[155px]
               "
                 style={{ textAlign: "justify" }}
               >
@@ -279,6 +289,7 @@ function Home() {
                 landscape-galaxy-z-fold:ml-12
                 landscape-iphone-12:ml-8
                 landscape-iphone-xr:ml-[60px]
+                landscape-iphone-14:ml-20
                 ">
                 Read More
               </button>
@@ -312,6 +323,7 @@ function Home() {
             landscape-iphone-12:mt-[430px]
             landscape-iphone-xr:mt-[450px]
             landscape-pixel-7:mt-[400px]
+            landscape-iphone-14:mt-[415px]
             ">
               Resources
             </h2>
@@ -334,6 +346,7 @@ function Home() {
              landscape-iphone-12:mt-[430px]
              landscape-iphone-xr:mt-[450px]
              landscape-pixel-7:mt-[400px]
+             landscape-iphone-14:mt-[415px]
               "
               onClick={handleClick}
             >
@@ -358,7 +371,8 @@ function Home() {
         landscape-galaxy-z-fold:h-[180vh]  
         landscape-iphone-12:h-[160vh]
         landscape-iphone-xr:h-[150vh]
-        landscape-pixel-7:h-[155vh] bg-black"
+        landscape-pixel-7:h-[155vh]
+        landscape-iphone-14:h-[155vh] bg-black"
       >
         <div className="relative w-full h-screen min-w-[344px]">
           <div className="absolute inset-0 w-full h-full z-0">
@@ -388,7 +402,7 @@ function Home() {
            landscape-iphone-12:h-[160vh]
            landscape-iphone-xr:h-[150vh]
            landscape-pixel-7:h-[155vh]
-          "
+          landscape-iphone-14:h-[155vh]"
             ></div>
 
             <div
@@ -417,6 +431,7 @@ function Home() {
           landscape-iphone-12:h-[160vh]
           landscape-iphone-xr:h-[150vh]
           landscape-pixel-7:h-[155vh]
+          landscape-iphone-14:h-[155vh]
           "
               style={{
                 background:
@@ -450,6 +465,7 @@ function Home() {
               landscape-galaxy-s8:ml-[105px]
                landscape-iphone-12:ml-[72px] landscape-iphone-12:mt-6
                landscape-iphone-xr:ml-[105px] landscape-iphone-xr:mt-8
+               landscape-iphone-14:mt-12
               ">
                 Contact Us
               </h3>
@@ -537,6 +553,7 @@ function Home() {
               landscape-galaxy-z-fold:min-w-[710px]
               landscape-iphone-12:min-w-[700px]
               landscape-iphone-xr:min-w-[682px]
+              landscape-iphone-14:min-w-[700px]
                  bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -578,6 +595,7 @@ function Home() {
                      landscape-galaxy-z-fold:min-w-[710px]
                      landscape-iphone-12:min-w-[700px]
                      landscape-iphone-xr:min-w-[682px]
+                     landscape-iphone-14:min-w-[700px]
                   bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
@@ -619,6 +637,7 @@ function Home() {
                        landscape-galaxy-z-fold:min-w-[710px]
                        landscape-iphone-12:min-w-[700px]
                        landscape-iphone-xr:min-w-[682px]
+                       landscape-iphone-14:min-w-[700px]
                    bg-white text-black flex justify-between items-center 
                   p-3 rounded-lg shadow-md font-bold text-[11px] lg:text-[16px]"
                   >
