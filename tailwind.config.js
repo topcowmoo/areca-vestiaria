@@ -147,7 +147,7 @@ export default {
           raw: "(min-width: 897px) and (max-width: 915px) and (min-height: 412px) and (orientation: landscape)",
         },
         "landscape-iphone-14": {
-          raw: "(orientation: landscape)",
+          raw: "(min-width: 932px) and (max-width: 932px) and (min-height: 430px) and (max-height: 430px) and (orientation: landscape)",
         },
         "landscape-ipad-mini": {
           raw: "(min-width: 933px) and (max-width: 1024px) and (min-height: 768px) and (orientation: landscape)",
