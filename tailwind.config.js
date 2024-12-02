@@ -126,29 +126,38 @@ export default {
         "ultra-wide": { min: "2560px" }, // Ultra wide (2560px)
 
         "landscape-iphone-se": {
-          raw: "(max-width: 667px) and (max-height: 375px) and (orientation: landscape)",
-        },
-        "landscape-surface-duo": {
-          raw: "(min-width: 668px) and (max-width: 720px) and (max-height: 540px) and (orientation: landscape)",
-        },
-        "landscape-galaxy-s8": {
-          raw: "(min-width: 721px) and (max-width: 740px) and (min-height: 360px) and (orientation: landscape)",
-        },
-        "landscape-galaxy-z-fold": {
-          raw: "(min-width: 741px) and (max-width: 882px) and (max-height: 344px) and (orientation: landscape)",
-        },
-        "landscape-iphone-12": {
-          raw: "(min-width: 820px) and (max-width: 844px) and (orientation: landscape)",
-        },
-        "landscape-iphone-xr": {
-          raw: "(min-width: 845px) and (max-width: 896px) and (min-height: 414px) and (orientation: landscape)",
-        },
-        "landscape-pixel-7": {
-          raw: "(min-width: 897px) and (max-width: 915px) and (min-height: 412px) and (orientation: landscape)",
-        },
-        "landscape-iphone-14": {
-          raw: "(min-width: 932px) and (max-width: 932px) and (min-height: 430px) and (max-height: 430px) and (orientation: landscape)",
-        },
+  raw: "(min-width: 320px) and (max-width: 667px) and (max-height: 375px) and (orientation: landscape)",
+},
+
+"landscape-surface-duo": {
+  raw: "(min-width: 668px) and (max-width: 720px) and (min-height: 540px) and (orientation: landscape)",
+},
+
+"landscape-galaxy-s8": {
+  raw: "(min-width: 721px) and (max-width: 740px) and (min-height: 360px) and (orientation: landscape)",
+},
+
+"landscape-galaxy-z-fold": {
+  raw: "(min-width: 741px) and (max-width: 882px) and (max-height: 344px) and (orientation: landscape)",
+},
+
+"landscape-iphone-12": {
+  raw: "(min-width: 820px) and (max-width: 844px) and (min-height: 390px) and (orientation: landscape)",
+},
+
+"landscape-iphone-xr": {
+  raw: "(min-width: 845px) and (max-width: 896px) and (min-height: 414px) and (max-height: 414px) and (orientation: landscape)",
+},
+
+"landscape-pixel-7": {
+  raw: "(min-width: 897px) and (max-width: 915px) and (min-height: 412px) and (max-height: 412px) and (orientation: landscape)",
+},
+
+
+"landscape-iphone-14": {
+  raw: "(min-width: 932px) and (max-width: 932px) and (min-height: 430px) and (max-height: 430px) and (orientation: landscape)",
+},
+
         "landscape-ipad-mini": {
           raw: "(min-width: 933px) and (max-width: 1024px) and (min-height: 768px) and (orientation: landscape)",
         },
