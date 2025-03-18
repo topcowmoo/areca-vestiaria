@@ -57,13 +57,13 @@ function ADHDResources() {
   iphone-12-max:h-[35vh] 
   galaxy-s20-max:h-[33vh] 
   iphone-xr-max:h-[32.5vh] 
-  iphone-14-max:!h-[34.5vh]
+  iphone-14-max:h-[34.5vh]
   surface-duo-max:h-[47vh] 
   ipad-mini:h-[41vh]
   ipad-air-max:h-[39vh]
   asus-zenbook-max:h-[37.5vh]
   suface-pro-max:h-[37.5vh]
-  ipad-pro-height:!h-[55vh]
+  ipad-pro-height:h-[55vh]
   full-hd-max:h-[65vh]
   ultra-wide:h-[50vh] 
   sm:h-[75vh] 
@@ -77,6 +77,7 @@ landscape-iphone-12:h-[113vh]
   landscape-iphone-xr:h-[112vh]
   landscape-pixel-7:h-[106vh]
   landscape-iphone-14:!h-[100vh]
+  landscape-iphone-16:h-[100vh]
   landscape-ipad-mini:h-[81vh]
   landscape-ipad-air:h-[79.5vh]
   landscape-ipad-pro:!h-[67vh]
@@ -96,11 +97,12 @@ landscape-iphone-12:h-[113vh]
             landscape-galaxy-s8:h-[115.5vh] landscape-galaxy-z-fold:h-[144.3vh]
             landscape-iphone-12:h-[113vh] landscape-iphone-xr:h-[112vh]
             landscape-pixel-7:h-[106vh] landscape-iphone-14:h-[100vh]
+            landscape-iphone-16:h-[100vh]
             landscape-ipad-mini:h-[81vh] landscape-ipad-air:h-[79.5vh]
             landscape-ipad-pro:!h-[67vh] landscape-surface-pro:h-[73vh]"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.1) 90%, rgba(0, 0, 0, 1) 100%)",
+              "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 1) 100%)",
           }}
         ></div>
 
