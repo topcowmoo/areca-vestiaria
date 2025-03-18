@@ -100,7 +100,7 @@ landscape-iphone-12:h-[113vh]
             landscape-ipad-pro:!h-[67vh] landscape-surface-pro:h-[73vh]"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.1) 90%, rgba(0, 0, 0, 1) 100%)",
+              "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 1) 100%)",
           }}
         ></div>
 
