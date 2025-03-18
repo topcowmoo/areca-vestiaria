@@ -47,6 +47,7 @@ function AllResources() {
         landscape-pixel-7:h-[106vh]
         landscape-iphone-14:h-[95vh]
         landscape-ipad-mini:h-[81vh]
+        landscape-iphone-16:h-[95vh]
         landscape-ipad-air:h-[79.5vh]
         landscape-ipad-pro:!h-[67vh]
         landscape-surface-pro:h-[73vh]"
