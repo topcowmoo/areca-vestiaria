@@ -158,13 +158,14 @@ export default {
           raw: "(min-width: 932px) and (max-width: 932px) and (min-height: 430px) and (max-height: 430px) and (orientation: landscape)",
         },
 
+        "landscape-ipad-mini": {
+          raw: "(min-width: 933px) and (max-width: 1024px) and (min-height: 768px) and (orientation: landscape)",
+        },
+
         "landscape-iphone-16": {
           raw: "(min-width: 956px) and (max-width: 956px) and (min-height: 440px) and (max-height: 440px) and (orientation: landscape)",
         },
 
-        "landscape-ipad-mini": {
-          raw: "(min-width: 933px) and (max-width: 1024px) and (min-height: 768px) and (orientation: landscape)",
-        },
         "landscape-ipad-air": {
           raw: "(min-width: 1025px) and (max-width: 1180px) and (min-height: 820px) and (orientation: landscape)",
         },
