@@ -109,6 +109,7 @@ export default {
         "landscape-md": {
           raw: "(orientation: landscape) and (min-width: 768px)",
         },
+
         "galaxy-z-fold-max": { max: "344px" }, // Galaxy Z Fold and smaller
         "galaxy-s8-max": { max: "360px" }, // Galaxy S8 and smaller
         "iphone-se-max": { max: "375px" }, // iPhone SE and smaller
@@ -125,6 +126,12 @@ export default {
         "ipad-pro-height": { min: "1024px" }, // iPad Pro and larger
         "full-hd-max": { min: "1920px" }, // Full HD (1920px)
         "ultra-wide": { min: "2560px" }, // Ultra wide (2560px)
+        'aspect-9-18_5': { 'raw': '(aspect-ratio: 9 / 18.5)' }, // Galaxy S8
+        'zfold': {
+    raw: '(max-width: 350px) and (min-height: 870px) and (aspect-ratio: 344 / 882)', // Galaxy Z Fold 5
+  },
+
+        
 
         "landscape-iphone-se": {
           raw: "(min-width: 320px) and (max-width: 667px) and (max-height: 375px) and (orientation: landscape)",
