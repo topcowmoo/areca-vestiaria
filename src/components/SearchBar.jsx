@@ -70,16 +70,16 @@ const SearchBar = () => {
           onFocus={() => setIsFocused(true)}
           onBlur={() => setTimeout(() => setIsFocused(false), 150)}
         />
-        <IoMdSearch className="w-[9.86px] h-[9.86px] lg:w-[23px] lg:h-[23px] ml-2 text-[#9b9b9b]" />
+        <IoMdSearch className="w-[9.86px] h-[9.86px] lg:w-[23px] lg:h-[23px] ml-2 text-[#9b9b9b] " />
       </div>
 
       {/* Search Result container */}
       {isFocused && query.length >= 3 && (
         <div
-          className={`absolute top-[60px] w-[247px] sm:w-[247px] md:w-[482px] lg:w-[482px] bg-white rounded-[10px] p-2 shadow-lg z-10 border border-gray-200 transition-opacity duration-300 ease-in-out opacity-100`}
+          className={`absolute top-[60px] w-[247px] sm:w-[247px] md:w-[482px] lg:w-[482px] bg-white rounded-[10px] p-2 shadow-lg border border-gray-200 transition-opacity duration-300 ease-in-out opacity-100 z-50  `}
         >
           {filteredData.length > 0 ? (
-            <div className="flex flex-col justify-start items-start gap-2.5">
+            <div className="flex flex-col justify-start items-start gap-2.5 z-50">
               {filteredData.map((item) => (
                 <a
                   key={item.id}
@@ -89,7 +89,7 @@ const SearchBar = () => {
                   className="w-full no-underline hover:underline"
                 >
                   <div className="w-full truncate">
-                    <span className="text-[#1f1f1f] text-[12px] sm:text-[12px] md:text-base lg:text-base font-normal font-['Inter'] truncate">
+                    <span className="text-[#1f1f1f] text-[12px] sm:text-[12px] md:text-base lg:text-base font-normal font-['Inter'] truncate z-50">
                       {highlightQuery(item.title)}
                     </span>
                     {item !== filteredData[filteredData.length - 1] && (
@@ -103,7 +103,7 @@ const SearchBar = () => {
               ))}
             </div>
           ) : (
-            <p className="text-[#bababa] text-[12px] sm:text-[12px] md:text-base lg:text-base font-semibold font-['Inter']">
+            <p className="text-[#bababa] text-[12px] sm:text-[12px] md:text-base lg:text-base font-semibold font-['Inter'] z-50">
               No results found
             </p>
           )}
