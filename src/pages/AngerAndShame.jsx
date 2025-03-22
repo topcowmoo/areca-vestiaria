@@ -27,7 +27,7 @@ console.log("Z Fold 5 - Width:", width, " Height:", height, " Aspect ratio:", ra
   return (
     <div className="relative flex flex-col bg-black z-0">
       {/* Hero Section */}
-      <div className="relative w-full min-w-[320px] overflow-hidden">
+      <div className="relative w-full min-w-[320px] ">
         <div
           className={`
               relative w-full 
@@ -47,7 +47,7 @@ console.log("Z Fold 5 - Width:", width, " Height:", height, " Aspect ratio:", ra
         >
           {/* 🔥 Fix: Gradient Overlay Restored */}
           <div
-  className="absolute inset-0 pointer-events-none"
+  className="absolute inset-0 pointer-events-none z-0"
   style={{
     background: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.6) 95%, rgba(0, 0, 0, 1) 100%) ",
   }}
@@ -78,18 +78,18 @@ console.log("Z Fold 5 - Width:", width, " Height:", height, " Aspect ratio:", ra
       <div className="relative z-20 flex flex-col items-center justify-start flex-grow pt-[clamp(50px, 12vh, 110px)] sm:pt-[10vh] pb-12">
         <div className="w-full max-w-[1200px] px-4 py-4 sm:px-6 sm:py-6 mx-auto">
           {/* Container for FilterBox and Directory */}
-          <div 
+          <div
   className="
     relative flex flex-col w-full gap-[24px]
-    mt-[-115px]  /* Default for large screens */
-    sm:mt-[30px] /* Less aggressive push-down for tablets */
-    xs:mt-[50px] /* Slightly more space for small devices */
-    md:mt-[60px] /* Adjust for iPads & tablets */
-    aspect-9-18_5:mt-[100px] /* Galaxy S8 (18.5:9) */
-    zfold:mt-[130px]         /*  Z Fold 5 */
-   
+    mt-[100px]                          /* Default for mobile */
+    iphone-se-max:mt-[110px]           /* Extra space for iPhone SE */
+    sm:mt-[30px]                       /* Less aggressive for tablets */
+    md:mt-[60px]                       /* Adjust for iPads & tablets */
+    aspect-9-18_5:mt-[100px]           /* Galaxy S8 */
+    zfold:mt-[130px]                   /* Z Fold 5 */
   "
 >
+
             {/* Filter Box (Starts Below Hero Section) */}
             <div className="relative flex w-full z-10">
               <GeneralFilter
