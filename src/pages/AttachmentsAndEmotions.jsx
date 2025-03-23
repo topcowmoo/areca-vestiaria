@@ -21,7 +21,7 @@ function AttachmentsAndEmotions() {
       {/* Hero Section */}
       <div className="relative w-full min-w-[320px]">
         <div
-      className={`
+          className={`
               relative w-full 
     min-h-[40vh] sm:min-h-[60vh] md:min-h-[70vh] lg:min-h-[70vh] xl:min-h-[65vh] 
     max-h-[85vh] 
@@ -37,34 +37,36 @@ function AttachmentsAndEmotions() {
   sm:bg-emotions-page sm:bg-cover"
   `}
         >
-
           {/* Gradient Overlay */}
           <div
-  className="absolute inset-0 pointer-events-none z-0"
-  style={{
-    background: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.6) 95%, rgba(0, 0, 0, 1) 100%) ",
-  }}
-></div>
+            className="absolute inset-0 pointer-events-none z-0"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.6) 95%, rgba(0, 0, 0, 1) 100%) ",
+            }}
+          ></div>
 
-        {/* Title and SearchBar In Hero Image */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 ">
-          <h1
-  className="text-center text-white font-extrabold font-[playfair] leading-[1.1]"
-  style={{
-    fontSize: "clamp(40px, 7vw, 71px)",
-    paddingTop: "clamp(20px, 6vh, 80px)",  /* Lower padding in landscape */
-    marginBottom: "clamp(10px, 2vh, 15px)", /* Less space between title & search */
-  }}
->
-            Attachment & Emotions
-          </h1>
-          <SearchBarWithCommit
-            setFilteredData={setFilteredData}
-            category={category}
-            className="mt-6 w-full max-w-[320px] sm:max-w-[400px]"
-          />
+          {/* Title and SearchBar In Hero Image */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-4 ">
+            <h1
+              className="text-center text-white font-extrabold font-[playfair] leading-[1.1]"
+              style={{
+                fontSize: "clamp(40px, 7vw, 71px)",
+                paddingTop:
+                  "clamp(20px, 6vh, 80px)" /* Lower padding in landscape */,
+                marginBottom:
+                  "clamp(10px, 2vh, 15px)" /* Less space between title & search */,
+              }}
+            >
+              Attachment & Emotions
+            </h1>
+            <SearchBarWithCommit
+              setFilteredData={setFilteredData}
+              category={category}
+              className="mt-6 w-full max-w-[320px] sm:max-w-[400px]"
+            />
+          </div>
         </div>
-      </div>
       </div>
 
       {/* Content Section At Bottom of Hero Image */}
@@ -72,7 +74,7 @@ function AttachmentsAndEmotions() {
         <div className="w-full max-w-[1200px] px-4 py-4 sm:px-6 sm:py-6 mx-auto">
           {/* Container for FilterBox and Directory */}
           <div
-  className="
+            className="
     relative flex flex-col w-full gap-[19px]
     mt-[100px]                          /* Default for mobile */
     iphone-se-max:mt-[110px]           /* Extra space for iPhone SE */
@@ -81,8 +83,7 @@ function AttachmentsAndEmotions() {
     aspect-9-18_5:mt-[100px]           /* Galaxy S8 */
     zfold:mt-[130px]                   /* Z Fold 5 */
   "
->
-
+          >
             {/* Filter Box Starts Below Hero Section */}
             <div className="relative flex w-full z-10">
               <GeneralFilter
