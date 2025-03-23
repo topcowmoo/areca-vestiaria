@@ -53,7 +53,7 @@ function ParentingResources() {
               style={{
                 fontSize: "clamp(42px, 8vw, 71px)",
                 paddingTop:
-                  "clamp(20px, 10vh, 80px)" /* Lower padding in landscape */,
+                  "clamp(20px, 7vh, 80px)" /* Lower padding in landscape */,
                 marginBottom:
                   "clamp(10px, 2vh, 15px)" /* Less space between title & search */,
               }}
