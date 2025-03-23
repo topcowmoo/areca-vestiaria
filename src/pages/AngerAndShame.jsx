@@ -80,7 +80,7 @@ console.log("Z Fold 5 - Width:", width, " Height:", height, " Aspect ratio:", ra
           {/* Container for FilterBox and Directory */}
           <div
   className="
-    relative flex flex-col w-full gap-[24px]
+    relative flex flex-col w-full gap-[19px]
     mt-[100px]                          /* Default for mobile */
     iphone-se-max:mt-[110px]           /* Extra space for iPhone SE */
     sm:mt-[30px]                       /* Less aggressive for tablets */
