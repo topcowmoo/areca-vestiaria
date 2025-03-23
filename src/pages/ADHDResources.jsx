@@ -150,7 +150,7 @@ function ADHDResources() {
               <Directory
                 filteredData={filteredData}
                 maxRows={maxRows} // Pass the dynamically adjusted row count here
-                className="flex-1 min-w-[75%] w-full px-4 py-4 sm:w-[90%] sm:px-6 sm:py-6 md:w-full lg:w-full"
+                className="flex-1 w-full px-4 py-4 sm:w-[90%] sm:px-6 sm:py-6 md:w-full lg:w-full"
               />
             </div>
           </div>
