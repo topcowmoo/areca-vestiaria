@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+// import { HashLink } from "react-router-hash-link";
 import { IoCloseSharp } from "react-icons/io5";
-import { scrollWithOffset } from "../utils/scrollHelper";
-import SearchBar from "../components/SearchBar";
+// import { scrollWithOffset } from "../utils/scrollHelper";
+// import SearchBar from "../components/SearchBar";
 import HomeResourceDisplay from "../components/HomeResourceDisplay";
+import HomeHero from "../components/HomeHero";
 import speech from "/speech.png";
 import arrow from "/arrow.png";
 
@@ -33,129 +34,7 @@ function Home() {
   return (
     <div>
       {/* First section with background and main title */}
-      <header className="relative flex flex-col bg-black">
-        <div className="relative w-full min-w-[320px] min-h-[40vh] sm:h-[100vh] 
-       
-        landscape-galaxy-z-fold:h-[160vh] landscape-iphone-12:h-[120vh] 
-        landscape-iphone-xr:h-[110vh] landscape-pixel-7:h-[115vh]
-        landscape-iphone-14:h-[120vh]
-        ">
-          <div
-            className="
-          absolute inset-0 w-full h-[50vh]
-  galaxy-z-fold-max:!h-[39vh]
-  galaxy-s8-max:h-[44vh] 
-  iphone-12-max:h-[28.9vh] 
-  galaxy-s20-max:h-[39vh] 
-  iphone-xr-max:h-[40vh] 
-  iphone-14-max:h-[40vh]
-  surface-duo-max:h-[45vh] 
-  ipad-mini:h-[100vh]
-  ipad-air-max:h-[100vh]
-  asus-zenbook-max:h-[100vh]
-  surface-pro-max:h-[90vh]
-  ipad-pro-height:h-[100vh]
-  full-hd-max:h-[100vh] full-hd-max:bg-top
-  ultra-wide:h-[100vh] ultra-wide:bg-right
-  bg-mobile-home-one bg-cover bg-center bg-no-repeat z-0
-  sm:bg-home-one
-  landscape-iphone-se:h-[100vh]
-  landscape-surface-duo:h-[100vh]
-  landscape-galaxy-s8:h-[100vh]
-  landscape-galaxy-z-fold:h-[160vh]
-  landscape-iphone-12:h-[120vh]
-  landscape-iphone-xr:h-[110vh]
-  landscape-pixel-7:h-[115vh]
-  landscape-iphone-14:h-[120vh]
-
-  "
-          ></div>
-
-          <div
-            className="
-            absolute inset-0 w-full pointer-events-none 
-            h-[50vh] 
-            galaxy-z-fold-max:!h-[39vh] 
-            galaxy-s8-max:h-[44vh] 
-            iphone-12-max:h-[28.9vh]
-            galaxy-s20-max:h-[39vh]
-            iphone-xr-max:h-[40vh]
-            iphone-14-max:h-[40vh] 
-            surface-duo-max:h-[45vh] 
-            ipad-mini:h-[100vh]
-            ipad-air-max:h-[100vh]
-            asus-zenbook-max:h-[100vh]
-            surface-pro-max:h-[90vh] 
-            ipad-pro-height:h-[100vh] 
-            full-hd-max:h-[100vh] 
-            ultra-wide:h-[100vh] 
-            sm:h-[75vh]
-            landscape-iphone-se:h-[100vh]
-            landscape-surface-duo:h-[100vh]
-            landscape-galaxy-s8:h-[100vh]
-            landscape-galaxy-z-fold:h-[160vh]
-            landscape-iphone-12:h-[120vh]
-            landscape-iphone-xr:h-[110vh]
-            landscape-pixel-7:h-[115vh]
-            landscape-iphone-14:h-[120vh]
-           
-            "
-            style={{
-              background:
-                "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 1) 100%)",
-            }}
-          ></div>
-
-          <div className="flex flex-grow flex-col items-center justify-center z-10">
-            <div className="relative z-10 flex flex-col items-center h-full mt-16 sm:mt-36">
-              <h1
-                className="text-center text-white text-[48px] sm:text-[60px] md:text-[90.17px] font-extrabold font-playfair mb-1 
-                galaxy-z-fold-max:-mt-8 
-                surface-duo-max:-mt-8 
-                asus-zenbook-max:mt-12
-                full-hd-max:mt-20
-                ultra-wide:text-[135px]
-                landscape-iphone-se:-mt-24
-                landscape-galaxy-s8:-mt-24
-                landscape-galaxy-z-fold:-mt-10
-                landscape-iphone-xr:-mt-7
-                landscape-pixel-7:-mt-7
-                landscape-iphone-14:-mt-7
-             
-                ">
-                WLNS
-              </h1>
-              <h2
-                className="text-center text-white text-xl sm:text-2xl md:text-3xl font-extralight font-inter sm:mb-8 
-              ultra-wide:text-[43px] ultra-wide:mb-11
-              landscape-iphone-se:mb-3
-              landscape-galaxy-s8:mb-3
-              landscape-galaxy-z-fold:mb-4
-              landscape-iphone-12:mb-4
-              landscape-iphone-xr:mb-4
-              landscape-pixel-7:mb-4
-              landscape-iphone-14:mb-4
-              ">
-                The Wellness Hub
-              </h2>
-
-              {/* Search bar component */}
-              <SearchBar />
-              <HashLink
-                smooth
-                to="#resource-page"
-                scroll={scrollWithOffset}
-                className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-['Inter'] underline m-2 py-4 
-                galaxy-z-fold-max:-mt-3 
-                surface-duo-max:-mt-2
-                "
-              >
-                Explore More
-              </HashLink>
-            </div>
-          </div>
-        </div>
-      </header>
+      <HomeHero />
 
       {/* ABOUT US second section with additional content and 'Read More' button */}
       <section className="relative flex flex-col bg-black">
