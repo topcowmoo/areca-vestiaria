@@ -79,7 +79,7 @@ const SearchBarWithCommit = ({ category }) => {
       {/* Search results container */}
       {isFocused && query.length >= 3 && (
         <div
-          className={`absolute top-[60px] w-[247px] sm:w-[247px] md:w-[482px] lg:w-[482px] bg-white rounded-[10px] p-2 shadow-lg z-10 border border-gray-200 transition-opacity duration-300 ease-in-out`}
+          className={`absolute top-[60px] w-[247px] sm:w-[247px] md:w-[482px] lg:w-[482px] bg-white rounded-[10px] p-2 shadow-lg border border-gray-200 transition-opacity duration-300 ease-in-out z-60`}
         >
           {searchResults.length > 0 ? (
             <div className="flex flex-col justify-start items-start gap-2.5">

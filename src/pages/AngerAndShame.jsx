@@ -2,99 +2,96 @@ import { useState } from "react";
 import GeneralFilter from "../components/GeneralFilter";
 import Directory from "../components/Directory";
 import SearchBarWithCommit from "../components/SearchBarWithCommit";
+import { useEffect } from "react";
 
 function AngerAndShame() {
   const [filteredData, setFilteredData] = useState([]);
   const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(false);
-  const [isInitial, setIsInitial] = useState(true); // Initial state to control first interaction
-  const category = "Anger & Shame"; // Category specific to this page
+  const [isInitial, setIsInitial] = useState(true);
+  const category = "Anger & Shame";
+
+  useEffect(()=> {
+    const width = window.innerWidth;
+  const height = window.innerHeight;
+const ratio = (width / height).toFixed(3);
+console.log("Z Fold 5 - Width:", width, " Height:", height, " Aspect ratio:", ratio);
+  },[]);
 
   const handleFilterBoxToggle = () => {
     if (isInitial) {
-      setIsInitial(false); // Set to false after the first interaction
+      setIsInitial(false);
     }
     setIsFilterBoxOpen(!isFilterBoxOpen);
   };
 
   return (
-    <div className="relative flex flex-col bg-black">
-      {/* Background Image with Gradient Layer */}
-      <div className="relative w-full h-[847px] min-w-[320px]">
-      <div
-          className="
-  absolute inset-0 w-full h-[42vh] 
-  galaxy-z-fold-max:!h-[32.8vh] 
-  galaxy-s8-max:h-[40vh] 
-  iphone-12-max:h-[35vh] 
-  galaxy-s20-max:h-[33vh] 
-  iphone-xr-max:h-[32.5vh] 
-  iphone-14-max:h-[34.5vh]
-  surface-duo-max:h-[47vh] 
-  ipad-mini:h-[41vh]
-  ipad-air-max:h-[39vh]
-  asus-zenbook-max:h-[37.5vh]
-  suface-pro-max:h-[37.5vh]
-  ipad-pro-height:h-[51vh] 
-  full-hd-max:h-[65vh]
-  ultra-wide:h-[50vh] 
-  sm:h-[75vh] 
-  bg-mobile-anger-page bg-no-repeat bg-cover bg-center z-0 
-  sm:bg-anger-page sm:bg-cover
-  landscape-iphone-se:h-[92vh]
-  landscape-surface-duo:h-[75vh]
-  landscape-galaxy-s8:h-[115.5vh]
-landscape-galaxy-z-fold:h-[144.3vh]
-landscape-iphone-12:h-[113vh]
-  landscape-iphone-xr:h-[112vh]
-  landscape-pixel-7:h-[106vh]
-  landscape-iphone-14:h-[100vh]
-  landscape-ipad-mini:h-[81vh]
-  landscape-ipad-air:h-[79.5vh]
-  landscape-ipad-pro:!h-[67vh]
-  landscape-surface-pro:h-[73vh]"
-        ></div>
+    <div className="relative flex flex-col bg-black z-0">
+      {/* Hero Section */}
+      <div className="relative w-full min-w-[320px] ">
+        <div
+          className={`
+              relative w-full 
+    min-h-[40vh] sm:min-h-[60vh] md:min-h-[70vh] lg:min-h-[70vh] xl:min-h-[65vh] 
+    max-h-[85vh] 
+    aspect-[9/19.5]:min-h-[34vh]  /* iPhone 12, 13, 14, 15, 16 Pro/Pro Max (19.5:9) */
+    aspect-[9/20]:min-h-[35vh]    /* iPhone XR, Samsung Galaxy S20 (20:9) */
+    aspect-[3/4]:min-h-[50vh]     /* iPads in Portrait Mode (3:4) */
+    aspect-[16/9]:min-h-[60vh]    /* Older iPhones (iPhone SE, 8, etc.) */
+    aspect-[9/22]:min-h-[30vh]    /* Samsung Galaxy Fold */
+    aspect-[9/18.5]:min-h-[36vh]  /* Samsung Galaxy S8, S9, S10 (18.5:9) */
+    aspect-[16/9]:min-h-[60vh]    /* Landscape Tablets, Laptops (16:9) */
+    aspect-[16/10]:min-h-[65vh]   /* MacBooks, Surface Laptops (16:10) */
+    bg-mobile-anger-page bg-no-repeat bg-cover bg-center
+    sm:bg-anger-page sm:bg-cover
+          `}
+        >
+          {/* 🔥 Fix: Gradient Overlay Restored */}
+          <div
+  className="absolute inset-0 pointer-events-none z-0"
+  style={{
+    background: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.6) 95%, rgba(0, 0, 0, 1) 100%) ",
+  }}
+></div>
 
-<div
-          className="
-            absolute inset-0 w-full pointer-events-none 
-            h-[42vh] galaxy-z-fold-max:!h-[32.8vh] galaxy-s8-max:h-[40vh] 
-            iphone-12-max:h-[35vh] iphone-14-max:h-[34.5vh] asus-zenbook-max:h-[37.5vh] surface-pro-max:h-[37.5vh] galaxy-s20-max:h-[33vh] 
-            iphone-xr-max:h-[32.5vh] surface-duo-max:h-[47vh] 
-            ipad-mini:h-[41vh] ipad-air-max:h-[39vh] 
-            ipad-pro-height:h-[51vh] 
-            full-hd-max:h-[65vh] ultra-wide:h-[50vh] sm:h-[75vh]
-            landscape-iphone-se:h-[92vh] landscape-surface-duo:h-[75vh]
-            landscape-galaxy-s8:h-[115.5vh] landscape-galaxy-z-fold:h-[144.3vh]
-            landscape-iphone-12:h-[113vh] landscape-iphone-xr:h-[112vh]
-            landscape-pixel-7:h-[106vh] landscape-iphone-14:h-[100vh]
-            landscape-ipad-mini:h-[81vh] landscape-ipad-air:h-[79.5vh]
-            landscape-ipad-pro:!h-[67vh] landscape-surface-pro:h-[73vh]"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 1) 100%)",
-          }}
-        ></div>
-
-        {/* Title and SearchBar positioned near the bottom of the image */}
-        <div className="relative z-10 flex flex-col items-center h-full justify-end pb-[575px] md:pb-[490px] lg:pb-[410px]">
-          <h1 className="text-center text-white text-[34px] sm:text-[34px] md:text-[71px] lg:text-[71px] font-extrabold font-[playfair]">
-            Anger & Shame
-          </h1>
-          <SearchBarWithCommit
-            setFilteredData={setFilteredData}
-            category={category}
-            className="mt-6"
-          />
+          {/* 🔥 Fix: Center Title & Search Bar in Hero Image */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-4 ">
+          <h1
+  className="text-center text-white font-extrabold font-[playfair] leading-[1.1]"
+  style={{
+    fontSize: "clamp(42px, 8vw, 71px)",
+    paddingTop: "clamp(20px, 10vh, 80px)",  /* Lower padding in landscape */
+    marginBottom: "clamp(10px, 2vh, 15px)", /* Less space between title & search */
+  }}
+>
+              Anger & Shame
+            </h1>
+            <SearchBarWithCommit
+              setFilteredData={setFilteredData}
+              category={category}
+              className="mt-6 w-full max-w-[320px] sm:max-w-[400px] "
+            />
+          </div>
         </div>
       </div>
 
-      {/* Content Section */}
-      <div className="relative z-20 flex flex-col items-center justify-start flex-grow pt-2 -mt-[440px] md:pt-8 md:-mt-[370px] lg:pt-10 lg:-mt-[315px] pb-12">
+      {/* Content Section (Starts at the Bottom of the Hero Image) */}
+      <div className="relative z-20 flex flex-col items-center justify-start flex-grow pt-[clamp(50px, 12vh, 110px)] sm:pt-[10vh] pb-12">
         <div className="w-full max-w-[1200px] px-4 py-4 sm:px-6 sm:py-6 mx-auto">
           {/* Container for FilterBox and Directory */}
-          <div className="relative flex flex-col w-full gap-[19px]">
-            {/* Filter Box */}
-            <div className="relative flex w-full">
+          <div
+  className="
+    relative flex flex-col w-full gap-[19px]
+    mt-[100px]                          /* Default for mobile */
+    iphone-se-max:mt-[110px]           /* Extra space for iPhone SE */
+    sm:mt-[30px]                       /* Less aggressive for tablets */
+    md:mt-[60px]                       /* Adjust for iPads & tablets */
+    aspect-9-18_5:mt-[100px]           /* Galaxy S8 */
+    zfold:mt-[130px]                   /* Z Fold 5 */
+  "
+>
+
+            {/* Filter Box (Starts Below Hero Section) */}
+            <div className="relative flex w-full z-10">
               <GeneralFilter
                 currentPage={category}
                 setFilteredData={setFilteredData}
@@ -116,9 +113,8 @@ landscape-iphone-12:h-[113vh]
               />
             </div>
 
-            {/* Directory */}
-            <div
-              className={`relative flex flex-col flex-grow transition-all duration-700 pb-[50px] sm:pb-[100px] md:pb-[160px] ease-out ${
+            {/* Directory (Starts Below Filter Box) */}
+            <div   className={`relative flex flex-col flex-grow transition-all duration-700 pb-[50px] sm:pb-[100px] md:pb-[160px] ease-out ${
                 isFilterBoxOpen
                   ? "sm:ml-[310px] sm:z-10 z-0 sm:pointer-events-auto pointer-events-none opacity-0 sm:opacity-100"
                   : "ml-0 z-10 pointer-events-auto opacity-100"
@@ -129,7 +125,7 @@ landscape-iphone-12:h-[113vh]
             >
               <Directory
                 filteredData={filteredData}
-                className="flex-1 min-w-[75%] w-full px-4 py-4 sm:w-[90%] sm:px-6 sm:py-6 md:w-full lg:w-full"
+                className="flex-1 w-full px-4 py-4 sm:w-[90%] sm:px-6 sm:py-6 md:w-full lg:w-full"
               />
             </div>
           </div>
