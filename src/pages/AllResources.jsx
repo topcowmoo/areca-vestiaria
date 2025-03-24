@@ -21,6 +21,7 @@ function AllResources() {
         className={`
           relative flex flex-col z-0 
            min-h-[60vh] sm:min-h-[70vh] md:min-h-[70vh] lg:min-h-[70vh] xl:min-h-[85vh]
+           landscape:min-h-[90vh]
           bg-mobile-resource-image bg-no-repeat bg-cover bg-center
           sm:bg-resource sm:bg-cover
     aspect-[9/19.5]:min-h-[34vh]  /* iPhone 12, 13, 14, 15, 16 Pro/Pro Max (19.5:9) */
@@ -39,7 +40,7 @@ function AllResources() {
   className="flex flex-grow flex-col items-center justify-center px-4"
   style={{
     paddingTop: "clamp(10px, 10vh, 80px)",
-    paddingBottom: "clamp(30px, 10vh, 80px)", 
+    paddingBottom: "clamp(90px, 12vh, 140px)", 
   }}
 >
   <h2
@@ -67,7 +68,7 @@ function AllResources() {
       </div>
 
       {/* Grid Section (Resource Cards) Below Hero Section */}
-      <div className="relative z-0 py-[20px]">
+      <div className="relative z-0 py-[35px]">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 px-6 xl:gap-12 xl:px-14">
           {categoryNames.map((category, index) => (
             <AllResourcesCard key={index} category={category} />
