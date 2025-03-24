@@ -37,15 +37,15 @@ function HomeHero() {
   className="
     relative z-10 flex flex-col items-center justify-start h-full px-4
 
-    pt-[24vh]                  /* default mobile/tablet */
+    pt-[28vh]                  /* default mobile/tablet */
     sm:pt-[22vh]
-    md:pt-[20vh]
+    md:pt-[28vh]
 
-    lg:pt-[18vh]               /* large screens */
-    xl:pt-[16vh]
-    2xl:pt-[14vh]
+    lg:pt-[20vh]               /* large screens */
+    xl:pt-[22vh]
+    2xl:pt-[24vh]
 
-    landscape:pt-[25vh]        /* landscape spacing preserved */
+    landscape:pt-[28vh]        /* landscape spacing preserved */
   "
 >
 

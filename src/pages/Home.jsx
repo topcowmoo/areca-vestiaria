@@ -4,10 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 // import { scrollWithOffset } from "../utils/scrollHelper";
 // import SearchBar from "../components/SearchBar";
-import HomeResourceDisplay from "../components/HomeResourceDisplay";
-import HomeHero from "../components/HomeHero";
 import speech from "/speech.png";
 import arrow from "/arrow.png";
+import HomeResourceDisplay from "../components/HomeResourceDisplay";
+import HomeHero from "../components/HomeHero";
+import HomeAbout from "../components/HomeAbout";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -31,161 +32,16 @@ function Home() {
     navigate("/all-resources"); // <--To /all-resources
   };
 
+  
+
   return (
     <div>
       {/* First section with background and main title */}
       <HomeHero />
 
       {/* ABOUT US second section with additional content and 'Read More' button */}
-      <section className="relative flex flex-col bg-black">
-        <div className="relative w-full h-[55vh] min-w-[390px]">
-          {/* Background Image Container */}
-          <div className="absolute inset-0 w-full h-[100vh] z-0">
-            <div
-              className="
-          absolute inset-0 w-full sm:h-full h-[65vh] 
-  galaxy-z-fold-max:h-[55vh] 
-  galaxy-s8-max:h-[62vh] 
-  iphone-12-max:h-[55vh] 
-  galaxy-s20-max:h-[55vh] 
-  iphone-xr-max:h-[55vh] 
-  iphone-14-max:h-[55vh]
-  surface-duo-max:h-[70vh] 
-  ipad-mini:h-[100vh]
-  ipad-air-max:h-[90vh]
-  asus-zenbook-max:h-[100vh]
-  surface-pro-max:h-[70vh]
-  ipad-pro-height:h-[85vh] ipad-pro-height:bg-top
-  full-hd-max:h-[100vh] full-hd-max:bg-top
-  ultra-wide:h-[120vh] 
-  bg-mobile-home-two bg-cover bg-center bg-no-repeat z-0
-  sm:bg-home-two
-  landscape-iphone-se:h-[100vh]
-  landscape-surface-duo:h-[80vh]
-  landscape-galaxy-s8:h-[100vh]
-  landscape-galaxy-z-fold:h-[185vh]
-  landscape-iphone-12:h-[160vh]
-  landscape-iphone-xr:h-[160vh]
-  landscape-pixel-7:h-[145vh]
-  landscape-iphone-14:h-[150vh]
-
-  "
-            ></div>
-
-            <div
-              className="absolute inset-0 w-full h-full pointer-events-none"
-              style={{
-                background:
-                  "linear-gradient(to top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 1))",
-              }}
-            ></div>
-          </div>
-
-          {/* Content */}
-          <div
-            id="about-us"
-            className="relative flex flex-grow flex-col items-center justify-center mx-4 sm:mx-8 md:mx-12 my-4 sm:my-12"
-          >
-            <article className="w-full flex flex-grow flex-col items-start justify-center">
-              <h3
-                className="w-full text-white text-[22px]
-              galaxy-z-fold-max:!mt-28
-              galaxy-s8-max:mt-20
-              galaxy-s20-max:ml-2 galaxy-s20-max:mt-20
-              iphone-12-max:mt-[78px]
-              iphone-xr-max:mt-28
-              iphone-14-max:text-[22px] iphone-14-max:ml-4 iphone-14-max:mt-[84px]
-              surface-duo-max:text-[26px] surface-duo-max:mt-24 surface-duo-max:ml-[72px]
-              ipad-mini:text-[42px] ipad-mini:mt-36 ipad-mini:ml-0
-              ipad-air-max:text-[42px] ipad-air-max:mt-24 ipad-air-max:ml-5
-              asus-zenbook-max:text-[42px] asus-zenbook-max:mt-48 asus-zenbook-max:ml-10
-              surface-pro-max:mt-14 surface-pro-max:text-[34px] surface-pro-max:ml-16
-              ipad-pro-height:ml-[32px] ipad-pro-height:mt-32
-              full-hd-max:text-[76px] full-hd-max:ml-24 full-hd-max:mt-32
-              ultra-wide:ml-56 ultra-wide:mt-56 ultra-wide:mb-24
-              font-extrabold font-playfair leading-tight md:leading-normal mt-16 mb-4 md:mt-48d
-              landscape-iphone-se:mt-0
-              landscape-surface-duo:mt-7 landscape-surface-duo:text-[28px]
-              landscape-galaxy-s8:mt-3
-              landscape-galaxy-z-fold:mt-7 landscape-galaxy-z-fold:ml-12
-              landscape-iphone-12:mt-5 landscape-iphone-12:ml-8
-              landscape-iphone-xr:mt-11 landscape-iphone-xr:ml-[60px]
-              landscape-iphone-14:mt-14 landscape-iphone-14:ml-20
-         
-              "
-              >
-                Sunrise Health & Clinical <br /> Excellence Centre
-              </h3>
-              <p
-                className="w-full text-[11px] pr-4 text-white font-light font-['Inter'] leading-4 md:leading-[34px] lg:leading-[30px] mt-1
-              galaxy-z-fold-max:!pr-12 
-              galaxy-s8-max:pr-8
-              iphone-12-max:text-[11px] iphone-12-max:pr-1
-              galaxy-s20-max:ml-2 galaxy-s20-max:pr-3
-              iphone-xr-max:text-[11px] iphone-xr-max:pr-2
-              iphone-14-max:text-[12px] iphone-14-max:ml-4 iphone-14-max:pr-6
-              surface-duo-max:ml-[72px] surface-duo-max:pr-36
-              ipad-mini:text-[16px] ipad-mini:ml-0 ipad-mini:pr-0
-              ipad-air-max:text-[16px] ipad-air-max:ml-5 ipad-air-max:pr-9
-              asus-zenbook-max:text-[16px] asus-zenbook-max:mx-10 asus-zenbook-max:pr-16
-              surface-pro-max:text-[12.5px] surface-pro-max:ml-16 surface-pro-max:pr-32
-              ipad-pro-height:ml-[32px] ipad-pro-height:pr-11 ipad-pro-height:text-[15px]
-              full-hd-max:text-[20px] full-hd-max:pr-44 full-hd-max:ml-24
-              ultra-wide:ml-56 ultra-wide:text-[26px] ultra-wide:pr-[420px]
-              landscape-surface-duo:text-[13px]
-              landscape-galaxy-z-fold:ml-12 landscape-galaxy-z-fold:pr-24
-              landscape-iphone-12:ml-8 landscape-iphone-12:pr-16
-              landscape-iphone-xr:ml-[60px] landscape-iphone-xr:pr-[115px]
-              landscape-pixel-7:text-[15px]
-              landscape-iphone-14:text-[15px] landscape-iphone-14:ml-20 landscape-iphone-14:pr-[155px]
-           
-              "
-                style={{ textAlign: "justify" }}
-              >
-                The Sun rises everyday - and we believe that in mental health
-                and life in general - hope and new beginnings are key
-                ingredients to wellness. At SUNRISE, not only do we focus on
-                comprehensive psychiatric care - but also wellness as both are
-                essential for long-term well-being. Our team is going to be
-                expanding over time and currently consists of Dr. Mammoliti.
-                <br />
-                <br />
-                Being a medical doctor, a consultation with Dr. Mammoliti is
-                covered by OHIP as well as ongoing care (your health card) if
-                you have OHIP coverage. THERE IS NO CAPACITY FOR ONGOING
-                PSYCHIATRIC CARE AT THIS TIME WITH DR. MAMMOLITI AND CONSULTS
-                ARE AVAILABLE on a limited basis given the demand and expertise
-                fields.
-              </p>
-              {/* Button to open the modal */}
-              <button
-                onClick={handleOpenModal}
-                className="mt-8 px-4 py-2 bg-white text-[8px] md:text-sm font-inter rounded text-alt hover:text-black hover:bg-alt 
-                iphone-se-max:mt-5
-                galaxy-s20-max:ml-2
-                iphone-14-max:ml-4 iphone-14-max:mt-5
-                surface-duo-max:mt-5 surface-duo-max:ml-[72px]
-                ipad-mini:mt-9 ipad-mini:-ml-1
-                ipad-air-max:ml-5
-                asus-zenbook-max:ml-10
-                surface-pro-max:ml-16 surface-pro-max:px-3 surface-pro-max:py-1 surface-pro-max:mt-4 surface-pro-max:text-[12px]
-                ipad-pro-height:ml-[32px] ipad-pro-height:mt-10
-                full-hd-max:ml-24
-                ultra-wide:ml-[220px] ultra-wide:px-6 ultra-wide:py-3 ultra-wide:text-[22px] ultra-wide:mt-32
-                landscape-surface-duo:mt-6
-                landscape-galaxy-z-fold:ml-12
-                landscape-iphone-12:ml-8
-                landscape-iphone-xr:ml-[60px]
-                landscape-iphone-14:ml-20
-            
-                ">
-                Read More
-              </button>
-            </article>
-          </div>
-        </div>
-      </section>
-
+      <HomeAbout onReadMore={handleOpenModal} />
+      
       {/* Section displaying various resource categories */}
       <section id="resource-page">
         <div className="max-w-[400px] md:max-w-[690px] lg:max-w-[960px] xl:max-w-[1115px] 2xl:max-w-[1420px] mx-auto">
