@@ -102,30 +102,13 @@ export default {
         urbanist: ["Urbanist", "sans-serif"],
       },
       screens: {
-        xs: "375px", // Added custom `xs` breakpoint
-        "landscape-sm": {
-          raw: "(orientation: landscape) and (min-width: 640px)",
-        },
-        "landscape-md": {
-          raw: "(orientation: landscape) and (min-width: 768px)",
-        },
 
-        "galaxy-z-fold-max": { max: "344px" }, // Galaxy Z Fold and smaller
-        "galaxy-s8-max": { max: "360px" }, // Galaxy S8 and smaller
-        "iphone-se-max": { max: "375px" }, // iPhone SE and smaller
-        "iphone-12-max": { min: "390px" }, // iPhone 12 and smaller
-        "galaxy-s20-max": { min: "412px" }, // Galaxy S20 and larger
-        "iphone-xr-max": { min: "414px" }, // iPhone XR and larger
-        "iphone-14-max": { min: "430px" }, // iPhone 14 and larger
-        "iphone-16-max": { min: "440px" }, // iPhone 16 and larger
-        "surface-duo-max": { min: "540px" }, // Surface Duo and larger
-        "ipad-mini": { min: "768px" }, // iPad Mini and larger
-        "ipad-air-max": { min: "820px" }, // iPad Air and larger
-        "asus-zenbook-max": { min: "853px" }, // Asus Zenbook and larger
-        "surface-pro-max": { min: "912px" }, // Surface Pro and larger
-        "ipad-pro-height": { min: "1024px" }, // iPad Pro and larger
-        "full-hd-max": { min: "1920px" }, // Full HD (1920px)
-        "ultra-wide": { min: "2560px" }, // Ultra wide (2560px)
+        'landscape-xs': {
+  raw: '(max-width: 767px) and (orientation: landscape)',
+},
+
+   
+
         'aspect-9-18_5': { 'raw': '(aspect-ratio: 9 / 18.5)' }, // Galaxy S8
         'zfold': {
     raw: '(max-width: 350px) and (min-height: 870px) and (aspect-ratio: 344 / 882)', // Galaxy Z Fold 5
@@ -133,58 +116,7 @@ export default {
 
         
 
-        "landscape-iphone-se": {
-          raw: "(min-width: 320px) and (max-width: 667px) and (max-height: 375px) and (orientation: landscape)",
-        },
-
-        "landscape-surface-duo": {
-          raw: "(min-width: 668px) and (max-width: 720px) and (min-height: 540px) and (orientation: landscape)",
-        },
-
-        "landscape-galaxy-s8": {
-          raw: "(min-width: 721px) and (max-width: 740px) and (min-height: 360px) and (orientation: landscape)",
-        },
-
-        "landscape-galaxy-z-fold": {
-          raw: "(min-width: 741px) and (max-width: 882px) and (max-height: 344px) and (orientation: landscape)",
-        },
-
-        "landscape-iphone-12": {
-          raw: "(min-width: 820px) and (max-width: 844px) and (min-height: 390px) and (orientation: landscape)",
-        },
-
-        "landscape-iphone-xr": {
-          raw: "(min-width: 845px) and (max-width: 896px) and (min-height: 414px) and (max-height: 414px) and (orientation: landscape)",
-        },
-
-        "landscape-pixel-7": {
-          raw: "(min-width: 897px) and (max-width: 915px) and (min-height: 412px) and (max-height: 412px) and (orientation: landscape)",
-        },
-
-        "landscape-iphone-14": {
-          raw: "(min-width: 932px) and (max-width: 932px) and (min-height: 430px) and (max-height: 430px) and (orientation: landscape)",
-        },
-
-        "landscape-ipad-mini": {
-          raw: "(min-width: 933px) and (max-width: 1024px) and (min-height: 768px) and (orientation: landscape)",
-        },
-
-        "landscape-iphone-16": {
-          raw: "(min-width: 956px) and (max-width: 956px) and (min-height: 440px) and (max-height: 440px) and (orientation: landscape)",
-        },
-
-        "landscape-ipad-air": {
-          raw: "(min-width: 1025px) and (max-width: 1180px) and (min-height: 820px) and (orientation: landscape)",
-        },
-        "landscape-zenbook-fold": {
-          raw: "(min-width: 1181px) and (max-width: 1280px) and (max-height: 853px) and (orientation: landscape)",
-        },
-        "landscape-ipad-pro": {
-          raw: "(min-width: 1281px) and (max-width: 1366px) and (min-height: 1024px) and (orientation: landscape)",
-        },
-        "landscape-surface-pro": {
-          raw: "(min-width: 1367px) and (max-width: 1368px) and (min-height: 912px) and (orientation: landscape)",
-        },
+        
       },
     },
   },
