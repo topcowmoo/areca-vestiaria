@@ -1,18 +1,18 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 // import { HashLink } from "react-router-hash-link";
 import { IoCloseSharp } from "react-icons/io5";
 // import { scrollWithOffset } from "../utils/scrollHelper";
 // import SearchBar from "../components/SearchBar";
 import speech from "/speech.png";
 import arrow from "/arrow.png";
-import HomeResourceDisplay from "../components/HomeResourceDisplay";
 import HomeHero from "../components/HomeHero";
 import HomeAbout from "../components/HomeAbout";
+import HomeResource from "../components/HomeResource";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const navigate = useNavigate(); // <-- useNavigate hook should be at the top level of the component
+  
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -28,9 +28,7 @@ function Home() {
     }
   };
 
-  const handleClick = () => {
-    navigate("/all-resources"); // <--To /all-resources
-  };
+ 
 
   
 
@@ -43,68 +41,8 @@ function Home() {
       <HomeAbout onReadMore={handleOpenModal} />
       
       {/* Section displaying various resource categories */}
-      <section id="resource-page">
-        <div className="max-w-[400px] md:max-w-[690px] lg:max-w-[960px] xl:max-w-[1115px] 2xl:max-w-[1420px] mx-auto">
-          {/* Title and Button Section */}
-          <div className="flex justify-between items-center mt-4 lg:mt-5 px-[18px] md:px-[1px]">
-            <h2
-              className="text-[28px] md:text-[50px] lg:text-[65px] font-bold font-playfair
-            galaxy-z-fold-max:!mt-14  galaxy-s8-max:mt-16 
-            iphone-se-max:mt-16 
-            surface-duo-max:mt-28 
-            ipad-mini:mt-[425px] 
-            ipad-air-max:mt-[320px] 
-            asus-zenbook-max:mt-[425px] 
-            surface-pro-max:mt-32
-            ipad-pro-height:mt-80 ipad-pro-height:ml-10
-            full-hd-max:-ml-[115px] full-hd-max:mt-[415px]
-            ultra-wide:mt-[600px] ultra-wide:-ml-[305px]
-            sm:mt-96
-            landscape-iphone-se:mt-48 landscape-iphone-se:-ml-[48px]
-            landscape-surface-duo:mt-[150px] landscape-surface-duo:-ml-[75px]
-            landscape-galaxy-s8:mt-[180px] landscape-galaxy-s8:-ml-[84px]
-            landscape-galaxy-z-fold:mt-[465px]
-            landscape-iphone-12:mt-[430px]
-            landscape-iphone-xr:mt-[450px]
-            landscape-pixel-7:mt-[400px]
-            landscape-iphone-14:mt-[415px]
-            ">
-              Resources
-            </h2>
-            <button
-              className="bg-[#393939] shadow-custom-even font-bold text-white font-inter rounded-[4px] px-[6.5px] py-[2.5px] text-[8px] md:text-[14px] md:px-[10px] md:py-[4px] lg:text-[16px] lg:px-[15px] lg:py-[6px] flex-shrink-0
-              galaxy-z-fold-max:!mt-14 
-              iphone-se-max:mt-16  z-10
-              surface-duo-max:mt-28
-              ipad-mini:mt-[425px]
-              ipad-air-max:mt-[320px]
-                 asus-zenbook-max:mt-[425px] 
-              surface-pro-max:mt-32
-              ipad-pro-height:mt-80 ipad-pro-height:mr-10
-              full-hd-max:mt-[415px] full-hd-max:-mr-[115px]
-              ultra-wide:mt-[600px] ultra-wide:-mr-[305px]
-              landscape-iphone-se:mt-48 landscape-iphone-se:-mr-[40px]
-              landscape-surface-duo:mt-[150px] landscape-surface-duo:-mr-[75px]
-              landscape-galaxy-s8:mt-[180px] landscape-galaxy-s8:-mr-[84px]
-             landscape-galaxy-z-fold:mt-[465px]
-             landscape-iphone-12:mt-[430px]
-             landscape-iphone-xr:mt-[450px]
-             landscape-pixel-7:mt-[400px]
-             landscape-iphone-14:mt-[415px]
-           
-              "
-              onClick={handleClick}
-            >
-              View All Resources
-            </button>
-          </div>
+      <HomeResource />
 
-          {/* Card and Directory Container */}
-          <div className="mt-5 mb-14 ipad-pro-height:mb-16 ultra-wide:mb-28">
-            <HomeResourceDisplay />
-          </div>
-        </div>
-      </section>
 
       {/* CONTACT US information */}
       <section
@@ -190,9 +128,16 @@ function Home() {
             ></div>
           </div>
 
+        
+
+
+
+
+
+
           {/* Basic Container for Contact Us and FAQ */}
           <div className="relative flex flex-col h-full space-y-6">
-            {/* Contact Us Section */}
+             {/* Contact Us Section */}
             <div className="w-full">
               <h3
                 className="text-white text-[22px] sm:text-[38px] font-extrabold font-playfair leading-tight md:leading-[67.45px] mt-8
