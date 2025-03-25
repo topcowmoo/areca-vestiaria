@@ -18,6 +18,13 @@ export default {
       "landscape-sm": {
         raw: "(min-width: 640px) and (max-width: 767px) and (orientation: landscape)",
       },
+
+      'tablet-portrait': {
+        raw: '(min-width: 768px) and (max-width: 1023px) and (orientation: portrait)',
+      },
+      'tablet-landscape': {
+        raw: '(min-width: 768px) and (max-width: 1023px) and (orientation: landscape)',
+      },
     },
     extend: {
       keyframes: {
