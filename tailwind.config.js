@@ -1,9 +1,24 @@
 /** @type {import('tailwindcss').Config} */
-
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
   theme: {
+    // ✅ screens should go here (NOT inside extend)
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+
+      // ✅ Custom landscape breakpoints (mobile-focused)
+      "landscape-xs": {
+        raw: "(max-width: 639px) and (orientation: landscape)",
+      },
+      "landscape-sm": {
+        raw: "(min-width: 640px) and (max-width: 767px) and (orientation: landscape)",
+      },
+    },
     extend: {
       keyframes: {
         dropdownSlideDown: {
@@ -102,21 +117,12 @@ export default {
         urbanist: ["Urbanist", "sans-serif"],
       },
       screens: {
-
-        'landscape-xs': {
-  raw: '(max-width: 767px) and (orientation: landscape)',
-},
-
-   
-
-        'aspect-9-18_5': { 'raw': '(aspect-ratio: 9 / 18.5)' }, // Galaxy S8
-        'zfold': {
-    raw: '(max-width: 350px) and (min-height: 870px) and (aspect-ratio: 344 / 882)', // Galaxy Z Fold 5
-  },
-
-        
-
-        
+        "aspect-9-18_5": {
+          raw: "(aspect-ratio: 9 / 18.5)",
+        },
+        zfold: {
+          raw: "(max-width: 350px) and (min-height: 870px) and (aspect-ratio: 344 / 882)",
+        },
       },
     },
   },

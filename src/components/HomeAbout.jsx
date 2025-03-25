@@ -33,26 +33,29 @@ function HomeAbout({ onReadMore }) {
         id="about-us"
         className="
           relative z-10 flex flex-col justify-start h-full px-4 sm:px-8 md:px-12
-          pt-[16vh] sm:pt-[24vh] md:pt-[22vh] lg:pt-[18vh] xl:pt-[18vh] 2xl:pt-[16vh]
-          landscape-xs:pt-[8vh]
+          pt-[16vh] sm:pt-[24vh] md:pt-[14vh] lg:pt-[14vh] xl:pt-[18vh] 2xl:pt-[16vh]
+          landscape-xs:pt-[4vh] landscape-sm:pt-[10vh] landscape-xs:px-3 landscape-sm:px-4 landscape-xs:pb-[4vh] landscape-sm:pb-[6vh]
         "
       >
         <article className="text-white max-w-5xl mx-auto">
           <h3 className="
-            text-[24px] sm:text-[32px] md:text-[22px] 
+            text-[22px] sm:text-[32px] 
             lg:text-[48px] xl:text-[56px] 2xl:text-[64px] 
-            landscape-xs:text-[22px] 
-            font-[playfair] font-extrabold leading-tight mb-6 text-center
+            font-playfair font-extrabold leading-tight mb-4 text-center
+            md:text-[26px] 
+            md:landscape-xs:text-[28px] md:landscape-xs:leading-[1.3]
+            landscape-xs:text-[16px] landscape-xs:leading-[1.2] landscape-sm:text-[20px]
           ">
             Sunrise Health & Clinical <br /> Excellence Centre
           </h3>
           <p className="
-            text-[12px] sm:text-sm md:text-[16px]
-            lg:text-[18px] xl:text-[19px] 2xl:text-[20px]
-            landscape:text-[10px]
-            font-light font-inter text-justify leading-relaxed md:leading-loose 
+            text-[11px] sm:text-sm 
+            lg:text-[18px] xl:text-[19px] 2xl:text-[20px] 
+            font-light font-inter text-justify leading-relaxed
+            md:text-[12px] md:leading-[1.6]
+            md:landscape-xs:text-[12px] md:landscape-xs:leading-[1.8]
+            landscape-xs:text-[10px] landscape-sm:text-[11px]
           ">
-
             The Sun rises everyday - and we believe that in mental health and life in general - hope and new beginnings are key
             ingredients to wellness. At SUNRISE, not only do we focus on comprehensive psychiatric care - but also wellness as
             both are essential for long-term well-being. Our team is going to be expanding over time and currently consists of
@@ -66,10 +69,11 @@ function HomeAbout({ onReadMore }) {
           <button
             onClick={onReadMore}
             className="
-              mt-6 px-4 py-2 bg-white text-black text-xs sm:text-sm
-              lg:text-base xl:text-lg 2xl:text-xl
-              landscape-xs:text-[10px] landscape-xs:px-2 landscape-xs:py-[6px]
+              mt-4 px-3 py-1 bg-white text-black text-xs sm:text-sm
+              lg:text-sm xl:text-base 2xl:text-base
               font-inter rounded text-alt
+              md:landscape-xs:text-[10px] md:landscape-xs:px-2 md:landscape-xs:py-[4px]
+              landscape-xs:text-[9px] landscape-sm:text-[10px] landscape-sm:px-3 landscape-sm:py-[5px]
             "
           >
             Read More
