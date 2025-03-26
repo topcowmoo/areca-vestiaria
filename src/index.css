@@ -20,11 +20,13 @@ html {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #424242;
   border-radius: 10px;
+  border: 5px solid transparent; /* creates space around thumb */
+  background-clip: content-box;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius:12px;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
 }
 

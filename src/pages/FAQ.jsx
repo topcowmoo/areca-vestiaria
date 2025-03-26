@@ -213,7 +213,7 @@ const Faq = () => {
           <div className="w-full lg:w-[539px] flex flex-col gap-[17px]">
             <div className=" lg:block w-[125px] h-[26px] flex items-center justify-center text-white/0 text-[15px] font-bold font-['Inter']"></div>
             <div className="text-[#1f1f1f] text-[20px] sm:text-[22px] font-semibold font-['Inter']">
-              What should I do incase of an emergency?
+              What should I do in case of an emergency?
             </div>
             <div className="text-black text-[15px] sm:text-[17px] font-normal font-['Inter']">
               In urgent situations, it&apos;s crucial to know where to seek immediate help. Whether you&apos;re dealing with a mental health emergency or need urgent physchiatric care, there are resources available to support you. Here&apos;s what you need to know about accessing emergency services.
@@ -222,7 +222,7 @@ const Faq = () => {
               className="text-black text-[15px] sm:text-[17px] font-semibold font-['Inter'] underline cursor-pointer"
               onClick={() =>
                 openModal(
-                  "What should I do incase of an emergency or urgent care need?",
+                  "What should I do in case of an emergency or urgent care need?",
                   <div> 
                      <p style={{ marginBottom: "20px" }}>
                        If you are suicidal or do not feel safe or have a plan/thoughts to hurt others, please proceed to your nearest Emergency Department. If you are in London, LHSC at Commissioners Rd East and Wellington has the 24hr Psychiatric Emergyency Service within the ER so you can be seen there for immediate concerns. You may also check out CMHA Crisis Center at 648 Huron St In London. Additionally online service <a href= "http://reachout247.ca/" target="_blank" rel="noopener noreferrer" className = "text-blue-600 hover:underline" >http://reachout247.ca/</a>  can be helpful in situations where you are not suicidal or homicidal
