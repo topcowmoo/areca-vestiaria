@@ -36,8 +36,9 @@ function HomeContact() {
         {/* FAQ Buttons */}
         <div className="flex flex-col items-start space-y-3 font-inter">
           {["What can I expect for a consultation?", "What can I expect for general policy?", "Missed appointments or service fees?"].map((text, index) => (
-            <button
+            <a
               key={index}
+              href="faq"
               className="w-full max-w-[720px] bg-white text-black flex justify-between items-center p-3 rounded-lg shadow-md font-bold text-[11px] sm:text-[14px] md:text-[16px] landscape-xs:text-[10px] landscape-xs:p-2"
             >
               <span className="flex items-center">
@@ -45,9 +46,10 @@ function HomeContact() {
                 {text}
               </span>
               <img src="/arrow.png" alt="Arrow" className="w-4 h-4" />
-            </button>
+            </a>
           ))}
         </div>
+
 
         {/* Link to all FAQ */}
         <a
