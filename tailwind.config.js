@@ -130,6 +130,9 @@ export default {
         zfold: {
           raw: "(max-width: 350px) and (min-height: 870px) and (aspect-ratio: 344 / 882)",
         },
+       "zfold-landscape": {
+          raw: "(min-width: 870px) and (max-height: 400px) and (aspect-ratio: 882 / 344)",
+        },
       },
     },
   },

@@ -36,6 +36,7 @@ function HomeAbout({ onReadMore }) {
         px-8 sm:px-8 md:px-12
         pt-[16vh] sm:pt-[24vh] md:pt-[14vh] lg:pt-[14vh] xl:pt-[18vh] 2xl:pt-[16vh]
         landscape-xs:pt-[4vh] landscape-sm:pt-[10vh] landscape-xs:px-4 landscape-sm:px-5 landscape-xs:pb-[4vh] landscape-sm:pb-[6vh]
+
       "
     >
         <article className="text-white max-w-5xl mx-auto">
@@ -46,6 +47,7 @@ function HomeAbout({ onReadMore }) {
             md:text-[26px] 
             md:landscape-xs:text-[28px] md:landscape-xs:leading-[1.3]
             landscape-xs:text-[16px] landscape-xs:leading-[1.2] landscape-sm:text-[20px]
+            zfold-landscape:text-[17px] zfold-landscape:leading-[1.3]
           ">
             Sunrise Health & Clinical <br /> Excellence Centre
           </h3>
@@ -61,6 +63,7 @@ function HomeAbout({ onReadMore }) {
 
   md:landscape-xs:text-[12px] md:landscape-xs:leading-[1.6] /* Phones in landscape */
   landscape-xs:text-[10px] landscape-sm:text-[11px]
+  zfold-landscape:text-[13px]
 ">
 
             The Sun rises everyday - and we believe that in mental health and life in general - hope and new beginnings are key
