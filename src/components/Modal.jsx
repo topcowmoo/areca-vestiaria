@@ -22,7 +22,7 @@ const Modal = ({ isOpen, onClose, title, children }) => {
        <h2
           className="text-center text-black font-extrabold font-playfair mb-6"
           style={{
-            fontSize: "clamp(12px, 4vw, 40px)",
+            fontSize: "clamp(12px, 5vw, 40px)",
           }}
         >
           {title}
