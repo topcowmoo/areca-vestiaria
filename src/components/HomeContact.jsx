@@ -51,7 +51,7 @@ function HomeContact() {
 
         {/* Link to all FAQ */}
         <a
-          href="#faq"
+          href="faq"
           className="text-white underline font-inter text-[14px] sm:text-[16px] mt-6 block landscape-xs:text-[12px]"
         >
           See All Frequently Asked Questions
