@@ -50,7 +50,7 @@ function HomeHero() {
 >
 
           <h1
-            className="text-center text-white font-extrabold font-playfair leading-[1.1]"
+            className="text-center text-white font-extrabold font-[playfair] leading-[1.1]"
             style={{
               fontSize: "clamp(40px, 8vw, 90px)",
               marginBottom: "clamp(8px, 2vh, 24px)",
@@ -60,7 +60,7 @@ function HomeHero() {
           </h1>
 
           <h2
-            className="text-center text-white font-inter font-light"
+            className="text-center text-white font-[inter] font-light"
             style={{
               fontSize: "clamp(16px, 4vw, 36px)",
               marginBottom: "clamp(16px, 3vh, 32px)",
