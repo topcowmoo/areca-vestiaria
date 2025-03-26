@@ -116,47 +116,36 @@ const Faq = () => {
                 openModal(
                   "What fees do I need to know about?",
                   <div>
-                    <p style={{ marginBottom: "20px" }}>
-                      1) NO SHOW and LATE FEES are not covered by OHIP and will be charged directly to the patient. FEES ARE SUBJECT TO CHANGE AND WILL BE UPDATED WHEN CHANGED. 
-                    </p>
-                    <p style={{ marginBottom: "20px" }}>
-                      2) NO SHOW FEES will be charged if there is no 24 business hours cancellation notice (emergencies/hospitalization/special circumstances will be considered)
-                    </p>
-                    <p style={{ marginBottom: "20px" }}>
-                      3) Consultation NO SHOW FEE - $300 (without 24 business hours cancellation notice)
-                      <br /> 
-                      <div style={{ paddingLeft: "23px" }}>
-                      Regular/Therapy Appointment NO SHOW FEE $175
-                      </div>
-                      <div style={{ paddingLeft: "23px" }}>
-                      Medication Check Appointment NO SHOW FEE $86
-                      </div>
-                      <div style={{ paddingLeft: "23px" }}>
-                      Late FEE of more than 15 minutes (weather permitting/special circumstances) $80
-                      </div>
-                      <div style={{ paddingLeft: "23px" }}>
-                      Insurance Forms $100-150
-                      </div>
-                      <div style={{ paddingLeft: "23px" }}>
-                      Simple Work/School Notes $40-60
-                      </div>
-                      <div style={{ paddingLeft: "23px" }}>
-                      Chart Copies - $30/each 50 pages 
-                      </div>
-                      <div style={{ paddingLeft: "23px" }}>
-                      Prescription Refill $10/script outside of appointments
-                      </div>
-                      < br />
-                      <p style={{ marginBottom: "20px" }}>
-                      4) Other non-OHIP covered services should be discussed directly with the office
-                    </p>
-                      <p style={{ marginBottom: "20px" }}>
-                      5) OHIP ONLY covers treatment-focused consultations and that is what Dr. Mammoliti provides for patients referred by their Family Doctors.
-                    </p>
-                      <p style={{ marginBottom: "20px" }}>
-                      6) Dr. Mammoliti does not provide capacity assessments, CAS parental capacity assessments, forensic assessments or ODSP disability determining assessments.
-                    </p>
-                    </p>
+                   <div style={{ marginBottom: "20px" }}>
+  <p style={{ marginBottom: "10px" }}>
+    1) Consultation NO SHOW FEE - $300 (without 24 business hours cancellation notice)
+  </p>
+  <div style={{ paddingLeft: "23px" }}>
+    Regular/Therapy Appointment NO SHOW FEE $175
+  </div>
+  <div style={{ paddingLeft: "23px" }}>
+    Medication Check Appointment NO SHOW FEE $86
+  </div>
+  <div style={{ paddingLeft: "23px" }}>
+    Late FEE of more than 15 minutes (weather permitting/special circumstances) $80
+  </div>
+  <div style={{ paddingLeft: "23px" }}>
+    Insurance Forms $100-150
+  </div>
+  <div style={{ paddingLeft: "23px" }}>
+    Simple Work/School Notes $40-60
+  </div>
+  <div style={{ paddingLeft: "23px" }}>
+    Chart Copies - $30/each 50 pages 
+  </div>
+  <div style={{ paddingLeft: "23px" }}>
+    Prescription Refill $10/script outside of appointments
+  </div>
+</div>
+<p style={{ marginBottom: "20px" }}>
+  2) Other non-OHIP covered services should be discussed directly with the office
+</p>
+
                   </div>
                   
                 )
