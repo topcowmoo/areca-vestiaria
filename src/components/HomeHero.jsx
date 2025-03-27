@@ -6,7 +6,7 @@ function HomeHero() {
   return (
     <header className="relative flex flex-col bg-black">
       {/* Hero Container */}
-      <div className="relative w-full min-w-[320px] h-screen overflow-hidden">
+      <div className="relative w-full min-w-[320px] h-screen overflow-hidden landscape:h-auto landscape:min-h-[135vh]">
         {/* Background Image */}
         <div
           className="
