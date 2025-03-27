@@ -51,7 +51,7 @@ function Home() {
       {/* Modal for 'Read More' content */}
       {isModalOpen && (
         <section
-          className="fixed inset-0 bg-black bg-opacity-0 backdrop-blur-sm flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50"
           role="dialog"
           aria-labelledby="modal-title"
           aria-modal="true"
@@ -72,7 +72,7 @@ function Home() {
               About Us
             </h2>
             <div className="bg-white/80 rounded-[18px] mb-4">
-              <p className="text-[#1e1e1e] text-[12px] sm:text-base md:text-[19px] font-normal leading-[18px] font-inter p-6">
+              <p className="text-[#1e1e1e] text-[14px] md:text-[17px] font-normal leading-[18px] font-inter p-6">
                 Dr. M. Mammoliti is a dedicated psychiatrist specializing in
                 General Adult Psychiatry with a focus on Physician Mental Health
                 and ADHD in adults. She completed her medical education at the
