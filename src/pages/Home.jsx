@@ -1,9 +1,6 @@
 import { useState } from "react";
 
-// import { HashLink } from "react-router-hash-link";
 import { IoCloseSharp } from "react-icons/io5";
-// import { scrollWithOffset } from "../utils/scrollHelper";
-// import SearchBar from "../components/SearchBar";
 import HomeHero from "../components/HomeHero";
 import HomeAbout from "../components/HomeAbout";
 import HomeResource from "../components/HomeResource";
