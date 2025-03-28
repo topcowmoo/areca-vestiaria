@@ -16,6 +16,14 @@ import Error from './pages/Error.jsx';
 import Therapy from './pages/Therapy.jsx';
 import PhysicianResources from './pages/PhysicianPatient.jsx'
 import AdditionalResources from './pages/AdditionalResources.jsx';
+import TagManager from 'react-gtm-module';
+
+
+// Initialize Google Tag Manager Before Rendering App
+TagManager.initialize({ 
+  gtmId: import.meta.env.VITE_GTM_ID || '', /* Google Tag Manager ID */
+  
+});
 
 
 const router = createBrowserRouter([
