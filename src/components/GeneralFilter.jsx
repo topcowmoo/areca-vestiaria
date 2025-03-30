@@ -1,12 +1,11 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
-import { collectionData } from "../data/collectionData";
 import { RiEqualizerFill } from "react-icons/ri";
 import { IoCheckmarkSharp } from "react-icons/io5";
 
 const GeneralFilter = ({
-  currentPage,
-  setFilteredData,
+ 
+  onFilterChange,
   setIsFilterBoxOpen,
   isFilterBoxOpen,
 }) => {
@@ -16,32 +15,18 @@ const GeneralFilter = ({
     Book: false,
   });
 
-  const filteredData = useMemo(() => {
-    const kinds = Object.keys(checkedKinds).filter(
-      (kind) => checkedKinds[kind]
-    );
-
-    if (kinds.length === 0) {
-      return collectionData.filter((item) => item.category === currentPage);
-    }
-
-    return collectionData.filter((item) => {
-      const kindMatch = kinds.length > 0 ? kinds.includes(item.kind) : true;
-      return item.category === currentPage && kindMatch;
-    });
-  }, [checkedKinds, currentPage]);
-
-  useEffect(() => {
-    setFilteredData(filteredData);
-  }, [filteredData, setFilteredData]);
+  const toggleFilterBox = () => {
+    setIsFilterBoxOpen(!isFilterBoxOpen);
+  };
 
   const handleKindCheckboxChange = (e) => {
     const { value, checked } = e.target;
-    setCheckedKinds((prev) => ({ ...prev, [value]: checked }));
-  };
+    const updated = { ...checkedKinds, [value]: checked };
+    setCheckedKinds(updated);
 
-  const toggleFilterBox = () => {
-    setIsFilterBoxOpen(!isFilterBoxOpen);
+    //  Send selected tags to parent (e.g., ["Article", "Book"])
+    const activeFilters = Object.keys(updated).filter((key) => updated[key]);
+    onFilterChange(activeFilters);
   };
 
   return (
@@ -61,7 +46,6 @@ const GeneralFilter = ({
         <div className="text-xl font-medium font-['Inter']">Filter</div>
       </div>
 
-      {/* Animate visibility of the FilterBox */}
       <div
         className={`w-full mt-[19px] absolute top-full left-0 transition-all duration-500 ease-in-out transform ${
           isFilterBoxOpen
@@ -71,24 +55,16 @@ const GeneralFilter = ({
         style={{ visibility: isFilterBoxOpen ? "visible" : "hidden" }}
       >
         <div
-          className={`w-full pt-7 pb-[70px] px-4 sm:w-[282px] md:px-4 md:pt-7 md:pb-[69px] lg:px-4 lg:pt-7 lg:pb-[69px]
-
- 
-  ${isFilterBoxOpen ? "bg-[#f0f0f0] backdrop-blur-xl text-black" : "bg-[#f0f0f0]"}
-  sm:bg-[#e8e8e8]/20 sm:text-white 
-  md:bg-[#e8e8e8]/20 md:text-white 
-  lg:bg-[#e8e8e8]/20 lg:text-white 
-  xl:bg-[#e8e8e8]/20 xl:text-white 
-  sm:backdrop-blur-[24.90px] md:backdrop-blur-[24.90px] lg:backdrop-blur-[24.90px] xl:backdrop-blur-[24.90px] 
-  rounded-[10px] border border-white flex-col justify-start items-start gap-[15px] inline-flex`}
+          className={`w-full pt-7 pb-[70px] px-4 sm:w-[282px] rounded-[10px] border border-white flex-col justify-start items-start gap-[15px] inline-flex backdrop-blur-[24.90px] ${
+            isFilterBoxOpen ? "bg-[#f0f0f0] text-black" : "bg-[#f0f0f0]"
+          } sm:bg-[#e8e8e8]/20 sm:text-white md:bg-[#e8e8e8]/20 md:text-white`}
         >
-          <div className="sm:text-white md:text-white lg:text-white text-[32px] font-semibold font-['Inter']">
-            Filter
-          </div>
-          <hr className="w-full h-[2px] sm:bg-white md:bg-white lg:bg-white bg-black border-0" />
-          <div className="sm:text-white md:text-white lg:text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
+          <div className="text-[32px] font-semibold font-['Inter']">Filter</div>
+          <hr className="w-full h-[2px] bg-black sm:bg-white border-0" />
+          <div className="text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
             Resource Format
           </div>
+
           <div className="flex-col justify-start items-start gap-[12px] flex">
             {Object.keys(checkedKinds).map((kind) => (
               <div
@@ -103,27 +79,25 @@ const GeneralFilter = ({
                     onChange={handleKindCheckboxChange}
                     className="appearance-none w-6 h-6 bg-white border border-gray-300 rounded-md cursor-pointer checked:bg-black sm:checked:bg-white checked:border-black sm:checked:border-white"
                   />
-                  {/* Checkmark Icon (Visible only when checked) */}
                   {checkedKinds[kind] && (
                     <IoCheckmarkSharp className="absolute w-6 h-6 sm:text-black text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                   )}
                 </label>
-                <div className="sm:text-white md:text-white lg:text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
+                <div className="sm:text-white text-base font-medium font-['Urbanist'] leading-normal tracking-tight">
                   {kind}
                 </div>
               </div>
             ))}
           </div>
-          
-          </div>
         </div>
       </div>
+    </div>
   );
 };
 
 GeneralFilter.propTypes = {
-  currentPage: PropTypes.string.isRequired,
-  setFilteredData: PropTypes.func.isRequired,
+  
+  onFilterChange: PropTypes.func.isRequired,
   setIsFilterBoxOpen: PropTypes.func.isRequired,
   isFilterBoxOpen: PropTypes.bool.isRequired,
 };
