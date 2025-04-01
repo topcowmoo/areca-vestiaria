@@ -2,12 +2,53 @@ import { useState } from "react";
 import ParentingFilterBox from "../components/ParentingFilterBox";
 import Directory from "../components/Directory";
 import SearchBarWithCommit from "../components/SearchBarWithCommit";
+import { collectionData } from "../data/collectionData"; // Needed for filtering logic
 
 function ParentingResources() {
   const [filteredData, setFilteredData] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [activeFilters, setActiveFilters] = useState({
+    kinds: [],
+    subcategories: [],
+  });
   const [isFilterBoxOpen, setIsFilterBoxOpen] = useState(false);
   const [isInitial, setIsInitial] = useState(true); // Initial state to control first interaction
   const category = "Parenting Resources";
+
+  // Combine search + kind + subcategory filters
+  const applyFilters = (query = searchQuery, filters = activeFilters) => {
+    const { kinds, subcategories } = filters;
+
+    const filtered = collectionData.filter((item) => {
+      const matchesCategory = item.category === category;
+      const matchesSearch = 
+        !query || item.title.toLowerCase().includes(query.toLowerCase());
+      const matchesKind =
+        kinds.length === 0 || kinds.includes(item.kind);
+      const matchesSubcategory =
+        subcategories.length === 0 ||
+        (item.subCategory &&
+          subcategories.some((sub) =>
+            item.subCategory.includes(sub)
+          ));
+      return matchesCategory && matchesSearch && matchesKind && matchesSubcategory;
+    });
+
+    setFilteredData(filtered);
+           
+    
+  };
+
+  const handleSearchChange = (value) => {
+    setSearchQuery(value);
+    applyFilters(value, activeFilters)
+  };
+
+  const handleFilterChange = (filters) => {
+    setActiveFilters(filters);
+    applyFilters(searchQuery, filters); // Apply filters whenever they change
+  };
+
 
   const handleFilterBoxToggle = () => {
     if (isInitial) {
@@ -63,6 +104,7 @@ function ParentingResources() {
             <SearchBarWithCommit
               setFilteredData={setFilteredData}
               category={category}
+              onSearchChange={handleSearchChange}
               className="mt-6 w-full max-w-[320px] sm:max-w-[400px] "
             />
           </div>
@@ -87,10 +129,9 @@ function ParentingResources() {
             {/* Filter Box Below Hero Section */}
             <div className="relative flex w-full z-10">
               <ParentingFilterBox
-                currentPage={category}
-                setFilteredData={setFilteredData}
                 setIsFilterBoxOpen={handleFilterBoxToggle}
                 isFilterBoxOpen={isFilterBoxOpen}
+                onFilterChange={handleFilterChange}
                 className={`transition-all duration-500 ease-in-out ${
                   !isInitial &&
                   (isFilterBoxOpen ? "animate-slideDown" : "animate-slideUp")

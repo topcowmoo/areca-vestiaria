@@ -1,6 +1,5 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { collectionData } from "../data/collectionData";
 import { RiEqualizerFill } from "react-icons/ri";
 import { IoCheckmarkSharp } from "react-icons/io5";
 
@@ -13,8 +12,7 @@ const subcategoryLabels = {
 };
 
 const ParentingFilterBox = ({
-  currentPage,
-  setFilteredData,
+  onFilterChange,
   setIsFilterBoxOpen,
   isFilterBoxOpen,
 }) => {
@@ -23,6 +21,7 @@ const ParentingFilterBox = ({
     Video: false,
     Book: false,
   });
+
   const [selectedSubcategories, setSelectedSubcategories] = useState({
     "Local Services": false,
     "Sex Discussion": false,
@@ -31,33 +30,13 @@ const ParentingFilterBox = ({
     General: false,
   });
 
-  const filteredData = useMemo(() => {
-    const kinds = Object.keys(checkedKinds).filter(
-      (kind) => checkedKinds[kind]
-    );
-    const activeSubcategories = Object.keys(selectedSubcategories).filter(
+  useEffect(() => {
+    const kinds = Object.keys(checkedKinds).filter((key) => checkedKinds[key]);
+    const subcategories = Object.keys(selectedSubcategories).filter(
       (key) => selectedSubcategories[key]
     );
-
-    if (kinds.length === 0 && activeSubcategories.length === 0) {
-      return collectionData.filter((item) => item.category === currentPage);
-    }
-
-    return collectionData.filter((item) => {
-      const kindMatch = kinds.length > 0 ? kinds.includes(item.kind) : true;
-      const subCategoryMatch =
-        activeSubcategories.length > 0
-          ? activeSubcategories.some((subCategory) =>
-              item.subCategory.includes(subcategoryLabels[subCategory])
-            )
-          : true;
-      return item.category === currentPage && kindMatch && subCategoryMatch;
-    });
-  }, [checkedKinds, selectedSubcategories, currentPage]);
-
-  useEffect(() => {
-    setFilteredData(filteredData);
-  }, [filteredData, setFilteredData]);
+    onFilterChange({ kinds, subcategories });
+  }, [checkedKinds, selectedSubcategories, onFilterChange]);
 
   const handleKindCheckboxChange = (e) => {
     const { value, checked } = e.target;
@@ -105,19 +84,19 @@ const ParentingFilterBox = ({
       >
         <div
           className={`w-full pt-7 pb-11 px-4 sm:w-[282px] md:px-4 md:pt-7 md:pb-[69px] lg:px-4 lg:pt-7 lg:pb-[69px]
- 
-  ${isFilterBoxOpen ? "bg-[#f0f0f0] backdrop-blur-xl text-black" : "bg-[#f0f0f0]"}
-  sm:bg-[#e8e8e8]/20 sm:text-white 
-  md:bg-[#e8e8e8]/20 md:text-white 
-  lg:bg-[#e8e8e8]/20 lg:text-white 
-  xl:bg-[#e8e8e8]/20 xl:text-white 
-  sm:backdrop-blur-[24.90px] md:backdrop-blur-[24.90px] lg:backdrop-blur-[24.90px] xl:backdrop-blur-[24.90px] 
-  rounded-[10px] border border-white flex-col justify-start items-start gap-[15px] inline-flex`}
+          ${isFilterBoxOpen ? "bg-[#f0f0f0] backdrop-blur-xl text-black" : "bg-[#f0f0f0]"}
+          sm:bg-[#e8e8e8]/20 sm:text-white 
+          md:bg-[#e8e8e8]/20 md:text-white 
+          lg:bg-[#e8e8e8]/20 lg:text-white 
+          xl:bg-[#e8e8e8]/20 xl:text-white 
+          sm:backdrop-blur-[24.90px] md:backdrop-blur-[24.90px] lg:backdrop-blur-[24.90px] xl:backdrop-blur-[24.90px] 
+          rounded-[10px] border border-white flex-col justify-start items-start gap-[15px] inline-flex`}
         >
           <div className="sm:text-white md:text-white lg:text-white text-[32px] font-semibold font-['Inter']">
             Filter
           </div>
           <hr className="w-full h-[2px] sm:bg-white md:bg-white lg:bg-white bg-black border-0" />
+
           <div className="sm:text-white md:text-white lg:text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
             Resource Format
           </div>
@@ -135,7 +114,6 @@ const ParentingFilterBox = ({
                     onChange={handleKindCheckboxChange}
                     className="appearance-none w-6 h-6 bg-white border border-gray-300 rounded-md cursor-pointer checked:bg-black sm:checked:bg-white checked:border-black sm:checked:border-white"
                   />
-                  {/* Checkmark Icon (Visible only when checked) */}
                   {checkedKinds[kind] && (
                     <IoCheckmarkSharp className="absolute w-6 h-6 sm:text-black text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                   )}
@@ -146,6 +124,7 @@ const ParentingFilterBox = ({
               </div>
             ))}
           </div>
+
           <div className="sm:text-white md:text-white lg:text-white text-[19px] font-semibold font-['Inter'] leading-7 tracking-tight">
             Type of Resource
           </div>
@@ -163,7 +142,6 @@ const ParentingFilterBox = ({
                     onChange={handleSubcategoryCheckboxChange}
                     className="appearance-none w-6 h-6 bg-white border border-gray-300 rounded-md cursor-pointer checked:bg-black sm:checked:bg-white checked:border-black sm:checked:border-white"
                   />
-                  {/* Checkmark Icon (Visible only when checked) */}
                   {selectedSubcategories[subcategoryKey] && (
                     <IoCheckmarkSharp className="absolute w-6 h-6 sm:text-black text-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                   )}
@@ -181,8 +159,7 @@ const ParentingFilterBox = ({
 };
 
 ParentingFilterBox.propTypes = {
-  currentPage: PropTypes.string.isRequired,
-  setFilteredData: PropTypes.func.isRequired,
+  onFilterChange: PropTypes.func.isRequired,
   setIsFilterBoxOpen: PropTypes.func.isRequired,
   isFilterBoxOpen: PropTypes.bool.isRequired,
 };
