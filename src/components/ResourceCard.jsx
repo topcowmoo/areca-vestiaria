@@ -40,13 +40,14 @@ const ResourceCard = ({ category }) => {
   const card = cardData[category];
 
   return (
-<div
+<Link
+to={card.link || "#"}
   className={`
     w-full
     aspect-[1/1]
     rounded-md sm:rounded-[10px] md:rounded-[10px]
     ${card.backgroundClass} relative overflow-hidden
-    flex bg-cover bg-center bg-no-repeat
+    flex bg-cover bg-center bg-no-repeat cursor-pointer
   `}
 >
       {/* Overlay Content */}
@@ -57,16 +58,14 @@ const ResourceCard = ({ category }) => {
             {category}
           </div>
 
-          {/* Link */}
-          <Link
-            to={card.link || "#"}
-            className="text-white text-[9px] sm:text-[12px] md:text-[18px] lg:text-[20px] xl:text-[22px] font-extrabold font-inter underline"
-          >
+          {/* View All with Hover glow */}
+          <span className="text-white text-[9px] sm:text-[12px] md:text-[18px] lg:text-[20px] xl:text-[22px] font-extrabold 
+          font-inter transition duration-100 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
             View All
-          </Link>
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
