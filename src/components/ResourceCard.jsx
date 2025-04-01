@@ -41,33 +41,30 @@ const ResourceCard = ({ category }) => {
 
   return (
     <div
-      className={`w-full md:w-[335px] lg:w-[470px] xl:w-[550px] 2xl:w-[700px] ultra-wide:w-[1000px]
-    min-h-12 sm:min-h-[95px] md:min-h-[250px] lg:min-h-[350px] xl:min-h-[400px] 2xl:min-h-[475px] landscape-ipad-mini:w-[427px]
-    landscape-iphone-se:w-[452px] landscape-iphone-se:-ml-[45px]
-    landscape-surface-duo:-ml-[75px] landscape-surface-duo:w-[516px]
-    landscape-galaxy-s8:-ml-[84px] landscape-galaxy-s8:w-[537px]
-    rounded-md sm:rounded-[10px] md:rounded-[10px] lg:rounded-[10px] xl:rounded-[10px] 
-    relative overflow-hidden flex bg-cover bg-no-repeat full-hd-max:w-[815px]
-    ${card.backgroundClass} 
-    ${category === "Attachment & Emotions" ? "bg-[center_top_82%]" : ""}
-    ${category === "Therapy" ? "bg-[center_top_10%]" : ""}
-    ${category === "Physician Patient" ? "bg-[center_top_27%]" : ""}
-    ${category !== "Attachment & Emotions" && category !== "Therapy" && category !== "Physician Patient" ? "bg-center" : ""}
-    `}
+      className={`
+        w-full
+        min-h-[150px] md:min-h-[250px] lg:min-h-[350px] xl:min-h-[450px]
+        rounded-md sm:rounded-[10px] md:rounded-[10px] 
+        ${card.backgroundClass} relative overflow-hidden
+        flex bg-cover bg-center bg-no-repeat
+      `}
     >
-      {/* Card Content */}
-      <div className="absolute inset-0 flex md:flex-col justify-between md:justify-evenly md:items-start lg:flex-col lg:items-start lg:px-[55px] lg:py-24 lg:justify-evenly md:px-9 md:py-16 items-center px-4">
-        {/* Title */}
-        <div className="text-white text-sm sm:text-lg md:text-[34px] lg:text-[50px] xl:text-[58px] 2xl:text-[68px] font-extrabold font-playfair md:break-words md:leading-tight">
-          {category}
+      {/* Overlay Content */}
+      <div className="absolute inset-0 flex flex-col justify-between items-start px-3 py-9 md:px-7 md:py-11 xl:py-32 z-10">
+        <div className="flex flex-col gap-5 md:gap-9 lg:gap-11 xl:gap-14 2xl:gap-16">
+          {/* Title */}
+          <div className="text-white text-md font-extrabold font-playfair md:text-[28px] lg:text-[38px] xl:text-[44px]">
+            {category}
+          </div>
+
+          {/* Link */}
+          <Link
+            to={card.link || "#"}
+            className="text-white text-[9px] sm:text-[12px] md:text-[18px] lg:text-[20px] xl:text-[22px] font-extrabold font-inter underline"
+          >
+            View All
+          </Link>
         </div>
-        {/* View All Button */}
-        <Link
-          to={card.link || "#"}
-          className="text-white text-[9px] sm:text-[12px] md:text-[14px] lg:text-[18px] xl:text-[25px] 2xl:text-[30px] font-inter underline md:mt-5"
-        >
-          View All
-        </Link>
       </div>
     </div>
   );

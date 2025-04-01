@@ -17,23 +17,13 @@ const orderedCategories = [
 
 const HomeResourceDisplay = () => {
   return (
-    <div className=" space-y-10 mb-8">
-      {/* Iterate through the ordered categories */}
-      {orderedCategories.map((category, index) => (
-        
-          <div
-            key={index}
-            className="flex flex-col md:flex-row justify-start mx-4 items-stretch md:justify-center md:items-center my-4 space-y-6 md:space-y-0 md:space-x-6"
-          >
-            {/* ResourceCard */}
-    
-              <ResourceCard category={category} />
-            
-
-            
-          </div>
-      ))}
-    </div>
+    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 xl:px-14">
+    {orderedCategories.map((category, index) => (
+      <ResourceCard key={index} category={category} />
+    ))}
+  </div>
+  
+  
   );
 };
 
