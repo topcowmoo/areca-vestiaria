@@ -24,26 +24,25 @@ function HomeAbout({ onReadMore }) {
         className="absolute inset-0 pointer-events-none z-0"
         style={{
           background:
-            "linear-gradient(to top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 1))",
+            "linear-gradient(to top, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.7) 92%, rgba(0, 0, 0, 1))",
         }}
       ></div>
 
       {/* About Content */}
       <div
-        id="about-us"
-        className="
-        relative z-10 flex flex-col justify-start h-full
-        px-8 sm:px-8 md:px-12
-        pt-[16vh] sm:pt-[24vh] md:pt-[14vh] lg:pt-[14vh] xl:pt-[18vh] 2xl:pt-[16vh]
-        landscape-xs:pt-[4vh] landscape-sm:pt-[10vh] landscape-xs:px-4 landscape-sm:px-5 landscape-xs:pb-[4vh] landscape-sm:pb-[6vh]
+  id="about-us"
+  className="relative z-10 flex flex-col justify-start h-full
+    pt-[16vh] sm:pt-[24vh] md:pt-[14vh] lg:pt-[14vh] xl:pt-[18vh] 2xl:pt-[16vh]
+    landscape-xs:pt-[4vh] landscape-sm:pt-[10vh] landscape-xs:pb-[4vh] landscape-sm:pb-[6vh]"
+>
 
-      "
-    >
-        <article className="text-white max-w-5xl mx-auto">
+<article className="text-white w-full max-w-[1420px] px-[18px] md:px-[1px] mx-auto">
+
+
           <h3 className="
             text-[22px] sm:text-[32px] 
             lg:text-[48px] xl:text-[56px] 2xl:text-[64px] 
-            font-[playfair] font-extrabold leading-tight mb-4 text-center
+            font-[playfair] font-extrabold leading-tight mb-7 mt-7 text-left
             md:text-[26px] 
             md:landscape-xs:text-[28px] md:landscape-xs:leading-[1.3]
             landscape-xs:text-[16px] landscape-xs:leading-[1.2] landscape-sm:text-[20px]
@@ -79,7 +78,7 @@ function HomeAbout({ onReadMore }) {
           <button
             onClick={onReadMore}
             className="
-              mt-4 px-3 py-2 bg-white text-black text-xs sm:text-sm
+              mt-14 px-3 py-2 bg-white text-black text-xs sm:text-sm
               lg:text-sm xl:text-base 2xl:text-base
               font-inter rounded text-alt
               md:landscape-xs:text-[10px] md:landscape-xs:px-2 md:landscape-xs:py-[4px]
