@@ -2,7 +2,8 @@ import PropTypes from "prop-types";
 
 function HomeAbout({ onReadMore }) {
   return (
-    <section className="relative w-full h-screen bg-black">
+    <section className="relative w-full h-screen landscape-xs:h-auto landscape-sm:h-auto bg-black">
+
       {/* Background Image */}
       <div
         className="
@@ -36,34 +37,26 @@ function HomeAbout({ onReadMore }) {
     landscape-xs:pt-[4vh] landscape-sm:pt-[10vh] landscape-xs:pb-[4vh] landscape-sm:pb-[6vh]"
 >
 
-<article className="text-white w-full max-w-[1420px] px-[18px] md:px-[1px] mx-auto">
+<article className="text-white w-full max-w-[400px] md:max-w-[690px] lg:max-w-[960px] xl:max-w-[1115px] 2xl:max-w-[1420px] px-[18px] md:px-[1px] mx-auto">
 
 
-          <h3 className="
-            text-[22px] sm:text-[32px] 
-            lg:text-[48px] xl:text-[56px] 2xl:text-[64px] 
-            font-[playfair] font-extrabold leading-tight mb-7 mt-7 text-left
-            md:text-[26px] 
-            md:landscape-xs:text-[28px] md:landscape-xs:leading-[1.3]
-            landscape-xs:text-[16px] landscape-xs:leading-[1.2] landscape-sm:text-[20px]
-            zfold-landscape:text-[17px] zfold-landscape:leading-[1.3]
-          ">
+
+<h3 className="
+  text-[22px] sm:text-[32px] lg:text-[48px] xl:text-[56px]
+  md:text-[26px] font-playfair font-extrabold leading-tight mb-4 text-left
+  md:landscape-xs:text-[20px] landscape-xs:text-[18px] landscape-sm:text-[20px]
+  zfold-landscape:text-[17px]
+">
+
             Sunrise Health & Clinical <br /> Excellence Centre
           </h3>
           <p className="
-  text-[11px] sm:text-sm 
-  lg:text-[24px] xl:text-[19px] 2xl:text-[20px] 
-  font-light font-inter text-justify leading-relaxed
-
-  md:text-[13px] md:leading-[1.7]             /* Generic md fallback */
-
-  tablet-portrait:text-[14px] tablet-portrait:leading-[1.6] /* iPad Mini & Air in portrait */
-  tablet-landscape:text-[14px] tablet-landscape:leading-[1.6] /* iPad Mini & Air in landscape */
-
-  md:landscape-xs:text-[12px] md:landscape-xs:leading-[1.6] /* Phones in landscape */
+  text-[11px] sm:text-sm lg:text-[24px] xl:text-[19px]
+  md:text-[13px] md:leading-[1.7]
   landscape-xs:text-[10px] landscape-sm:text-[11px]
-  zfold-landscape:text-[13px]
+  zfold-landscape:text-[12px] leading-[1.4]
 ">
+
 
             The Sun rises everyday - and we believe that in mental health and life in general - hope and new beginnings are key
             ingredients to wellness. At SUNRISE, not only do we focus on comprehensive psychiatric care - but also wellness as
@@ -78,13 +71,14 @@ function HomeAbout({ onReadMore }) {
           <button
             onClick={onReadMore}
             className="
-              mt-14 px-3 py-2 bg-white text-black text-xs sm:text-sm
-              lg:text-sm xl:text-base 2xl:text-base
-              font-inter rounded text-alt
-              md:landscape-xs:text-[10px] md:landscape-xs:px-2 md:landscape-xs:py-[4px]
-              landscape-xs:text-[9px] landscape-sm:text-[10px] landscape-sm:px-3 landscape-sm:py-[5px]
-            "
-          >
+            mt-9 px-3 py-2 bg-white text-black text-xs sm:text-sm
+            lg:text-sm xl:text-base 2xl:text-base
+            font-inter rounded text-alt
+        
+            landscape-xs:px-2 landscape-xs:py-1 landscape-xs:text-[10px]
+            landscape-sm:px-3 landscape-sm:py-[6px] landscape-sm:text-[12px]
+          "
+        >
             Read More
           </button>
         </article>
