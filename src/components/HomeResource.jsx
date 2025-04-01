@@ -1,17 +1,17 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import HomeResourceDisplay from "../components/HomeResourceDisplay";
 
 function HomeResources() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate("/all-resources");
-  };
+  // const handleClick = () => {
+  //   navigate("/all-resources");
+  // };
 
   return (
     <section id="resource-page">
       <div className="max-w-[400px] md:max-w-[690px] lg:max-w-[960px] xl:max-w-[1115px] 2xl:max-w-[1420px] mx-auto">
-        {/* Title and Button Section */}
+        {/* Title */}
         <div
   className="
     flex justify-between items-center
@@ -25,7 +25,7 @@ function HomeResources() {
           >
             Resources
           </h2>
-          <button
+          {/* <button
             className="
               bg-[#393939]  text-white font-inter
               rounded-[4px] px-[6.5px] py-[2.5px] text-[8px]
@@ -36,10 +36,10 @@ function HomeResources() {
             onClick={handleClick}
           >
             View All Resources
-          </button>
+          </button> */}
         </div>
 
-        {/* Card and Directory Container */}
+        {/* Card Container */}
         <div className="mt-5 mb-14 ipad-pro-height:mb-16 ultra-wide:mb-28">
           <HomeResourceDisplay />
         </div>
