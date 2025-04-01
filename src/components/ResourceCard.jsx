@@ -40,15 +40,15 @@ const ResourceCard = ({ category }) => {
   const card = cardData[category];
 
   return (
-    <div
-      className={`
-        w-full
-        min-h-[150px] md:min-h-[250px] lg:min-h-[350px] xl:min-h-[450px]
-        rounded-md sm:rounded-[10px] md:rounded-[10px] 
-        ${card.backgroundClass} relative overflow-hidden
-        flex bg-cover bg-center bg-no-repeat
-      `}
-    >
+<div
+  className={`
+    w-full
+    aspect-[1/1]
+    rounded-md sm:rounded-[10px] md:rounded-[10px]
+    ${card.backgroundClass} relative overflow-hidden
+    flex bg-cover bg-center bg-no-repeat
+  `}
+>
       {/* Overlay Content */}
       <div className="absolute inset-0 flex flex-col justify-between items-start px-3 py-9 md:px-7 md:py-11 xl:py-32 z-10">
         <div className="flex flex-col gap-5 md:gap-9 lg:gap-11 xl:gap-14 2xl:gap-16">
