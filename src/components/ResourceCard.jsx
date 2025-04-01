@@ -51,7 +51,7 @@ to={card.link || "#"}
   `}
 >
       {/* Overlay Content */}
-      <div className="absolute inset-0 flex flex-col justify-between items-start px-3 py-9 md:px-7 md:py-11 xl:py-32 z-10">
+      <div className="absolute inset-0 flex flex-col justify-between items-start px-3 py-9 md:px-7 md:py-14 xl:py-20 z-10">
         <div className="flex flex-col gap-5 md:gap-9 lg:gap-11 xl:gap-14 2xl:gap-16">
           {/* Title */}
           <div className="text-white text-md font-extrabold font-playfair md:text-[28px] lg:text-[38px] xl:text-[42px]">
