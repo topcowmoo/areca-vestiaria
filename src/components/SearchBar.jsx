@@ -49,8 +49,8 @@ const SearchBar = () => {
       <div
         className="
         w-[247px] h-[33px] pl-3.5 pr-[9.43px] py-[2.57px] 
-        bg-white rounded-[13.71px] shadow-[0_0_15px_5px_rgba(255,255,255,0.5)] flex items-center 
-        border border-gray-200 focus-within:shadow-[0_0_15px_5px_rgba(255,255,255,0.4)]
+        bg-white rounded-[13.71px] shadow-[0_0_15px_5px_rgba(255,255,255,0.2)] flex items-center 
+        border border-gray-200 focus-within:shadow-[0_0_15px_5px_rgba(255,255,255,0.7)] transition-shadow duration-300 ease-in-out 
         sm:w-[247px] sm:h-[33px] sm:pl-3.5 sm:pr-[9.43px] sm:py-[2.57px] 
         md:w-[482px] md:h-[35px] md:pl-[22px] md:pr-[22px] md:py-1.5 md:rounded-[32px] 
         lg:w-[482px] lg:h-[35px] lg:pl-[22px] lg:pr-[22px] lg:py-1.5 lg:rounded-[32px]

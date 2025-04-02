@@ -1,6 +1,4 @@
 import SearchBar from "../components/SearchBar";
-import { HashLink } from "react-router-hash-link";
-import { scrollWithOffset } from "../utils/scrollHelper";
 
 function HomeHero() {
   return (
@@ -72,15 +70,7 @@ function HomeHero() {
           {/* Search Bar */}
           <SearchBar />
 
-          {/* Scroll Link */}
-          <HashLink
-            smooth
-            to="#resource-page"
-            scroll={scrollWithOffset}
-            className="text-center text-white text-sm sm:text-base md:text-[19px] font-light font-inter underline mt-4"
-          >
-            Explore More
-          </HashLink>
+         
         </div>
       </div>
     </header>
