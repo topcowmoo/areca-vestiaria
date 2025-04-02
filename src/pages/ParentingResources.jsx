@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import ParentingFilterBox from "../components/ParentingFilterBox";
 import Directory from "../components/Directory";
 import SearchBarWithCommit from "../components/SearchBarWithCommit";
@@ -16,38 +16,40 @@ function ParentingResources() {
   const category = "Parenting Resources";
 
   // Combine search + kind + subcategory filters
-  const applyFilters = (query = searchQuery, filters = activeFilters) => {
+  const applyFilters = useCallback((query, filters) => {
     const { kinds, subcategories } = filters;
-
+  
     const filtered = collectionData.filter((item) => {
       const matchesCategory = item.category === category;
-      const matchesSearch = 
-        !query || item.title.toLowerCase().includes(query.toLowerCase());
-      const matchesKind =
-        kinds.length === 0 || kinds.includes(item.kind);
+      const matchesSearch = !query || item.title.toLowerCase().includes(query.toLowerCase());
+      const matchesKind = kinds.length === 0 || kinds.includes(item.kind);
       const matchesSubcategory =
         subcategories.length === 0 ||
-        (item.subCategory &&
-          subcategories.some((sub) =>
-            item.subCategory.includes(sub)
-          ));
+        (item.subCategory && subcategories.some((sub) => item.subCategory.includes(sub)));
+  
       return matchesCategory && matchesSearch && matchesKind && matchesSubcategory;
     });
-
+  
     setFilteredData(filtered);
-           
-    
-  };
+  }, []);
+  
+  // Run once on mount to show default list
+  useEffect(() => {
+    applyFilters("", { kinds: [], subcategories: [] });
+  }, [applyFilters]);
+
+
 
   const handleSearchChange = (value) => {
     setSearchQuery(value);
-    applyFilters(value, activeFilters)
+    applyFilters(value, activeFilters);
   };
-
+  
   const handleFilterChange = (filters) => {
     setActiveFilters(filters);
-    applyFilters(searchQuery, filters); // Apply filters whenever they change
+    applyFilters(searchQuery, filters);
   };
+  
 
 
   const handleFilterBoxToggle = () => {
@@ -102,7 +104,6 @@ function ParentingResources() {
               Parenting Resources
             </h1>
             <SearchBarWithCommit
-              setFilteredData={setFilteredData}
               category={category}
               onSearchChange={handleSearchChange}
               className="mt-6 w-full max-w-[320px] sm:max-w-[400px] "
