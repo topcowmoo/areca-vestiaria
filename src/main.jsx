@@ -7,7 +7,7 @@ import App from './App.jsx';
 import ADHDResources from './pages/ADHDResources.jsx';
 import Home from './pages/Home.jsx';
 import ParentingResources from './pages/ParentingResources.jsx';
-import AllResources from './pages/AllResources.jsx';
+import ComingSoon from './pages/ComingSoon.jsx';
 import AngerAndShame from './pages/AngerAndShame.jsx'
 import AttachmentsAndEmotions from './pages/AttachmentsAndEmotions.jsx';
 import CouplesResources from './pages/CouplesResources.jsx';
@@ -37,8 +37,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: 'all-resources',
-        element: <AllResources />,
+        path: 'coming-soon',
+        element: <ComingSoon />,
       },
       {
         path: 'adhd-resources',
