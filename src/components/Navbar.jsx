@@ -11,21 +11,7 @@ function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hasResourcesInteracted, setHasResourcesInteracted] = useState(false);
   const [isResourcesVisible, setIsResourcesVisible] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
-
-  // Detect scroll position apply bg only if mobile closed
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!isMobileMenuOpen) {
-        setIsScrolled(window.scrollY > 50);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isMobileMenuOpen]);
 
   // Toggling Resources dropdown
   const toggleResources = useCallback(() => {
@@ -77,14 +63,8 @@ function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-30 flex justify-center transition-colors duration-300 ${
-        isMobileMenuOpen
-          ? "bg-transparent" // Always transparent when the mobile menu is open
-          : isScrolled
-          ? "bg-black/70 backdrop-blur-md text-white pb-6 lg:bg-black/70 lg:pb-6"
-          : "bg-transparent"
-      }`}
-    >
+    className="fixed top-0 left-0 w-full z-30 flex justify-center bg-black/75 backdrop-blur-md text-white pb-6 transition-colors duration-300"
+  >
       {/* Hamburger Menu: visible on devices 1024px and below */}
       <div className="w-full flex justify-between items-center pl-[21px] pt-[29px] lg:hidden">
         <CgMenuRound
@@ -124,58 +104,57 @@ function Navbar() {
             About Us
           </NavItem>
           {/* Resources Dropdown */}
-          <li className="self-stretch relative resources-toggle cursor-pointer">
-            <div className="flex items-center" onClick={toggleResources}>
-              <span className="text-left text-white text-[21px] ultra-wide:text-[29px] font-light font-['Inter'] tracking-wide cursor-pointer mr-[11px] hover:text-white hover:underline">
-                Resources
-              </span>
-              <IoTriangleSharp
-                className={`transform ${isResourcesOpen ? "rotate-0" : "rotate-180"}`}
-                size={11}
-                color="white"
-                style={{ marginBottom: "-2px" }}
-              />
-            </div>
-            {isResourcesVisible && (
-              <div
-                className={`dropdown-menu absolute mt-5 ml-12 py-5 bg-black/25 backdrop-blur-md flex flex-col justify-start items-start gap-4 text-white rounded shadow-lg px-5 z-20 w-[285px] ultra-wide:w-[325px] transition-all transform origin-top ${
-                  hasResourcesInteracted
-                    ? isResourcesOpen
-                      ? "animate-dropdownSlideDown pointer-events-auto visibility-visible"
-                      : "animate-dropdownSlideUp pointer-events-none visibility-hidden"
-                    : "opacity-0 pointer-events-none visibility-hidden"
-                }`}
-                style={{ left: "-50px" }}
-              >
-                {[
-                  { to: "/adhd-resources", label: "ADHD Resources" },
-                  { to: "/parenting-resources", label: "Parenting Resources" },
-                  { to: "/couples-resources", label: "Couples Resources" },
-                  { to: "/attachments-and-emotions", label: "Attachment & Emotions" },
-                  { to: "/anger-and-shame", label: "Anger & Shame" },
-                  { to: "/therapy", label: "Therapy" },
-                  { to: "/physician-patient-resources", label: "Physician Patient Resources", className: "tracking-tight" },
-                  { to: "/additional-resources", label: "Additional Resources" },
-                ].map((item) => (
-                  <HashLink
-                    key={item.to}
-                    smooth
-                    to={item.to}
-                    className={`text-[17px] ultra-wide:text-[20px] font-light font-['Inter'] rounded-md px-3 py-2 hover:text-white hover:font-semibold ${
-                      item.className || ""
-                    }`}
-                    onClick={() => {
-                      setIsResourcesOpen(false);
-                      setIsMobileMenuOpen(false);
-                      setIsResourcesVisible(false);
-                    }}
-                  >
-                    {item.label}
-                  </HashLink>
-                ))}
-              </div>
-            )}
-          </li>
+<li className="self-stretch resources-toggle">
+  <div className="flex items-center" onClick={toggleResources}>
+    <span className="text-left text-white text-[21px] ultra-wide:text-[29px] font-light font-['Inter'] tracking-wide cursor-pointer mr-[11px] hover:text-white hover:underline">
+      Resources
+    </span>
+    <IoTriangleSharp
+      className={`transform transition-transform duration-300 ${
+        isResourcesOpen ? "rotate-0" : "rotate-180"
+      }`}
+      size={11}
+      color="white"
+      style={{ marginBottom: "-2px" }}
+    />
+  </div>
+
+  {isResourcesOpen && (
+    <ul className="mt-7 ml-3 flex flex-col gap-4">
+      {[
+        { to: "/adhd-resources", label: "ADHD Resources" },
+        { to: "/parenting-resources", label: "Parenting Resources" },
+        { to: "/couples-resources", label: "Couples Resources" },
+        { to: "/attachments-and-emotions", label: "Attachment & Emotions" },
+        { to: "/anger-and-shame", label: "Anger & Shame" },
+        { to: "/therapy", label: "Therapy" },
+        {
+          to: "/physician-patient-resources",
+          label: "Physician Patient Resources",
+          className: "tracking-tight",
+        },
+        { to: "/additional-resources", label: "Additional Resources" },
+      ].map((item) => (
+        <HashLink
+          key={item.to}
+          smooth
+          to={item.to}
+          className={`text-[17px] ultra-wide:text-[20px] font-light font-['Inter'] rounded-md px-3 py-2 hover:text-white hover:font-semibold ${
+            item.className || ""
+          }`}
+          onClick={() => {
+            setIsResourcesOpen(false);
+            setIsMobileMenuOpen(false);
+            setIsResourcesVisible(false);
+          }}
+        >
+          {item.label}
+        </HashLink>
+      ))}
+    </ul>
+  )}
+</li>
+
           <NavItem to="/#contact-page" onClick={() => handleNavigation("/#contact-page")}>
             Contact Us
           </NavItem>
@@ -213,7 +192,7 @@ function Navbar() {
           {/* Only render dropdown if it's visible */}
           {isResourcesVisible && (
             <div
-              className={`dropdown-menu absolute mt-5 ml-12 py-5 bg-black/25 backdrop-blur-md flex flex-col justify-start items-start gap-4 text-white rounded shadow-lg px-5 z-20 w-[285px] ultra-wide:w-[325px] transition-all transform origin-top ${
+              className={`dropdown-menu absolute mt-7 ml-12 py-5 bg-zinc-950 flex flex-col justify-start items-start gap-4 text-white rounded shadow-lg px-5 z-20 w-[285px] ultra-wide:w-[325px] transition-all transform origin-top ${
                 hasResourcesInteracted
                   ? isResourcesOpen
                     ? "animate-dropdownSlideDown pointer-events-auto visibility-visible"
